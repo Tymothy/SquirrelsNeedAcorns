@@ -1,0 +1,3 @@
+Make main menu all drawn on the UI layer to scale properly.
+
+High scores page, with high scores from each level
