@@ -57,7 +57,7 @@ if(room == rMainMenu)
 	draw_text_outline(menu_x, menu_y/2, "Squirrels\nNeed Acorns", c_white, c_aqua);
 	
 } //End Main Menu
-
+//
 if(room == rHowTo)
 {
 	var i = 0;
