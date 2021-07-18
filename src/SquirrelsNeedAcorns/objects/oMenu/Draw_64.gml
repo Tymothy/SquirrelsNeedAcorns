@@ -47,7 +47,7 @@ if(room == rMainMenu)
 	draw_set_halign(fa_left);
 	draw_set_valign(fa_top);
 	//Draw at very top left of screen
-		draw_text(5, 5, string("Squirrels Need Acorns - Alpha Version 0.4.1"));
+		draw_text(5, 5, string("Squirrels Need Acorns - Alpha Version 0.4.2"));
 		
 	//Draw Title
 	draw_set_font(fEthno36);

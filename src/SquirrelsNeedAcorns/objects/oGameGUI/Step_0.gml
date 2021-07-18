@@ -48,22 +48,21 @@
 #region
 var _hh = global.GUIhh
 var _ww = global.GUIww
-var _buttonHeight = _hh*.1;
 var _margin = 3;
 var _buffer = 20;
 var _sWidth = sprite_get_width(s_button_left);
 var _sHeight = sprite_get_height(s_button_left);
 
 leftArrLeftX = 1;
-leftArrTopY = _hh - _hh/2;
+leftArrTopY = _hh*.3;
 leftArrRightX = _ww/2;
-leftArrBottomY = _hh;
+leftArrBottomY = _hh-_margin;
 
 
 //Right Arrow GUI coords
 
-rightArrLeftX = _hh/2+1;
-rightArrTopY = _hh - _hh/2;
+rightArrLeftX = _ww/2+1;
+rightArrTopY = _hh*.3;
 rightArrRightX = _ww -_margin;
 rightArrBottomY = _hh-_margin;
 
@@ -71,13 +70,13 @@ rightArrBottomY = _hh-_margin;
 var _sWidth = sprite_get_width(s_button_circle);
 var _sHeight = sprite_get_height(s_button_circle);
 
-pauseLeftX = _ww - _sWidth-_buffer*1-_margin+1;
+pauseLeftX = _ww - _sWidth-_margin+1;
 pauseTopY = 3;
 pauseRightX = _ww -_margin;
-pauseBottomY = _sHeight+_buffer+_margin;
+pauseBottomY = _sHeight+_margin;
 #endregion
 
-if(oPause.paused == false)
+if(oPause.paused == false) //UI Elements
 	{
 	if (countDown > 0)
 	{
@@ -121,18 +120,18 @@ if(touchUI)
 
 			
 			//FlyUp Button
-			if(flyupDevice == -1)
-			{
-				if(_y > flyupTopY && _y < flyupBottomY)
-				{
-					if(_x > flyupLeftX && _x < flyupRightX)
-					{
-						//Assign device to flyup button
-						show_debug_message("Fly up button pressed with device " + string(i));
-						flyupDevice = i;
-					}
-				}
-			}
+			//if(flyupDevice == -1)
+			//{
+			//	if(_y > flyupTopY && _y < flyupBottomY)
+			//	{
+			//		if(_x > flyupLeftX && _x < flyupRightX)
+			//		{
+			//			//Assign device to flyup button
+			//			show_debug_message("Fly up button pressed with device " + string(i));
+			//			flyupDevice = i;
+			//		}
+			//	}
+			//}
 		
 			if(leftArrDevice == -1)
 			{			
@@ -180,11 +179,11 @@ if(touchUI)
 		//Check if user releases
 		if (device_mouse_check_button_released(i, mb_any)) {
 			//When true, button has been let go.
-			if(i = flyupDevice)
-			{
-				flyupDevice = -1;
-				show_debug_message("Fly up button released with device " + string(i));
-			}
+			//if(i = flyupDevice)
+			//{
+			//	flyupDevice = -1;
+			//	show_debug_message("Fly up button released with device " + string(i));
+			//}
 			if(i = leftArrDevice)
 			{
 				leftArrDevice = -1;
@@ -218,12 +217,12 @@ if(touchUI)
 		
 		
 	}//End For Loop
-	if(flyupDevice > -1)
-	{
-		flyUp = 1;
-	} else {
-		flyUp = 0;	
-	}
+	//if(flyupDevice > -1)
+	//{
+	//	flyUp = 1;
+	//} else {
+	//	flyUp = 0;	
+	//}
 	if(leftArrDevice > -1)
 	{
 		moveLeft = 1;

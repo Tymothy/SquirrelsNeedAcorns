@@ -10,9 +10,9 @@ enum state {
 state = state.idle;
 image_speed = 0;
 
-animationProbability = 180; // Probablitiy of animation starting.  60 = ~ 1 time per second of idle.
+animationProbability = 60; // Probablitiy of animation starting.  60 = ~ 1 time per second of idle.
 animationInProgress = false;
-animationRestTime = 90 //Minimum frames before animating again
+animationRestTime = 60 //Minimum frames before animating again
 
 animationRestTimer = animationRestTime; //Working variable that is reset constantly to track time
 cycleCounter = 0;

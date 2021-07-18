@@ -138,5 +138,13 @@ if(touchUI)
 
 	//Draw Pause
 	draw_sprite(s_button_pause, 0, _ww - _sWidth/2 - _margin, _sHeight/2 + _margin);
+	
+	if(debug)
+	{
+		draw_set_color(c_yellow);
+		draw_rectangle(leftArrLeftX, leftArrTopY, leftArrRightX, leftArrBottomY ,true);
+		draw_rectangle(rightArrLeftX, rightArrTopY, rightArrRightX, rightArrBottomY ,true);
+		draw_rectangle(pauseLeftX, pauseTopY, pauseRightX, pauseBottomY ,true);
+	}
 }
 #endregion

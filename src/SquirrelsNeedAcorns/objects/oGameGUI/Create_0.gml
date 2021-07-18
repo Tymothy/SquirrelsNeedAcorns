@@ -1,4 +1,6 @@
 /// @desc Insert description here
+debug = false;
+
 countDown = 3;
 showCountDown = countDown;
 gameTimer = 60;
