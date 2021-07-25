@@ -11,6 +11,14 @@
 var _ww = global.GUIww;
 var _hh = global.GUIhh;
 
+//If true, game is in portrait mode
+if(_ww/_hh < 1)
+{
+	timerDisplayOffset = 70;
+} else { //Game is in landscape
+	timerDispalyOffset = 10;
+}
+
 var _hhalert = _hh/2;//-(font_get_size(alertFont)*2);
 
 draw_set_halign(fa_center);
@@ -41,16 +49,16 @@ draw_set_font(UIFont);
 draw_set_color(c_ltgray);
 draw_set_halign(fa_center);
 draw_set_valign(fa_top);
-draw_text_outline(_ww/2, 20, "Time Left: " + string(showTime),c_black,c_ltgray);
+draw_text_outline(_ww/2, timerDisplayOffset, "Time Left: " + string(showTime),c_black,c_ltgray);
 if(showTime < 11)
 {
 	//draw_set_color(c_yellow);
-	draw_text_outline(_ww/2, 20, "Time Left: " + string(showTime),c_black,c_yellow);
+	draw_text_outline(_ww/2, timerDisplayOffset, "Time Left: " + string(showTime),c_black,c_yellow);
 }
 if(showTime < 4)
 {
 	//draw_set_color(c_red);	
-	draw_text_outline(_ww/2, 20, "Time Left: " + string(showTime),c_black,c_red);
+	draw_text_outline(_ww/2, timerDisplayOffset, "Time Left: " + string(showTime),c_black,c_red);
 }
 
 
@@ -148,7 +156,7 @@ if(oPlayer.playerMoved == false && gameTimer < (gameTimerInit - 2))
 {
 	draw_set_font(hintFont);
 	draw_set_halign(fa_center);
-	draw_text_outline(_ww*.25,_hh*.7, "Touch this side/n to go left!", c_black, c_ltgray);
-	draw_text_outline(_ww*.75,_hh*.7, "Touch this side/n to go right!", c_black, c_ltgray);
+	draw_text_outline(_ww*.25,_hh*.7, "Touch this side\n to go left!", c_black, c_ltgray);
+	draw_text_outline(_ww*.75,_hh*.7, "Touch this side\n to go right!", c_black, c_ltgray);
 }
 #endregion

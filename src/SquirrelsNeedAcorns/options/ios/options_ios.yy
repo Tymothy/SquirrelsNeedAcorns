@@ -1,9 +1,9 @@
 {
-  "option_ios_display_name": "Created with GameMaker Studio 2",
-  "option_ios_bundle_name": "com.company.game",
-  "option_ios_version": "1.0.0.0",
+  "option_ios_display_name": "Squirrels Need Acorns",
+  "option_ios_bundle_name": "com.lucidi.squirrelsneedacorns",
+  "option_ios_version": "0.5.1",
   "option_ios_output_dir": "~/gamemakerstudio2",
-  "option_ios_team_id": "",
+  "option_ios_team_id": "VY4SBT59WB",
   "option_ios_orientation_portrait": true,
   "option_ios_orientation_portrait_flipped": true,
   "option_ios_orientation_landscape": true,

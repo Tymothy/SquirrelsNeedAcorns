@@ -9,10 +9,11 @@ showTime = gameTimer;
 
 gameOver = false;
 gameOverTimer = 3;
+timerDisplayOffset = 30;
 
 alertFont = fEthno24;
 UIFont = fConthrax26;
-hintFont = fConthrax26;
+hintFont = fConthrax11;
 
 touchUI = true;
 var _hh = global.GUIhh
