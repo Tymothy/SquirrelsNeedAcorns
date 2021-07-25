@@ -5,7 +5,7 @@ if(mode != TRANS_MODE.OFF)
 {
 	if (mode == TRANS_MODE.INTRO)
 	{
-		percent = max(0,percent - max((percent/10),0.005));
+		percent = max(0,percent - max((percent/10),0.005));		
 	}
 	else
 	{
@@ -23,12 +23,14 @@ if(mode != TRANS_MODE.OFF)
 			}
 			case TRANS_MODE.NEXT:
 			{
+
 				mode = TRANS_MODE.INTRO;
 				room_goto_next();
 				break;
 			}
 			case TRANS_MODE.GOTO:
 			{
+								
 				mode = TRANS_MODE.INTRO;
 				room_goto(target);
 				break;

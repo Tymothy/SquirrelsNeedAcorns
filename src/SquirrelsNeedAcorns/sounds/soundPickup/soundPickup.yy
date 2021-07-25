@@ -1,5 +1,5 @@
 {
-  "compression": 0,
+  "compression": 1,
   "volume": 0.5,
   "preload": false,
   "bitRate": 128,
@@ -11,7 +11,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "soundPickup.wav",
-  "duration": 0.28627,
+  "duration": 0.28127,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",

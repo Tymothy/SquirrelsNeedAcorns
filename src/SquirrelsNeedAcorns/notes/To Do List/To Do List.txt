@@ -1,3 +1,8 @@
-Make main menu all drawn on the UI layer to scale properly.
+Implement a shop to spend money
+Add items that give cosmetic effects
 
-High scores page, with high scores from each level
+Add a campaign, or reason to proceed in game
+
+
+Long Term
+Online high score system

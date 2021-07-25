@@ -33,10 +33,10 @@ if(room == rMainMenu)
 		*/
 		
 		draw_text_outline(menu_x, menu_y + button_h * i, button[i], c_black,c_ltgray);
-		if (menu_index == i)
-		{
-		draw_text_outline(menu_x, menu_y + button_h * i, button[i], c_black,c_aqua);
-		}
+		//if (menu_index == i)
+		//{
+		//draw_text_outline(menu_x, menu_y + button_h * i, button[i], c_black,c_aqua);
+		//}
 		i++;	
 	}
 	i = 0;
@@ -47,7 +47,7 @@ if(room == rMainMenu)
 	draw_set_halign(fa_left);
 	draw_set_valign(fa_bottom);
 	//Draw at very top left of screen
-		draw_text(5, global.GUIhh-5, string("Squirrels Need Acorns - Alpha Version 0.5.0"));
+	draw_text(5, global.GUIhh-5, string("Squirrels Need Acorns - Alpha Version 0.5.1"));
 		
 	//Draw Title
 	draw_set_font(fEthno36);
@@ -57,21 +57,23 @@ if(room == rMainMenu)
 	draw_text_outline(menu_x, menu_y/2, "Squirrels\nNeed Acorns", c_white, c_aqua);
 	
 } //End Main Menu
-//
+
 if(room == rHowTo)
 {
 	var i = 0;
 	draw_set_font(menuFont);
 	//Set menu at top left
-	menu_x = global.GUIww/4;
-	menu_y = global.GUIhh/4;
+	draw_set_halign(fa_center);
+	draw_set_valign(fa_bottom);
+	menu_x = global.GUIww *.5;
+	menu_y = global.GUIhh -15;
 	button_h = font_get_size(menuFont)*1.5;
 	//menu_x = 200;
 	//menu_y = 100; //- ((button_h * buttons)/2 + button_h);
 	//button_h = 60;
 
-	draw_set_valign(fa_middle);
-	draw_set_halign(fa_center);
+	//draw_set_valign(fa_middle);
+	//draw_set_halign(fa_center);
 	repeat (buttons)
 	{
 		if(touch_buttons(menu_x, menu_y, i, button[i], button_h))
@@ -80,29 +82,34 @@ if(room == rHowTo)
 			touchSelect = true;
 		}
 		draw_text_outline(menu_x, menu_y + button_h * i, button[i], c_black,c_ltgray);
-		if (menu_index == i)
-		{
-		draw_text_outline(menu_x, menu_y + button_h * i, button[i], c_black,c_aqua);
-		}
+		//if (menu_index == i)
+		//{
+		//draw_text_outline(menu_x, menu_y + button_h * i, button[i], c_black,c_aqua);
+		//}
 		i++;	
 	}
 	i = 0;
 	
 	//	draw_sprite(sWASD, image_index,100,700);
 		
-	var text_x = global.GUIww * .65;
-	var text_y = global.GUIhh * .15;
-	draw_set_color (c_ltgray);
-	draw_set_font(fConthrax11);
+	var text_x = global.GUIww *.5;
+	var text_y = 25;
+
+
 	var textSpacing = font_get_size(fConthrax11)*1.5;
-	
-		draw_text(text_x,text_y+textSpacing*0,string("Touch left or right side of screen move"));
+	draw_set_halign(fa_center);
+	draw_set_valign(fa_top);
+	draw_set_font(fEthno18);
+	draw_text_outline(text_x,text_y+textSpacing*0,string("How to Play"),c_white,c_aqua);
+	draw_set_font(fConthrax11);	
+	draw_set_color (c_ltgray);
+	draw_text(text_x,text_y+textSpacing*2,string("Touch left or right side of to screen move."));
 		
-		draw_text(text_x,text_y+textSpacing*3,string("The goal is to collect as many"));
-		draw_text(text_x,text_y+textSpacing*4,string("acorns as you can in 60 seconds."));
+	draw_text(text_x,text_y+textSpacing*4,string("The goal is to collect as many"));
+	draw_text(text_x,text_y+textSpacing*5,string("acorns as you can in 60 seconds."));
 		
-		draw_text(text_x,text_y+textSpacing*6,string("Watch your fuel, don't hit the"));
-		draw_text(text_x,text_y+textSpacing*7,string("walls too hard, and avoid spikes."));
+	draw_text(text_x,text_y+textSpacing*7,string("Watch your fuel, don't hit the"));
+	draw_text(text_x,text_y+textSpacing*8,string("walls too hard, and avoid spikes."));
 		
 //		draw_text(text_x,text_y+textSpacing*9,string("Press space bar in game to pause."));;
 		
@@ -137,10 +144,10 @@ if(room == rHighscore)
 			touchSelect = true;
 		}
 		draw_text_outline(menu_x, menu_y + button_h * i, button[i], c_black,c_ltgray);
-		if (menu_index == i)
-		{
-		draw_text_outline(menu_x, menu_y + button_h * i, button[i], c_black,c_aqua);
-		}
+		//if (menu_index == i)
+		//{
+		//draw_text_outline(menu_x, menu_y + button_h * i, button[i], c_black,c_aqua);
+		//}
 		i++;	
 	}
 	i = 0;
@@ -163,10 +170,10 @@ if(room == rHighscore)
 
 
 		//Left side
-		draw_set_font(fConthrax26);
-		text_x = global.GUIww *.25;
-		text_y = global.GUIhh *.65;
-		draw_text(text_x,text_y,string("Movement"));
+		//draw_set_font(fConthrax26);
+		//text_x = global.GUIww *.25;
+		//text_y = global.GUIhh *.65;
+		//draw_text(text_x,text_y,string("Movement"));
 		
 }
 
@@ -187,10 +194,10 @@ if(room == rLevelSelect)
 			touchSelect = true;
 		}
 		draw_text_outline(menu_x, menu_y + button_h * i, button[i], c_black,c_ltgray);
-		if (menu_index == i)
-		{
-		draw_text_outline(menu_x, menu_y + button_h * i, button[i], c_black,c_aqua);
-		}
+		//if (menu_index == i)
+		//{
+		//draw_text_outline(menu_x, menu_y + button_h * i, button[i], c_black,c_aqua);
+		//}
 		i++;	
 	}
 	i = 0;
@@ -215,10 +222,10 @@ if(room == rEndRun)
 			touchSelect = true;
 		}
 		draw_text_outline(menu_x, menu_y + button_h * i, button[i], c_black,c_ltgray);
-		if (menu_index == i)
-		{
-		draw_text_outline(menu_x, menu_y + button_h * i, button[i], c_black,c_aqua);
-		}
+		//if (menu_index == i)
+		//{
+		//draw_text_outline(menu_x, menu_y + button_h * i, button[i], c_black,c_aqua);
+		//}
 		i++;	
 	}
 	i = 0;
@@ -248,10 +255,10 @@ if(room == rOptions)
 			touchSelect = true;
 		}
 		draw_text_outline(menu_x, menu_y + button_h * i, button[i], c_black,c_ltgray);
-		if (menu_index == i)
-		{
-		draw_text_outline(menu_x, menu_y + button_h * i, button[i], c_black,c_aqua);
-		}
+		//if (menu_index == i)
+		//{
+		//draw_text_outline(menu_x, menu_y + button_h * i, button[i], c_black,c_aqua);
+		//}
 		i++;	
 	}
 	i = 0;

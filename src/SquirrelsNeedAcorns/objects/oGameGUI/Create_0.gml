@@ -12,7 +12,7 @@ gameOverTimer = 3;
 
 alertFont = fEthno24;
 UIFont = fConthrax26;
-hintFont = fConthrax11;
+hintFont = fConthrax26;
 
 touchUI = true;
 var _hh = global.GUIhh

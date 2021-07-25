@@ -4,7 +4,7 @@ paused = false;
 pauseFont = fEthno18;
 touchSelect = false;
 
-button_h = font_get_size(pauseFont)*1.5;
+button_h = font_get_size(pauseFont)*2.3;
 button[0] = "Continue";
 button[1] = "Restart";
 button[2] = "End Run";

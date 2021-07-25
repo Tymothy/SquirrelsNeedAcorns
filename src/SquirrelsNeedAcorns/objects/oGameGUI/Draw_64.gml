@@ -148,7 +148,7 @@ if(oPlayer.playerMoved == false && gameTimer < (gameTimerInit - 2))
 {
 	draw_set_font(hintFont);
 	draw_set_halign(fa_center);
-	draw_text_outline(_ww*.25,_hh*.7, "Touch this side to go left!", c_black, c_ltgray);
-	draw_text_outline(_ww*.75,_hh*.7, "Touch this side to go right!", c_black, c_ltgray);
+	draw_text_outline(_ww*.25,_hh*.7, "Touch this side/n to go left!", c_black, c_ltgray);
+	draw_text_outline(_ww*.75,_hh*.7, "Touch this side/n to go right!", c_black, c_ltgray);
 }
 #endregion

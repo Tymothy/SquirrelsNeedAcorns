@@ -8,7 +8,7 @@ if (paused == true)
 {
 	var i = 0;
 	menu_x = _ww/2;
-	menu_y = _hh/2; //- ((button_h * buttons)/2 + button_h);
+	menu_y = _hh*.7; //- ((button_h * buttons)/2 + button_h);
 	
 
 	draw_set_font(pauseFont);
@@ -24,7 +24,7 @@ if (paused == true)
 		draw_text_outline(menu_x, menu_y + button_h * i, button[i], c_black,c_ltgray);
 		if (menu_index == i)
 		{
-		draw_text_outline(menu_x, menu_y + button_h * i, button[i], c_black,c_aqua);
+		draw_text_outline(menu_x, menu_y + button_h * i, button[i], c_black,c_ltgray);
 		}
 		i++;	
 	}

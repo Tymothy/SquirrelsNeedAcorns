@@ -1,5 +1,5 @@
 {
-  "compression": 0,
+  "compression": 1,
   "volume": 1.0,
   "preload": false,
   "bitRate": 128,
@@ -11,7 +11,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "soundDead.wav",
-  "duration": 1.020011,
+  "duration": 1.015011,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
