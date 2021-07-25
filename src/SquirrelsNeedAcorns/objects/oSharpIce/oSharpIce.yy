@@ -31,8 +31,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Entities",
-    "path": "folders/Objects/Entities.yy",
+    "name": "Obstacles",
+    "path": "folders/Objects/Entities/Obstacles.yy",
   },
   "resourceVersion": "1.0",
   "name": "oSharpIce",

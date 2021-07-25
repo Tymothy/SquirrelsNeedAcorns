@@ -30,8 +30,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Entities",
-    "path": "folders/Objects/Entities.yy",
+    "name": "Pickups",
+    "path": "folders/Objects/Entities/Pickups.yy",
   },
   "resourceVersion": "1.0",
   "name": "oPointPickup",

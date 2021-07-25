@@ -45,9 +45,9 @@ if(room == rMainMenu)
 		draw_set_color(c_gray);
 	draw_set_font(fConthrax11);
 	draw_set_halign(fa_left);
-	draw_set_valign(fa_top);
+	draw_set_valign(fa_bottom);
 	//Draw at very top left of screen
-		draw_text(5, 5, string("Squirrels Need Acorns - Alpha Version 0.4.2"));
+		draw_text(5, global.GUIhh-5, string("Squirrels Need Acorns - Alpha Version 0.5.0"));
 		
 	//Draw Title
 	draw_set_font(fEthno36);
@@ -96,7 +96,7 @@ if(room == rHowTo)
 	draw_set_font(fConthrax11);
 	var textSpacing = font_get_size(fConthrax11)*1.5;
 	
-		draw_text(text_x,text_y+textSpacing*0,string("WASD or arrow keys to move"));
+		draw_text(text_x,text_y+textSpacing*0,string("Touch left or right side of screen move"));
 		
 		draw_text(text_x,text_y+textSpacing*3,string("The goal is to collect as many"));
 		draw_text(text_x,text_y+textSpacing*4,string("acorns as you can in 60 seconds."));
@@ -104,9 +104,7 @@ if(room == rHowTo)
 		draw_text(text_x,text_y+textSpacing*6,string("Watch your fuel, don't hit the"));
 		draw_text(text_x,text_y+textSpacing*7,string("walls too hard, and avoid spikes."));
 		
-		draw_text(text_x,text_y+textSpacing*9,string("Press space bar in game to pause."));;
-		
-		draw_text(text_x,text_y+textSpacing*14,string("M to toggle music."));
+//		draw_text(text_x,text_y+textSpacing*9,string("Press space bar in game to pause."));;
 		
 
 		//Left side
@@ -155,15 +153,14 @@ if(room == rHighscore)
 	draw_set_font(fConthrax11);
 	var textSpacing = font_get_size(fConthrax11)*1.5;
 	
-	ini_open("savedata.ini");
-	var _rGameIce1 = ini_read_real("stats", "rGameIce1", 0);
-		draw_text(text_x,text_y+textSpacing*0,string("Ice Asteroid - ")+string(_rGameIce1));
+
+		draw_text(text_x,text_y+textSpacing*0,string("Ice Asteroid - ")+string(rGameIce1Score));
 		//draw_text(text_x,text_y+textSpacing*3,string("The goal is to collect as many"));
 		//draw_text(text_x,text_y+textSpacing*4,string("acorns as you can in 60 seconds."));
 		//draw_text(text_x,text_y+textSpacing*6,string("Be mindful of your fuel and"));
 		//draw_text(text_x,text_y+textSpacing*7,string("hitting the walls too hard."));
 		//draw_text(text_x,text_y+textSpacing*10,string("M to toggle music."));
-	ini_close();
+
 
 		//Left side
 		draw_set_font(fConthrax26);
@@ -236,5 +233,27 @@ if(room == rEndRun)
 
 if(room == rOptions)
 {
-	
+	var i = 0;
+	draw_set_font(menuFont);
+	menu_x = global.GUIww/2;
+	menu_y = global.GUIhh/2;
+
+	draw_set_valign(fa_middle);
+	draw_set_halign(fa_center);
+	repeat (buttons)
+	{
+		if(touch_buttons(menu_x, menu_y, i, button[i], button_h))
+		{
+			menu_index = i;
+			touchSelect = true;
+		}
+		draw_text_outline(menu_x, menu_y + button_h * i, button[i], c_black,c_ltgray);
+		if (menu_index == i)
+		{
+		draw_text_outline(menu_x, menu_y + button_h * i, button[i], c_black,c_aqua);
+		}
+		i++;	
+	}
+	i = 0;
+
 }

@@ -4,8 +4,7 @@ function canvas_fullscreen(_base, _zoom){
 	/// @function               canvas_fullscreen(base)
 	/// @param {int}    base    The base value for scaling on both axis
 
-	//var _base = argument0;
-	
+	//use to fill screen
 	var _bw = browser_width;
 	var _bh = browser_height;
 

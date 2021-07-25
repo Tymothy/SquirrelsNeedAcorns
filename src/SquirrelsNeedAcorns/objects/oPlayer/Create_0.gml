@@ -51,8 +51,8 @@ xCollision = false;
 invuln = false;
 applyXBounce = false;
 applyYBounce = false;
-
 invulnCount = invulnTimer;
+playerMoved = false;
 
 //Tilemap Collision
 tilemapCollision = true; //True for tilemap collision, false for object collision

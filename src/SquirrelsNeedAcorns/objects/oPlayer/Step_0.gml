@@ -358,13 +358,11 @@ if (oGameGUI.gameOver == 1) audio_pause_sound(soundFire);
 	#endregion
 }//End of game timer check
 
-//if(hasControl == false)
-//{
-//	hasControl = false;
-//	sprite_index = sPlayer;
-//	audio_pause_sound(soundFire);
-	
-//}
+//Check to see when player moved.  Used to detect if player knows how to play
+if(playerMoved == false && flyUp > 0)
+{
+	playerMoved = true;
+}
 
 //Fix the subpixel movement stuttering
 x = round(x);

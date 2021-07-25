@@ -10,6 +10,7 @@
 
 var _ww = global.GUIww;
 var _hh = global.GUIhh;
+
 var _hhalert = _hh/2;//-(font_get_size(alertFont)*2);
 
 draw_set_halign(fa_center);
@@ -40,16 +41,16 @@ draw_set_font(UIFont);
 draw_set_color(c_ltgray);
 draw_set_halign(fa_center);
 draw_set_valign(fa_top);
-draw_text_outline(_ww/2, 10, "Time Left: " + string(showTime),c_black,c_ltgray);
+draw_text_outline(_ww/2, 20, "Time Left: " + string(showTime),c_black,c_ltgray);
 if(showTime < 11)
 {
 	//draw_set_color(c_yellow);
-	draw_text_outline(_ww/2, 10, "Time Left: " + string(showTime),c_black,c_yellow);
+	draw_text_outline(_ww/2, 20, "Time Left: " + string(showTime),c_black,c_yellow);
 }
 if(showTime < 4)
 {
 	//draw_set_color(c_red);	
-	draw_text_outline(_ww/2, 10, "Time Left: " + string(showTime),c_black,c_red);
+	draw_text_outline(_ww/2, 20, "Time Left: " + string(showTime),c_black,c_red);
 }
 
 
@@ -122,19 +123,11 @@ if(touchUI)
 	var _sWidth = sprite_get_width(s_button_right);
 	var _sHeight = sprite_get_height(s_button_right);
 	draw_sprite(s_button_right,image_index, _ww - _sWidth/2 - _margin, _hh - _sHeight/2 - _margin);
-	draw_sprite(s_button_left, image_index, _ww - _sWidth/2 - _margin - _sWidth, _hh- _sHeight/2 - _margin);
+	
+	draw_sprite(s_button_left, image_index, _sWidth/2 + _margin, _hh- _sHeight/2 - _margin);
 
-	//Fly up
-	//_sWidth = sprite_get_width(s_button_circle);
-	//_sHeight = sprite_get_height(s_button_circle);
-	//if(flyUp == 1)
-	//{
-	//draw_sprite(s_button_circle, 1, _sWidth/2 + _margin, _hh - _sHeight/2 - _margin);		
-	//} else {
-	//draw_sprite(s_button_circle, 0, _sWidth/2 + _margin, _hh - _sHeight/2 - _margin);	
-	//}
-
-	//draw_sprite(global.playerRocket, image_index, _sWidth/2 + _margin+9, _hh - _sHeight/2 - _margin-1);
+	//This draws left arrow on right side to left of right arrow
+	//draw_sprite(s_button_left, image_index, _ww - _sWidth/2 - _margin - _sWidth, _hh- _sHeight/2 - _margin);
 
 	//Draw Pause
 	draw_sprite(s_button_pause, 0, _ww - _sWidth/2 - _margin, _sHeight/2 + _margin);
@@ -146,5 +139,16 @@ if(touchUI)
 		draw_rectangle(rightArrLeftX, rightArrTopY, rightArrRightX, rightArrBottomY ,true);
 		draw_rectangle(pauseLeftX, pauseTopY, pauseRightX, pauseBottomY ,true);
 	}
+}
+#endregion
+
+#region Hints
+//After 2 seconds of play time, if player has not moved, provide hints to move
+if(oPlayer.playerMoved == false && gameTimer < (gameTimerInit - 2))
+{
+	draw_set_font(hintFont);
+	draw_set_halign(fa_center);
+	draw_text_outline(_ww*.25,_hh*.7, "Touch this side to go left!", c_black, c_ltgray);
+	draw_text_outline(_ww*.75,_hh*.7, "Touch this side to go right!", c_black, c_ltgray);
 }
 #endregion

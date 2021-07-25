@@ -37,5 +37,5 @@ switch(global.lastGameRoom)
 			}
 		break;
 }
-ini_write_real("stats", "money", global.money);
+//ini_write_real("stats", "money", global.money);
 ini_close();
