@@ -1,3 +1,4 @@
+if(live_call()) return live_result;
 /// @desc Insert description here
 /// @description Progress the transistion
 // You can write your code in this editor

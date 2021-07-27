@@ -1,5 +1,5 @@
 /// @desc Insert description here
-
+if(live_call()) return live_result;
 
 //Level Variables
 //Old values, before resolution change
@@ -7,7 +7,7 @@ flyUpPowerEVar = 2.6;
 pushPowerEVar = 1.5;
 planetGravityEVar = 1.2;
 playerDeathFrictionEVar = 5;
-planetFrictionEVar = 1.5; //Higher is more friction
+planetFrictionEVar = .9; //Higher is more friction
 
 
 

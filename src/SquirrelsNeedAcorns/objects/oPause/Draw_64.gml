@@ -1,3 +1,4 @@
+if(live_call()) return live_result;
 /// @description Insert description here
 // You can write your code in this editor
 
@@ -8,7 +9,7 @@ if (paused == true)
 {
 	var i = 0;
 	menu_x = _ww/2;
-	menu_y = _hh*.7; //- ((button_h * buttons)/2 + button_h);
+	menu_y = _hh*.55; //- ((button_h * buttons)/2 + button_h);
 	
 
 	draw_set_font(pauseFont);

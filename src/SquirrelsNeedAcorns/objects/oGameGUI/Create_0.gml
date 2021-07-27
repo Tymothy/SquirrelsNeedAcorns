@@ -1,3 +1,4 @@
+if(live_call()) return live_result;
 /// @desc Insert description here
 debug = false;
 
@@ -22,6 +23,8 @@ var _buttonHeight = _hh*.1;
 var _margin = 3;
 var _buffer = 20;
 
+alertY = _hh*.3;
+alertX = _ww*.5;
 
 //Left Arrow GUI coords
 var _sWidth = sprite_get_width(s_button_left);

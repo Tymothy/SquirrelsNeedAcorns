@@ -1,3 +1,4 @@
+if(live_call()) return live_result;
 menuFont = fEthno18;
 button_h = font_get_size(menuFont)*2.3;
 ableToSelect = true;
@@ -48,8 +49,8 @@ if(room == rLevelSelect)
 {
 //button_h = 80;
 button[0] = "Ice Asteroid";
-//button[1] = "Classic";
-button[1] = "Main Menu";
+button[1] = "";
+button[2] = "Main Menu";
 //button[3] = "Exit";
 }
 
@@ -72,10 +73,11 @@ if(room == rOptions)
 		musicString = "Off";
 	}
 //button_h = 80;
-button[0] = "Back to Main Menu";
+
 //button[1] = "Classic";
-button[1] = "Music: " + string(musicString);
-button[2] = "Mode: " + string(gameModeString);
+button[0] = "Music: " + string(musicString);
+button[1] = "Mode: " + string(gameModeString);
+button[2] = "Back to Main Menu";
 }
 
 buttons = array_length(button);

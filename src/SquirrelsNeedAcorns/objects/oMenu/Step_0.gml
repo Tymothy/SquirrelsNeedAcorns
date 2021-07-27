@@ -1,4 +1,4 @@
-
+if(live_call()) return live_result;
 //menu_move = keyboard_check_pressed(vk_down) -  keyboard_check(vk_up);
 
 
@@ -63,7 +63,7 @@ if (keyboard_check_pressed(vk_enter) == true
 			//case 1:
 			//	SlideTransition(TRANS_MODE.GOTO,rGame);
 			//	break;
-			case 1:
+			case 2:
 				SlideTransition(TRANS_MODE.GOTO,rMainMenu);
 				break;
 		}
@@ -88,14 +88,12 @@ if (keyboard_check_pressed(vk_enter) == true
 			
 		switch (menu_index)
 		{
+
 			case 0:
-				SlideTransition(TRANS_MODE.GOTO,rMainMenu);
-				break;
-			case 1:
 				//SlideTransition(TRANS_MODE.GOTO,rLevelSelect);
 				oMusic.toggleMusic = true;
 				break;
-			case 2:
+			case 1:
 				global.gameMode += 1;
 				if(global.gameMode == 3)//Go back to lowest value
 				{
@@ -118,6 +116,9 @@ if (keyboard_check_pressed(vk_enter) == true
 							set_game_mode(global.gameMode);
 							break;
 					}
+				break;
+			case 2:
+				SlideTransition(TRANS_MODE.GOTO,rMainMenu);
 				break;
 		}
 	}

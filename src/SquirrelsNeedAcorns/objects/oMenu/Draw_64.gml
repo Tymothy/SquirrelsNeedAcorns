@@ -1,5 +1,7 @@
-
+if(live_call()) return live_result;
 //Draw the buttons created in the Create event
+var _ww = global.GUIww;
+var _hh = global.GUIhh;
 if(room == rMainMenu)
 {
 	var i = 0;
@@ -43,11 +45,11 @@ if(room == rMainMenu)
 	
 		//Draw Version
 		draw_set_color(c_gray);
-	draw_set_font(fConthrax11);
+	draw_set_font(fDebug);
 	draw_set_halign(fa_left);
 	draw_set_valign(fa_bottom);
 	//Draw at very top left of screen
-	draw_text(5, global.GUIhh-5, string("Squirrels Need Acorns - Alpha Version 0.5.1"));
+	draw_text(global.GUIww*.04, global.GUIhh*.96, string("Squirrels Need Acorns - Alpha Version O.5.2"));
 		
 	//Draw Title
 	draw_set_font(fEthno36);
@@ -64,9 +66,9 @@ if(room == rHowTo)
 	draw_set_font(menuFont);
 	//Set menu at top left
 	draw_set_halign(fa_center);
-	draw_set_valign(fa_bottom);
-	menu_x = global.GUIww *.5;
-	menu_y = global.GUIhh -15;
+	draw_set_valign(fa_middle);
+	menu_x = _ww *.5;
+	menu_y = _hh *.8;
 	button_h = font_get_size(menuFont)*1.5;
 	//menu_x = 200;
 	//menu_y = 100; //- ((button_h * buttons)/2 + button_h);
@@ -92,8 +94,8 @@ if(room == rHowTo)
 	
 	//	draw_sprite(sWASD, image_index,100,700);
 		
-	var text_x = global.GUIww *.5;
-	var text_y = 25;
+	var text_x = _ww *.5;
+	var text_y = _hh *.1;
 
 
 	var textSpacing = font_get_size(fConthrax11)*1.5;
@@ -103,13 +105,13 @@ if(room == rHowTo)
 	draw_text_outline(text_x,text_y+textSpacing*0,string("How to Play"),c_white,c_aqua);
 	draw_set_font(fConthrax11);	
 	draw_set_color (c_ltgray);
-	draw_text(text_x,text_y+textSpacing*2,string("Touch left or right side of to screen move."));
+	draw_text_outline(text_x,text_y+textSpacing*3,string("Touch left or right side of to screen move."), c_black,c_ltgray);
 		
-	draw_text(text_x,text_y+textSpacing*4,string("The goal is to collect as many"));
-	draw_text(text_x,text_y+textSpacing*5,string("acorns as you can in 60 seconds."));
+	draw_text_outline(text_x,text_y+textSpacing*5,string("The goal is to collect as many"), c_black,c_ltgray);
+	draw_text_outline(text_x,text_y+textSpacing*6,string("acorns as you can in 60 seconds."), c_black,c_ltgray);
 		
-	draw_text(text_x,text_y+textSpacing*7,string("Watch your fuel, don't hit the"));
-	draw_text(text_x,text_y+textSpacing*8,string("walls too hard, and avoid spikes."));
+	draw_text_outline(text_x,text_y+textSpacing*8,string("Watch your fuel, don't hit the"), c_black,c_ltgray);
+	draw_text_outline(text_x,text_y+textSpacing*9,string("walls too hard, and avoid spikes."), c_black,c_ltgray);
 		
 //		draw_text(text_x,text_y+textSpacing*9,string("Press space bar in game to pause."));;
 		
@@ -127,8 +129,8 @@ if(room == rHighscore)
 	var i = 0;
 	draw_set_font(menuFont);
 	//Set menu at top left
-	menu_x = global.GUIww/4;
-	menu_y = global.GUIhh/4;
+	menu_x = global.GUIww*.5;
+	menu_y = global.GUIhh*.75;
 	button_h = font_get_size(menuFont)*1.5;
 	//menu_x = 200;
 	//menu_y = 100; //- ((button_h * buttons)/2 + button_h);
@@ -154,14 +156,21 @@ if(room == rHighscore)
 	
 	//	draw_sprite(sWASD, image_index,100,700);
 		
-	var text_x = global.GUIww * .65;
+	var text_x = global.GUIww * .5;
 	var text_y = global.GUIhh * .15;
-	draw_set_color (c_ltgray);
-	draw_set_font(fConthrax11);
 	var textSpacing = font_get_size(fConthrax11)*1.5;
 	
+	draw_set_halign(fa_center);
+	draw_set_valign(fa_top);
+	draw_set_font(fEthno18);
+	draw_text_outline(text_x,text_y-textSpacing*1,string("High Scores"),c_white,c_aqua);
+	
+	draw_set_color (c_ltgray);
+	draw_set_font(fConthrax11);
 
-		draw_text(text_x,text_y+textSpacing*0,string("Ice Asteroid - ")+string(rGameIce1Score));
+	
+	//Draw High Scores
+		draw_text_outline(text_x,text_y+textSpacing*1,string("Ice Asteroid - ")+string(rGameIce1Score),c_black,c_ltgray);
 		//draw_text(text_x,text_y+textSpacing*3,string("The goal is to collect as many"));
 		//draw_text(text_x,text_y+textSpacing*4,string("acorns as you can in 60 seconds."));
 		//draw_text(text_x,text_y+textSpacing*6,string("Be mindful of your fuel and"));
@@ -252,7 +261,8 @@ if(room == rOptions)
 	draw_set_font(menuFont);
 	menu_x = global.GUIww/2;
 	menu_y = global.GUIhh/2;
-
+	
+	draw_text_outline(_ww*.5, _hh *.2,string("Options"),c_white,c_aqua);
 	draw_set_valign(fa_middle);
 	draw_set_halign(fa_center);
 	repeat (buttons)

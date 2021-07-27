@@ -1,3 +1,4 @@
+if(live_call()) return live_result;
 /// @desc Insert description here
 #region
 var _hh = global.GUIhh

@@ -1,3 +1,4 @@
+if(live_call()) return live_result;
 /// @desc Insert description here
 //draw_set_color(c_red)
 //draw_rectangle(50,50,50+(200-50)*(oPlayer.fuel),100,0);
@@ -81,53 +82,58 @@ if(showCountDown > 0)
 		draw_set_color(c_ltgray);
 		draw_set_halign(fa_center);
 		draw_set_valign(fa_middle);
-		draw_text(_ww/2,_hhalert,"Get Ready!");
-		draw_text_outline(_ww/2, _hhalert, "Get Ready!", c_black,c_ltgray);
+		draw_text(alertX,alertY,"Get Ready!");
+		draw_text_outline(alertX,alertY, "Get Ready!", c_black,c_ltgray);
 
 		draw_set_font(alertFont);
 		draw_set_color(c_yellow);
 		draw_set_halign(fa_center);
 		draw_set_valign(fa_middle);
-		draw_text_outline(_ww/2,_hhalert+font_get_size(alertFont)*1.5,string(showCountDown),c_black, c_ltgray);
+		draw_text_outline(alertX,alertY+font_get_size(alertFont)*1.5,string(showCountDown),c_black, c_ltgray);
 	}
 
 #region //Alerts
-if((oPlayer.fuel > 10 && oPlayer.fuel < .2*oPlayer.fuelMax))
+var alertActive = false;
+
+if((gameTimer == 0) && alertActive ==false)
 {
 	draw_set_font(alertFont);
 	draw_set_color(c_ltgray);
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_middle);
-	draw_text_outline(_ww/2,_hhalert,"Low Fuel!",c_black, c_yellow);
-}
-if((oPlayer.fuel < 10))
-{
-	draw_set_font(alertFont);
-	draw_set_color(c_ltgray);
-	draw_set_halign(fa_center);
-	draw_set_valign(fa_middle);
-	draw_text_outline(_ww/2,_hhalert,"Out of Fuel!",c_black, c_red);
+	draw_text_outline(alertX,alertY,"Time's Up!",c_black, c_red);
+	alertActive = true;
 }
 
 
-if((gameTimer == 0))
+if((oPlayer.playerHealth < 1) && alertActive ==false)
 {
 	draw_set_font(alertFont);
 	draw_set_color(c_ltgray);
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_middle);
-	draw_text_outline(_ww/2,_hhalert,"Time's Up!",c_black, c_red);
+	draw_text_outline(alertX,alertY,"Squirrel Down!",c_black, c_red);
+	alertActive = true;
 }
 
-
-if((oPlayer.playerHealth < 1))
+if((oPlayer.fuel < 10) && alertActive ==false)
 {
 	draw_set_font(alertFont);
 	draw_set_color(c_ltgray);
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_middle);
-	draw_text_outline(_ww/2,_hhalert,"Squirrel Down!",c_black, c_red);
-	
+	draw_text_outline(alertX,alertY,"Out of Fuel!",c_black, c_red);
+	alertActive = true;
+}
+
+if((oPlayer.fuel > 10 && oPlayer.fuel < .2*oPlayer.fuelMax && alertActive ==false))
+{
+	draw_set_font(alertFont);
+	draw_set_color(c_ltgray);
+	draw_set_halign(fa_center);
+	draw_set_valign(fa_middle);
+	draw_text_outline(alertX,alertY,"Low Fuel!",c_black, c_yellow);
+	alertActive = true;
 }
 
 #endregion

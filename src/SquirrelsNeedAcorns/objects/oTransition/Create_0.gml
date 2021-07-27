@@ -1,3 +1,4 @@
+if(live_call()) return live_result;
 /// @description Size variables and mode setup
 // You can write your code in this editor
 

@@ -1,4 +1,5 @@
 /// @desc Insert description here
+if(live_call()) return live_result;
 var _paused = oPause.paused;
 var _damageObstacle = false; //If set to true, apply damage
 
