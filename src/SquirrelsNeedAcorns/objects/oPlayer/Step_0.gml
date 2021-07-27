@@ -22,8 +22,10 @@ if(oGameGUI.gameTimer > 0.0 && oPause.paused == false) //Remove all player contr
 
 			ySpeedTemp = (ySpeedTemp - (flyUp * flyUpPower));
 			xSpeedTemp = (xSpeedTemp + (moveRight-moveLeft)* pushPower);
-			fuel = fuel - (flyUp*(engineFuelUsage)) - moveRight - moveLeft;
-	
+			if(global.gameOptions.fuelUse == true)
+			{
+				fuel = fuel - (flyUp*(engineFuelUsage)) - moveRight - moveLeft;
+			}
 		}
 		ySpeedTemp = ySpeedTemp + planetGravity;
 	}
@@ -50,13 +52,13 @@ if(oGameGUI.gameTimer > 0.0 && oPause.paused == false) //Remove all player contr
 		{
 			xSpeedFloat = 0;
 		}
-		if(yCollision = true)
-		{
-			if (xSpeedTemp != 0){
-				xSpeedTemp -= planetFriction*sign(xSpeed);
-			}
-			}
-		}
+		//if(yCollision = true)
+		//{
+		//	if (xSpeedTemp != 0){
+		//		xSpeedTemp -= planetFriction*sign(xSpeed);
+		//	}
+		//	}
+		//}
 /*
 	Arrays store clockwise, starting from top middle.
 	Order collisionArray[
@@ -175,8 +177,15 @@ if(oGameGUI.gameTimer > 0.0 && oPause.paused == false) //Remove all player contr
 				xSpeed = 0;
 				xSpeedTemp = 0;
 			}
-		}		 
-
+		}	 
+		if(yCollision == true)
+		{
+			if (xSpeed != 0){
+				xSpeedTemp = xSpeedTemp - planetFriction*sign(xSpeed);				
+				xSpeed = xSpeed - planetFriction*sign(xSpeed);
+			}
+			}
+		}
 	//Obstacle Collision
 	if (place_meeting(x+xSpeed,y, oparCollision))
 	{
@@ -201,6 +210,7 @@ if(oGameGUI.gameTimer > 0.0 && oPause.paused == false) //Remove all player contr
 		yCollision = true;
 		_damageObstacle = true;
 	}
+	
 	/*
 	if (place_meeting(x+hsp,y,oWall))
 		{
@@ -238,7 +248,10 @@ if(oGameGUI.gameTimer > 0.0 && oPause.paused == false) //Remove all player contr
 		if((abs(yCollideSpeed) > ySpeedKill) || _damageObstacle == true)
 		{
 
-			playerDamage();
+			if(global.gameOptions.damage == true)
+			{
+				playerDamage();
+			}
 			ScreenShake(oCamera, 10, 30);
 			flash_player(.8, c_red, invulnTimer);
 			invuln = true;
@@ -250,7 +263,10 @@ if(oGameGUI.gameTimer > 0.0 && oPause.paused == false) //Remove all player contr
 		if((abs(xCollideSpeed) > xSpeedKill) || _damageObstacle == true)
 		{
 
-			playerDamage();
+			if(global.gameOptions.damage == true)
+			{
+				playerDamage();
+			}
 			ScreenShake(oCamera, 10, 30);
 			flash_player(.8, c_red, invulnTimer);
 			invuln = true;

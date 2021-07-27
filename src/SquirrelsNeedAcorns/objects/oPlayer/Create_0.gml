@@ -3,7 +3,7 @@
 
 //Level Variables
 //Old values, before resolution change
-flyUpPowerEVar = 2.4;
+flyUpPowerEVar = 2.6;
 pushPowerEVar = 1.5;
 planetGravityEVar = 1.2;
 playerDeathFrictionEVar = 5;

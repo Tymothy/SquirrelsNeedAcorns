@@ -210,7 +210,7 @@ if(room == rEndRun)
 	var i = 0;
 	draw_set_font(menuFont);
 	menu_x = global.GUIww/2;
-	menu_y = global.GUIhh/2;
+	menu_y = global.GUIhh*.6;
 
 	draw_set_valign(fa_middle);
 	draw_set_halign(fa_center);
@@ -235,7 +235,15 @@ if(room == rEndRun)
 	draw_set_font(fConthrax26);
 	draw_text_outline(menu_x, menu_y*.5+font_get_size(fConthrax26)*1.5,string(global.points),c_black, c_yellow);
 
-
+	//Gamemode specific
+	draw_set_font(menuFont);
+	draw_text_outline(menu_x, menu_y*.15, "Mode: "+string(gameModeString), c_black, c_ltgray);
+	
+	if(global.gameMode != 0)
+	{
+		draw_set_font(fEthno12);
+		draw_text_outline(menu_x, menu_y*.15+font_get_size(menuFont)*1.5, "Score not saved due to mode", c_black, c_ltgray);
+	}
 } //End Level Select
 
 if(room == rOptions)

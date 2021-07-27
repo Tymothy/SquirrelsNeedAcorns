@@ -8,7 +8,7 @@ global.points = 0;
 global.final = 0;
 global.highscore = 0;
 global.money = 0;
-global.musicToggle = true;
+
 global.touchEnabled = true;
 
 global.defaultWidth = 640;
@@ -31,6 +31,27 @@ global.playerPropelRunning = s_propel_red_running;
 
 //Save File
 global.saveFile = "savedata.ini";
+
+//Options
+global.musicToggle = true;
+
+//Game Modes
+global.gameOptions =
+{
+	timed : false,
+	fuelUse : false,
+	damage : false,
+	scoring : true,
+}
+
+global.gameMode = 0;
+/*
+0 = Challenge
+1 = Zen
+2 = Practice
+*/
+
+		
 
 //Get high score from last session, if it exists.  Otherwise use 0.
 //ini_open("savedata.ini");

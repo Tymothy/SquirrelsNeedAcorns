@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if(room = rEndRun)
+if(room = rEndRun && global.gameMode == 0)
 {
 	ini_open(global.saveFile);
 	var _checkHighscore = 0;

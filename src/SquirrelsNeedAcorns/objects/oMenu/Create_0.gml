@@ -6,12 +6,30 @@ touchSelect = false;
 //High score variables
 rGameIce1Score = 0;
 
+switch(global.gameMode)
+	{
+		case 0:	
+			gameModeString = "Challenge";
+			set_game_mode(global.gameMode);
+			break;
+	
+		case 1:
+			gameModeString = "Zen";
+			set_game_mode(global.gameMode);
+			break;
+	
+		case 2:
+			gameModeString = "Practice";
+			set_game_mode(global.gameMode);
+			break;
+	}
+
 //Buttons
 //Change this to a switch statement
 if(room == rMainMenu)
 {
 //button_h = 80;
-button[0] = "Level Select";
+button[0] = "Play";
 button[1] = "How to Play";
 button[2] = "High Scores";
 button[3] = "Options";
@@ -46,7 +64,9 @@ button[2] = "Main Menu";
 
 if(room == rOptions)
 {
+	
 	musicString = "On";
+
 	if (global.musicToggle == false)
 	{
 		musicString = "Off";
@@ -55,7 +75,7 @@ if(room == rOptions)
 button[0] = "Back to Main Menu";
 //button[1] = "Classic";
 button[1] = "Music: " + string(musicString);
-//button[3] = "Exit";
+button[2] = "Mode: " + string(gameModeString);
 }
 
 buttons = array_length(button);

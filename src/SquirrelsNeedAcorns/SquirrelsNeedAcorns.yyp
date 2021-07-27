@@ -138,6 +138,7 @@
     {"id":{"name":"shd_magnify","path":"shaders/shd_magnify/shd_magnify.yy",},"order":6,},
     {"id":{"name":"obj_player_magnify","path":"objects/obj_player_magnify/obj_player_magnify.yy",},"order":1,},
     {"id":{"name":"fEthno36","path":"fonts/fEthno36/fEthno36.yy",},"order":7,},
+    {"id":{"name":"set_game_mode","path":"scripts/set_game_mode/set_game_mode.yy",},"order":12,},
     {"id":{"name":"sTileCollision","path":"sprites/sTileCollision/sTileCollision.yy",},"order":1,},
     {"id":{"name":"obj_player_emboss","path":"objects/obj_player_emboss/obj_player_emboss.yy",},"order":1,},
     {"id":{"name":"obj_controller_LED_effect","path":"objects/obj_controller_LED_effect/obj_controller_LED_effect.yy",},"order":0,},
@@ -344,7 +345,7 @@
     {"CopyToMask":-1,"filePath":"datafiles","resourceVersion":"1.0","name":"savedata.ini","resourceType":"GMIncludedFile",},
   ],
   "MetaData": {
-    "IDEVersion": "2.3.3.570",
+    "IDEVersion": "2.3.3.574",
   },
   "resourceVersion": "1.4",
   "name": "SquirrelsNeedAcorns",

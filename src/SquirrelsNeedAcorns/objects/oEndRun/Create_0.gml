@@ -20,22 +20,22 @@ menu_y = global.view_h_half;
 //	global.highscore = global.points;	
 //}
 
-ini_open("savedata.ini");
-var runMoney = ini_read_real("stats", "money", 0);
-global.money = global.money + runMoney;
+//ini_open("savedata.ini");
+//var runMoney = ini_read_real("stats", "money", 0);
+//global.money = global.money + runMoney;
 
-var _checkHighscore = 0;
-switch(global.lastGameRoom)
-{
-	case rGameIce1:
-		_checkHighscore = ini_read_real("stats", rGameIce1, 0);
-		show_debug_message("Checking for previous highscore");
-		if(_checkHighscore < global.points) //If high score is reached, set it
-			{
-			ini_write_real("stats", "rGameIce1", global.points);
-			show_debug_message("Writing points to save file");
-			}
-		break;
-}
-//ini_write_real("stats", "money", global.money);
-ini_close();
+//var _checkHighscore = 0;
+//switch(global.lastGameRoom)
+//{
+//	case rGameIce1:
+//		_checkHighscore = ini_read_real("stats", rGameIce1, 0);
+//		show_debug_message("Checking for previous highscore");
+//		if(_checkHighscore < global.points) //If high score is reached, set it
+//			{
+//			ini_write_real("stats", "rGameIce1", global.points);
+//			show_debug_message("Writing points to save file");
+//			}
+//		break;
+//}
+////ini_write_real("stats", "money", global.money);
+//ini_close();

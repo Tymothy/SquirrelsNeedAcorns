@@ -94,8 +94,30 @@ if (keyboard_check_pressed(vk_enter) == true
 			case 1:
 				//SlideTransition(TRANS_MODE.GOTO,rLevelSelect);
 				oMusic.toggleMusic = true;
-
-
+				break;
+			case 2:
+				global.gameMode += 1;
+				if(global.gameMode == 3)//Go back to lowest value
+				{
+					global.gameMode = 0;	
+				}
+					switch(global.gameMode)
+					{
+						case 0:	
+							gameModeString = "Challenge";
+							set_game_mode(global.gameMode);
+							break;
+	
+						case 1:
+							gameModeString = "Zen";
+							set_game_mode(global.gameMode);
+							break;
+	
+						case 2:
+							gameModeString = "Practice";
+							set_game_mode(global.gameMode);
+							break;
+					}
 				break;
 		}
 	}
