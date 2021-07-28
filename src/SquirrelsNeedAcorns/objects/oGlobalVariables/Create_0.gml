@@ -24,6 +24,7 @@ global.lastGameRoom = 0;
 
 //Declare Player Cosmetics
 global.playerCharacter = sPlayer;
+global.playerTopper = s_topper_spacehelmet;
 global.playerBelt = s_belt_orange;
 global.playerRocket = s_rocket_blue;
 global.playerPropelStart = s_propel_red_start;

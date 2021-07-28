@@ -123,6 +123,7 @@
     {"id":{"name":"rStart","path":"rooms/rStart/rStart.yy",},"order":4,},
     {"id":{"name":"rm_wave","path":"rooms/rm_wave/rm_wave.yy",},"order":17,},
     {"id":{"name":"sound_transition_fast","path":"sounds/sound_transition_fast/sound_transition_fast.yy",},"order":7,},
+    {"id":{"name":"s_topper_spacehelmet","path":"sprites/s_topper_spacehelmet/s_topper_spacehelmet.yy",},"order":0,},
     {"id":{"name":"sStarfieldBackground","path":"sprites/sStarfieldBackground/sStarfieldBackground.yy",},"order":1,},
     {"id":{"name":"shd_sketch","path":"shaders/shd_sketch/shd_sketch.yy",},"order":15,},
     {"id":{"name":"Change Log","path":"notes/Change Log/Change Log.yy",},"order":1,},
@@ -318,6 +319,7 @@
     {"folderPath":"folders/Objects/Entities/Pickups.yy","order":3,"resourceVersion":"1.0","name":"Pickups","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objects/Entities/Obstacles.yy","order":4,"resourceVersion":"1.0","name":"Obstacles","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sounds/Soundtrack.yy","order":10,"resourceVersion":"1.0","name":"Soundtrack","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Sprites/Entities/Player/Topper.yy","order":4,"resourceVersion":"1.0","name":"Topper","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
