@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sAcorn",
-    "path": "sprites/sAcorn/sAcorn.yy",
+    "name": "s_pickup_point_acorn",
+    "path": "sprites/s_pickup_point_acorn/s_pickup_point_acorn.yy",
   },
   "solid": false,
   "visible": true,

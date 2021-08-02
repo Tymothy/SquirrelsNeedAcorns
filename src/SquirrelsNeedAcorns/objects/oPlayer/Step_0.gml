@@ -323,6 +323,7 @@ if(oGameGUI.gameTimer > 0.0 && oPause.paused == false) //Remove all player contr
 		{
 			other.pointsOnPlayer += pointValue;
 			other.fuel += fuelValue;
+			other.playerHealth += lifeValue;
 			instance_destroy();
 			//audio_play_sound(soundPickup,3,false);
 		}	
@@ -336,6 +337,7 @@ if(oGameGUI.gameTimer > 0.0 && oPause.paused == false) //Remove all player contr
 		{
 			other.pointsOnPlayer += pointValue;
 			other.fuel += fuelValue;
+			other.playerHealth += lifeValue;
 			instance_destroy();
 			//audio_play_sound(soundPickup,3,false);
 		}	

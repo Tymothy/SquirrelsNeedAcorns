@@ -49,7 +49,7 @@ if(room == rMainMenu)
 	draw_set_halign(fa_left);
 	draw_set_valign(fa_bottom);
 	//Draw at very top left of screen
-	draw_text(global.GUIww*.04, global.GUIhh*.96, string("Squirrels Need Acorns - Alpha Version O.5.2"));
+	draw_text(global.GUIww*.04, global.GUIhh*.96, string(global.versionText));
 		
 	//Draw Title
 	draw_set_font(fEthno36);

@@ -6,16 +6,17 @@ draw_self();
 //Draw attire
 draw_sprite_ext(global.playerTopper, image_index, x, y, image_xscale, image_yscale, image_angle,image_blend, image_alpha);
 draw_sprite_ext(global.playerRocket,image_index, x, y, image_xscale, image_yscale, image_angle,image_blend, image_alpha);
-
 draw_sprite_ext(global.playerBelt, image_index, x, y, image_xscale, image_yscale, image_angle,image_blend, image_alpha);
 
-//Flash
+//Damage Flash
 if (flashAlpha > 0)
 {
 	shader_set(shFlash);
 	
 	draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, flashColor, flashAlpha);
-	
+	draw_sprite_ext(global.playerTopper, image_index, x, y, image_xscale, image_yscale, image_angle,flashColor, flashAlpha);
+	draw_sprite_ext(global.playerRocket,image_index, x, y, image_xscale, image_yscale, image_angle,flashColor, flashAlpha);
+	draw_sprite_ext(global.playerBelt, image_index, x, y, image_xscale, image_yscale, image_angle,flashColor, flashAlpha);
 	shader_reset();
 	
 }
@@ -62,7 +63,7 @@ if (flashAlpha > 0)
 		}
 	}
 	
-	if (flyUp != 1) // Player is no long accelerating up
+	if (flyUp != 1) // Player is no longer accelerating up
 	{
 		propelStart = 0;
 		propelRunning = 0;

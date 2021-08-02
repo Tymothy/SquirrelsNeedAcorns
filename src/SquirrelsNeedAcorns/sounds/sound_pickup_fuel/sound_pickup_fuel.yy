@@ -13,8 +13,8 @@
   "soundFile": "sound_pickup_fuel.wav",
   "duration": 0.433492,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "Pickup",
+    "path": "folders/Sounds/Pickup.yy",
   },
   "resourceVersion": "1.0",
   "name": "sound_pickup_fuel",

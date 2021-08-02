@@ -1,4 +1,6 @@
 /// @desc Insert description here
+//Variables changed often
+global.versionText = "Squirrels Need Acorns - Alpha Version O.5.3"
 
 //Declare Global Variables
 global.cam = view_camera[0];
@@ -11,8 +13,8 @@ global.money = 0;
 
 global.touchEnabled = true;
 
-global.defaultWidth = 640;
-global.defaultHeight = 360;
+global.defaultWidth = 640; //Default 640
+global.defaultHeight = 360; //Default 360
 global.tileSize = 16;
 global.goalAspect = global.defaultWidth / global.defaultHeight;
 global.GUIZoom = 2; //Higher number, smaller UI
