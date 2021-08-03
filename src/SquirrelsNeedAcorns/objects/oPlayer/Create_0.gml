@@ -24,7 +24,7 @@ alive = true;
 //Cargo
 pointsOnPlayer = 0;
 fuelMax = 1500; //Default 1500
-fuel = 1500; //Default 1500;
+fuel = fuelMax; //Set fuel to full on start
 
    
 //Static Movement Variables

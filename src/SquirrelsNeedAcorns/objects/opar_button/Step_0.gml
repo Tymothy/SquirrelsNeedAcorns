@@ -1,5 +1,5 @@
 /// @description Insert description here
-// You can write your code in this editor
+if(live_call()) return live_result;
 if (my_touch == -1) {
 	
 	for (var i = 0; i < 10; i += 1) {

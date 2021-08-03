@@ -1,6 +1,5 @@
 /// @description Insert description here
-// You can write your code in this editor
-		//zoom = Zoom();
+if(live_call()) return live_result;
 if(fullscreen == true)
 {
 	if (browser_width != width || browser_height != height || currentRoom != room || runScaling == true)

@@ -1,5 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+if(live_call()) return live_result;
 function canvas_fullscreen(_base, _zoom){
 	/// @function               canvas_fullscreen(base)
 	/// @param {int}    base    The base value for scaling on both axis
@@ -41,6 +42,17 @@ function canvas_fullscreen(_base, _zoom){
 	var _camWidth = global.defaultWidth * 2;
 	var _camHeight = global.defaultHeight * 2;
 	
+	camera_set_view_size(view_camera[0], _vw, _vh);
+	//camera_set_view_size(view_camera[0], 640, 360);
+	surface_resize(application_surface, view_wport[0], view_hport[0]);
+/*
+Get jitter free pixel art
+If {Viewport mod camera == 0}(no jitter)
+
+It's pretty simple. You want to make sure the dimensions of your camera are an EVEN MULTIPLE of your view port.
+
+Got a 1920x1080 viewport? Try setting your camera size to 480x270. 1360x768? Try 340x256.
+*/
 	//TODO: GET PIXEL PERFECT SCALING
 	
 	 //_temp = (_vw % _camWidth);
@@ -60,16 +72,4 @@ function canvas_fullscreen(_base, _zoom){
 	 
 
 	//camera_set_view_size(view_camera[0], _camWidth, _camHeight);
-	
-	camera_set_view_size(view_camera[0], _vw, _vh);
-	//camera_set_view_size(view_camera[0], 640, 360);
-	surface_resize(application_surface, view_wport[0], view_hport[0]);
-/*
-Get jitter free pixel art
-If {Viewport mod camera == 0}(no jitter)
-
-It's pretty simple. You want to make sure the dimensions of your camera are an EVEN MULTIPLE of your view port.
-
-Got a 1920x1080 viewport? Try setting your camera size to 480x270. 1360x768? Try 340x256.
-*/
 }
