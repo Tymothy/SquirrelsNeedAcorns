@@ -6,3 +6,8 @@ image_speed = 0;
 font = fButton;
 outline = c_white;
 color = c_ltgray;
+
+margin = 15;//How far around text to draw
+
+text = "";
+transitionLocation = 0;

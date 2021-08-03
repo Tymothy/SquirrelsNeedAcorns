@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "s_button_background",
-    "path": "sprites/s_button_background/s_button_background.yy",
+    "name": "s_button_pressable",
+    "path": "sprites/s_button_pressable/s_button_pressable.yy",
   },
   "solid": false,
   "visible": true,
@@ -25,6 +25,8 @@
   "physicsShapePoints": [],
   "eventList": [
     {"isDnD":false,"eventNum":64,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
