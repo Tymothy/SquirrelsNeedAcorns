@@ -7,3 +7,4 @@ if(room = rHighscore)
 	rGameIce1Score = ini_read_real("stats", "rGameIce1", 0);
 	ini_close();
 }
+

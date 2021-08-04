@@ -37,11 +37,11 @@ if (keyboard_check_pressed(vk_enter) == true
 				SlideTransition(TRANS_MODE.GOTO,rHowTo);
 				break;
 			case 2:
-				SlideTransition(TRANS_MODE.GOTO,rHighscore);
-				break;
-			case 3:
 				SlideTransition(TRANS_MODE.GOTO,rOptions);
 				break;
+			//case 3:
+			//	SlideTransition(TRANS_MODE.GOTO,rOptions);
+			//	break;
 		}
 	}
 	if(room == rHowTo || room == rHighscore)
@@ -133,3 +133,4 @@ if (keyboard_check_pressed(vk_enter) == true
 	if (device_mouse_check_button_released(0, mb_any)) {
 		ableToSelect = true;
 	}
+

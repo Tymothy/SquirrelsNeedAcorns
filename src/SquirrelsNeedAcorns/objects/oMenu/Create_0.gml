@@ -1,8 +1,13 @@
 if(live_call()) return live_result;
 menuFont = fEthno18;
 button_h = font_get_size(menuFont)*2.3;
+margin = 1.15; //How far around text button should be drawn, as a multiplyer
+buttonSprite = s_button_pressable;
+
 ableToSelect = true;
 touchSelect = false;
+
+debug = true;
 
 //High score variables
 rGameIce1Score = 0;
@@ -27,13 +32,16 @@ switch(global.gameMode)
 
 //Buttons
 //Change this to a switch statement
+#region Set buttons array with text
 if(room == rMainMenu)
 {
 //button_h = 80;
 button[0] = "Play";
 button[1] = "How to Play";
-button[2] = "High Scores";
-button[3] = "Options";
+//button[2] = "High Scores";
+button[2] = "Options";
+
+	//Create button size
 }
 
 if(room == rHowTo || room == rHighscore)
@@ -80,27 +88,24 @@ button[1] = "Mode: " + string(gameModeString);
 button[2] = "Back to Main Menu";
 }
 
+#endregion
+
 buttons = array_length(button);
 
 menu_index = 0;
 last_selected = 0;
-/*
-//Move below to "How to Play"
-pButtonX = oScaling.width - oScaling.width/5
-pButtonY = oScaling.height - oScaling.height/3
-pButtonHeight = 25;
-pButton[0] = "The goal is to collect as many";
-pButton[1] = "acorns as you can in 60 seconds.";
-pButton[2] = "";
-pButton[3] = "Be mindful of your fuel and";
-pButton[4] = "hitting the walls too hard.";
-pButton[5] = "";
-pButton[6] = "M to toggle music.";
-pButtons = array_length(pButton);
-*/
 
-	//draw_text(global.view_w_half,global.view_h_half+150,string("The goal is to collect as many"));
-	//draw_text(global.view_w_half,global.view_h_half+180,string("acorns as you can in 60 seconds."));
-	//draw_text(global.view_w_half,global.view_h_half+230,string("Be mindful of your fuel and"));
-	//draw_text(global.view_w_half,global.view_h_half+260,string("hitting the walls too hard."));
-	//draw_text(global.view_w_half,global.view_h_half+310,string("M to toggle music."));
+//Create buttons
+draw_set_font(menuFont); //Required so string height and width can be accurately found
+maxWidth = 0;
+maxHeight = 0;
+
+maxHeight = string_height_array(button);
+maxWidth = string_width_array(button);
+maxWidth = maxWidth * margin;
+maxHeight = maxHeight * margin;
+
+//Get xscale and yscale values to use in Draw GUI event
+buttonXScale = maxWidth/sprite_get_width(buttonSprite);
+buttonYScale = maxHeight/sprite_get_height(buttonSprite);
+

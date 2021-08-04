@@ -1,6 +1,7 @@
 /// @desc Insert description here
 //Variables changed often
-global.versionText = "Squirrels Need Acorns - Alpha Version O.5.3"
+global.versionText = "Squirrels Need Acorns - Alpha Version O.5.3";
+global.debug = true;
 
 //Declare Global Variables
 global.cam = view_camera[0];
