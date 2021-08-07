@@ -58,11 +58,11 @@ if (keyboard_check_pressed(vk_enter) == true
 		switch (menu_index)
 		{
 			case 0:
-				SlideTransition(TRANS_MODE.GOTO,rGameIce1);
+				SlideTransition(TRANS_MODE.GOTO,rMainMenu);
 				break;
-			//case 1:
-			//	SlideTransition(TRANS_MODE.GOTO,rGame);
-			//	break;
+			case 1:
+				SlideTransition(TRANS_MODE.GOTO,global.levelSelectArray[global.selectedLevel].roomName);
+				break;
 			case 2:
 				SlideTransition(TRANS_MODE.GOTO,rMainMenu);
 				break;
@@ -102,17 +102,17 @@ if (keyboard_check_pressed(vk_enter) == true
 					switch(global.gameMode)
 					{
 						case 0:	
-							gameModeString = "Challenge";
+							global.gameModeString = "Challenge";
 							set_game_mode(global.gameMode);
 							break;
 	
 						case 1:
-							gameModeString = "Zen";
+							global.gameModeString = "Zen";
 							set_game_mode(global.gameMode);
 							break;
 	
 						case 2:
-							gameModeString = "Practice";
+							global.gameModeString = "Practice";
 							set_game_mode(global.gameMode);
 							break;
 					}

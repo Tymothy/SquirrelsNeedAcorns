@@ -1,9 +1,15 @@
 if(live_call()) return live_result;
 menuFont = fEthno18;
 button_h = font_get_size(menuFont)*2.3;
+button_w = 3;
+
 margin = 1.15; //How far around text button should be drawn, as a multiplyer
 buttonSprite = s_button_pressable;
-
+enum LAYOUT{
+	HORIZONTAL,
+	VERTICAL
+}
+layout = LAYOUT.VERTICAL; //Vertical is standard layout
 ableToSelect = true;
 touchSelect = false;
 
@@ -15,17 +21,17 @@ rGameIce1Score = 0;
 switch(global.gameMode)
 	{
 		case 0:	
-			gameModeString = "Challenge";
+			
 			set_game_mode(global.gameMode);
 			break;
 	
 		case 1:
-			gameModeString = "Zen";
+
 			set_game_mode(global.gameMode);
 			break;
 	
 		case 2:
-			gameModeString = "Practice";
+
 			set_game_mode(global.gameMode);
 			break;
 	}
@@ -56,9 +62,10 @@ button[0] = "Return to\nMain Menu";
 if(room == rLevelSelect)
 {
 //button_h = 80;
-button[0] = "Ice Asteroid";
-button[1] = "";
-button[2] = "Main Menu";
+layout = LAYOUT.HORIZONTAL;
+button[0] = "Previous\n Level";
+button[1] = "Play";
+button[2] = "Next\n Level";
 //button[3] = "Exit";
 }
 
@@ -84,7 +91,7 @@ if(room == rOptions)
 
 //button[1] = "Classic";
 button[0] = "Music: " + string(musicString);
-button[1] = "Mode: " + string(gameModeString);
+button[1] = "Mode: " + string(global.gameModeString);
 button[2] = "Back to Main Menu";
 }
 

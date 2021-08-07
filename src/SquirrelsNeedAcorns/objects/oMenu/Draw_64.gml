@@ -5,47 +5,11 @@ var _hh = global.GUIhh;
 
 	if(room == rMainMenu)
 	{
-		var i = 0;
-		draw_set_font(menuFont);
+
 		menu_x = global.GUIww/2;
 		menu_y = global.GUIhh/2;
 		//button_h = font_get_size(menuFont)*1.5;
 
-		draw_set_valign(fa_middle);
-		draw_set_halign(fa_center);
-	
-		repeat (buttons)
-		{
-			draw_sprite_ext(s_button_pressable,0,menu_x,menu_y + button_h * i,buttonXScale,buttonYScale,0,-1,1); //Draw pressed button
-			//Function needs, button[i], menu_x, menu_y, button_h
-			if(touch_buttons(menu_x, menu_y, i, maxWidth, maxHeight, button_h))
-			{
-				menu_index = i;
-				touchSelect = true;
-				draw_sprite_ext(s_button_pressable,1,menu_x,menu_y + button_h * i,buttonXScale,buttonYScale,0,-1,1); //Draw pressed button
-			}
-			if(global.debug == true)
-			{
-				//Debugging, show outline of buttons
-				//Draw touch boxes
-				//var _sw = string_width(button[i]);
-				//var _sh = string_height(button[i]);
-				var _sw = maxWidth;
-				var _sh = maxHeight;
-				var _x1 = menu_x-_sw*.6;
-				var _x2 = menu_x+_sw*.6;
-				var _y1 = menu_y+button_h*i-_sh*.7;
-				var _y2 = menu_y+button_h*i+_sh*.6;
-				//Show Outline of Button
-				draw_set_color(c_yellow);
-				draw_rectangle(_x1, _y1, _x2, _y2 ,true);
-			}
-		
-			draw_text_outline(menu_x, menu_y + button_h * i, button[i], c_black,c_ltgray);
-
-			i++;	
-		}
-		i = 0;
 	
 			//Draw Version
 			draw_set_color(c_gray);
@@ -195,32 +159,8 @@ var _hh = global.GUIhh;
 
 	if(room == rLevelSelect)
 	{
-		var i = 0;
-		draw_set_font(menuFont);
-		menu_x = global.GUIww/2;
-		menu_y = global.GUIhh/2;
-
-		draw_set_valign(fa_middle);
-		draw_set_halign(fa_center);
-		repeat (buttons)
-		{
-			draw_sprite_ext(s_button_pressable,0,menu_x,menu_y + button_h * i,buttonXScale,buttonYScale,0,-1,1); //Draw pressed button
-			//Function needs, button[i], menu_x, menu_y, button_h
-			if(touch_buttons(menu_x, menu_y, i, maxWidth, maxHeight, button_h))
-			{
-				menu_index = i;
-				touchSelect = true;
-				draw_sprite_ext(s_button_pressable,1,menu_x,menu_y + button_h * i,buttonXScale,buttonYScale,0,-1,1); //Draw pressed button
-			}
-			draw_text_outline(menu_x, menu_y + button_h * i, button[i], c_black,c_ltgray);
-			//if (menu_index == i)
-			//{
-			//draw_text_outline(menu_x, menu_y + button_h * i, button[i], c_black,c_aqua);
-			//}
-			i++;	
-		}
-		i = 0;
-
+		menu_x = global.GUIww*.5 - (maxWidth + (buttons+button_w)/2);
+		menu_y = global.GUIhh*.7;
 
 	} //End Level Select
 
@@ -233,24 +173,6 @@ var _hh = global.GUIhh;
 
 		draw_set_valign(fa_middle);
 		draw_set_halign(fa_center);
-		repeat (buttons)
-		{
-				draw_sprite_ext(s_button_pressable,0,menu_x,menu_y + button_h * i,buttonXScale,buttonYScale,0,-1,1); //Draw pressed button
-				//Function needs, button[i], menu_x, menu_y, button_h
-				if(touch_buttons(menu_x, menu_y, i, maxWidth, maxHeight, button_h))
-				{
-					menu_index = i;
-					touchSelect = true;
-					draw_sprite_ext(s_button_pressable,1,menu_x,menu_y + button_h * i,buttonXScale,buttonYScale,0,-1,1); //Draw pressed button
-				}
-				draw_text_outline(menu_x, menu_y + button_h * i, button[i], c_black,c_ltgray);
-				//if (menu_index == i)
-				//{
-				//draw_text_outline(menu_x, menu_y + button_h * i, button[i], c_black,c_aqua);
-				//}
-				i++;
-		}
-		i = 0;
 	
 		//Write score
 		draw_text_outline(menu_x, menu_y*.5, "Points scored this run", c_black, c_ltgray);
@@ -259,39 +181,119 @@ var _hh = global.GUIhh;
 
 		//Gamemode specific
 		draw_set_font(menuFont);
-		draw_text_outline(menu_x, menu_y*.15, "Mode: "+string(gameModeString), c_black, c_ltgray);
+		draw_text_outline(menu_x, menu_y*.15, "Mode: "+string(global.gameModeString), c_black, c_ltgray);
 	
 		if(global.gameMode != 0)
 		{
 			draw_set_font(fEthno12);
 			draw_text_outline(menu_x, menu_y*.15+font_get_size(menuFont)*1.5, "Score not saved due to mode", c_black, c_ltgray);
 		}
-	} //End Level Select
+	} //End EndRun
 
 	if(room == rOptions)
 	{
-		var i = 0;
-		draw_set_font(menuFont);
 		menu_x = global.GUIww/2;
 		menu_y = global.GUIhh/2;
-	
-		draw_text_outline(_ww*.5, _hh *.2,string("Options"),c_white,c_aqua);
 		draw_set_valign(fa_middle);
-		draw_set_halign(fa_center);
-		repeat (buttons)
-		{
-			draw_sprite_ext(s_button_pressable,0,menu_x,menu_y + button_h * i,buttonXScale,buttonYScale,0,-1,1); //Draw pressed button
-			//Function needs, button[i], menu_x, menu_y, button_h
-			if(touch_buttons(menu_x, menu_y, i, maxWidth, maxHeight, button_h))
-			{
-				menu_index = i;
-				touchSelect = true;
-				draw_sprite_ext(s_button_pressable,1,menu_x,menu_y + button_h * i,buttonXScale,buttonYScale,0,-1,1); //Draw pressed button
-			}
-			draw_text_outline(menu_x, menu_y + button_h * i, button[i], c_black,c_ltgray);
-
-			i++;	
-		}
-		i = 0;
+		draw_set_halign(fa_center);	
+		draw_text_outline(_ww*.5, _hh *.2,string("Options"),c_white,c_aqua);
 
 	}
+
+//Draw Buttons Vertically
+if( layout == LAYOUT.VERTICAL)
+{
+	var i = 0;
+	draw_set_font(menuFont);
+	draw_set_valign(fa_middle);
+	draw_set_halign(fa_center);
+	
+	repeat (buttons)
+	{
+		draw_sprite_ext(s_button_pressable,0,menu_x,menu_y + button_h * i,buttonXScale,buttonYScale,0,-1,1); //Draw pressed button
+		
+		//Button pressed, draw pressed icon, but don't select until released
+		if(touch_buttons_vertical(menu_x, menu_y, i, maxWidth, maxHeight, button_h)==1)
+		{
+			menu_index = i;
+
+			draw_sprite_ext(s_button_pressable,1,menu_x,menu_y + button_h * i,buttonXScale,buttonYScale,0,-1,1); //Draw pressed button
+		}
+		
+		//Button released, find what button is touched and use that button
+		if(touch_buttons_vertical(menu_x, menu_y, i, maxWidth, maxHeight, button_h)==2)
+		{
+			menu_index = i;
+			touchSelect = true;
+			draw_sprite_ext(s_button_pressable,0,menu_x,menu_y + button_h * i,buttonXScale,buttonYScale,0,-1,1); //Draw pressed button
+		}
+		if(global.debug == true)
+		{
+			//Debugging, show outline of buttons
+			//Draw touch boxes
+			//var _sw = string_width(button[i]);
+			//var _sh = string_height(button[i]);
+			var _sw = maxWidth;
+			var _sh = maxHeight;
+			var _x1 = menu_x-_sw*.6;
+			var _x2 = menu_x+_sw*.6;
+			var _y1 = menu_y+button_h*i-_sh*.6;
+			var _y2 = menu_y+button_h*i+_sh*.6;
+			//Show Outline of Button
+			draw_set_color(c_yellow);
+			draw_rectangle(_x1, _y1, _x2, _y2 ,true);
+		}
+		
+		draw_text_outline(menu_x, menu_y + button_h * i, button[i], c_black,c_ltgray);
+
+		i++;	
+	}
+	i = 0;
+}
+
+//Draw Buttons Horizontally
+if( layout == LAYOUT.HORIZONTAL)
+{
+	var i = 0;
+	draw_set_font(menuFont);
+	draw_set_valign(fa_middle);
+	draw_set_halign(fa_center);
+	
+	repeat (buttons)
+	{
+		draw_sprite_ext(s_button_pressable,0,menu_x+maxWidth*i+button_w*i,menu_y,buttonXScale,buttonYScale,0,-1,1); //Draw pressed button
+		//Function needs, button[i], menu_x, menu_y, button_h
+		if(touch_buttons_horizontal(menu_x, menu_y, i, maxWidth, maxHeight, button_w) == 1)
+		{
+			menu_index = i;
+			draw_sprite_ext(s_button_pressable,1,menu_x+maxWidth*i+button_w*i,menu_y,buttonXScale,buttonYScale,0,-1,1); //Draw pressed button
+		}
+		if(touch_buttons_horizontal(menu_x, menu_y, i, maxWidth, maxHeight, button_w) == 2)
+		{
+			menu_index = i;
+			touchSelect = true;
+			draw_sprite_ext(s_button_pressable,0,menu_x+maxWidth*i+button_w*i,menu_y,buttonXScale,buttonYScale,0,-1,1); //Draw pressed button
+		}
+		if(global.debug == true)
+		{
+			//Debugging, show outline of buttons
+			//Draw touch boxes
+			//var _sw = string_width(button[i]);
+			//var _sh = string_height(button[i]);
+			var _sw = maxWidth;
+			var _sh = maxHeight;
+			var _x1 = menu_x+maxWidth*i+i*button_w-i-_sw*.5;
+			var _x2 = menu_x+maxWidth*i+i*button_w+_sw*.5;
+			var _y1 = menu_y-_sh*.6;
+			var _y2 = menu_y+_sh*.6;
+			//Show Outline of Button
+			draw_set_color(c_yellow);
+			draw_rectangle(_x1, _y1, _x2, _y2 ,true);
+		}
+		
+		draw_text_outline(menu_x+maxWidth*i+button_w*i,menu_y, button[i], c_black,c_ltgray);
+		
+		i++;	
+	}
+	i = 0;
+}

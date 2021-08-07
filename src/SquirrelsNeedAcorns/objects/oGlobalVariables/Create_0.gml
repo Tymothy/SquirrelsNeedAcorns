@@ -47,8 +47,26 @@ global.gameOptions =
 	damage : false,
 	scoring : true,
 }
-
 global.gameMode = 0;
+global.gameModeString = "Challenge";
+
+global.level1 =
+{
+	roomName : rGameIce1,
+	levelName : "Ice Asteroid",
+	unlocked : true,
+	art : s_gameIce1,
+	playerHighScore : 0,
+}
+
+//Level Selection - Contains all levels in game, in order
+global.levelSelectArray[0] = global.level1;
+//global.levelSelectArray[1] = rGameIce2;
+//global.levelSelectArray[2] = rGameIce3;
+
+global.selectedLevel = 0;
+
+
 /*
 0 = Challenge
 1 = Zen

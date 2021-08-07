@@ -11,5 +11,5 @@ if(room == rOptions)
 				musicString = "On";	
 			}
 			button[0] = "Music: " + string(musicString);
-			button[1] = "Mode: " + string(gameModeString);
+			button[1] = "Mode: " + string(global.gameModeString);
 }

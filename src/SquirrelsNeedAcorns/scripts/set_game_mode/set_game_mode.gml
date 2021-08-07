@@ -10,6 +10,7 @@ function set_game_mode(_gameMode){
 	switch(_gameMode)
 	{
 		case 0:	
+			global.gameModeString = "Challenge";
 			global.gameOptions.timed = true;
 			global.gameOptions.fuelUse = true;
 			global.gameOptions.damage = true;
@@ -17,6 +18,7 @@ function set_game_mode(_gameMode){
 			break;
 	
 		case 1:
+			global.gameModeString = "Zen";
 			global.gameOptions.timed = false;
 			global.gameOptions.fuelUse = true;
 			global.gameOptions.damage = true;
@@ -25,6 +27,7 @@ function set_game_mode(_gameMode){
 			break;
 	
 		case 2:
+			global.gameModeString = "Practice";
 			global.gameOptions.timed = false;
 			global.gameOptions.fuelUse = false;
 			global.gameOptions.damage = false;
