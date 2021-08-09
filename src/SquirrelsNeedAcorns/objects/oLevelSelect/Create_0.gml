@@ -16,5 +16,8 @@ highScoreTitleY = levelNameY;
 modeX = _ww *.9;
 modeY = _hh *.9;
 
-instance_create_layer(modeX, modeY, "Instances",o_button_mode);
+backX = _ww*.1;
+backY = _hh*.9;
 
+instance_create_layer(modeX, modeY, "Instances",o_button_mode);
+instance_create_layer(backX, backY, "Instances",o_button_back);

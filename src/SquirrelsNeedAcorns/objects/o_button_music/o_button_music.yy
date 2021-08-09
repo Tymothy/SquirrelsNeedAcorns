@@ -1,15 +1,12 @@
 {
-  "spriteId": {
-    "name": "s_button_left",
-    "path": "sprites/s_button_left/s_button_left.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "opar_button",
-    "path": "objects/opar_button/opar_button.yy",
+    "name": "opar_button_toggle",
+    "path": "objects/opar_button_toggle/opar_button_toggle.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -23,7 +20,10 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":64,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
@@ -31,7 +31,7 @@
     "path": "folders/Objects/UI/Buttons.yy",
   },
   "resourceVersion": "1.0",
-  "name": "o_button_left",
+  "name": "o_button_music",
   "tags": [],
   "resourceType": "GMObject",
 }

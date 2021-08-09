@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if(global.musicToggle == true)
+if(global.musicToggle == 1)
 {
 //	if(instance_exists(oPlayer) && currentMusic == mainMenuMusic) //Check if we are in a game room
 //	{

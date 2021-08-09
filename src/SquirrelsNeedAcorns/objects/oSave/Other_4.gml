@@ -1,21 +1,81 @@
 /// @description Insert description here
 // You can write your code in this editor
-if(room = rEndRun && global.gameMode == 0)
+if(room = rEndRun)
 {
-	ini_open(global.saveFile);
-	var _checkHighscore = 0;
-	switch(global.lastGameRoom)
+
+	//var _checkHighscore = 0;
+
+	
+	switch(global.gameMode)
 	{
-		case rGameIce1:
-			_checkHighscore = ini_read_real("stats", rGameIce1, 0);
-			show_debug_message("Checking for previous highscore");
-			if(_checkHighscore < global.points) //If high score is reached, set it
-				{
-				ini_write_real("stats", "rGameIce1", global.points);
-				show_debug_message("Writing points to save file");
-				}
-			break;
+		case 0: //Challenge Mode
+			save_highscore();
+		
+			//switch(global.lastGameRoom)
+			//{
+			//	case rGameIce1:
+			//		var _temp = save_highscore("challenge",rGameIce1,global.level1.challengeHighScore);
+			//		if (_temp > 0)
+			//		{
+			//			global.level1.challengeHighScore = _temp;		
+			//		}
+			//	break;
+				
+			//	case rGameIce2:
+			//		var _temp = save_highscore("challenge",rGameIce2,global.level2.challengeHighScore);
+			//		if (_temp > 0)
+			//		{
+			//			global.level2.challengeHighScore = _temp;		
+			//		}
+				
+			//	case rGameIce3:
+			//		var _temp = save_highscore("challenge",rGameIce2,global.level3.challengeHighScore);
+			//		if (_temp > 0)
+			//		{
+			//			global.level3.challengeHighScore = _temp;		
+			//		}
+			//	break;
+			//}
+		break;
+		
+		case 1: //Zen Mode
+			save_highscore();
+		
+			//switch(global.lastGameRoom)
+			//{
+			//	case rGameIce1:
+			//		var _temp = save_highscore("zen",rGameIce1,global.level1.zenHighScore);
+			//		if (_temp > 0)
+			//		{
+			//			global.level1.zenHighScore = _temp;		
+			//		}
+			//	break;
+				
+			//	case rGameIce2:
+			//		var _temp = save_highscore("zen",rGameIce2,global.level2.zenHighScore);
+			//		if (_temp > 0)
+			//		{
+			//			global.level2.zenHighScore = _temp;		
+			//		}
+				
+			//	case rGameIce3:
+			//		var _temp = save_highscore("zen",rGameIce2,global.level3.zenHighScore);
+			//		if (_temp > 0)
+			//		{
+			//			global.level3.zenHighScore = _temp;		
+			//		}
+			//	break;
+				
+			//}
+		break;
+		
+		case 2: //Practice mode
+		
+		break;
+		
 	}
-	ini_close();
+	
+	
+
 	save_change_money(global.points);
 }

@@ -83,7 +83,7 @@ if(room == rOptions)
 	
 	musicString = "On";
 
-	if (global.musicToggle == false)
+	if (global.musicToggle == 0)
 	{
 		musicString = "Off";
 	}

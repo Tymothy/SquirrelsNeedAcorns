@@ -37,7 +37,7 @@ global.playerPropelRunning = s_propel_red_running;
 global.saveFile = "savedata.ini";
 
 //Options
-global.musicToggle = true;
+global.musicToggle = 1;
 
 //Game Modes
 global.gameOptions =
@@ -50,22 +50,41 @@ global.gameOptions =
 global.gameMode = 0;
 global.gameModeString = "Challenge";
 
+#region Level Struct Declarations
 global.level1 =
 {
 	roomName : rGameIce1,
-	levelName : "Ice Asteroid",
+	levelName : "Ice - Easy",
 	unlocked : true,
 	art : s_gameIce1,
-	playerHighScore : 0,
+	highScore : [0, 0],
+	difficulty : 1,
 }
-
+global.level2 =
+{
+	roomName : rGameIce2,
+	levelName : "Ice - Medium",
+	unlocked : true,
+	art : s_gameIce1,
+	highScore : [0, 0],
+	difficulty : 3,
+}
+global.level3 =
+{
+	roomName : rGameIce3,
+	levelName : "Ice - Hard",
+	unlocked : true,
+	art : s_gameIce1,
+	highScore : [0, 0],
+	difficulty : 5,
+}
 //Level Selection - Contains all levels in game, in order
 global.levelSelectArray[0] = global.level1;
-//global.levelSelectArray[1] = rGameIce2;
-//global.levelSelectArray[2] = rGameIce3;
+global.levelSelectArray[1] = global.level2;
+global.levelSelectArray[2] = global.level3;
 
 global.selectedLevel = 0;
-
+#endregion
 
 /*
 0 = Challenge

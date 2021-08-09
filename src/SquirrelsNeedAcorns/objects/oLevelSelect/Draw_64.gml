@@ -10,6 +10,10 @@ draw_text_outline(levelNameX, levelNameY, string(global.levelSelectArray[global.
 
 draw_text_outline(highScoreTitleX, highScoreTitleY, string("High Score"), c_black, c_ltgray);
 draw_text_outline(highScoreTitleX, highScoreTitleY+margin, string(global.gameModeString), c_black, c_ltgray);
+if(global.gameMode != 2)
+	{
+		draw_text_outline(highScoreTitleX, highScoreTitleY+margin*2, string(global.levelSelectArray[global.selectedLevel].highScore[global.gameMode]), c_black, c_yellow);
+	}
 //draw_text_outline(highScoreTitleX, highScoreTitleY+margin*2, string("High Score", c_black, c_ltgray);
 
 //string(global.levelSelectArray[global.selectedLevel].playerHighScore),

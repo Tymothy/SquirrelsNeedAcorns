@@ -57,14 +57,15 @@ if (keyboard_check_pressed(vk_enter) == true
 	{
 		switch (menu_index)
 		{
+			//TODO: If select_level returns 0, do a fail sound
 			case 0:
-				SlideTransition(TRANS_MODE.GOTO,rMainMenu);
+				select_level(-1);
 				break;
 			case 1:
 				SlideTransition(TRANS_MODE.GOTO,global.levelSelectArray[global.selectedLevel].roomName);
 				break;
 			case 2:
-				SlideTransition(TRANS_MODE.GOTO,rMainMenu);
+				select_level(1);
 				break;
 		}
 	}

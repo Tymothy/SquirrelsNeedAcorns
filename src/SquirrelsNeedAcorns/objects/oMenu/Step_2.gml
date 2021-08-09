@@ -3,7 +3,7 @@ if(live_call()) return live_result;
 // You can write your code in this editor
 if(room == rOptions)
 {
-			if (global.musicToggle == false)
+			if (global.musicToggle == 0)
 			{	
 				musicString = "Off";
 			}

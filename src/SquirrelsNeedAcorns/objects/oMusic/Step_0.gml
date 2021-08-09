@@ -4,11 +4,11 @@ if(toggleMusic == true)
 {
 	switch (global.musicToggle)
 	{
-		case true:
+		case 1:
 			audio_pause_sound(currentMusic);
 			global.musicToggle = false;
 			break;
-		case false:
+		case 0:
 			audio_resume_sound(currentMusic);
 			global.musicToggle = true;
 			break;
