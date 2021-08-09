@@ -146,15 +146,15 @@ if(touchUI)
 	//Arrow keys
 	var _sWidth = sprite_get_width(s_button_right);
 	var _sHeight = sprite_get_height(s_button_right);
-	draw_sprite(s_button_right,image_index, _ww - _sWidth/2 - _margin, _hh - _sHeight/2 - _margin);
+	//draw_sprite(s_button_right,image_index, _ww - _sWidth/2 - _margin, _hh - _sHeight/2 - _margin);
 	
-	draw_sprite(s_button_left, image_index, _sWidth/2 + _margin, _hh- _sHeight/2 - _margin);
+	//draw_sprite(s_button_left, image_index, _sWidth/2 + _margin, _hh- _sHeight/2 - _margin);
 
-	//This draws left arrow on right side to left of right arrow
-	//draw_sprite(s_button_left, image_index, _ww - _sWidth/2 - _margin - _sWidth, _hh- _sHeight/2 - _margin);
+	////This draws left arrow on right side to left of right arrow
+	////draw_sprite(s_button_left, image_index, _ww - _sWidth/2 - _margin - _sWidth, _hh- _sHeight/2 - _margin);
 
-	//Draw Pause
-	draw_sprite(s_button_pause, 0, _ww - _sWidth/2 - _margin, _sHeight/2 + _margin);
+	////Draw Pause
+	//draw_sprite(s_button_pause, 0, _ww - _sWidth/2 - _margin, _sHeight/2 + _margin);
 	
 	if(debug)
 	{

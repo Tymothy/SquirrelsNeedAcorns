@@ -5,6 +5,7 @@ draw_self();
 
 //Draw attire
 draw_sprite_ext(global.playerTopper, image_index, x, y, image_xscale, image_yscale, image_angle,image_blend, image_alpha);
+draw_sprite_ext(global.playerShirt, image_index, x, y, image_xscale, image_yscale, image_angle,image_blend, image_alpha);
 draw_sprite_ext(global.playerRocket,image_index, x, y, image_xscale, image_yscale, image_angle,image_blend, image_alpha);
 draw_sprite_ext(global.playerBelt, image_index, x, y, image_xscale, image_yscale, image_angle,image_blend, image_alpha);
 

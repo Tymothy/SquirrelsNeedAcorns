@@ -20,4 +20,5 @@ if (moveTowardsPlayer == true)
 {
 	x = lerp(x,oPlayer.x,moveSpeed);
 	y = lerp(y,oPlayer.y,moveSpeed);
+	moveSpeed += .001;
 }

@@ -2,7 +2,7 @@ if(live_call()) return live_result;
 /// @description Insert description here
 // You can write your code in this editor
 var _wait = false;
-if (keyboard_check_pressed(vk_space) == true || oGameGUI.pause == true)
+if (keyboard_check_pressed(vk_space) == true || global.pause == 1)
 {
 	if(paused == false)
 	{
@@ -37,7 +37,7 @@ if(paused == true && _wait == false)
 			switch (menu_index)
 			{
 				case 0:
-					paused = false;
+					global.pause = false;
 					break;
 				case 1:
 					//room_restart();
@@ -53,5 +53,9 @@ if(paused == true && _wait == false)
 			}
 	
 	}
+}
+if(global.pause == false)
+{
+	paused = false;	
 }
 _wait = false;

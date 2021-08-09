@@ -14,4 +14,4 @@ targetY = 0;
 dropCount = 0;
 dropDistance = 0;
 moveTowardsPlayer = false;
-moveSpeed = .05; //Speed is used in lerp function, .1 is 10% the distance in each frame
+moveSpeed = .025; //Speed is used in lerp function, .1 is 10% the distance in each frame

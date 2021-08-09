@@ -52,6 +52,8 @@ pauseTopY = 3;
 pauseRightX = _ww -_margin;
 pauseBottomY = _sHeight+_buffer+_margin;
 
+instance_create_layer(_ww*.9,_hh*.1,"TouchUI",o_button_pause);
+
 /*
 
 //Left Arrow GUI coords

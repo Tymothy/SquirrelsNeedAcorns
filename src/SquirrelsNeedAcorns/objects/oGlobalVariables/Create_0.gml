@@ -1,7 +1,7 @@
 /// @desc Insert description here
 //Variables changed often
 global.versionText = "Squirrels Need Acorns - Alpha Version O.5.3";
-global.debug = true;
+global.debug = false;
 
 //Declare Global Variables
 global.cam = view_camera[0];
@@ -11,6 +11,7 @@ global.points = 0;
 global.final = 0;
 global.highscore = 0;
 global.money = 0;
+global.pause = 0;
 
 global.touchEnabled = true;
 
@@ -28,7 +29,8 @@ global.lastGameRoom = 0;
 //Declare Player Cosmetics
 global.playerCharacter = sPlayer;
 global.playerTopper = s_topper_spacehelmet;
-global.playerBelt = s_belt_orange;
+global.playerShirt = s_shirt_red;
+global.playerBelt = s_belt_red;
 global.playerRocket = s_rocket_blue;
 global.playerPropelStart = s_propel_red_start;
 global.playerPropelRunning = s_propel_red_running;

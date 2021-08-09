@@ -1,8 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+// Inherit the parent event
 event_inherited();
 
-dropCount = 5;
-dropDistance = 60;
-moveTowardsPlayer = false;
-moveSpeed = 0;
+if(sprite != -1)
+{
+	draw_sprite(sprite,0,x,y);
+}
