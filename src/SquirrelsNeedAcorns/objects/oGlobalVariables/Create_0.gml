@@ -1,7 +1,7 @@
 /// @desc Insert description here
 //Variables changed often
 global.versionText = "Squirrels Need Acorns - Alpha Version O.5.3";
-global.debug = false;
+global.debug = true;
 
 //Declare Global Variables
 global.cam = view_camera[0];
@@ -22,7 +22,16 @@ global.goalAspect = global.defaultWidth / global.defaultHeight;
 global.GUIZoom = 2; //Higher number, smaller UI
 global.GUIww = 0;
 global.GUIhh = 0;
-countDown = 1;
+countDown = 1;  //Count down for the inital splash screen in first room
+
+//Orientation
+enum ORIENTATION{
+	LANDSCAPE,
+	PORTRAIT
+}
+global.orientationChanged = false;
+global.orientationReset = false;
+global.orientation = ORIENTATION.LANDSCAPE;
 
 global.lastGameRoom = 0;
 
