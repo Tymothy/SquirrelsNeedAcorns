@@ -1,7 +1,7 @@
 if(live_call()) return live_result;
 
 //Draw the art
-draw_sprite(global.levelSelectArray[global.selectedLevel].art,0,artX,artY);
+//draw_sprite(global.levelSelectArray[global.selectedLevel].art,0,artX,artY);
 
 draw_set_font(levelSelectFont);
 draw_set_valign(fa_middle);

@@ -17,6 +17,10 @@ buttonSprite = s_button_pressable;
 ableToSelect = true;
 touchSelect = false;
 
+//Save coords of inital creation
+xStart = x/global.GUIww;
+yStart = y/global.GUIhh;
+
 draw_set_font(font); //Required so string height and width can be accurately found
 maxWidth = 0;
 maxHeight = 0;

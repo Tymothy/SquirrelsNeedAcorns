@@ -62,16 +62,16 @@ if(global.gameOptions.timed == true)
 	draw_set_color(c_ltgray);
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_top);
-	draw_text_outline(_ww/2, timerDisplayOffset, "Time Left: " + string(showTime),c_black,c_ltgray);
+	draw_text_outline(_ww/2, timerDisplayOffset,string(showTime),c_black,c_ltgray);
 	if(showTime < 11)
 	{
 		//draw_set_color(c_yellow);
-		draw_text_outline(_ww/2, timerDisplayOffset, "Time Left: " + string(showTime),c_black,c_yellow);
+		draw_text_outline(_ww/2, timerDisplayOffset, string(showTime),c_black,c_yellow);
 	}
 	if(showTime < 4)
 	{
 		//draw_set_color(c_red);	
-		draw_text_outline(_ww/2, timerDisplayOffset, "Time Left: " + string(showTime),c_black,c_red);
+		draw_text_outline(_ww/2, timerDisplayOffset, string(showTime),c_black,c_red);
 	}
 }
 

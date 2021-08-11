@@ -4,8 +4,7 @@ if(live_call()) return live_result;
 function UIScaling(){
 	var base_w = global.defaultWidth;
 	var base_h = global.defaultHeight;
-	//var _width = display_get_gui_width();
-	//var _height = display_get_gui_height();
+
 	var _width = browser_width;
 	var _height = browser_height;
 	var aspect = _width / _height;
@@ -17,6 +16,7 @@ function UIScaling(){
 		ww = base_h * aspect;
 	    hh = base_h;
 		global.orientation = ORIENTATION.LANDSCAPE;
+
 	    }
 	else
 	    {
@@ -28,5 +28,5 @@ function UIScaling(){
 	    }
 	global.GUIww = ww;
 	global.GUIhh = hh;
-
+	global.aspect = aspect;
 }

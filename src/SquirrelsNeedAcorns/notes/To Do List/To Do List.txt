@@ -1,3 +1,6 @@
+Fix Scaling for tablets
+Make portrait mode better
+
 Implement a shop to spend money
 Add items that give cosmetic effects
 

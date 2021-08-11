@@ -1,7 +1,6 @@
 if(live_call()) return live_result;
 //menu_move = keyboard_check_pressed(vk_down) -  keyboard_check(vk_up);
 
-
 if (keyboard_check_pressed(vk_down) == true || keyboard_check_pressed(ord("S")) == true)
 {
 	menu_index++;
@@ -36,9 +35,9 @@ if (keyboard_check_pressed(vk_enter) == true
 			case 1:
 				SlideTransition(TRANS_MODE.GOTO,rHowTo);
 				break;
-			case 2:
-				SlideTransition(TRANS_MODE.GOTO,rOptions);
-				break;
+			//case 2:
+			//	SlideTransition(TRANS_MODE.GOTO,rOptions);
+			//	break;
 			//case 3:
 			//	SlideTransition(TRANS_MODE.GOTO,rOptions);
 			//	break;

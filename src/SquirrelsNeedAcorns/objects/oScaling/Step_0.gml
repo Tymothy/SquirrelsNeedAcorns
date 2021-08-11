@@ -4,6 +4,7 @@ if(fullscreen == true)
 {
 	if (browser_width != width || browser_height != height || currentRoom != room || runScaling == true)
 	{
+		global.orientationChanged = true;
 		width = browser_width;
 		height = browser_height;
 		

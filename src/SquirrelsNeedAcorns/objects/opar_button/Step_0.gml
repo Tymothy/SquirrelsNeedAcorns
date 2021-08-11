@@ -43,3 +43,8 @@ if (touchSelect == true
 
 	}
 
+if(global.orientationChanged == true)
+{
+	x = xStart * global.GUIww;
+	y = yStart * global.GUIhh
+}

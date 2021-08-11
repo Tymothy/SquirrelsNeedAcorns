@@ -45,7 +45,7 @@ if(room == rMainMenu)
 button[0] = "Play";
 button[1] = "How to Play";
 //button[2] = "High Scores";
-button[2] = "Options";
+//button[2] = "Options";
 
 	//Create button size
 }

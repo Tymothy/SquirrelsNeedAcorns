@@ -20,6 +20,7 @@ global.defaultHeight = 360; //Default 360
 global.tileSize = 16;
 global.goalAspect = global.defaultWidth / global.defaultHeight;
 global.GUIZoom = 2; //Higher number, smaller UI
+global.aspect = browser_width / browser_height;
 global.GUIww = 0;
 global.GUIhh = 0;
 countDown = 1;  //Count down for the inital splash screen in first room

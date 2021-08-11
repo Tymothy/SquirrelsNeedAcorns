@@ -1,5 +1,5 @@
 if(live_call()) return live_result;
-levelSelectFont = fMenu;
+levelSelectFont = fConthrax26;
 margin = font_get_size(levelSelectFont)*2.3;
 
 var _ww = global.GUIww;
