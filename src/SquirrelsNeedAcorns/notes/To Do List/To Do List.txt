@@ -9,3 +9,6 @@ Add a campaign, or reason to proceed in game
 
 Long Term
 Online high score system
+
+World Design
+Level select is a map of an area.  Ice is in a mountain, ocean, etc.  Use Wonderdraft???

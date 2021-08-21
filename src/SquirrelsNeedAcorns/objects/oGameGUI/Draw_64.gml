@@ -11,6 +11,12 @@ if(live_call()) return live_result;
 
 var _ww = global.GUIww;
 var _hh = global.GUIhh;
+var _buttonHeight = _hh*.1;
+var _margin = 3;
+var _buffer = 20;
+
+alertY = _hh*.3;
+alertX = _ww*.5;
 
 //If true, game is in portrait mode
 if(_ww/_hh < 1)

@@ -1,7 +1,7 @@
 /// @desc Insert description here
 //Variables changed often
-global.versionText = "Squirrels Need Acorns - Alpha Version O.5.3";
-global.debug = true;
+global.versionText = "Squirrels Need Acorns - Alpha Version O.5.5";
+global.debug = true; //Controls all the debugging.  Turn off before exporting
 
 //Declare Global Variables
 global.cam = view_camera[0];
@@ -30,8 +30,8 @@ enum ORIENTATION{
 	LANDSCAPE,
 	PORTRAIT
 }
-global.orientationChanged = false;
-global.orientationReset = false;
+global.resolutionChanged = false;
+global.resolutionReset = false;
 global.orientation = ORIENTATION.LANDSCAPE;
 
 global.lastGameRoom = 0;

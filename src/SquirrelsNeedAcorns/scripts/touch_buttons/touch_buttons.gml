@@ -55,8 +55,8 @@ function touch_buttons_horizontal(menu_x, menu_y, i, width, height, button_w){
 		//var _sh = string_height(button_i);
 		var _sw = width;
 			var _sh =height;
-			var _x1 = menu_x+width*i+i*button_w-i-_sw*.5;
-			var _x2 = menu_x+width*i+i*button_w+_sw*.5;
+			var _x1 = menu_x+width*i+i*button_w-i-_sw*.6;
+			var _x2 = menu_x+width*i+i*button_w+_sw*.6;
 			var _y1 = menu_y-_sh*.6;
 			var _y2 = menu_y+_sh*.6;
 			

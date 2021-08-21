@@ -1,7 +1,2 @@
-Alpha V 0.3.0
-
-New Level
-Health UI
-Added screenshake to damage
-Added a damage flash
-
+V 0.5.5
+Fixed GUI scaling on tablets

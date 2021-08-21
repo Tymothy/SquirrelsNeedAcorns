@@ -2,6 +2,7 @@ if(live_call()) return live_result;
 //Draw the buttons created in the Create event
 var _ww = global.GUIww;
 var _hh = global.GUIhh;
+button_h = max(0,font_get_size(menuFont)*3);
 
 	if(room == rMainMenu)
 	{
@@ -20,7 +21,7 @@ var _hh = global.GUIhh;
 		draw_text(global.GUIww*.04, global.GUIhh*.96, string(global.versionText));
 		
 		//Draw Title
-		draw_set_font(fEthno36);
+		draw_set_font(fEthno24);
 		draw_set_valign(fa_middle);
 		draw_set_halign(fa_center);
 	
@@ -37,7 +38,7 @@ var _hh = global.GUIhh;
 		draw_set_valign(fa_middle);
 		menu_x = _ww *.5;
 		menu_y = _hh *.8;
-		button_h = font_get_size(menuFont)*1.5;
+		//button_h = font_get_size(menuFont)*1.5;
 		//menu_x = 200;
 		//menu_y = 100; //- ((button_h * buttons)/2 + button_h);
 		//button_h = 60;
@@ -99,7 +100,7 @@ var _hh = global.GUIhh;
 		//Set menu at top left
 		menu_x = global.GUIww*.5;
 		menu_y = global.GUIhh*.75;
-		button_h = font_get_size(menuFont)*1.5;
+		//button_h = font_get_size(menuFont)*1.5;
 		//menu_x = 200;
 		//menu_y = 100; //- ((button_h * buttons)/2 + button_h);
 		//button_h = 60;
@@ -282,8 +283,8 @@ if( layout == LAYOUT.HORIZONTAL)
 			//var _sh = string_height(button[i]);
 			var _sw = maxWidth;
 			var _sh = maxHeight;
-			var _x1 = menu_x+maxWidth*i+i*button_w-i-_sw*.5;
-			var _x2 = menu_x+maxWidth*i+i*button_w+_sw*.5;
+			var _x1 = menu_x+maxWidth*i+i*button_w-i-_sw*.6;
+			var _x2 = menu_x+maxWidth*i+i*button_w+_sw*.6;
 			var _y1 = menu_y-_sh*.6;
 			var _y2 = menu_y+_sh*.6;
 			//Show Outline of Button

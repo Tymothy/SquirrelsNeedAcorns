@@ -1,8 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if(global.orientationChanged == true)
+if(global.resolutionChanged == true)
 {
 	
-	global.orientationReset = true;
+	global.resolutionReset = true;
 }

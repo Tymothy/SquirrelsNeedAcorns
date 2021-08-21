@@ -11,7 +11,7 @@ draw_set_halign(fa_center);
 
 repeat (buttons)
 {
-	draw_set_font(fMenu);
+	draw_set_font(fMenu18);
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_middle);
 	draw_set_color(c_ltgray);
@@ -26,7 +26,7 @@ repeat (buttons)
 draw_set_color(c_ltgray);
 draw_set_halign(fa_center);
 draw_set_valign(fa_top);
-draw_set_font(fMenu);
+draw_set_font(fMenu18);
 draw_text(menu_x,menu_y*2 - (menu_y/5)-50,"Final Score: " + string(global.points));
 
 

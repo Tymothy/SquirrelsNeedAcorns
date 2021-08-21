@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this edito
-levelSelectFont = fMenu;
+levelSelectFont = fMenu18;
 margin = font_get_size(levelSelectFont)*2.3;
 
 var _ww = global.GUIww;

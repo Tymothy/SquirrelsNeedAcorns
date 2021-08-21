@@ -1,5 +1,5 @@
 if(live_call()) return live_result;
-levelSelectFont = fConthrax26;
+levelSelectFont = fMenu26;
 margin = font_get_size(levelSelectFont)*2.3;
 
 var _ww = global.GUIww;
@@ -7,10 +7,9 @@ var _hh = global.GUIhh;
 
 artX = global.GUIww*.25;
 artY = global.GUIhh*.25;
-levelNameX = global.GUIww*.25;
-levelNameY = global.GUIhh*.15;
-
-highScoreTitleX = global.GUIww*.75;
+levelNameX = global.GUIww*.05;
+levelNameY = global.GUIhh*.05;
+highScoreTitleX = global.GUIww*.95;
 highScoreTitleY = levelNameY;
 
 modeX = _ww *.9;

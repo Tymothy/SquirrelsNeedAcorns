@@ -1,7 +1,7 @@
 if(live_call()) return live_result;
-menuFont = fEthno18;
+menuFont = fMenu18;
 button_h = font_get_size(menuFont)*2.3;
-button_w = 3;
+button_w = 20;
 
 margin = 1.15; //How far around text button should be drawn, as a multiplyer
 buttonSprite = s_button_pressable;

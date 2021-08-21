@@ -37,10 +37,6 @@ function canvas_fullscreen(_base, _zoom){
 
 	 _vw = _vw * _zoom;
 	 _vh = _vh * _zoom;
-	 var _temp = 0;
-	 var _camID = view_camera[0];
-	var _camWidth = global.defaultWidth * 2;
-	var _camHeight = global.defaultHeight * 2;
 	
 	camera_set_view_size(view_camera[0], _vw, _vh);
 	//camera_set_view_size(view_camera[0], 640, 360);
