@@ -2,6 +2,7 @@
 //Variables changed often
 global.versionText = "Squirrels Need Acorns - Alpha Version 0.5.5";
 global.debug = true; //Controls all the debugging.  Turn off before exporting
+global.playerName = "Tester0142"; //Used for the highscores
 
 //Declare Global Variables
 global.cam = view_camera[0];
