@@ -13,4 +13,6 @@ if(global.resolutionChanged == true)
 	modeY = _hh *.9;
 	backX = _ww*.1;
 	backY = _hh*.9;
+	usernameX = _ww*.5;
+	usernameY = _hh*.9;
 }

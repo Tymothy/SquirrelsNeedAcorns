@@ -35,9 +35,9 @@ if (keyboard_check_pressed(vk_enter) == true
 			case 1:
 				SlideTransition(TRANS_MODE.GOTO,rHowTo);
 				break;
-			//case 2:
-			//	SlideTransition(TRANS_MODE.GOTO,rOptions);
-			//	break;
+			case 2:
+				SlideTransition(TRANS_MODE.GOTO,rUsername);
+				break;
 			//case 3:
 			//	SlideTransition(TRANS_MODE.GOTO,rOptions);
 			//	break;

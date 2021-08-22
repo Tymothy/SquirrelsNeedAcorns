@@ -16,6 +16,14 @@ if(global.gameMode != 2)
 	{
 		draw_text_outline(modeStringX, modeStringY+margin, string(global.levelSelectArray[global.selectedLevel].highScore[global.gameMode]), c_black, c_yellow);
 	}
+
+if(global.playerName == "")
+{
+	draw_text_outline(usernameX, usernameY, "No username set",c_black,c_aqua);
+}
+else{
+	draw_text_outline(usernameX, usernameY, string(global.playerName),c_black,c_aqua);
+}
 //draw_text_outline(modeStringX, modeStringY+margin*2, string("High Score", c_black, c_ltgray);
 
 //string(global.levelSelectArray[global.selectedLevel].playerHighScore),

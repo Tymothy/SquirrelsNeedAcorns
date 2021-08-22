@@ -26,6 +26,13 @@ if(live_call()) return live_result;
 	
 
 //}
+
+//Disable buttons when the virtual keyboard is active
+if(global.virtualKeyboardOn == true)
+{
+	touchSelect = false;	
+}
+
 if (touchSelect == true 
 && ableToSelect == true)
 {
