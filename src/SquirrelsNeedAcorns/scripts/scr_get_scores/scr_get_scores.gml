@@ -17,5 +17,5 @@ function scr_get_scores(name,no_lines){
 
 	var _name = url_encode(base64_encode(string(name)));
 	var args = "name="+_name+"&no_lines="+string(no_lines)+"&secret_key=3ztrpxIhVyq5";
-	get_highscores = http_post_string("http://ftp.squirrelsneedacorns.altervista.org/Highscores/display.php", args);
+	get_highscores = http_post_string("https://ftp.squirrelsneedacorns.altervista.org/Highscores/display.php", args);
 }

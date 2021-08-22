@@ -26,8 +26,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Controllers",
-    "path": "folders/Objects/Controllers.yy",
+    "name": "UI",
+    "path": "folders/Objects/UI.yy",
   },
   "resourceVersion": "1.0",
   "name": "oHighscore",

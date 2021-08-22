@@ -1,18 +1,12 @@
-/*
-function <NAME>(_var1, _var2, _var3...) {
-/// @desc ...
-/// @arg ....
-/// @arg ....
-//CODE
-}
-*/
+
+if(live_call()) return live_result;
 function draw_text_highscore(x,y,text1,text2,text3,highscores,name,colour){
 	/// @description draw_text_highscore(x,y,text1,text2,text3,highscores,name,colour)
 	/// @param x            Draw x position
 	/// @param y            Draw y position
 	/// @param text1        The text to display above the index
 	/// @param text2        The text to display above the name
-	/// @param text3        The text to display above the score
+	/// @param text3        The text to display above the score	
 	/// @param highscores    The highscores
 	/// @param name            The name to colour
 	/// @param colour        The colour to give to the name

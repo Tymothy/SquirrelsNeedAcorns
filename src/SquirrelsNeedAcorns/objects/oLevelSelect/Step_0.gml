@@ -5,10 +5,10 @@ if(global.resolutionChanged == true)
 	var _hh = global.GUIhh;
 	artX = global.GUIww*.25;
 	artY = global.GUIhh*.25;
-	levelNameX = global.GUIww*.05;
-	levelNameY = global.GUIhh*.05;
-	highScoreTitleX = global.GUIww*.95;
-	highScoreTitleY = levelNameY;
+	levelNameX = global.GUIww*.5;
+	levelNameY = global.GUIhh*.07;
+	modeStringX = levelNameX;
+	modeStringY = levelNameY+margin;
 	modeX = _ww *.9;
 	modeY = _hh *.9;
 	backX = _ww*.1;

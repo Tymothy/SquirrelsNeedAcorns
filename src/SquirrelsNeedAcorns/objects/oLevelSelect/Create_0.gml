@@ -9,8 +9,8 @@ artX = global.GUIww*.25;
 artY = global.GUIhh*.25;
 levelNameX = global.GUIww*.05;
 levelNameY = global.GUIhh*.05;
-highScoreTitleX = global.GUIww*.95;
-highScoreTitleY = levelNameY;
+modeStringX = global.GUIww*.95;
+modeStringY = levelNameY;
 
 modeX = _ww *.9;
 modeY = _hh *.9;
