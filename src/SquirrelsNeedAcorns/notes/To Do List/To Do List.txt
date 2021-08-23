@@ -1,7 +1,7 @@
+IN PROGRESS
+Changing where statement on .php file to accept levelid and gamemode parameters
+
 Version 0.6.0 to do
-Allow score board to alternate between multiple levels
- - Add a game mode column in database
- - Add a level column in database
 Have server send score to database at end of each run
 
 Version 0.6.1

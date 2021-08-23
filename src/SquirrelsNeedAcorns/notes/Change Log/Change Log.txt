@@ -3,3 +3,6 @@ Fixed GUI scaling on tablets
 Added level name to end run screen
 Added username, no login or registration required
 Save username between sessions
+Allow score board to alternate between multiple levels
+ - Add a game mode column in database
+ - Add a level column in database
