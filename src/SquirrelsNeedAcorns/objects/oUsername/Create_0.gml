@@ -3,7 +3,7 @@ playerName = global.playerName;
 
 //if(playerName == "")
 //{
-		keyboard_string = "";
+		keyboard_string = playerName;
 	    keyboard_virtual_show(kbv_type_default, kbv_returnkey_default, kbv_autocapitalize_none, false);
 //}
 var _ww = global.GUIww;
