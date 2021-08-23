@@ -6,7 +6,7 @@
     "path": "folders/Scripts/Saving.yy",
   },
   "resourceVersion": "1.0",
-  "name": "save_highscore",
+  "name": "save_info",
   "tags": [],
   "resourceType": "GMScript",
 }

@@ -1,10 +1,52 @@
-Fix Scaling for tablets
-Make portrait mode better
+Version 0.6.0 to do
+Save username between sessions
+Allow score board to alternate between multiple levels
+ - Add a game mode column in database
+ - Add a level column in database
+Have server send score to database at end of each run
 
+Version 0.6.1
+Add button below username selection to change username, rather than having keyboard open up immediately
+Add underwater levels
+Add additional hazards/enemies
+Add level art
+Hover sound for mouse for HTML5/Windows exports
+UIX improvement (helpful tips)
+
+Version 0.6.2
+Add particles and various effects
+Change transition style from the Sean Spaulding version
+
+Version 0.7.0
+Consider art overhaul to adobe illustrator style/Spine integration
+Add cosmetics
+Integrate Apple GameCenter and Android Google Play for usernames/accounts
+Add blur shader for when game is paused
+XP system for level up, if proper accounts can be made
+
+Version 0.8.0 - BETA BUILD
+Add link to join discord
+Make displays work nicely with portait mode(no super zoom out)
+Additional level world
+Opt-in video ads - extra XP, money generation, etc.
+Daily play reward
+
+
+Version 1.0 RELEASE TO APP STORE
+Polish and bug fixes
+
+
+Ideas:
+Some way to compare your scores with friends
+Game mode with time only, unlimited fuel?
 Implement a shop to spend money
 Add items that give cosmetic effects
-
+Level editor
+Histogram to show players score vs. a percent of the world
 Add a campaign, or reason to proceed in game
+
+TEST:
+Parameter injection attacks (Avoid high score from being cheated).
 
 
 Long Term

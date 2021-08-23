@@ -1,9 +1,11 @@
 playerName = global.playerName;
-if(playerName == "")
-{
+//TO DO: Add a button that prompts user to select "Change username" if a username already exists
+
+//if(playerName == "")
+//{
 		keyboard_string = "";
 	    keyboard_virtual_show(kbv_type_default, kbv_returnkey_default, kbv_autocapitalize_none, false);
-}
+//}
 var _ww = global.GUIww;
 var _hh = global.GUIhh;
 

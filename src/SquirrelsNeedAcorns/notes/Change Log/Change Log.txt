@@ -1,3 +1,4 @@
-V 0.5.5
+V 0.6.0
 Fixed GUI scaling on tablets
 Added level name to end run screen
+Added username, no login or registration required

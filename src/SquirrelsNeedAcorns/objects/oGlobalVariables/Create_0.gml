@@ -1,6 +1,6 @@
 /// @desc Insert description here
 //Variables changed often
-global.versionText = "Squirrels Need Acorns - Alpha Version 0.5.5";
+global.versionText = "Squirrels Need Acorns - Alpha Version 0.6.0";
 global.debug = true; //Controls all the debugging.  Turn off before exporting
 global.playerName = ""; //Used for the highscores
 
