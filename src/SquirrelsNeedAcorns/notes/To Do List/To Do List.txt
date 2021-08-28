@@ -1,10 +1,22 @@
+Tony Hawk Pro Skater 3 style level design
+- 1 large level, collect a certain sequence of collecitables, or do certain things
+https://youtu.be/K6y9PJipfpk?t=303
+- levels of points (getting 20, 40, 60 acorns for example)
+- Collecting A-C-O-R-N (or 5 acorn shards)
+- Collecting a secret acorn
+- Bonk something
+- Break X things
+
+
+
 IN PROGRESS
-Changing where statement on .php file to accept levelid and gamemode parameters
+
 
 Version 0.6.0 to do
-Have server send score to database at end of each run
+
 
 Version 0.6.1
+Build fuel UI into rocket sprite
 Add button below username selection to change username, rather than having keyboard open up immediately
 Add underwater levels
 Add additional hazards/enemies
@@ -36,6 +48,8 @@ Polish and bug fixes
 
 
 Ideas:
+
+
 Some way to compare your scores with friends
 Game mode with time only, unlimited fuel?
 Implement a shop to spend money

@@ -1,4 +1,6 @@
 /// @desc Insert description here
+#macro no_direction -1 //Needed for collision checks
+
 //Variables changed often
 global.versionText = "Squirrels Need Acorns - Alpha Version 0.6.0";
 global.debug = false; //Controls all the debugging.  Set to false before exporting

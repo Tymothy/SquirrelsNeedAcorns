@@ -6,3 +6,7 @@ Save username between sessions
 Allow score board to alternate between multiple levels
  - Add a game mode column in database
  - Add a level column in database
+ Have server send score to database at end of each run
+ 
+ V 0.6.1
+ Added sandy rocks tileset
