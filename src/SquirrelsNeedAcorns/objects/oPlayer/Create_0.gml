@@ -26,7 +26,20 @@ pointsOnPlayer = 0;
 fuelMax = 1500; //Default 1500
 fuel = fuelMax; //Set fuel to full on start
 
-   
+//Player Control Values
+	analog_deadzone = .25;
+	movement_percent = 0;
+
+	max_speed = 1.25;
+	xscale = 1;
+	input_h = 0;
+	input_v = 0;
+	 //Momentum Physics
+	dpad_dir = no_direction;
+	velocity = vec2_zero();
+	fric = .05;
+	accel = .04;  
+	
 //Static Movement Variables
 moveLeft = 0;
 moveRight = 0;

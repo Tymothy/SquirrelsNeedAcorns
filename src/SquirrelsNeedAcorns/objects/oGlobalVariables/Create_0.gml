@@ -1,9 +1,18 @@
 /// @desc Insert description here
 #macro no_direction -1 //Needed for collision checks
+#macro database_enabled false //0 to disable database functionality
+#macro live_enabled 1 //GM Live - Export with 0, use with 1
+
+//Player Control Macros
+#macro ev_set_sprite 0
+#macro mode_keyboard 0
+#macro mode_dpad 1
+#macro mode_analog 2
+#macro mode_touch 3
 
 //Variables changed often
 global.versionText = "Squirrels Need Acorns - Alpha Version 0.6.0";
-global.debug = false; //Controls all the debugging.  Set to false before exporting
+global.debug = true; //Controls all the debugging.  Set to false before exporting
 global.playerName = ""; //Used for the highscores
 
 //Declare Global Variables
@@ -94,10 +103,21 @@ global.level3 =
 	highScore : [0, 0],
 	difficulty : 5,
 }
+
+global.level4 =
+{
+	roomName : rGameTest1,
+	levelName : "Test",
+	unlocked : true,
+	art : s_gameIce1,
+	highScore : [0, 0],
+	difficulty : 0,
+}
 //Level Selection - Contains all levels in game, in order
 global.levelSelectArray[0] = global.level1;
 global.levelSelectArray[1] = global.level2;
 global.levelSelectArray[2] = global.level3;
+global.levelSelectArray[3] = global.level4;
 
 global.selectedLevel = 0;
 #endregion
