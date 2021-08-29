@@ -6,99 +6,10 @@ var _damageObstacle = false; //If set to true, apply damage
 if(oGameGUI.gameTimer > 0.0 && oPause.paused == false) //Remove all player control if timer runs out
 	{
 	#region //Player movement
-	//Get player input
-	//moveLeft = keyboard_check(vk_left) || keyboard_check(ord("A")) + oGameGUI.moveLeft;
-	//moveRight = keyboard_check(vk_right) || keyboard_check(ord("D")) + oGameGUI.moveRight;
-	
-	var _dpad_h = gamepad_button_check(0,gp_padr) - gamepad_button_check(0,gp_padl);
-	var _dpad_v = gamepad_button_check(0,gp_padd) - gamepad_button_check(0,gp_padu);
-	var _dpad_dist = point_distance(0,0,_dpad_h,_dpad_v);
-
-	var _arrows_h = keyboard_check(vk_right) - keyboard_check(vk_left);
-	var _arrows_v = keyboard_check(vk_down) - keyboard_check(vk_up);
-	var _arrows_dist = point_distance(0,0,_arrows_h,_arrows_v);
-
-	//Check analog stick
-	var _axis_h = gamepad_axis_value(0,gp_axislh);
-	var _axis_v = gamepad_axis_value(0,gp_axislv);
-	var _axis_dist = point_distance(0,0,_axis_h,_axis_v);
-	
-	//Mobile controls
-	var _touch_h = oGameGUI.moveRight - oGameGUI.moveLeft;
-	var _touch_v = min(1, oGameGUI.moveLeft + oGameGUI.moveRight)*-1;
-	var _touch_dist = point_distance(0,0, _touch_h, _touch_v);
-	
-	//If player is moving left or right, player should also fly up.  Min is used to 
-	//flyUp = min(1,moveLeft + moveRight);
-	
-	if(_arrows_dist > 0)
-	{
-	  movement_percent = 1;
-	  control_mode = mode_keyboard;
-	  input_h = _arrows_h;
-	  input_v = _arrows_v;
-	}
-	else if(_dpad_dist > 0)
-	{
-	  movement_percent = 1;
-	  control_mode = mode_dpad;
-	  input_h = _dpad_h;
-	  input_v = _dpad_v;
-	}
-	else if(_axis_dist > analog_deadzone)
-	{
-	  movement_percent = min(_axis_dist,1);
-	  control_mode = mode_analog;
-	  input_h = _axis_h;
-	  input_v = _axis_v;
-	}
-	else if(_touch_dist > 0)
-	{
-		movement_percent = min(_touch_dist,1);
-		control_mode = mode_touch;
-		input_h = _touch_h;
-		input_v = _touch_v;
-	}
-	
-	var _hspd = velocity[0];
-	var _vspd = velocity[1];
-	
-	if(input_h != 0)
-		 var _break = 0;	
-	
-	_hspd = sign(input_h) != sign(_hspd) 
-	        ? approach(_hspd,0,fric) 
-	        : _hspd;
-	_hspd += accel * input_h;
-
-	_vspd = sign(input_v) != sign(_vspd) 
-	        ? approach(_vspd,0,fric) 
-	        : _vspd;
-	_vspd += accel * input_v;		 
-		 
-	velocity = vec2(_hspd,_vspd);
-	velocity = vec2_truncate(velocity,max_speed);
-	
-	dpad_dir = vec2_length(velocity) > 0 
-	           ? vec2_dir(velocity) 
-	           : no_direction;		 
-	//event_user(ev_set_sprite);	 
-	if(tile_movement_and_collision(dpad_dir, vec2_length(velocity), "tsPixelPerfectWalls"))
-	{
-		if(tile_meeting(x+velocity[0],y,"tsPixelPerfectWalls")) velocity[0] = 0;
-		if(tile_meeting(x,y+velocity[1],"tsPixelPerfectWalls")) velocity[1] = 0;	
-	}
-	//var _moveDirection = point_direction(x, y, x+xSpd, y+ySpd);
-	//var _speed = point_distance(0, 0, xSpd, ySpd);
-	
-
-	
-	
-	
-	
-
+	moveLeft = keyboard_check(vk_left) || keyboard_check(ord("A")) + oGameGUI.moveLeft;
+	moveRight = keyboard_check(vk_right) || keyboard_check(ord("D")) + oGameGUI.moveRight;
 	//flyUp = keyboard_check(ord("W")) || keyboard_check(vk_up) + oGameGUI.flyUp;
-
+	flyUp = min(1,moveLeft + moveRight);
 
 	//Remove control if player is dead
 	if(playerHealth < 1 || oGameGUI.showCountDown != 0)
@@ -125,7 +36,6 @@ if(oGameGUI.gameTimer > 0.0 && oPause.paused == false) //Remove all player contr
 	#region Movement Restricting Collision Code
 	if(tilemapCollision == true)
 		{
-			
 		xSpeed = xSpeedTemp + xSpeedFloat;
 		xSpeedFloat = xSpeed - floor(abs(xSpeed))*sign(xSpeed);
 		xSpeed -= xSpeedFloat;
@@ -302,11 +212,6 @@ if(oGameGUI.gameTimer > 0.0 && oPause.paused == false) //Remove all player contr
 		_damageObstacle = true;
 	}
 	
-
-//	x = x + xSpeed;
-//	y = y + ySpeed;
-
-	
 	/*
 	if (place_meeting(x+hsp,y,oWall))
 		{
@@ -319,14 +224,13 @@ if(oGameGUI.gameTimer > 0.0 && oPause.paused == false) //Remove all player contr
 		x = x + hsp;
 	*/
 	
-		//x += xSpeed;
-		//y += ySpeed;	
+		x += xSpeed;
+		y += ySpeed;	
 	#endregion
 
 	#region //Controls and checks involving player vitals
 
 	#region Bounce TODO Maybe use prevYspeed?
-/*
 	if(yCollision == true) 
 		{
 			ySpeed = ySpeed * -1 / bounceStrength;
@@ -337,7 +241,6 @@ if(oGameGUI.gameTimer > 0.0 && oPause.paused == false) //Remove all player contr
 			xSpeed = xSpeed * -1 / bounceStrength;
 		
 		}
-*/	
 	#endregion
 
 	#region Damage
@@ -481,5 +384,5 @@ if(playerMoved == false && flyUp > 0)
 }
 
 //Fix the subpixel movement stuttering
-//x = round(x);
-//y = round(y);
+x = round(x);
+y = round(y);

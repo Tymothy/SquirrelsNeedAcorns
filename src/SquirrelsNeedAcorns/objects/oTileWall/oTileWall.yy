@@ -1,10 +1,7 @@
 {
-  "spriteId": {
-    "name": "sPixelPerfectTileCollisionTest_Frames",
-    "path": "sprites/sPixelPerfectTileCollisionTest_Frames/sPixelPerfectTileCollisionTest_Frames.yy",
-  },
+  "spriteId": null,
   "solid": false,
-  "visible": false,
+  "visible": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,

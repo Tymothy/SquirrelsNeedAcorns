@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Vec2",
-    "path": "folders/Scripts/Vec2.yy",
+    "name": "Scripts",
+    "path": "folders/Scripts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "vec2_add",
+  "name": "movement_and_collision",
   "tags": [],
   "resourceType": "GMScript",
 }
