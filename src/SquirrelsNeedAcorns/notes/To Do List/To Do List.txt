@@ -7,15 +7,26 @@ https://youtu.be/K6y9PJipfpk?t=303
 - Bonk something
 - Break X things
 
+Jellyfish enemies in Beach
+Go for terraria based tile system?
 
 
 IN PROGRESS
-
+Create Jellyfish object
+Refactor oParCollision to have oParObstacle and oParEnemy
+Change the oPlayer collision script with objects to take a value from the objec
+Update oParCollision to have base values, which children then change, like damage.
+Allow player to bounce off roof of enemies (jellyfish)
 
 Version 0.6.0 to do
 
 
 Version 0.6.1
+Jellyfish
+Speed rings
+Slow rings
+Seperate hitbox based on the struct properties.  For example, the top 10% of a hitbox
+	if collided with, should let the player bounce if the bounce property is selected.
 Build fuel UI into rocket sprite
 Add button below username selection to change username, rather than having keyboard open up immediately
 Add underwater levels
@@ -34,6 +45,7 @@ Add cosmetics
 Integrate Apple GameCenter and Android Google Play for usernames/accounts
 Add blur shader for when game is paused
 XP system for level up, if proper accounts can be made
+Consider putting non-moving obstacles on a tile layer for performance gains
 
 Version 0.8.0 - BETA BUILD
 Add link to join discord

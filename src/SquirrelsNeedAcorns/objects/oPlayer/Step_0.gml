@@ -1,7 +1,7 @@
 /// @desc Insert description here
 if(live_call()) return live_result;
 var _paused = oPause.paused;
-var _damageObstacle = false; //If set to true, apply damage
+damageObstacle = false; //If set to true, apply damage
 
 if(oGameGUI.gameTimer > 0.0 && oPause.paused == false) //Remove all player control if timer runs out
 	{
@@ -20,7 +20,6 @@ if(oGameGUI.gameTimer > 0.0 && oPause.paused == false) //Remove all player contr
 	{	
 		if(hasControl == true)
 		{
-
 			ySpeedTemp = (ySpeedTemp - (flyUp * flyUpPower));
 			xSpeedTemp = (xSpeedTemp + (moveRight-moveLeft)* pushPower);
 			if(global.gameOptions.fuelUse == true)
@@ -188,28 +187,29 @@ if(oGameGUI.gameTimer > 0.0 && oPause.paused == false) //Remove all player contr
 			}
 		}
 	//Obstacle Collision
-	if (place_meeting(x+xSpeed,y, oparCollision))
+	var _collideObject = oparObstacle;
+	if (place_meeting(x+xSpeed,y, _collideObject))
 	{
-		while(!place_meeting(x+sign(xSpeed), y, oparCollision))
+		while(!place_meeting(x+sign(xSpeed), y, _collideObject))
 		{
 			x = x + sign(xSpeed);
 		}
 		xSpeed = 0;
 		xSpeedTemp = 0;
 		xCollision = true;
-		_damageObstacle = true;		
+		damageObstacle = true;		
 	}
 	
-	if (place_meeting(x,y+ySpeed, oparCollision))
+	if (place_meeting(x,y+ySpeed, _collideObject))
 	{
-		while(!place_meeting(x, y+sign(ySpeed), oparCollision))
+		while(!place_meeting(x, y+sign(ySpeed), _collideObject))
 		{
 			y = y + sign(ySpeed);
 		}
 		ySpeed = 0;
 		ySpeedTemp = 0;
 		yCollision = true;
-		_damageObstacle = true;
+		damageObstacle = true;
 	}
 	
 	/*
@@ -246,31 +246,26 @@ if(oGameGUI.gameTimer > 0.0 && oPause.paused == false) //Remove all player contr
 	#region Damage
 	if ((yCollision == true) && (invuln = false))
 	{
-		if((abs(yCollideSpeed) > ySpeedKill) || _damageObstacle == true)
+		if((abs(yCollideSpeed) > ySpeedKill) || damageObstacle == true)
 		{
 
 			if(global.gameOptions.damage == true)
 			{
 				playerDamage();
 			}
-			ScreenShake(oCamera, 10, 30);
-			flash_player(.8, c_red, invulnTimer);
-			invuln = true;
+			
 		}
 	}
 	
 	if ((xCollision == true) && (invuln = false))
 	{
-		if((abs(xCollideSpeed) > xSpeedKill) || _damageObstacle == true)
+		if((abs(xCollideSpeed) > xSpeedKill) || damageObstacle == true)
 		{
 
 			if(global.gameOptions.damage == true)
 			{
 				playerDamage();
 			}
-			ScreenShake(oCamera, 10, 30);
-			flash_player(.8, c_red, invulnTimer);
-			invuln = true;
 		}
 	}
 	

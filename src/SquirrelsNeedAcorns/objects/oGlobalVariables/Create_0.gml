@@ -1,8 +1,9 @@
-/// @desc Insert description here
-#macro no_direction -1 //Needed for collision checks
+/// @desc Generate global variables
+#macro live_enabled 1 //Turn to 0 to turn off for exporting, 1 to use
+#macro database_send false //Use false to not send runs to server, export with true
 
 //Variables changed often
-global.versionText = "Squirrels Need Acorns - Alpha Version 0.6.0";
+global.versionText = "Squirrels Need Acorns - Alpha Version 0.6.1";
 global.debug = false; //Controls all the debugging.  Set to false before exporting
 global.playerName = ""; //Used for the highscores
 
@@ -70,7 +71,7 @@ global.gameModeString = "Challenge";
 global.level1 =
 {
 	roomName : rGameIce1,
-	levelName : "Ice - Easy",
+	levelName : "Ice - 1",
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0],
@@ -79,7 +80,7 @@ global.level1 =
 global.level2 =
 {
 	roomName : rGameIce2,
-	levelName : "Ice - Medium",
+	levelName : "Ice - 2",
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0],
@@ -88,7 +89,17 @@ global.level2 =
 global.level3 =
 {
 	roomName : rGameIce3,
-	levelName : "Ice - Hard",
+	levelName : "Ice - 3",
+	unlocked : true,
+	art : s_gameIce1,
+	highScore : [0, 0],
+	difficulty : 5,
+}
+
+global.level4 =
+{
+	roomName : rGameWater2,
+	levelName : "Water - 2",
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0],
@@ -98,6 +109,7 @@ global.level3 =
 global.levelSelectArray[0] = global.level1;
 global.levelSelectArray[1] = global.level2;
 global.levelSelectArray[2] = global.level3;
+global.levelSelectArray[3] = global.level4;
 
 global.selectedLevel = 0;
 #endregion
