@@ -23,6 +23,7 @@ attributes =
 	description : "Default description",
 	damage : 0,
 	moveSpeed : 0,
+	pushable : false,
 	stationary : true,
 	paletteSwap : 0,
 	dropOnDestroy: false,

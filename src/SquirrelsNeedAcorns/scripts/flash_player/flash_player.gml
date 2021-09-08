@@ -5,7 +5,7 @@ function flash_player(_flashStrength, _flashColor, _flashFrames){
 	/// @arg Color What color to flash sprite as
 	/// @arg Frames sets the length of the shake in frames (60 = 1 second at 60 fps)
 	
-	self.flashAlpha = _flashStrength;
-	self.flashColor = _flashColor;
-	self.flashDecrement = _flashStrength/_flashFrames
+	oPlayer.flashAlpha = _flashStrength;
+	oPlayer.flashColor = _flashColor;
+	oPlayer.flashDecrement = _flashStrength/_flashFrames
 }

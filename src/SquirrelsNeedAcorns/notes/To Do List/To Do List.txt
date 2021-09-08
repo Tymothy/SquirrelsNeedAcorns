@@ -6,38 +6,40 @@ https://youtu.be/K6y9PJipfpk?t=303
 - Collecting a secret acorn
 - Bonk something
 - Break X things
+- Seaweed/Bubbles
 
 Jellyfish enemies in Beach
 Go for terraria based tile system?
 
 
 IN PROGRESS
-Create Jellyfish object
-Refactor oParCollision to have oParObstacle and oParEnemy
-Change the oPlayer collision script with objects to take a value from the objec
-Update oParCollision to have base values, which children then change, like damage.
-Allow player to bounce off roof of enemies (jellyfish)
+Add button below username selection to change username, rather than having keyboard open up immediately
+
 
 Version 0.6.0 to do
 
 
 Version 0.6.1
-Jellyfish
 Speed rings
 Slow rings
-Seperate hitbox based on the struct properties.  For example, the top 10% of a hitbox
-	if collided with, should let the player bounce if the bounce property is selected.
-Build fuel UI into rocket sprite
-Add button below username selection to change username, rather than having keyboard open up immediately
+Change the oPlayer collision script with objects to take a value from the object
+Status effects
+Effect to allow player to have a collection radius
 Add underwater levels
 Add additional hazards/enemies
-Add level art
 Hover sound for mouse for HTML5/Windows exports
 UIX improvement (helpful tips)
+First to X win condition
+Find X to win condition
 
 Version 0.6.2
-Add particles and various effects
+Add particles and various effects (https://manual.yoyogames.com/GameMaker_Language/GML_Reference/Drawing/Particles/Particles.htm?rhsearch=mobile&rhhlterm=mobile)
+Build fuel UI into rocket sprite
 Change transition style from the Sean Spaulding version
+Mode to press a certain amount of buttons
+Minimap
+Indicators showing objectives
+"Casual Prodder" control style.  (One finger)
 
 Version 0.7.0
 Consider art overhaul to adobe illustrator style/Spine integration
@@ -46,6 +48,7 @@ Integrate Apple GameCenter and Android Google Play for usernames/accounts
 Add blur shader for when game is paused
 XP system for level up, if proper accounts can be made
 Consider putting non-moving obstacles on a tile layer for performance gains
+Add level art
 
 Version 0.8.0 - BETA BUILD
 Add link to join discord

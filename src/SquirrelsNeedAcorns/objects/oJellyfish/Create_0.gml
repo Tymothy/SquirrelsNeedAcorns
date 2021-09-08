@@ -1,23 +1,26 @@
-/// @description Insert description here
+/// @description Jellyfish Create
 // You can write your code in this editor
 if(live_call()) return live_result;
 // Inherit the parent event
 event_inherited();
 moveSpeed = .25;
-moveDistance = 30;
+moveDistance = 15;
 
 attributes =
 {
 	description : "A slow moving creature, beware of it's tentacles!",
 	damage : 1,
 	moveSpeed : .25,
+	pushable : false,
 	stationary : false,
 	paletteSwap : 0,
 	dropOnDestroy: false,
 	topCollide : collideProperty.bounce, 
-	botCollide : collideProperty.standard,
-	rightCollide : collideProperty.standard,
-	leftCollide : collideProperty.standard
+	botCollide : collideProperty.damage,
+	rightCollide : collideProperty.damage,
+	leftCollide : collideProperty.damage,
+	bounceStrength : 5
+	
 }
 
 moveSomewhere = function()

@@ -10,3 +10,8 @@ Allow score board to alternate between multiple levels
  
  V 0.6.1
  Added sandy rocks tileset
+ Create Jellyfish object
+ Update oParCollision to have base values, which children then change, like damage.
+Allow player to bounce off roof of enemies (jellyfish)
+Seperate hitbox based on the struct properties.  For example, the top 10% of a hitbox
+	if collided with, should let the player bounce if the bounce property is selected.

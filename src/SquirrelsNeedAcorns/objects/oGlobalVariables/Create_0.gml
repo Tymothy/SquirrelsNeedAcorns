@@ -4,7 +4,7 @@
 
 //Variables changed often
 global.versionText = "Squirrels Need Acorns - Alpha Version 0.6.1";
-global.debug = false; //Controls all the debugging.  Set to false before exporting
+global.debug = true; //Controls all the debugging.  Set to false before exporting
 global.playerName = ""; //Used for the highscores
 
 //Declare Global Variables
@@ -68,10 +68,15 @@ global.gameMode = 0;
 global.gameModeString = "Challenge";
 
 #region Level Struct Declarations
+enum LEVELTYPE {
+	SPACE,
+	WATER
+}
 global.level1 =
 {
 	roomName : rGameIce1,
 	levelName : "Ice - 1",
+	levelType : LEVELTYPE.SPACE,
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0],
@@ -81,6 +86,7 @@ global.level2 =
 {
 	roomName : rGameIce2,
 	levelName : "Ice - 2",
+	levelType : LEVELTYPE.SPACE,
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0],
@@ -90,6 +96,7 @@ global.level3 =
 {
 	roomName : rGameIce3,
 	levelName : "Ice - 3",
+	levelType : LEVELTYPE.SPACE,
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0],
@@ -98,8 +105,31 @@ global.level3 =
 
 global.level4 =
 {
+	roomName : rGameWater1,
+	levelName : "Water - 1",
+	levelType : LEVELTYPE.WATER,
+	unlocked : true,
+	art : s_gameIce1,
+	highScore : [0, 0],
+	difficulty : 5,
+}
+
+global.level5 =
+{
 	roomName : rGameWater2,
 	levelName : "Water - 2",
+	levelType : LEVELTYPE.WATER,
+	unlocked : true,
+	art : s_gameIce1,
+	highScore : [0, 0],
+	difficulty : 5,
+}
+
+global.level6 =
+{
+	roomName : rGameTest,
+	levelName : "Test",
+	levelType : LEVELTYPE.WATER,
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0],
@@ -110,6 +140,8 @@ global.levelSelectArray[0] = global.level1;
 global.levelSelectArray[1] = global.level2;
 global.levelSelectArray[2] = global.level3;
 global.levelSelectArray[3] = global.level4;
+global.levelSelectArray[4] = global.level5;
+global.levelSelectArray[5] = global.level6;
 
 global.selectedLevel = 0;
 #endregion

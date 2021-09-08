@@ -1,4 +1,4 @@
-/// @desc Insert description here
+/// @desc Player Create
 if(live_call()) return live_result;
 
 //Level Variables
@@ -69,6 +69,7 @@ xSpeedFloat = 0;
 //Other Variables
 fireStarted = 0; //Used to start the fire sound when flying
 
+
 flashAlpha = 0;
 flashColor = c_red;
 flashDecrement = 0;
@@ -79,4 +80,9 @@ propelRunning = 0;
 propelStartCounter = 3;
 propelRunningCounter = 3;
 
+//Intializing variables
 global.lastGameRoom = room;
+playerMiddle = 0;
+playerCenter = 0;
+collisionSide = "";
+enemyCollideAttribute = -1;

@@ -1,4 +1,4 @@
-/// @desc Insert description here
+/// @desc Player Step
 if(live_call()) return live_result;
 var _paused = oPause.paused;
 damageObstacle = false; //If set to true, apply damage
@@ -186,6 +186,143 @@ if(oGameGUI.gameTimer > 0.0 && oPause.paused == false) //Remove all player contr
 			}
 			}
 		}
+	//Enemy Collision
+	var _collideEnemy = oparEnemy;
+	if (place_meeting(x+xSpeed,y, _collideEnemy) || (place_meeting(x,y+ySpeed, _collideEnemy)))
+	{
+		if(collisionSide == "")
+		{
+				
+			if(collision_line(x, y, x+(100*sign(xSpeed)), y, _collideEnemy,false, true))
+			{
+				//show_debug_message("Enemy collided with horizontal line");
+				if(xSpeed>0) collisionSide = "Left"; //Interacting with left side of enemy
+				else collisionSide = "Right";
+			}
+			else
+			{
+				//show_debug_message("No enemy collided with horizontal line");
+				if(ySpeed>0) collisionSide = "Top";
+				else collisionSide = "Bottom";
+			}
+		
+			if(collision_line(x, y, x, y+(100*sign(ySpeed)), _collideEnemy,false, true))
+			{
+				//show_debug_message("Enemy collided with horizontal line");
+			}
+			else
+			{
+				//show_debug_message("No enemy collided with horizontal line");			
+			}
+			show_debug_message("Enemy collision side: " + string(collisionSide));
+		
+			//Apply effects of collision
+			with(instance_nearest(x,y, _collideEnemy))
+			{
+
+				switch (other.collisionSide)
+				{
+					case "Top":
+						other.enemyCollideAttribute = attributes.topCollide;
+						break;
+						
+					case "Right":
+						other.enemyCollideAttribute = attributes.rightCollide;
+						break;
+						
+					case "Bottom":
+						other.enemyCollideAttribute = attributes.botCollide;
+						break;
+						
+					case "Left":
+						other.enemyCollideAttribute = attributes.leftCollide;
+						break;
+						
+					default:
+						show_debug_message("THIS SHOULD NOT APPEAR, CHECK ENEMY COLLISION IN OPLAYER.STEP");
+						break;
+				}
+				
+				//If player should bounce
+				if(other.enemyCollideAttribute = collideProperty.bounce)
+				{
+					switch (other.collisionSide)
+					{
+						case "Top":
+							if(other.ySpeed > 0)	other.ySpeed = other.ySpeed * -.5
+							else other.ySpeed = 0;
+							
+							other.ySpeed -= attributes.bounceStrength;
+							other.ySpeedTemp = other.ySpeed;
+							break;
+						case "Right":
+							//TODO: Give a bounce right						
+							break;
+						
+						case "Bottom":
+							//TODO: Give a bounce down
+							break;
+						
+						case "Left":
+							//TODO: Give a bounce left
+							break;
+					}
+					
+				}
+				
+				if(other.enemyCollideAttribute = collideProperty.damage)
+				{
+					playerDamage();					
+				}
+				
+			}
+		}
+		/*
+		TODO: Collision with enemies
+		
+		//Get bounding boxes of jellyfish
+		if(place_meeting(x+xSpeed,y, _collideEnemy))
+		{
+			while(!place_meeting(x+sign(xSpeed), y, _collideEnemy))
+			{
+				x = x + sign(xSpeed);
+			}
+			xSpeed = 0;
+			xSpeedTemp = 0;
+			xCollision = true;
+		}
+		
+		if(place_meeting(x,y+ySpeed, _collideEnemy))
+		{
+			while(!place_meeting(x, y+sign(ySpeed), _collideEnemy))
+			{
+				y = y + sign(ySpeed);
+			}
+			
+			ySpeed = 0;
+			ySpeedTemp = 0;
+			yCollision = true;
+			
+
+		}		
+		//TODO: After implementing collision, make sure enemy can push player, or player can push enemy to keep "stuck" collisions
+			with(instance_nearest(x, y, _collideEnemy))
+			{
+				//var pd = point_direction(x, y,other.x,other.y);
+				////var new_push_amount = 1 * cos( degtorad( direction - pd));
+				//other.x += lengthdir_x(speed, pd);
+				//other.y += lengthdir_y(speed, pd);
+				//show_debug_message("Pushing...");
+			}
+			*/
+
+	
+	}
+	else
+	{
+		collisionSide = "";	
+	}
+		
 	//Obstacle Collision
 	var _collideObject = oparObstacle;
 	if (place_meeting(x+xSpeed,y, _collideObject))

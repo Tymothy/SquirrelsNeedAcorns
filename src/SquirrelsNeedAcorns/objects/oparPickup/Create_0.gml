@@ -3,6 +3,7 @@
 pointValue = 0;
 fuelValue = 0;
 lifeValue = 0;
+attractable = false; //If player can attract this item with an upgrade
 
 bounceSpeed = .5;
 bounceDist = 40;

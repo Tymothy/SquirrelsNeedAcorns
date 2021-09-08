@@ -69,3 +69,12 @@ if (flashAlpha > 0)
 		propelStart = 0;
 		propelRunning = 0;
 	}
+	
+//Debug drawing
+if(global.debug == true)
+{
+	//Draw the collision line for enemy checks
+	draw_set_color(c_yellow);
+	draw_line(x,y, x+(100*sign(xSpeed)), y );
+	draw_line(x, y, x, y+(100*sign(ySpeed)));
+}
