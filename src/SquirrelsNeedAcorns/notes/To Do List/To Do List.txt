@@ -1,3 +1,5 @@
+Spaceship upgrades (fins, hull, nose cone, thrusters, propellent, pilots (animals))
+
 Tony Hawk Pro Skater 3 style level design
 - 1 large level, collect a certain sequence of collecitables, or do certain things
 https://youtu.be/K6y9PJipfpk?t=303
