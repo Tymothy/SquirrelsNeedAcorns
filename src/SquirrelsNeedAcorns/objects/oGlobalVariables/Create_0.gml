@@ -44,7 +44,8 @@ global.lastGameRoom = 0;
 //Declare Player Cosmetics
 global.rocketFins = s_Rocket_Fins_Shallow_Red;
 global.rocketHull = s_Rocket_Hull_Capsule_Gray;
-global.rocketFuelTank = s_Rocket_FuelTank_Dual_Green;
+global.rocketFuelTank = s_Rocket_Fuel_Tank_Dual_Green;
+global.rocketFuelLines = s_Rocket_Fuel_Lines_Dual_Green;
 global.rocketThrusters = s_Rocket_Thrusters_Gray_Small;
 global.rocketWindow = s_Rocket_Window_Gray;
 global.playerCharacter = s_Character_Squirrel_Head;

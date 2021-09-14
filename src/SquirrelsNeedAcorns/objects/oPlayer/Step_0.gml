@@ -490,8 +490,8 @@ if(oGameGUI.gameTimer > 0.0 && oPause.paused == false) //Remove all player contr
 	
 if(hasControl == true)
 {
-	if (moveLeft == 1) image_xscale = -1;
-	if (moveRight == 1) image_xscale = 1;
+	//if (moveLeft == 1) image_xscale = -1;
+	//if (moveRight == 1) image_xscale = 1;
 	if (fireStarted == 0 && flyUp > 0)
 	{
 		audio_play_sound(soundFire, 10, true);
