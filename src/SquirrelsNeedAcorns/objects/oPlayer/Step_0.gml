@@ -495,11 +495,29 @@ if(oGameGUI.gameTimer > 0.0 && oPause.paused == false) //Remove all player contr
 			//Create particles under thrusters when player is accerlating
 			//TODO: Have coords set by the thrusters
 			//TODO: Rotate particle effects to always be under thrusters
-			lengthdir_x()
 			
+			//Get direction from origin to thrusters
 			
-			if(moveLeft == 1) instance_create_layer(x + global.rocketThrusters.x1, y + global.rocketThrusters.y1, "Particles", oPropellent);
-			if(moveRight == 1) instance_create_layer(x + global.rocketThrusters.x2, y + global.rocketThrusters.y2, "Particles", oPropellent);
+			var _x1 = global.rocketThrusters.x1;
+			var _y1 = global.rocketThrusters.y1;
+			var _t1dir = point_direction(x, y, x + _x1, y + _y1);
+			var _t1len = point_distance(x, y, x + _x1, y + _y1);
+			
+			var _x2 = global.rocketThrusters.x2;
+			var _y2 = global.rocketThrusters.y2;
+			var _t2dir = point_direction(x, y, x + _x2, y + _y2);
+			var _t2len = point_distance(x, y, x + _x2, y + _y2);
+			
+			_t1dir = _t1dir + playerAngle;
+			_t2dir = _t2dir + playerAngle;
+			
+			_x1 = lengthdir_x(_t1len,_t1dir);
+			_y1 = lengthdir_y(_t1len,_t1dir);
+			_x2 = lengthdir_x(_t2len,_t2dir);
+			_y2 = lengthdir_y(_t2len,_t2dir);
+			
+			if(moveLeft == 1) instance_create_depth(x + _x1, y + _y1, 701, oPropellent);
+			if(moveRight == 1) instance_create_depth(x + _x2, y + _y2, 701, oPropellent);
 		
 		#endregion
 		if (fireStarted == 0 && flyUp > 0)
