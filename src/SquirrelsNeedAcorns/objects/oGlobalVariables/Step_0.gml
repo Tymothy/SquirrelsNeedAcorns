@@ -7,7 +7,8 @@ if (countDown > 0)
 
 else
 {
-	SlideTransition(TRANS_MODE.GOTO,rMainMenu);
+	if(testRoom == "") SlideTransition(TRANS_MODE.GOTO,rMainMenu);
+	else SlideTransition(TRANS_MODE.GOTO,testRoom);
 }
 
 if (global.debug == true)
