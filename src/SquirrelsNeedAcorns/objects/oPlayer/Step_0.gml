@@ -548,5 +548,5 @@ if(playerMoved == false && flyUp > 0)
 //
 
 //Fix the subpixel movement stuttering
-x = round(x);
-y = round(y);
+x = ceil(x);
+y = ceil(y);

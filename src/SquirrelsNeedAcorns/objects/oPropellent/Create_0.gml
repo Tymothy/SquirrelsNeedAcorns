@@ -3,7 +3,7 @@
 if(live_call()) return live_result;
 //TODO: Add code to thrust with image angle
 
-
+ttl = 4;
 
 //Generated for GMS2 in Geon FX v1.3.2
 //Put this code in Create event
