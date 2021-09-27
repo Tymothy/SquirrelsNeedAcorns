@@ -70,7 +70,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Shirts",
-    "path": "folders/Sprites/Entities/Player/ZZZ_OldPlayerStuff/Shirts.yy",
+    "path": "folders/Sprites/Entities/Player/Shirts.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_shirt_red",

@@ -3,34 +3,21 @@
 if(live_call()) return live_result;
 draw_self();
 
-//Draw sprites for player's rocket
-draw_sprite_ext(global.rocketFins, image_index, x, y, image_xscale, image_yscale, image_angle,image_blend, image_alpha);
-draw_sprite_ext(global.rocketHull, image_index, x, y, image_xscale, image_yscale, image_angle,image_blend, image_alpha);
-draw_sprite_ext(global.rocketFuelTank, image_index, x, y, image_xscale, image_yscale, image_angle,image_blend, image_alpha);
-draw_sprite_ext(global.playerCharacter, image_index, x, y, image_xscale, image_yscale, image_angle,image_blend, image_alpha);
-draw_sprite_ext(global.rocketWindow, image_index, x, y, image_xscale, image_yscale, image_angle,image_blend, image_alpha);
-
-
-//draw_sprite_ext(global.playerTopper, image_index, x, y, image_xscale, image_yscale, image_angle,image_blend, image_alpha);
-//draw_sprite_ext(global.playerShirt, image_index, x, y, image_xscale, image_yscale, image_angle,image_blend, image_alpha);
-//draw_sprite_ext(global.playerRocket,image_index, x, y, image_xscale, image_yscale, image_angle,image_blend, image_alpha);
-//draw_sprite_ext(global.playerBelt, image_index, x, y, image_xscale, image_yscale, image_angle,image_blend, image_alpha);
+//Draw attire
+draw_sprite_ext(global.playerTopper, image_index, x, y, image_xscale, image_yscale, image_angle,image_blend, image_alpha);
+draw_sprite_ext(global.playerShirt, image_index, x, y, image_xscale, image_yscale, image_angle,image_blend, image_alpha);
+draw_sprite_ext(global.playerRocket,image_index, x, y, image_xscale, image_yscale, image_angle,image_blend, image_alpha);
+draw_sprite_ext(global.playerBelt, image_index, x, y, image_xscale, image_yscale, image_angle,image_blend, image_alpha);
 
 //Damage Flash
 if (flashAlpha > 0)
 {
 	shader_set(shFlash);
-
-	draw_sprite_ext(global.rocketFins, image_index, x, y, image_xscale, image_yscale, image_angle,flashColor, flashAlpha);
-	draw_sprite_ext(global.rocketHull, image_index, x, y, image_xscale, image_yscale, image_angle,flashColor, flashAlpha);
-	draw_sprite_ext(global.rocketFuelTank, image_index, x, y, image_xscale, image_yscale, image_angle,flashColor, flashAlpha);
-	draw_sprite_ext(global.playerCharacter, image_index, x, y, image_xscale, image_yscale, image_angle,flashColor, flashAlpha);
-	draw_sprite_ext(global.rocketWindow, image_index, x, y, image_xscale, image_yscale, image_angle,flashColor, flashAlpha);
-
-	//draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, flashColor, flashAlpha);
-	//draw_sprite_ext(global.playerTopper, image_index, x, y, image_xscale, image_yscale, image_angle,flashColor, flashAlpha);
-	//draw_sprite_ext(global.playerRocket,image_index, x, y, image_xscale, image_yscale, image_angle,flashColor, flashAlpha);
-	//draw_sprite_ext(global.playerBelt, image_index, x, y, image_xscale, image_yscale, image_angle,flashColor, flashAlpha);
+	
+	draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, flashColor, flashAlpha);
+	draw_sprite_ext(global.playerTopper, image_index, x, y, image_xscale, image_yscale, image_angle,flashColor, flashAlpha);
+	draw_sprite_ext(global.playerRocket,image_index, x, y, image_xscale, image_yscale, image_angle,flashColor, flashAlpha);
+	draw_sprite_ext(global.playerBelt, image_index, x, y, image_xscale, image_yscale, image_angle,flashColor, flashAlpha);
 	shader_reset();
 	
 }
@@ -39,8 +26,6 @@ if (flashAlpha > 0)
 //Draw other parts of the sprite
 	if(hasControl == true) //Animate only when player has control
 	{
-		#region Old propel animation code
-		/*
 		if (flyUp == 1)  //Player is accerlating up
 		{
 		var _startFrames = sprite_get_number(global.playerPropelStart);
@@ -77,8 +62,6 @@ if (flashAlpha > 0)
 				}
 			}
 		}
-		*/
-		#endregion
 	}
 	
 	if (flyUp != 1) // Player is no longer accelerating up

@@ -70,7 +70,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Rockets",
-    "path": "folders/Sprites/Entities/Player/ZZZ_OldPlayerStuff/Rockets.yy",
+    "path": "folders/Sprites/Entities/Player/Rockets.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_rocket_blue",

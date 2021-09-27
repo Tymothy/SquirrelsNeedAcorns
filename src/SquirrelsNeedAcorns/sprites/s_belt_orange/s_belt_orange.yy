@@ -70,7 +70,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Belts",
-    "path": "folders/Sprites/Entities/Player/ZZZ_OldPlayerStuff/Belts.yy",
+    "path": "folders/Sprites/Entities/Player/Belts.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_belt_orange",

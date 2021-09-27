@@ -42,20 +42,13 @@ global.orientation = ORIENTATION.LANDSCAPE;
 global.lastGameRoom = 0;
 
 //Declare Player Cosmetics
-global.rocketFins = s_Rocket_Fins_Shallow_Red;
-global.rocketHull = s_Rocket_Hull_Capsule_Gray;
-global.rocketFuelTank = s_Rocket_FuelTank_Dual_Green;
-global.rocketThrusters = s_Rocket_Thrusters_Gray_Small;
-global.rocketWindow = s_Rocket_Window_Gray;
-global.playerCharacter = s_Character_Squirrel_Head;
-
-//global.playerCharacter = sPlayer;
-//global.playerTopper = s_topper_spacehelmet;
-//global.playerShirt = s_shirt_red;
-//global.playerBelt = s_belt_red;
-//global.playerRocket = s_rocket_blue;
-//global.playerPropelStart = s_propel_red_start;
-//global.playerPropelRunning = s_propel_red_running;
+global.playerCharacter = sPlayer;
+global.playerTopper = s_topper_spacehelmet;
+global.playerShirt = s_shirt_red;
+global.playerBelt = s_belt_red;
+global.playerRocket = s_rocket_blue;
+global.playerPropelStart = s_propel_red_start;
+global.playerPropelRunning = s_propel_red_running;
 
 //Save File
 global.saveFile = "savedata.ini";

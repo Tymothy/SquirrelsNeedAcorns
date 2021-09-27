@@ -70,7 +70,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Topper",
-    "path": "folders/Sprites/Entities/Player/ZZZ_OldPlayerStuff/Topper.yy",
+    "path": "folders/Sprites/Entities/Player/Topper.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_topper_spacehelmet",

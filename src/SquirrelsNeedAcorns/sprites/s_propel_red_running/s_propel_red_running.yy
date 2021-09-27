@@ -82,7 +82,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Propulsion",
-    "path": "folders/Sprites/Entities/Player/ZZZ_OldPlayerStuff/Propulsion.yy",
+    "path": "folders/Sprites/Entities/Player/Propulsion.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_propel_red_running",

@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "ZZZ_OldPlayerStuff",
-    "path": "folders/Sprites/Entities/Player/ZZZ_OldPlayerStuff.yy",
+    "name": "Player",
+    "path": "folders/Sprites/Entities/Player.yy",
   },
   "resourceVersion": "1.0",
   "name": "sPlayer",
