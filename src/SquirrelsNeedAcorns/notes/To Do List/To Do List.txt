@@ -12,8 +12,7 @@ https://youtu.be/K6y9PJipfpk?t=303
 
 Jellyfish enemies in Beach
 Go for terraria based tile system?
-BUG:
-When hitting the chain object at an angle from below, player got stuck
+
 
 IN PROGRESS
 Add button below username selection to change username, rather than having keyboard open up immediately
@@ -36,7 +35,6 @@ First to X win condition
 Find X to win condition
 
 Version 0.6.2
-Upgrades have cosmetic differences (need to add a "transmorg" feature)
 Add particles and various effects (https://manual.yoyogames.com/GameMaker_Language/GML_Reference/Drawing/Particles/Particles.htm?rhsearch=mobile&rhhlterm=mobile)
 Build fuel UI into rocket sprite
 Change transition style from the Sean Spaulding version

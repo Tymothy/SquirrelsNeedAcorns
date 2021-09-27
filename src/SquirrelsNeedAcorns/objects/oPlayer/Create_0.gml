@@ -86,4 +86,3 @@ playerMiddle = 0;
 playerCenter = 0;
 collisionSide = "";
 enemyCollideAttribute = -1;
-playerAngle = 0;

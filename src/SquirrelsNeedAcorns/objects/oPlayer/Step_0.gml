@@ -10,7 +10,7 @@ if(oGameGUI.gameTimer > 0.0 && oPause.paused == false) //Remove all player contr
 	moveRight = keyboard_check(vk_right) || keyboard_check(ord("D")) + oGameGUI.moveRight;
 	//flyUp = keyboard_check(ord("W")) || keyboard_check(vk_up) + oGameGUI.flyUp;
 	flyUp = min(1,moveLeft + moveRight);
-	playerAngle = moveLeft*30 - moveRight*30;
+
 	//Remove control if player is dead
 	if(playerHealth < 1 || oGameGUI.showCountDown != 0)
 	{
@@ -484,37 +484,24 @@ if(oGameGUI.gameTimer > 0.0 && oPause.paused == false) //Remove all player contr
 	}
 	#endregion
 
-	#region //Animation and Sound
+	#region //Animation
+
+
 	
-	if(hasControl == true)
+if(hasControl == true)
+{
+	//if (moveLeft == 1) image_xscale = -1;
+	//if (moveRight == 1) image_xscale = 1;
+	if (fireStarted == 0 && flyUp > 0)
 	{
-
-		//if (moveLeft == 1) image_xscale = -1;
-		//if (moveRight == 1) image_xscale = 1;
-		#region Particles			
-			//Create particles under thrusters when player is accerlating
-			//TODO: Have coords set by the thrusters
-			//TODO: Rotate particle effects to always be under thrusters
-			lengthdir_x()
-			
-			
-			if(moveLeft == 1) instance_create_layer(x + global.rocketThrusters.x1, y + global.rocketThrusters.y1, "Particles", oPropellent);
-			if(moveRight == 1) instance_create_layer(x + global.rocketThrusters.x2, y + global.rocketThrusters.y2, "Particles", oPropellent);
-		
-		#endregion
-		if (fireStarted == 0 && flyUp > 0)
-		{
-
-
-				
-			audio_play_sound(soundFire, 10, true);
-			fireStarted = 1;
-		}
-		if (flyUp > 0) audio_resume_sound(soundFire);
-	
+		audio_play_sound(soundFire, 10, true);
+		fireStarted = 1;
 	}
-	if (flyUp == 0) audio_pause_sound(soundFire);
-	if (oGameGUI.gameOver == 1) audio_pause_sound(soundFire);
+	if (flyUp > 0) audio_resume_sound(soundFire);
+	
+}
+if (flyUp == 0) audio_pause_sound(soundFire);
+if (oGameGUI.gameOver == 1) audio_pause_sound(soundFire);
 	#endregion
 
 	#region
@@ -527,7 +514,6 @@ if(playerMoved == false && flyUp > 0)
 {
 	playerMoved = true;
 }
-//
 
 //Fix the subpixel movement stuttering
 x = round(x);
