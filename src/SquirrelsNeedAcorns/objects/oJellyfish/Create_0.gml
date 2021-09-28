@@ -8,9 +8,9 @@ moveDistance = 15;
 
 attributes =
 {
-	description : "A slow moving creature, beware of it's tentacles!",
+	description : "A slow moving creature.  You can bounce off it's head, but beware of it's tentacles!",
 	damage : 1,
-	moveSpeed : .25,
+	moveSpeed : .2,
 	pushable : false,
 	stationary : false,
 	paletteSwap : 0,
