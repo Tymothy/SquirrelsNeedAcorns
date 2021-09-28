@@ -15,7 +15,9 @@ state = state.idle;
 enum collideProperty {
 	standard,
 	damage,
-	bounce
+	bounce,
+	speedUp,
+	speedDown
 }
 
 attributes =
@@ -39,6 +41,10 @@ createX = x;
 createY = y;
 targX = x;
 targY = y;
+
+active = true; //Used to turn on/off objects
+idleTimer = 30;
+idleCountdown = idleTimer;
 
 animationProbability = 10; // Probablitiy of animation starting.  60 = ~ 1 time per second of idle.
 animationInProgress = false;

@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sSpeedUp",
-    "path": "sprites/sSpeedUp/sSpeedUp.yy",
+    "name": "sExplodingAcornIdle",
+    "path": "sprites/sExplodingAcornIdle/sExplodingAcornIdle.yy",
   },
   "solid": false,
   "visible": true,
@@ -30,11 +30,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Entities",
-    "path": "folders/Objects/Entities.yy",
+    "name": "Enemies",
+    "path": "folders/Objects/Entities/Enemies.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oSpeedUp",
+  "name": "oExplodingAcorn",
   "tags": [],
   "resourceType": "GMObject",
 }

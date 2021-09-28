@@ -244,7 +244,7 @@ if(oGameGUI.gameTimer > 0.0 && oPause.paused == false) //Remove all player contr
 				}
 				
 				//If player should bounce
-				if(other.enemyCollideAttribute = collideProperty.bounce)
+				if(other.enemyCollideAttribute == collideProperty.bounce)
 				{
 					switch (other.collisionSide)
 					{
@@ -270,9 +270,21 @@ if(oGameGUI.gameTimer > 0.0 && oPause.paused == false) //Remove all player contr
 					
 				}
 				
-				if(other.enemyCollideAttribute = collideProperty.damage)
+				if(other.enemyCollideAttribute == collideProperty.damage)
 				{
-					playerDamage();					
+					playerDamage();
+					active = false;
+				}
+				
+				if(other.enemyCollideAttribute == collideProperty.speedUp && active == true)
+				{
+					other.xSpeed = other.xSpeed * 1.5;
+					other.ySpeed = other.ySpeed * 1.5;
+					other.xSpeedTemp = other.xSpeed;
+					other.ySpeedTemp = other.ySpeed;
+					
+					active = false;
+					show_debug_message("Speed Up!");
 				}
 				
 			}
