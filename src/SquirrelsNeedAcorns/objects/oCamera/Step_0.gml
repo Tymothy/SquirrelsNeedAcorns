@@ -16,14 +16,56 @@ else
 }
 if (instance_exists(follow))
 {
-		xTo = follow.x;
-		yTo = follow.y;
+		//If player is farther away than buffer, slowly move towards player
+		if(	point_distance(x, y, follow.x, follow.y) > playerBuffer)
+		{
+			moveCam = true;
+		}
+		else
+		{
+			moveCam = false;	
+		}
+			
+		
+
+		//Move camera towards where the player is going.  
+		//The faster the player is going, the farther to move camera
+		//xTo = follow.x + follow.xSpeed * 5;
+		//yTo = follow.y + follow.ySpeed * 5;
+		//var _dir = point_direction(follow.x, follow.y, follow.x + follow.xSpeed, follow.y + follow.ySpeed);
+		//xTo = follow.x + lengthdir_x(camDist, _dir);
+		//yTo = follow. y + lengthdir_y(camDist, _dir);
+		
 		
 }
 
+
+
+	if(moveCam == true)
+	{
+
+	}
+	
+		xTo = follow.x;
+		yTo = follow.y;
+		
+		//Look ahead cam
+		//xTo = xTo + follow.xSpeed;
+		//yTo = yTo + follow.ySpeed;
+
+		//Speed up Cam
+		x = floor(lerp(x, xTo, min(1, abs(x - xTo) / maxBuff)));
+		y = floor(lerp(y, yTo, min(1, abs(y - yTo) / maxBuff)));
+		
+
+
+
+
+		//y = lerp(y, yTo, .15);
+		//x += (xTo - x) / 10;
+		//y += (yTo - y) / 10;
 //Update object position
-x += (xTo - x) / 10;
-y += (yTo - y) / 10;
+
 
 x = clamp(x,camWidth/2+buff,room_width-camWidth/2-buff);
 y = clamp(y,camHeight/2+buff,room_height-camHeight/2-buff);
