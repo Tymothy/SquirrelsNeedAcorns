@@ -31,8 +31,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Entities",
-    "path": "folders/Objects/Entities.yy",
+    "name": "Placeable in Rooms",
+    "path": "folders/Objects/Entities/Placeable in Rooms.yy",
   },
   "resourceVersion": "1.0",
   "name": "oPlayer",

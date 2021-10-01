@@ -23,8 +23,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Entities",
-    "path": "folders/Objects/Entities.yy",
+    "name": "Parents",
+    "path": "folders/Objects/Entities/Parents.yy",
   },
   "resourceVersion": "1.0",
   "name": "oparCollision",

@@ -30,7 +30,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Obstacles",
-    "path": "folders/Objects/Entities/Obstacles.yy",
+    "path": "folders/Objects/Entities/Placeable in Rooms/Obstacles.yy",
   },
   "resourceVersion": "1.0",
   "name": "oChainLink",

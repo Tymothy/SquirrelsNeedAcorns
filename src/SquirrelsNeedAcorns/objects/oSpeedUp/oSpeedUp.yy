@@ -30,8 +30,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Entities",
-    "path": "folders/Objects/Entities.yy",
+    "name": "Obstacles",
+    "path": "folders/Objects/Entities/Placeable in Rooms/Obstacles.yy",
   },
   "resourceVersion": "1.0",
   "name": "oSpeedUp",

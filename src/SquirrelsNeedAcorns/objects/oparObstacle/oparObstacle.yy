@@ -24,8 +24,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Obstacles",
-    "path": "folders/Objects/Entities/Obstacles.yy",
+    "name": "Parents",
+    "path": "folders/Objects/Entities/Parents.yy",
   },
   "resourceVersion": "1.0",
   "name": "oparObstacle",

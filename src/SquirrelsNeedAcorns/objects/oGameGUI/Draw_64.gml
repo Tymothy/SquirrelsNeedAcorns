@@ -100,6 +100,15 @@ if(showCountDown > 0)
 
 #region //Alerts
 var alertActive = false;
+if((goalReached == true) && alertActive ==false)
+{
+	draw_set_font(alertFont);
+	draw_set_color(c_ltgray);
+	draw_set_halign(fa_center);
+	draw_set_valign(fa_middle);
+	draw_text_outline(alertX,alertY,"Goal Reached!",c_black, c_red);
+	alertActive = true;
+}
 
 if((gameTimer == 0) && alertActive ==false)
 {

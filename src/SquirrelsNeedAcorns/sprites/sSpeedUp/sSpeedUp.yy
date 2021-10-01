@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Obstacles",
-    "path": "folders/Sprites/Entities/Obstacles.yy",
+    "name": "Interactables",
+    "path": "folders/Sprites/Entities/Interactables.yy",
   },
   "resourceVersion": "1.0",
   "name": "sSpeedUp",

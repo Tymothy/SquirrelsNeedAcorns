@@ -54,6 +54,7 @@ applyYBounce = false;
 invulnCount = invulnTimer;
 playerMoved = false;
 
+
 //Tilemap Collision
 tilemapCollision = true; //True for tilemap collision, false for object collision
 tilemapId = layer_tilemap_get_id(layer_get_id("tsWalls"));

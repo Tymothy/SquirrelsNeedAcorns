@@ -31,7 +31,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Enemies",
-    "path": "folders/Objects/Entities/Enemies.yy",
+    "path": "folders/Objects/Entities/Placeable in Rooms/Enemies.yy",
   },
   "resourceVersion": "1.0",
   "name": "oExplodingAcorn",

@@ -24,8 +24,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Enemies",
-    "path": "folders/Objects/Entities/Enemies.yy",
+    "name": "Parents",
+    "path": "folders/Objects/Entities/Parents.yy",
   },
   "resourceVersion": "1.0",
   "name": "oparEnemy",

@@ -24,8 +24,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Pickups",
-    "path": "folders/Objects/Entities/Pickups.yy",
+    "name": "Parents",
+    "path": "folders/Objects/Entities/Parents.yy",
   },
   "resourceVersion": "1.0",
   "name": "oparPickup",

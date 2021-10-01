@@ -51,7 +51,7 @@ if(oPause.paused == false) //UI Elements
 
 
 
-	if(gameTimer == 0 || oPlayer.fuel < 10 || oPlayer.playerHealth < 1)
+	if(gameTimer == 0 || oPlayer.fuel < 10 || oPlayer.playerHealth < 1 || goalReached = true)
 	{
 		gameOver = true;
 		gameOverTimer = max(0,gameOverTimer - delta_time/1000000);

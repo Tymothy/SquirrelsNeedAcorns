@@ -31,7 +31,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Pickups",
-    "path": "folders/Objects/Entities/Pickups.yy",
+    "path": "folders/Objects/Entities/Placeable in Rooms/Pickups.yy",
   },
   "resourceVersion": "1.0",
   "name": "oExtraLife",

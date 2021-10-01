@@ -7,6 +7,7 @@ showCountDown = countDown;
 gameTimerInit = 60;
 gameTimer = gameTimerInit;
 showTime = gameTimer;
+goalReached = false;
 
 gameOver = false;
 gameOverTimer = 3;

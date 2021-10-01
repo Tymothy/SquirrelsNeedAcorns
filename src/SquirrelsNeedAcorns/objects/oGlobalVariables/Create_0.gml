@@ -69,60 +69,79 @@ global.gameModeString = "Challenge";
 
 #region Level Struct Declarations
 enum LEVELTYPE {
+	FOREST,
 	SPACE,
 	WATER
 }
+
+enum GOALTYPE { //Each goal type can also be timed/untimed
+	COLLECT, // Collect X points to proceed
+	GOAL, // Reach the goal with limited fuel
+	RESCUE, // Rescue an animal
+	
+}
 global.level1 =
 {
-	roomName : rGameIce1,
-	levelName : "Ice - 1",
-	levelType : LEVELTYPE.SPACE,
+	roomName : rGameForest01,
+	levelName : "F01 - Beginning",
+	levelType : LEVELTYPE.FOREST,
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0],
 	difficulty : 1,
+	timed : true,
+	goalType : GOALTYPE.GOAL,
 }
+
 global.level2 =
 {
-	roomName : rGameIce2,
-	levelName : "Ice - 2",
-	levelType : LEVELTYPE.SPACE,
+	roomName : rGameForest02,
+	levelName : "F02 - Slope",
+	levelType : LEVELTYPE.FOREST,
+	unlocked : true,
+	art : s_gameIce1,
+	highScore : [0, 0],
+	difficulty : 2,
+	timed : true,
+	goalType : GOALTYPE.GOAL,
+}
+
+global.level3 =
+{
+	roomName : rGameForest03,
+	levelName : "F03 - Around the Bend",
+	levelType : LEVELTYPE.FOREST,
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0],
 	difficulty : 3,
+	timed : true,
+	goalType : GOALTYPE.GOAL,
 }
-global.level3 =
-{
-	roomName : rGameIce3,
-	levelName : "Ice - 3",
-	levelType : LEVELTYPE.SPACE,
-	unlocked : true,
-	art : s_gameIce1,
-	highScore : [0, 0],
-	difficulty : 5,
-}
-
 global.level4 =
 {
-	roomName : rGameWater1,
-	levelName : "Water - 1",
-	levelType : LEVELTYPE.WATER,
+	roomName : rGameForest04,
+	levelName : "F04 - Some Go Boom",
+	levelType : LEVELTYPE.FOREST,
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0],
 	difficulty : 5,
+	timed : true,
+	goalType : GOALTYPE.GOAL,
 }
 
 global.level5 =
 {
-	roomName : rGameWater2,
+	roomName : rGameWater1,
 	levelName : "Water - 2",
 	levelType : LEVELTYPE.WATER,
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0],
 	difficulty : 5,
+	timed : true,
+	goalType : GOALTYPE.COLLECT,
 }
 
 global.level6 =
@@ -134,7 +153,11 @@ global.level6 =
 	art : s_gameIce1,
 	highScore : [0, 0],
 	difficulty : 5,
+	timed : true,
+	goalType : GOALTYPE.COLLECT,
 }
+
+
 //Level Selection - Contains all levels in game, in order
 global.levelSelectArray[0] = global.level1;
 global.levelSelectArray[1] = global.level2;
