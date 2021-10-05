@@ -109,7 +109,7 @@ global.level2 =
 global.level3 =
 {
 	roomName : rGameForest03,
-	levelName : "F03 - Around the Bend",
+	levelName : "F03 - Bend",
 	levelType : LEVELTYPE.FOREST,
 	unlocked : true,
 	art : s_gameIce1,
@@ -121,7 +121,7 @@ global.level3 =
 global.level4 =
 {
 	roomName : rGameForest04,
-	levelName : "F04 - Some Go Boom",
+	levelName : "F04 - Boom",
 	levelType : LEVELTYPE.FOREST,
 	unlocked : true,
 	art : s_gameIce1,
@@ -133,8 +133,21 @@ global.level4 =
 
 global.level5 =
 {
+	roomName : rGameForest05,
+	levelName : "F05 - Gaps",
+	levelType : LEVELTYPE.FOREST,
+	unlocked : true,
+	art : s_gameIce1,
+	highScore : [0, 0],
+	difficulty : 5,
+	timed : true,
+	goalType : GOALTYPE.GOAL,
+}
+
+global.level6 =
+{
 	roomName : rGameWater1,
-	levelName : "Water - 2",
+	levelName : "W01 - Bounce",
 	levelType : LEVELTYPE.WATER,
 	unlocked : true,
 	art : s_gameIce1,
@@ -144,10 +157,23 @@ global.level5 =
 	goalType : GOALTYPE.COLLECT,
 }
 
-global.level6 =
+global.level7 =
 {
-	roomName : rGameTest,
-	levelName : "Test",
+	roomName : rGameWater2,
+	levelName : "W02 - Turning",
+	levelType : LEVELTYPE.WATER,
+	unlocked : true,
+	art : s_gameIce1,
+	highScore : [0, 0],
+	difficulty : 5,
+	timed : true,
+	goalType : GOALTYPE.COLLECT,
+}
+
+global.level8 =
+{
+	roomName : rGameWater3,
+	levelName : "W03 - Conserve",
 	levelType : LEVELTYPE.WATER,
 	unlocked : true,
 	art : s_gameIce1,
@@ -165,6 +191,9 @@ global.levelSelectArray[2] = global.level3;
 global.levelSelectArray[3] = global.level4;
 global.levelSelectArray[4] = global.level5;
 global.levelSelectArray[5] = global.level6;
+global.levelSelectArray[6] = global.level7;
+global.levelSelectArray[7] = global.level8;
+//global.levelSelectArray[8] = global.level9;
 
 global.selectedLevel = 0;
 #endregion

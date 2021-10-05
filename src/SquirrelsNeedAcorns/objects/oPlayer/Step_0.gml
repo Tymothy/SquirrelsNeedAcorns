@@ -27,7 +27,11 @@ if(oGameGUI.gameTimer > 0.0 && oPause.paused == false) //Remove all player contr
 				fuel = fuel - (flyUp*(engineFuelUsage)) - moveRight - moveLeft;
 			}
 		}
+		//Environmental effects
 		ySpeedTemp = ySpeedTemp + planetGravity;
+		xSpeedTemp = lerp(xSpeedTemp, 0, airResist);
+		ySpeedTemp = lerp(ySpeedTemp, 0, airResist);
+		
 	}
 	//Environment movement effects	
 	#endregion

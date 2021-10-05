@@ -1,12 +1,7 @@
-Tony Hawk Pro Skater 3 style level design
-- 1 large level, collect a certain sequence of collecitables, or do certain things
-https://youtu.be/K6y9PJipfpk?t=303
-- levels of points (getting 20, 40, 60 acorns for example)
-- Collecting A-C-O-R-N (or 5 acorn shards)
-- Collecting a secret acorn
-- Bonk something
-- Break X things
-- Seaweed/Bubbles
+General Ideas
+Make the super acorns a money to use for collections.  Save per level so as you collect them,
+they disappear.  (maybe replaced with a ghost acorn?).
+The first tap may give a side boost (useful for stopping suddenly)
 
 Jellyfish enemies in Beach
 Go for terraria based tile system?
