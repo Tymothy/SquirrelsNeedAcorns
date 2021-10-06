@@ -2,11 +2,30 @@ if(live_call()) return live_result;
 /// @desc Insert description here
 debug = false;
 
+enum TIMERMODE {
+	UNTIMED,
+	TIMED
+}
 countDown = 3;
+countUp = 0;
 showCountDown = countDown;
-gameTimerInit = 60;
+gameTimerInit = global.levelSelectArray[global.selectedLevel].timed;
+if(gameTimerInit == 0)
+{
+	//Untimed Mode
+	timerMode = TIMERMODE.UNTIMED;
+	gameTimerInit = 600;
+	showTime = 0;
+}
+else
+{
+	//Timed mode	
+	timerMode = TIMERMODE.TIMED;
+	showTime = gameTimer;
+}
+
 gameTimer = gameTimerInit;
-showTime = gameTimer;
+
 goalReached = false;
 
 gameOver = false;
@@ -55,33 +74,9 @@ pauseBottomY = _sHeight+_buffer+_margin;
 
 instance_create_layer(_ww*.9,_hh*.1,"TouchUI",o_button_pause);
 
-/*
-
-//Left Arrow GUI coords
-leftArrDevice = -1;
-leftArrLeftX = 442;
-leftArrTopY = 280;
-leftArrRightX = 544;
-leftArrBottomY = 356;
-
-//Right Arrow GUI coords
-rightArrDevice = -1;
-rightArrLeftX = 545;
-rightArrTopY = 280;
-rightArrRightX = 637;
-rightArrBottomY = 356;
-
-//Pause Button GUI coords
-pauseDevice = -1;
-pauseLeftX = 545;
-pauseTopY = 3;
-pauseRightX = 637;
-pauseBottomY = 79;
-*/
-
-
 //Oplayer Values
 flyUp = 0;
 moveLeft = 0;
 moveRight = 0;
 pause = false;
+

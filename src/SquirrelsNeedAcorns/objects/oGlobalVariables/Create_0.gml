@@ -80,6 +80,7 @@ enum GOALTYPE { //Each goal type can also be timed/untimed
 	RESCUE, // Rescue an animal
 	
 }
+
 global.level1 =
 {
 	roomName : rGameForest01,
@@ -89,7 +90,7 @@ global.level1 =
 	art : s_gameIce1,
 	highScore : [0, 0],
 	difficulty : 1,
-	timed : true,
+	timed : 0, //0 is no time limit
 	goalType : GOALTYPE.GOAL,
 }
 
@@ -102,7 +103,7 @@ global.level2 =
 	art : s_gameIce1,
 	highScore : [0, 0],
 	difficulty : 2,
-	timed : true,
+	timed : 0,
 	goalType : GOALTYPE.GOAL,
 }
 
@@ -115,7 +116,7 @@ global.level3 =
 	art : s_gameIce1,
 	highScore : [0, 0],
 	difficulty : 3,
-	timed : true,
+	timed : 0,
 	goalType : GOALTYPE.GOAL,
 }
 global.level4 =
@@ -127,7 +128,7 @@ global.level4 =
 	art : s_gameIce1,
 	highScore : [0, 0],
 	difficulty : 5,
-	timed : true,
+	timed : 0,
 	goalType : GOALTYPE.GOAL,
 }
 
@@ -140,7 +141,7 @@ global.level5 =
 	art : s_gameIce1,
 	highScore : [0, 0],
 	difficulty : 5,
-	timed : true,
+	timed : 0,
 	goalType : GOALTYPE.GOAL,
 }
 
@@ -153,7 +154,7 @@ global.level6 =
 	art : s_gameIce1,
 	highScore : [0, 0],
 	difficulty : 5,
-	timed : true,
+	timed : 0,
 	goalType : GOALTYPE.COLLECT,
 }
 
@@ -166,7 +167,7 @@ global.level7 =
 	art : s_gameIce1,
 	highScore : [0, 0],
 	difficulty : 5,
-	timed : true,
+	timed : 0,
 	goalType : GOALTYPE.COLLECT,
 }
 
@@ -179,7 +180,7 @@ global.level8 =
 	art : s_gameIce1,
 	highScore : [0, 0],
 	difficulty : 5,
-	timed : true,
+	timed : 0,
 	goalType : GOALTYPE.COLLECT,
 }
 

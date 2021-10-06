@@ -40,12 +40,28 @@ if(oPause.paused == false) //UI Elements
 	}
 	if(global.gameOptions.timed == true)
 	{
-		if (countDown < .1)
+		if (countDown < .01)
 		{
-			gameTimer = max(0, gameTimer - delta_time/1000000);
-			showTime = max(0,ceil(gameTimer));
-			showCountDown = 0;
-			countDown = 0;
+			switch(timerMode)
+			{
+				case TIMERMODE.UNTIMED :
+					if(goalReached == false)
+					{
+						countUp = countUp + delta_time/1000000;
+						showTime = countUp;	
+					}
+					gameTimer = 60;
+
+				break;
+				
+				case TIMERMODE.TIMED :
+					gameTimer = max(0, gameTimer - delta_time/1000000);
+					countUp = countUp + delta_time/1000000;
+					showTime = max(0,ceil(gameTimer));
+					showCountDown = 0;
+					countDown = 0;
+				break;
+			}
 		}
 	}
 
