@@ -28,6 +28,7 @@ First to X win condition
 Find X to win condition
 
 Version 0.6.2
+Add database stuff back in (Just commented out)
 Add particles and various effects (https://manual.yoyogames.com/GameMaker_Language/GML_Reference/Drawing/Particles/Particles.htm?rhsearch=mobile&rhhlterm=mobile)
 Build fuel UI into rocket sprite
 Change transition style from the Sean Spaulding version

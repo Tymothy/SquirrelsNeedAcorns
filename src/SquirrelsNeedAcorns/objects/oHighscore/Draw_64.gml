@@ -6,9 +6,9 @@ draw_set_valign(fa_top);
 draw_set_halign(fa_left);
 if (text1 == "Ready")
 {
-    draw_text_highscore(global.GUIww*.01, global.GUIhh*.01, "", "Name", "Score", string(text2), player_name, c_aqua);
+ //   draw_text_highscore(global.GUIww*.01, global.GUIhh*.01, "", "Name", "Score", string(text2), player_name, c_aqua);
 }
 else
 {
-    draw_text(global.GUIww*.1, global.GUIhh*.01, text1);
+ //   draw_text(global.GUIww*.1, global.GUIhh*.01, text1);
 }

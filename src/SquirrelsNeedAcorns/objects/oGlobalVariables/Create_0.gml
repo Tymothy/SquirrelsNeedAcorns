@@ -4,8 +4,10 @@
 
 //Variables changed often
 global.versionText = "Squirrels Need Acorns - Alpha Version 0.6.1";
-global.debug = true; //Controls all the debugging.  Set to false before exporting
+global.debug = false; //Controls all the debugging.  Set to false before exporting
 global.playerName = ""; //Used for the highscores
+global.musicToggle = 0; //Set to 1 to export with sound on by default.  Set to 0 for no sound on game on.
+global.testRoom = ""; //Put a room to immediately go to that room for testing.  Export with ""
 
 //Declare Global Variables
 global.cam = view_camera[0];
@@ -53,8 +55,7 @@ global.playerPropelRunning = s_propel_red_running;
 //Save File
 global.saveFile = "savedata.ini";
 
-//Options
-global.musicToggle = 1;
+
 
 //Game Modes
 global.gameOptions =
