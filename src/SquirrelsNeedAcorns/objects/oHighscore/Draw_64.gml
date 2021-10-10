@@ -12,3 +12,5 @@ else
 {
  //   draw_text(global.GUIww*.1, global.GUIhh*.01, text1);
 }
+draw_text(global.GUIww*.05, global.GUIhh*.01, "Network Scores");
+draw_text(global.GUIww*.05, global.GUIhh*.06, "Temporarily Disabled");

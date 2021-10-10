@@ -28,16 +28,17 @@ if(_ww/_hh < 1)
 
 var _hhalert = _hh/2;//-(font_get_size(alertFont)*2);
 
-draw_set_halign(fa_center);
+draw_set_halign(fa_left);
 draw_set_valign(fa_middle);
 draw_set_font(UIFont);
 
 
-var xSpacing = 30;
+var xSpacing = 25;
 var ySpacing = 45;
 var valueSpacing = 45;
 
 //Draw Fuel
+//TODO: Fix the fuel bar to be pixel perfect
 if(global.gameOptions.fuelUse == true)
 {
 	draw_sprite(sFuelPickup,image_index, xSpacing, ySpacing);
@@ -51,18 +52,18 @@ if(global.gameOptions.scoring == true)
 {
 	draw_set_color(c_yellow);
 	draw_sprite(sAcorn,image_index, xSpacing, ySpacing*2);
-	draw_text_transformed_color(xSpacing+valueSpacing, ySpacing*2+2,oPlayer.pointsOnPlayer, 1, 1, 0, c_yellow, c_yellow, c_yellow, c_yellow, 1);
+	draw_text_transformed_color(xSpacing/2+valueSpacing, ySpacing*2+2,string(oPlayer.pointsOnPlayer) + " / " + string(global.availablePoints), 1, 1, 0, c_yellow, c_yellow, c_yellow, c_yellow, 1);
 }
 
 //Draw Health
 if(global.gameOptions.damage == true)
 {
 	draw_sprite(sPlayer,0, xSpacing, ySpacing*3);
-	draw_text_transformed_color(xSpacing+valueSpacing, ySpacing*3,oPlayer.playerHealth, 1, 1, 0, c_red, c_red, c_red, c_red, 1);
+	draw_text_transformed_color(xSpacing/2+valueSpacing, ySpacing*3,oPlayer.playerHealth, 1, 1, 0, c_red, c_red, c_red, c_red, 1);
 }
 
 //Draw Time
-if(global.gameOptions.timed == true)
+if(global.displayCountUp == true)
 {
 	draw_set_font(UIFont);
 	draw_set_color(c_ltgray);
@@ -100,7 +101,7 @@ if(showCountDown > 0)
 
 #region //Alerts
 var alertActive = false;
-if((goalReached == true) && alertActive ==false)
+if((global.goalReached == true) && alertActive ==false)
 {
 	draw_set_font(alertFont);
 	draw_set_color(c_ltgray);

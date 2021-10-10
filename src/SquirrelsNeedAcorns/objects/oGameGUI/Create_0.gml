@@ -26,7 +26,7 @@ else
 
 gameTimer = gameTimerInit;
 
-goalReached = false;
+global.goalReached = false;
 
 gameOver = false;
 gameOverTimer = 3;
@@ -35,6 +35,7 @@ timerDisplayOffset = 30;
 alertFont = fEthno24;
 UIFont = fConthrax26;
 hintFont = fConthrax11;
+global.availablePoints = instance_number(oPointPickup);
 
 touchUI = true;
 var _hh = global.GUIhh

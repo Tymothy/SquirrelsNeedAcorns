@@ -5,26 +5,29 @@ if(room = rEndRun)
 
 	//var _checkHighscore = 0;
 
-	
-	switch(global.gameMode)
-	{
-		case 0: //Challenge Mode
-			save_highscore();
+	if(global.goalReached == true)
+		{
+		switch(global.gameMode)
+		{
+			case 0: //Challenge Mode
+				save_highscore();
 		
-		break;
+			break;
 		
-		case 1: //Zen Mode
-			save_highscore();
+			case 1: //Zen Mode
+				save_highscore();
 
-		break;
+			break;
 		
-		case 2: //Practice mode
+			case 2: //Practice mode
 		
-		break;
+			break;
 		
+		}
+		//Send high score to server
+		scr_send_score(global.playerName, global.points, global.gameMode, global.selectedLevel);
+
+		save_change_money(global.points);
 	}
-	//Send high score to server
-	scr_send_score(global.playerName, global.points, global.gameMode, global.selectedLevel);
-
-	save_change_money(global.points);
+	load_highscore();
 }

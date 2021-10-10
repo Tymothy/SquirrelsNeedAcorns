@@ -4,7 +4,7 @@ if(live_call()) return live_result;
 function Zoom(){
 		if(instance_exists(oPlayer))
 		{
-			var _zoom = 2.5; //Higher the number, farther out the zoom is.
+			var _zoom = 2; //Higher the number, farther out the zoom is.
 		}
 		else
 		{

@@ -16,15 +16,15 @@ else
 }
 if (instance_exists(follow))
 {
-		//If player is farther away than buffer, slowly move towards player
-		if(	point_distance(x, y, follow.x, follow.y) > playerBuffer)
-		{
-			moveCam = true;
-		}
-		else
-		{
-			moveCam = false;	
-		}
+		////If player is farther away than buffer, slowly move towards player
+		//if(	point_distance(x, y, follow.x, follow.y) > playerBuffer)
+		//{
+		//	moveCam = true;
+		//}
+		//else
+		//{
+		//	moveCam = false;	
+		//}
 			
 		
 
@@ -41,14 +41,15 @@ if (instance_exists(follow))
 
 
 
-	if(moveCam == true)
-	{
+	//if(moveCam == true)
+	//{
 
-	}
-	
+	//}
+	if(instance_exists(oPlayer))
+	{
 		xTo = follow.x;
 		yTo = follow.y;
-		
+	}
 		//Look ahead cam
 		//xTo = xTo + follow.xSpeed;
 		//yTo = yTo + follow.ySpeed;

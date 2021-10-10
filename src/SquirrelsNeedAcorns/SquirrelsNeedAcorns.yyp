@@ -447,7 +447,7 @@
     {"CopyToMask":0,"filePath":"datafiles/GMLive","resourceVersion":"1.0","name":"regexp.ndll","resourceType":"GMIncludedFile",},
     {"CopyToMask":0,"filePath":"datafiles/GMLive","resourceVersion":"1.0","name":"std.ndll","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/GMLive","resourceVersion":"1.0","name":"temp.shader","resourceType":"GMIncludedFile",},
-    {"CopyToMask":-1,"filePath":"datafiles","resourceVersion":"1.0","name":"savedata.ini","resourceType":"GMIncludedFile",},
+    {"CopyToMask":3035461371874509038,"filePath":"datafiles","resourceVersion":"1.0","name":"savedata.ini","resourceType":"GMIncludedFile",},
     {"CopyToMask":0,"filePath":"datafiles/GMLive","resourceVersion":"1.0","name":"gcmt-dll.dll","resourceType":"GMIncludedFile",},
     {"CopyToMask":0,"filePath":"datafiles/GMLive","resourceVersion":"1.0","name":"gmlive.html","resourceType":"GMIncludedFile",},
     {"CopyToMask":0,"filePath":"datafiles/GMLive","resourceVersion":"1.0","name":"gmlive-server.exe","resourceType":"GMIncludedFile",},

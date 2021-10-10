@@ -77,13 +77,14 @@ button_h = max(0,font_get_size(menuFont)*3);
 		draw_text_outline(text_x,text_y+textSpacing*0,string("How to Play"),c_white,c_aqua);
 		draw_set_font(fConthrax11);	
 		draw_set_color (c_ltgray);
-		draw_text_outline(text_x,text_y+textSpacing*3,string("Touch left or right side of to screen move."), c_black,c_ltgray);
+		draw_text_outline(text_x,text_y+textSpacing*3,string("Under construction."), c_black,c_ltgray);		
+//		draw_text_outline(text_x,text_y+textSpacing*3,string("Touch left or right side of to screen move."), c_black,c_ltgray);
 		
-		draw_text_outline(text_x,text_y+textSpacing*5,string("The goal is to collect as many"), c_black,c_ltgray);
-		draw_text_outline(text_x,text_y+textSpacing*6,string("acorns as you can in 60 seconds."), c_black,c_ltgray);
+//		draw_text_outline(text_x,text_y+textSpacing*5,string("The goal is to collect as many"), c_black,c_ltgray);
+//		draw_text_outline(text_x,text_y+textSpacing*6,string("acorns as you can in 60 seconds."), c_black,c_ltgray);
 		
-		draw_text_outline(text_x,text_y+textSpacing*8,string("Watch your fuel, don't hit the"), c_black,c_ltgray);
-		draw_text_outline(text_x,text_y+textSpacing*9,string("walls too hard, and avoid spikes."), c_black,c_ltgray);
+//		draw_text_outline(text_x,text_y+textSpacing*8,string("Watch your fuel, don't hit the"), c_black,c_ltgray);
+//		draw_text_outline(text_x,text_y+textSpacing*9,string("walls too hard, and avoid spikes."), c_black,c_ltgray);
 
 			//Left side
 			draw_set_font(fConthrax26);
@@ -176,10 +177,13 @@ button_h = max(0,font_get_size(menuFont)*3);
 		draw_set_halign(fa_center);
 	
 		//Write score
-		draw_text_outline(menu_x, menu_y*.5, "Points scored this run", c_black, c_ltgray);
+		//draw_text_outline(menu_x, menu_y*.5, "Points scored this run", c_black, c_ltgray);
 		draw_set_font(fConthrax26);
-		draw_text_outline(menu_x, menu_y*.5+font_get_size(fConthrax26)*1.5,string(global.points),c_black, c_yellow);
-
+		draw_text_outline(menu_x, menu_y*.5,string(global.points) + " / " + string(global.availablePoints),c_black, c_yellow);
+		if(global.points >= global.availablePoints)
+		{
+			draw_text_outline(menu_x, menu_y*.5+font_get_size(fConthrax26)*2,string(global.time),c_black, c_yellow);
+		}
 		//Gamemode specific
 		draw_set_font(menuFont);
 		draw_text_outline(menu_x, menu_y*.15, string(global.gameModeString), c_black, c_ltgray);

@@ -8,12 +8,17 @@ global.debug = false; //Controls all the debugging.  Set to false before exporti
 global.playerName = ""; //Used for the highscores
 global.musicToggle = 0; //Set to 1 to export with sound on by default.  Set to 0 for no sound on game on.
 global.testRoom = ""; //Put a room to immediately go to that room for testing.  Export with ""
+global.displayCountUp = true;
 
 //Declare Global Variables
 global.cam = view_camera[0];
 global.view_w_half = camera_get_view_width(global.cam) * 0.5;
 global.view_h_half = camera_get_view_height(global.cam) * 0.5;
 global.points = 0;
+global.availablePoints = 0;
+global.time = 0;
+global.goalReached = false;
+
 global.final = 0;
 global.highscore = 0;
 global.money = 0;
@@ -84,12 +89,13 @@ enum GOALTYPE { //Each goal type can also be timed/untimed
 
 global.level1 =
 {
+	saveNum : 101, //Save num, first number used for world, last two used for levels
 	roomName : rGameForest01,
 	levelName : "F01 - Beginning",
 	levelType : LEVELTYPE.FOREST,
 	unlocked : true,
 	art : s_gameIce1,
-	highScore : [0, 0],
+	highScore : [0, 0, 0], //Gamemode, points, time
 	difficulty : 1,
 	timed : 0, //0 is no time limit
 	goalType : GOALTYPE.GOAL,
@@ -97,12 +103,13 @@ global.level1 =
 
 global.level2 =
 {
+	saveNum : 102, 
 	roomName : rGameForest02,
 	levelName : "F02 - Slope",
 	levelType : LEVELTYPE.FOREST,
 	unlocked : true,
 	art : s_gameIce1,
-	highScore : [0, 0],
+	highScore : [0, 0, 0],
 	difficulty : 2,
 	timed : 0,
 	goalType : GOALTYPE.GOAL,
@@ -110,24 +117,26 @@ global.level2 =
 
 global.level3 =
 {
+	saveNum : 103, 
 	roomName : rGameForest03,
 	levelName : "F03 - Bend",
 	levelType : LEVELTYPE.FOREST,
 	unlocked : true,
 	art : s_gameIce1,
-	highScore : [0, 0],
+	highScore : [0, 0, 0],
 	difficulty : 3,
 	timed : 0,
 	goalType : GOALTYPE.GOAL,
 }
 global.level4 =
 {
+	saveNum : 104, 
 	roomName : rGameForest04,
 	levelName : "F04 - Boom",
 	levelType : LEVELTYPE.FOREST,
 	unlocked : true,
 	art : s_gameIce1,
-	highScore : [0, 0],
+	highScore : [0, 0, 0],
 	difficulty : 5,
 	timed : 0,
 	goalType : GOALTYPE.GOAL,
@@ -135,12 +144,13 @@ global.level4 =
 
 global.level5 =
 {
+	saveNum : 105, 
 	roomName : rGameForest05,
 	levelName : "F05 - Gaps",
 	levelType : LEVELTYPE.FOREST,
 	unlocked : true,
 	art : s_gameIce1,
-	highScore : [0, 0],
+	highScore : [0, 0, 0],
 	difficulty : 5,
 	timed : 0,
 	goalType : GOALTYPE.GOAL,
@@ -148,12 +158,13 @@ global.level5 =
 
 global.level6 =
 {
+	saveNum : 201, 
 	roomName : rGameWater1,
 	levelName : "W01 - Bounce",
 	levelType : LEVELTYPE.WATER,
 	unlocked : true,
 	art : s_gameIce1,
-	highScore : [0, 0],
+	highScore : [0, 0, 0],
 	difficulty : 5,
 	timed : 0,
 	goalType : GOALTYPE.COLLECT,
@@ -161,12 +172,13 @@ global.level6 =
 
 global.level7 =
 {
+	saveNum : 202, 
 	roomName : rGameWater2,
 	levelName : "W02 - Turning",
 	levelType : LEVELTYPE.WATER,
 	unlocked : true,
 	art : s_gameIce1,
-	highScore : [0, 0],
+	highScore : [0, 0, 0],
 	difficulty : 5,
 	timed : 0,
 	goalType : GOALTYPE.COLLECT,
@@ -174,12 +186,13 @@ global.level7 =
 
 global.level8 =
 {
+	saveNum : 203, 
 	roomName : rGameWater3,
 	levelName : "W03 - Conserve",
 	levelType : LEVELTYPE.WATER,
 	unlocked : true,
 	art : s_gameIce1,
-	highScore : [0, 0],
+	highScore : [0, 0, 0],
 	difficulty : 5,
 	timed : 0,
 	goalType : GOALTYPE.COLLECT,

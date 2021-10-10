@@ -45,7 +45,7 @@ if(oPause.paused == false) //UI Elements
 			switch(timerMode)
 			{
 				case TIMERMODE.UNTIMED :
-					if(goalReached == false)
+					if(global.goalReached == false)
 					{
 						countUp = countUp + delta_time/1000000;
 						showTime = countUp;	
@@ -67,7 +67,7 @@ if(oPause.paused == false) //UI Elements
 
 
 
-	if(gameTimer == 0 || oPlayer.fuel < 10 || oPlayer.playerHealth < 1 || goalReached = true)
+	if(gameTimer == 0 || oPlayer.fuel < 10 || oPlayer.playerHealth < 1 || global.goalReached = true)
 	{
 		gameOver = true;
 		gameOverTimer = max(0,gameOverTimer - delta_time/1000000);

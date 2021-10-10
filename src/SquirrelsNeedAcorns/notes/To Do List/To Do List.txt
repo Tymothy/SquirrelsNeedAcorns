@@ -1,4 +1,12 @@
 General Ideas
+1 Star for finishing level
+2 Stars for collecting all acorns
+3 Stars for beating a time and collecting all acorns
+Timer only appears when activated
+
+Have a game mode to collect as many acorns as possible, maxing out acorn is not possible
+
+
 Make the super acorns a money to use for collections.  Save per level so as you collect them,
 they disappear.  (maybe replaced with a ghost acorn?).
 The first tap may give a side boost (useful for stopping suddenly)
