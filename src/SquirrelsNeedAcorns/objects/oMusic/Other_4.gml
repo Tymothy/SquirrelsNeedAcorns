@@ -32,10 +32,10 @@ if(global.musicToggle == 1)
 		//Check if game is trying to play the same track again.  If so, don't replay, just continue.
 		if(endingMusic != currentMusic)
 		{
-			audio_sound_gain(endingMusic, 0, 500);
+			audio_sound_gain(endingMusic, 0, 300);
 			audio_play_sound(currentMusic, 90, true);	
 			audio_sound_gain(currentMusic, 0,0);
-			audio_sound_gain(currentMusic, 1,500);
+			audio_sound_gain(currentMusic, 1,300);
 		}
 		if(endingMusic == currentMusic)
 		{
