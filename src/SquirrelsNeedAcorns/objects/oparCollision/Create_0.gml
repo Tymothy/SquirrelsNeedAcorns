@@ -17,7 +17,8 @@ enum collideProperty {
 	damage,
 	bounce,
 	speedUp,
-	speedDown
+	speedDown,
+	push
 }
 
 attributes =
@@ -32,7 +33,8 @@ attributes =
 	topCollide : collideProperty.standard,
 	botCollide : collideProperty.standard,
 	rightCollide : collideProperty.standard,
-	leftCollide : collideProperty.standard
+	leftCollide : collideProperty.standard,
+	pushStrength : 0
 }
 image_speed = 0;
 

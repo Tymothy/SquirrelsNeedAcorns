@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+if(live_call()) return live_result;
 // Inherit the parent event
 event_inherited();
 
@@ -13,10 +13,11 @@ attributes =
 	stationary : true,
 	paletteSwap : 0,
 	dropOnDestroy: false,
-	topCollide : collideProperty.damage,
-	botCollide : collideProperty.damage,
-	rightCollide : collideProperty.damage,
-	leftCollide : collideProperty.damage
+	topCollide : collideProperty.push,
+	botCollide : collideProperty.push,
+	rightCollide : collideProperty.push,
+	leftCollide : collideProperty.push,
+	pushStrength : 15
 }
 
 image_speed = 1;

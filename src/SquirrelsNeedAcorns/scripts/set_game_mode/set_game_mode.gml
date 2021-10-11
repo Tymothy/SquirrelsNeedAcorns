@@ -13,7 +13,7 @@ function set_game_mode(_gameMode){
 			global.gameModeString = "Challenge";
 			global.gameOptions.timed = true;
 			global.gameOptions.fuelUse = true;
-			global.gameOptions.damage = true;
+			global.gameOptions.damage = false;
 			global.gameOptions.scoring = true;
 			break;
 	
@@ -21,7 +21,7 @@ function set_game_mode(_gameMode){
 			global.gameModeString = "Zen";
 			global.gameOptions.timed = false;
 			global.gameOptions.fuelUse = true;
-			global.gameOptions.damage = true;
+			global.gameOptions.damage = false;
 			global.gameOptions.scoring = true;
 		
 			break;

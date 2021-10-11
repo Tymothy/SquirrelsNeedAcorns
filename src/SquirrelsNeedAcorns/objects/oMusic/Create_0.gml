@@ -1,5 +1,6 @@
 mainMenuMusic = sound_music_TheLongestYear;
-rGameIce1Music = sound_music_FastLanes;
+forestMusic = sound_music_FastLanes;
+waterMusic = sound_music_YouWereAlways;
 
 currentMusic = mainMenuMusic;
 endingMusic = 0;

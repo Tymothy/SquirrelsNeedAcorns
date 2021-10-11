@@ -3,7 +3,7 @@
 #macro database_send false //Use false to not send runs to server, export with true
 
 //Variables changed often
-global.versionText = "Squirrels Need Acorns - Alpha Version 0.6.1";
+global.versionText = "Squirrels Need Acorns - Alpha Version 0.6.2";
 global.debug = false; //Controls all the debugging.  Set to false before exporting
 global.playerName = ""; //Used for the highscores
 global.musicToggle = 1; //Set to 1 to export with sound on by default.  Set to 0 for no sound on game on.

@@ -7,12 +7,24 @@ if(global.musicToggle == 1)
 
 		endingMusic = currentMusic;
 	
-		if(room == rGameIce1)
+		if(instance_exists(oPlayer) || room == rEndRun)
 		{
-			currentMusic = rGameIce1Music;			
+			switch (global.levelSelectArray[global.selectedLevel].levelType)
+			{
+				case LEVELTYPE.FOREST : 
+					currentMusic = forestMusic;
+				break;
+	
+				case LEVELTYPE.WATER : 
+					currentMusic = waterMusic;
+				break;
+	
+				case LEVELTYPE.SPACE : 
+					
+				break;
+			}
 		}
-		
-		if(!instance_exists(oPlayer))
+		else 
 		{
 			currentMusic = mainMenuMusic;	
 		}

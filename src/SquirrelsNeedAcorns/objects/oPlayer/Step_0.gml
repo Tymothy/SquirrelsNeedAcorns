@@ -273,7 +273,16 @@ if(oGameGUI.gameTimer > 0.0 && oPause.paused == false) //Remove all player contr
 					}
 					
 				}
-				
+				if(other.enemyCollideAttribute == collideProperty.push)
+				{
+					//Push away from the object
+					var _dir = point_direction(x,y,other.x,other.y); //Gets the vector from collided object to player (we want to puch that way)
+					other.xSpeed += lengthdir_x(attributes.pushStrength, _dir);
+					other.ySpeed += lengthdir_y(attributes.pushStrength, _dir);
+					other.xSpeedTemp = other.xSpeed;
+					other.ySpeedTemp = other.ySpeed;
+					active = false;
+				}
 				if(other.enemyCollideAttribute == collideProperty.damage)
 				{
 					playerDamage();
