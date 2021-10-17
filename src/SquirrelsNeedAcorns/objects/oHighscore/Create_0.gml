@@ -1,7 +1,7 @@
 /// @description  Initialise loading the online highscores
 if(live_call()) return live_result;
 player_name = global.playerName;
-highscoreFont = fMenu12;
+highscoreFont = fTextNormal;
 lines = 5;
 currentGameMode = global.gameMode;
 currentSelectedLevel = global.selectedLevel;

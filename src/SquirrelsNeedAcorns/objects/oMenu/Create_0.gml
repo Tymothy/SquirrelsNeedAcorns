@@ -1,5 +1,5 @@
 if(live_call()) return live_result;
-menuFont = fMenu18;
+menuFont = fTextLarge;
 button_h = font_get_size(menuFont)*2.3;
 button_w = 20;
 

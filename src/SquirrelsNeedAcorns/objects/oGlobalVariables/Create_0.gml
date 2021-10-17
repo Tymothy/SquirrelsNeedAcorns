@@ -91,6 +91,7 @@ global.level1 =
 {
 	saveNum : 101, //Save num, first number used for world, last two used for levels
 	roomName : rGameForest01,
+	world : 1,
 	levelName : "F01 - Beginning",
 	levelType : LEVELTYPE.FOREST,
 	unlocked : true,
@@ -105,6 +106,7 @@ global.level2 =
 {
 	saveNum : 102, 
 	roomName : rGameForest02,
+	world : 1,
 	levelName : "F02 - Slope",
 	levelType : LEVELTYPE.FOREST,
 	unlocked : true,
@@ -119,6 +121,7 @@ global.level3 =
 {
 	saveNum : 103, 
 	roomName : rGameForest03,
+	world : 1,
 	levelName : "F03 - Bend",
 	levelType : LEVELTYPE.FOREST,
 	unlocked : true,
@@ -132,6 +135,7 @@ global.level4 =
 {
 	saveNum : 104, 
 	roomName : rGameForest04,
+	world : 1,
 	levelName : "F04 - Boom",
 	levelType : LEVELTYPE.FOREST,
 	unlocked : true,
@@ -146,6 +150,7 @@ global.level5 =
 {
 	saveNum : 105, 
 	roomName : rGameForest05,
+	world : 1,
 	levelName : "F05 - Gaps",
 	levelType : LEVELTYPE.FOREST,
 	unlocked : true,
@@ -160,6 +165,7 @@ global.level6 =
 {
 	saveNum : 201, 
 	roomName : rGameWater1,
+	world : 2,
 	levelName : "W01 - Bounce",
 	levelType : LEVELTYPE.WATER,
 	unlocked : true,
@@ -174,6 +180,7 @@ global.level7 =
 {
 	saveNum : 202, 
 	roomName : rGameWater2,
+	world : 2,
 	levelName : "W02 - Turning",
 	levelType : LEVELTYPE.WATER,
 	unlocked : true,
@@ -188,6 +195,7 @@ global.level8 =
 {
 	saveNum : 203, 
 	roomName : rGameWater3,
+	world : 2,
 	levelName : "W03 - Conserve",
 	levelType : LEVELTYPE.WATER,
 	unlocked : true,
@@ -211,6 +219,8 @@ global.levelSelectArray[7] = global.level8;
 //global.levelSelectArray[8] = global.level9;
 
 global.selectedLevel = 0;
+global.selectedWorld = 1;
+
 #endregion
 
 /*
