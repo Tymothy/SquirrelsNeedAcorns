@@ -1,41 +1,35 @@
 General Ideas
+
+=== Campaign Progression ===
 1 Star for finishing level
-2 Stars for collecting all acorns
+2 Stars for collecting at least half acorns
 3 Stars for beating a time and collecting all acorns
-Timer only appears when activated
 
-Have a game mode to collect as many acorns as possible, maxing out acorn is not possible
+=== Game Modes ===
+Reach goal 
+ - Collect acorns to increase level completion
+ - After 100%, time based
+ - Default Style
+ 
+60 Seconds to reach as many as possible (classic)
+ - Collecting all acorns is not possible
+ - Many paths to success
+ - No time mechanic
+ - Every 5 levels
 
+=== Bugs to Fix ===
+Username selection
 
-Make the super acorns a money to use for collections.  Save per level so as you collect them,
-they disappear.  (maybe replaced with a ghost acorn?).
-The first tap may give a side boost (useful for stopping suddenly)
-
-Jellyfish enemies in Beach
-Go for terraria based tile system?
-
-
-IN PROGRESS
-Add button below username selection to change username, rather than having keyboard open up immediately
-
-
-Version 0.6.0 to do
-
-
-Version 0.6.1
+=== Alpha 0.7 ===
 Speed rings
 Slow rings
-Change the oPlayer collision script with objects to take a value from the object
 Status effects
-Effect to allow player to have a collection radius
-Add underwater levels
-Add additional hazards/enemies
-Hover sound for mouse for HTML5/Windows exports
-UIX improvement (helpful tips)
+
 First to X win condition
 Find X to win condition
 
-Version 0.6.2
+=== Alpha 0.8 ===
+Timer only appears when replaying the level after fully beating it
 Add database stuff back in (Just commented out)
 Add particles and various effects (https://manual.yoyogames.com/GameMaker_Language/GML_Reference/Drawing/Particles/Particles.htm?rhsearch=mobile&rhhlterm=mobile)
 Build fuel UI into rocket sprite
@@ -44,9 +38,10 @@ Mode to press a certain amount of buttons
 Minimap
 Indicators showing objectives
 "Casual Prodder" control style.  (One finger)
+Hover sound for mouse for HTML5/Windows exports
+UIX improvement (helpful tips)
 
-Version 0.7.0
-Consider art overhaul to adobe illustrator style/Spine integration
+=== Alpha 0.9 ===
 Add cosmetics
 Integrate Apple GameCenter and Android Google Play for usernames/accounts
 Add blur shader for when game is paused
@@ -54,7 +49,7 @@ XP system for level up, if proper accounts can be made
 Consider putting non-moving obstacles on a tile layer for performance gains
 Add level art
 
-Version 0.8.0 - BETA BUILD
+=== Beta 0.10 ===
 Add link to join discord
 Make displays work nicely with portait mode(no super zoom out)
 Additional level world
@@ -67,13 +62,12 @@ Polish and bug fixes
 
 
 Ideas:
-
-
+Add a secret star in each level?
+Make the super acorns a money to use for collections.  Save per level so as you collect them, they disappear.  (maybe replaced with a ghost acorn?).
+The first tap may give a side boost (useful for stopping suddenly)
 Some way to compare your scores with friends
-Game mode with time only, unlimited fuel?
 Implement a shop to spend money
 Add items that give cosmetic effects
-Level editor
 Histogram to show players score vs. a percent of the world
 Add a campaign, or reason to proceed in game
 
@@ -85,4 +79,4 @@ Long Term
 Online high score system
 
 World Design
-Level select is a map of an area.  Ice is in a mountain, ocean, etc.  Use Wonderdraft???
+Level select is a map of an area.  Ice is in a mountain, ocean, etc.  
