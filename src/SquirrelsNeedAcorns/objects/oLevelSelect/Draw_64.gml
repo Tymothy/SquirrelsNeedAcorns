@@ -15,32 +15,33 @@ draw_text_outline(modeStringX, modeStringY, string(global.gameModeString), c_bla
 //As long as mode is not practice, display high score
 	var _score = global.levelSelectArray[global.selectedLevel].highScore[global.gameMode];
 	var _time = global.levelSelectArray[global.selectedLevel].highScore[2];
-	
-switch(global.gameModeString)
-{
+
+//TODO: Put score somewhere easily accesible.
+//switch(global.gameModeString)
+//{
 
 	
-	case "Challenge" :
-		if(_time == 0)
-		{
-			draw_text_outline(modeStringX, modeStringY+margin, string(_score), c_black, c_yellow);
-		}
-		else
-		{
-			draw_text_outline(modeStringX, modeStringY+margin, string(_score) + " - " + string(_time), c_black, c_yellow);	
-		}
+//	case "Challenge" :
+//		if(_time == 0)
+//		{
+//			draw_text_outline(modeStringX, modeStringY+margin, string(_score), c_black, c_yellow);
+//		}
+//		else
+//		{
+//			draw_text_outline(modeStringX, modeStringY+margin, string(_score) + " - " + string(_time), c_black, c_yellow);	
+//		}
 		
-		break;
+//		break;
 		
-	case "Zen" :
-		draw_text_outline(modeStringX, modeStringY+margin, string(_score), c_black, c_yellow);
-		break;
+//	case "Zen" :
+//		draw_text_outline(modeStringX, modeStringY+margin, string(_score), c_black, c_yellow);
+//		break;
 		
-	case "Practice" :
+//	case "Practice" :
 	
-		break;
+//		break;
 	
-}
+//}
 //if(global.gameModeString == "Challenge")
 //	{
 

@@ -112,6 +112,7 @@
     {"id":{"name":"s_button_pressable","path":"sprites/s_button_pressable/s_button_pressable.yy",},"order":8,},
     {"id":{"name":"romTest3","path":"rooms/romTest3/romTest3.yy",},"order":2,},
     {"id":{"name":"rMainMenu","path":"rooms/rMainMenu/rMainMenu.yy",},"order":1,},
+    {"id":{"name":"o_button_levelSelect","path":"objects/o_button_levelSelect/o_button_levelSelect.yy",},"order":10,},
     {"id":{"name":"inputbox_get_y","path":"scripts/inputbox_get_y/inputbox_get_y.yy",},"order":5,},
     {"id":{"name":"s_button_pause","path":"sprites/s_button_pause/s_button_pause.yy",},"order":7,},
     {"id":{"name":"inputbox_set_margins","path":"scripts/inputbox_set_margins/inputbox_set_margins.yy",},"order":2,},

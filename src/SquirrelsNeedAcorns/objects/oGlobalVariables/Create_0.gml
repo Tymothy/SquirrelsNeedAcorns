@@ -1,5 +1,5 @@
 /// @desc Generate global variables
-#macro live_enabled 0 //Turn to 0 to turn off for exporting, 1 to use
+#macro live_enabled 1 //Turn to 0 to turn off for exporting, 1 to use
 #macro database_send false //Use false to not send runs to server, export with true
 
 //Variables changed often
