@@ -19,6 +19,7 @@ Reach goal
 
 === Bugs to Fix ===
 Username selection
+Remove player control after reaching the goal so player just falls
 
 === Alpha 0.7 ===
 Speed rings
