@@ -4,7 +4,7 @@ if(live_call()) return live_result;
 //Level Variables
 //Old values, before resolution change
 flyUpPowerEVar = 3.4; //Default WAS 2.6 before gravity system
-pushPowerEVar = 1.5;
+pushPowerEVar = 1.75;
 planetGravityEVar = 2; //Default WAS 1.2 before gravity system
 playerDeathFrictionEVar = 5;
 planetFrictionEVar = .9; //Higher is more friction
@@ -93,16 +93,16 @@ switch (global.levelSelectArray[global.selectedLevel].levelType)
 {
 	case LEVELTYPE.FOREST : 
 		planetGravityEVar = planetGravityEVar * 1;
-		airResist = .003;
+		airResist = .005;
 	break;
 	
 	case LEVELTYPE.WATER : 
 		planetGravityEVar = planetGravityEVar * .75;
-		airResist = .006;
+		airResist = .008;
 	break;
 	
 	case LEVELTYPE.SPACE : 
 		planetGravityEVar = planetGravityEVar * .5;
-		airResist = .00;
+		airResist = .003;
 	break;
 }
