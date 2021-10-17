@@ -8,6 +8,6 @@ draw_set_font(fTextLarge);
 draw_set_color(c_ltgray);
 draw_text(_ww*.5, _hh*.2, "Enter Username:");
 
-draw_set_font(fMenu18);
+draw_set_font(fTextLarge);
 draw_set_color(c_aqua);
 draw_text(_ww*.5, _hh*.3, string(playerName));

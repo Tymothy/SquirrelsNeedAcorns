@@ -171,8 +171,8 @@
     "PhysicsWorldPixToMetres": 0.1,
   },
   "parent": {
-    "name": "Levels",
-    "path": "folders/Rooms/Levels.yy",
+    "name": "World 2 - Underwater",
+    "path": "folders/Rooms/Levels/World 2 - Underwater.yy",
   },
   "resourceVersion": "1.0",
   "name": "rGameTest",

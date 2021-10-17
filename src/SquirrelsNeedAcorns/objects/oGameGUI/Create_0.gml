@@ -10,6 +10,8 @@ countDown = 3;
 countUp = 0;
 showCountDown = countDown;
 gameTimerInit = global.levelSelectArray[global.selectedLevel].timed;
+gameTimer = gameTimerInit;
+
 if(gameTimerInit == 0)
 {
 	//Untimed Mode
@@ -24,17 +26,15 @@ else
 	showTime = gameTimer;
 }
 
-gameTimer = gameTimerInit;
-
 global.goalReached = false;
 
 gameOver = false;
 gameOverTimer = 3;
 timerDisplayOffset = 30;
 
-alertFont = fEthno24;
-UIFont = fConthrax26;
-hintFont = fConthrax11;
+alertFont = fTextLarge;
+UIFont = fTextLarge;
+hintFont = fTextNormal;
 global.availablePoints = instance_number(oPointPickup);
 
 touchUI = true;

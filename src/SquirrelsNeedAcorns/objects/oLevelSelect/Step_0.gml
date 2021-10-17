@@ -64,7 +64,7 @@ if(world != global.selectedWorld)
 					}
 				}
 			}
-
+		global.selectedLevel = worldArr[0];
 		}
 	array_delete(worldArr, 0, _arrayLen);
 	

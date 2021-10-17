@@ -4,14 +4,14 @@
 // Inherit the parent event
 event_inherited();
 //sprite = s_logo_back;
-displayText = "Next\nWorld";
+displayText = "Prev\nWorld";
 buttonXScale = 1.7;
 buttonYScale = 1.5;
 
 update_button = function() {
 	//SlideTransition(TRANS_MODE.GOTO,levelRoom);
-	if(global.selectedWorld < global.topWorld)
+	if(global.selectedWorld > 0)
 	{
-		global.selectedWorld++;
+		global.selectedWorld--;
 	}
 }

@@ -4,7 +4,7 @@ my_touch = -1; //The touch id for multitouch
 image_speed = 0;
 sprite = -1;
 
-font = fEthno18;
+font = fTextLarge;
 outline = c_white;
 color = c_ltgray;
 

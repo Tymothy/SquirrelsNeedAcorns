@@ -1,6 +1,6 @@
 if(live_call()) return live_result;
 levelSelectFont = fTextLarge;
-margin = font_get_size(levelSelectFont)*2.3;
+margin = font_get_size(levelSelectFont)*1.7;
 
 
 	var _ww = global.GUIww;
@@ -22,6 +22,8 @@ margin = font_get_size(levelSelectFont)*2.3;
 	nextWorldY = _hh * .9;
 	prevWorldX = _ww * .3;
 	prevWorldY = _hh * .9;
+	playX = _ww * .5;
+	playY = _hh * .9;
 	usernameX = _ww * .5;
 	usernameY = _hh*  .9;
 	
@@ -36,7 +38,8 @@ margin = font_get_size(levelSelectFont)*2.3;
 instance_create_layer(modeX, modeY, "UI_Buttons",o_button_mode);
 instance_create_layer(backX, backY, "UI_Buttons",o_button_back);
 instance_create_layer(nextWorldX, nextWorldY, "UI_Buttons", o_button_nextWorld);
-//instance_create_layer(prevWorldX, prevWorldY, "UI_Buttons", o_button_nextWorld);
+instance_create_layer(prevWorldX, prevWorldY, "UI_Buttons", o_button_prevWorld);
+instance_create_layer(playX, playY, "UI_Buttons", o_button_play);
 //TODO: Put this in a method to be able to call
 //Place levels on screen
 

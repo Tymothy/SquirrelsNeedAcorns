@@ -2,7 +2,7 @@ if(live_call()) return live_result;
 /// @description Insert description here
 // You can write your code in this editor
 paused = false;
-pauseFont = fEthno18;
+pauseFont = fTextLarge;
 touchSelect = false;
 margin = 1.15; //How far around text button should be drawn, as a multiplyer.
 buttonSprite = s_button_pressable;

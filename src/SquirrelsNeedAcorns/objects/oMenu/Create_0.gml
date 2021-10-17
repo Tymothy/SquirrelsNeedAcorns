@@ -59,15 +59,15 @@ button[0] = "Return to\nMain Menu";
 //button[3] = "Exit";
 }
 
-if(room == rLevelSelect)
-{
-//button_h = 80;
-layout = LAYOUT.HORIZONTAL;
-button[0] = "Previous\n Level";
-button[1] = "Play";
-button[2] = "Next\n Level";
-//button[3] = "Exit";
-}
+//if(room == rLevelSelect)
+//{
+////button_h = 80;
+//layout = LAYOUT.HORIZONTAL;
+//button[0] = "Previous\n Level";
+//button[1] = "Play";
+//button[2] = "Next\n Level";
+////button[3] = "Exit";
+//}
 
 if(room == rEndRun)
 {

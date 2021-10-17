@@ -14,18 +14,18 @@ button_h = max(0,font_get_size(menuFont)*3);
 	
 			//Draw Version
 			draw_set_color(c_gray);
-		draw_set_font(fDebug);
+		draw_set_font(fTextNormal);
 		draw_set_halign(fa_left);
 		draw_set_valign(fa_bottom);
 		//Draw at very top left of screen
 		draw_text(global.GUIww*.04, global.GUIhh*.96, string(global.versionText));
 		
 		//Draw Title
-		draw_set_font(fEthno24);
+		draw_set_font(fTextExtraLarge);
 		draw_set_valign(fa_middle);
 		draw_set_halign(fa_center);
 	
-		draw_text_outline(menu_x, menu_y/2, "Squirrels\nNeed Acorns", c_white, c_aqua);
+		draw_text_outline(menu_x, menu_y/2, "Squirrels\nNeed Acorns", c_white, c_teal);
 	
 	} //End Main Menu
 
@@ -70,12 +70,12 @@ button_h = max(0,font_get_size(menuFont)*3);
 		var text_y = _hh *.1;
 
 
-		var textSpacing = font_get_size(fConthrax11)*1.5;
+		var textSpacing = font_get_size(fTextNormal)*1.5;
 		draw_set_halign(fa_center);
 		draw_set_valign(fa_top);
-		draw_set_font(fEthno18);
+		draw_set_font(fTextLarge);
 		draw_text_outline(text_x,text_y+textSpacing*0,string("How to Play"),c_white,c_aqua);
-		draw_set_font(fConthrax11);	
+		draw_set_font(fTextNormal);	
 		draw_set_color (c_ltgray);
 		draw_text_outline(text_x,text_y+textSpacing*3,string("Under construction."), c_black,c_ltgray);		
 //		draw_text_outline(text_x,text_y+textSpacing*3,string("Touch left or right side of to screen move."), c_black,c_ltgray);
@@ -87,7 +87,7 @@ button_h = max(0,font_get_size(menuFont)*3);
 //		draw_text_outline(text_x,text_y+textSpacing*9,string("walls too hard, and avoid spikes."), c_black,c_ltgray);
 
 			//Left side
-			draw_set_font(fConthrax26);
+			draw_set_font(fTextLarge);
 			text_x = global.GUIww *.25;
 			text_y = global.GUIhh *.65;
 			//draw_text(text_x,text_y,string("Movement"));
@@ -131,15 +131,15 @@ button_h = max(0,font_get_size(menuFont)*3);
 		
 		var text_x = global.GUIww * .5;
 		var text_y = global.GUIhh * .15;
-		var textSpacing = font_get_size(fConthrax11)*1.5;
+		var textSpacing = font_get_size(fTextNormal)*1.5;
 	
 		draw_set_halign(fa_center);
 		draw_set_valign(fa_top);
-		draw_set_font(fEthno18);
+		draw_set_font(fTextLarge);
 		draw_text_outline(text_x,text_y-textSpacing*1,string("High Scores"),c_white,c_aqua);
 	
 		draw_set_color (c_ltgray);
-		draw_set_font(fConthrax11);
+		draw_set_font(fTextNormal);
 
 	
 		//Draw High Scores
@@ -152,7 +152,7 @@ button_h = max(0,font_get_size(menuFont)*3);
 
 
 			//Left side
-			//draw_set_font(fConthrax26);
+			//draw_set_font(fTextLarge);
 			//text_x = global.GUIww *.25;
 			//text_y = global.GUIhh *.65;
 			//draw_text(text_x,text_y,string("Movement"));
@@ -178,11 +178,11 @@ button_h = max(0,font_get_size(menuFont)*3);
 	
 		//Write score
 		//draw_text_outline(menu_x, menu_y*.5, "Points scored this run", c_black, c_ltgray);
-		draw_set_font(fConthrax26);
+		draw_set_font(fTextLarge);
 		draw_text_outline(menu_x, menu_y*.5,string(global.points) + " / " + string(global.availablePoints),c_black, c_yellow);
 		if(global.points >= global.availablePoints)
 		{
-			draw_text_outline(menu_x, menu_y*.5+font_get_size(fConthrax26)*2,string(global.time),c_black, c_yellow);
+			draw_text_outline(menu_x, menu_y*.5+font_get_size(fTextLarge)*2,string(global.time),c_black, c_yellow);
 		}
 		//Gamemode specific
 		draw_set_font(menuFont);
@@ -190,7 +190,7 @@ button_h = max(0,font_get_size(menuFont)*3);
 	
 		if(global.gameMode == 2)
 		{
-			draw_set_font(fEthno12);
+			draw_set_font(fTextNormal);
 			draw_text_outline(menu_x, menu_y*.15+font_get_size(menuFont)*1.5, "Score not saved due to mode", c_black, c_ltgray);
 		}else{
 		draw_text_outline(menu_x, menu_y*.15+font_get_size(menuFont)*1.5, string(global.levelSelectArray[global.selectedLevel].levelName),c_black,c_ltgray);	

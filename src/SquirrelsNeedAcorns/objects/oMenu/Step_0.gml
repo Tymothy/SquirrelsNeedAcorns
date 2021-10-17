@@ -52,22 +52,22 @@ if (keyboard_check_pressed(vk_enter) == true
 				break;
 		}
 	}
-	if(room == rLevelSelect)
-	{
-		switch (menu_index)
-		{
-			//TODO: If select_level returns 0, do a fail sound
-			case 0:
-				select_level(-1);
-				break;
-			case 1:
-				SlideTransition(TRANS_MODE.GOTO,global.levelSelectArray[global.selectedLevel].roomName);
-				break;
-			case 2:
-				select_level(1);
-				break;
-		}
-	}
+	//if(room == rLevelSelect)
+	//{
+	//	switch (menu_index)
+	//	{
+	//		//TODO: If select_level returns 0, do a fail sound
+	//		case 0:
+	//			select_level(-1);
+	//			break;
+	//		case 1:
+	//			SlideTransition(TRANS_MODE.GOTO,global.levelSelectArray[global.selectedLevel].roomName);
+	//			break;
+	//		case 2:
+	//			select_level(1);
+	//			break;
+	//	}
+	//}
 	if(room == rEndRun)
 	{
 		switch (menu_index)

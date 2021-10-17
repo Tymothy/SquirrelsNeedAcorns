@@ -6,7 +6,7 @@
 global.versionText = "Squirrels Need Acorns - Alpha Version 0.6.3";
 global.debug = false; //Controls all the debugging.  Set to false before exporting
 global.playerName = ""; //Used for the highscores
-global.musicToggle = 1; //Set to 1 to export with sound on by default.  Set to 0 for no sound on game on.
+global.musicToggle = 0; //Set to 1 to export with sound on by default.  Set to 0 for no sound on game on.
 global.testRoom = ""; //Put a room to immediately go to that room for testing.  Export with ""
 global.displayCountUp = true;
 
@@ -91,7 +91,7 @@ global.level1 =
 {
 	saveNum : 101, //Save num, first number used for world, last two used for levels
 	roomName : rGameForest01,
-	world : 1,
+	world : 0,
 	levelName : "F01 - Beginning",
 	levelType : LEVELTYPE.FOREST,
 	unlocked : true,
@@ -100,13 +100,14 @@ global.level1 =
 	difficulty : 1,
 	timed : 0, //0 is no time limit
 	goalType : GOALTYPE.GOAL,
+	pointReq : 0, //How many points required to pass
 }
 
 global.level2 =
 {
 	saveNum : 102, 
 	roomName : rGameForest02,
-	world : 1,
+	world : 0,
 	levelName : "F02 - Slope",
 	levelType : LEVELTYPE.FOREST,
 	unlocked : true,
@@ -115,13 +116,14 @@ global.level2 =
 	difficulty : 2,
 	timed : 0,
 	goalType : GOALTYPE.GOAL,
+	pointReq : 0,
 }
 
 global.level3 =
 {
 	saveNum : 103, 
 	roomName : rGameForest03,
-	world : 1,
+	world : 0,
 	levelName : "F03 - Bend",
 	levelType : LEVELTYPE.FOREST,
 	unlocked : true,
@@ -130,12 +132,13 @@ global.level3 =
 	difficulty : 3,
 	timed : 0,
 	goalType : GOALTYPE.GOAL,
+	pointReq : 0,
 }
 global.level4 =
 {
 	saveNum : 104, 
 	roomName : rGameForest04,
-	world : 1,
+	world : 0,
 	levelName : "F04 - Boom",
 	levelType : LEVELTYPE.FOREST,
 	unlocked : true,
@@ -144,13 +147,14 @@ global.level4 =
 	difficulty : 5,
 	timed : 0,
 	goalType : GOALTYPE.GOAL,
+	pointReq : 0,
 }
 
 global.level5 =
 {
 	saveNum : 105, 
 	roomName : rGameForest05,
-	world : 1,
+	world : 0,
 	levelName : "F05 - Gaps",
 	levelType : LEVELTYPE.FOREST,
 	unlocked : true,
@@ -159,13 +163,14 @@ global.level5 =
 	difficulty : 5,
 	timed : 0,
 	goalType : GOALTYPE.GOAL,
+	pointReq : 0,
 }
 
 global.level6 =
 {
 	saveNum : 201, 
 	roomName : rGameWater1,
-	world : 2,
+	world : 1,
 	levelName : "W01 - Bounce",
 	levelType : LEVELTYPE.WATER,
 	unlocked : true,
@@ -173,14 +178,15 @@ global.level6 =
 	highScore : [0, 0, 0],
 	difficulty : 5,
 	timed : 0,
-	goalType : GOALTYPE.COLLECT,
+	goalType : GOALTYPE.GOAL,
+	pointReq : 0,
 }
 
 global.level7 =
 {
 	saveNum : 202, 
 	roomName : rGameWater2,
-	world : 2,
+	world : 1,
 	levelName : "W02 - Turning",
 	levelType : LEVELTYPE.WATER,
 	unlocked : true,
@@ -188,14 +194,15 @@ global.level7 =
 	highScore : [0, 0, 0],
 	difficulty : 5,
 	timed : 0,
-	goalType : GOALTYPE.COLLECT,
+	goalType : GOALTYPE.GOAL,
+	pointReq : 0,
 }
 
 global.level8 =
 {
 	saveNum : 203, 
 	roomName : rGameWater3,
-	world : 2,
+	world : 1,
 	levelName : "W03 - Conserve",
 	levelType : LEVELTYPE.WATER,
 	unlocked : true,
@@ -203,7 +210,24 @@ global.level8 =
 	highScore : [0, 0, 0],
 	difficulty : 5,
 	timed : 0,
+	goalType : GOALTYPE.GOAL,
+	pointReq : 0,
+}
+
+global.level9 =
+{
+	saveNum : 204, 
+	roomName : rGameTest,
+	world : 1,
+	levelName : "T01 - Test",
+	levelType : LEVELTYPE.WATER,
+	unlocked : true,
+	art : s_gameIce1,
+	highScore : [0, 0, 0],
+	difficulty : 5,
+	timed : 10,
 	goalType : GOALTYPE.COLLECT,
+	pointReq : 4,
 }
 
 
@@ -216,10 +240,16 @@ global.levelSelectArray[4] = global.level5;
 global.levelSelectArray[5] = global.level6;
 global.levelSelectArray[6] = global.level7;
 global.levelSelectArray[7] = global.level8;
-//global.levelSelectArray[8] = global.level9;
+global.levelSelectArray[8] = global.level9;
+
+global.worldName[0] = "Forest";
+global.worldName[1] = "Underwater";
+//global.worldName[2
 
 global.selectedLevel = 0;
-global.selectedWorld = 1;
+global.selectedWorld = 0;
+global.topWorld = array_length(global.worldName) - 1;
+
 
 #endregion
 
