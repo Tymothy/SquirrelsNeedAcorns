@@ -6,6 +6,7 @@ if(endStepRan == false)
 	buttonText = global.levelSelectArray[level].levelName;
 	world = global.selectedWorld;
 	displayText = string_copy(buttonText, 1, 3);
+	completionLevel = global.levelSelectArray[level].completionLevel;
 	endStepRan = true;
 }
 

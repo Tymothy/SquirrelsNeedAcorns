@@ -7,6 +7,7 @@ event_inherited();
 level = 0; //Set to array value of level.  Level 1 is 0
 levelRoom = global.levelSelectArray[level].roomName;
 buttonText = global.levelSelectArray[level].levelName;
+completionLevel = global.levelSelectArray[level].completionLevel;
 world = global.selectedWorld;
 displayText = string_copy(buttonText, 1, 3);
 buttonXScale = 1.6;

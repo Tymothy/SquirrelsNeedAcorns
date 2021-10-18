@@ -111,7 +111,7 @@ if((global.goalReached == true) && alertActive ==false)
 	alertActive = true;
 }
 
-if((gameTimer == 0) && alertActive ==false)
+if((gameTimer == 0) && alertActive ==false && timerMode == TIMERMODE.TIMED)
 {
 	draw_set_font(alertFont);
 	draw_set_color(c_ltgray);

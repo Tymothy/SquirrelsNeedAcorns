@@ -87,7 +87,7 @@ enum GOALTYPE { //Each goal type can also be timed/untimed
 	
 }
 
-global.level1 =
+global.level_Beginning =
 {
 	saveNum : 101, //Save num, first number used for world, last two used for levels
 	roomName : rGameForest01,
@@ -101,9 +101,10 @@ global.level1 =
 	timed : 0, //0 is no time limit
 	goalType : GOALTYPE.GOAL,
 	pointReq : 0, //How many points required to pass
+	completionLevel : 0, //How many acorns to present on level select screen
 }
 
-global.level2 =
+global.level_Slope =
 {
 	saveNum : 102, 
 	roomName : rGameForest02,
@@ -117,9 +118,10 @@ global.level2 =
 	timed : 0,
 	goalType : GOALTYPE.GOAL,
 	pointReq : 0,
+	completionLevel : 0,
 }
 
-global.level3 =
+global.level_Bend =
 {
 	saveNum : 103, 
 	roomName : rGameForest03,
@@ -133,8 +135,9 @@ global.level3 =
 	timed : 0,
 	goalType : GOALTYPE.GOAL,
 	pointReq : 0,
+	completionLevel : 0,
 }
-global.level4 =
+global.level_Boom =
 {
 	saveNum : 104, 
 	roomName : rGameForest04,
@@ -148,12 +151,30 @@ global.level4 =
 	timed : 0,
 	goalType : GOALTYPE.GOAL,
 	pointReq : 0,
+	completionLevel : 0,
 }
 
-global.level5 =
+global.level_Open =
 {
 	saveNum : 105, 
 	roomName : rGameForest05,
+	world : 0,
+	levelName : "F05 - Open",
+	levelType : LEVELTYPE.FOREST,
+	unlocked : true,
+	art : s_gameIce1,
+	highScore : [0, 0, 0],
+	difficulty : 5,
+	timed : 0,
+	goalType : GOALTYPE.COLLECT,
+	pointReq : 0,
+	completionLevel : 0,
+}
+
+global.level_Gaps =
+{
+	saveNum : 106, 
+	roomName : rGameForest06,
 	world : 0,
 	levelName : "F05 - Gaps",
 	levelType : LEVELTYPE.FOREST,
@@ -164,9 +185,13 @@ global.level5 =
 	timed : 0,
 	goalType : GOALTYPE.GOAL,
 	pointReq : 0,
+	completionLevel : 0,
 }
 
-global.level6 =
+
+
+//Water Levels
+global.level_Bounce =
 {
 	saveNum : 201, 
 	roomName : rGameWater1,
@@ -180,9 +205,10 @@ global.level6 =
 	timed : 0,
 	goalType : GOALTYPE.GOAL,
 	pointReq : 0,
+	completionLevel : 0,
 }
 
-global.level7 =
+global.level_Turning =
 {
 	saveNum : 202, 
 	roomName : rGameWater2,
@@ -196,9 +222,10 @@ global.level7 =
 	timed : 0,
 	goalType : GOALTYPE.GOAL,
 	pointReq : 0,
+	completionLevel : 0,
 }
 
-global.level8 =
+global.level_Conserve =
 {
 	saveNum : 203, 
 	roomName : rGameWater3,
@@ -212,9 +239,10 @@ global.level8 =
 	timed : 0,
 	goalType : GOALTYPE.GOAL,
 	pointReq : 0,
+	completionLevel : 0,
 }
 
-global.level9 =
+global.level_Test =
 {
 	saveNum : 204, 
 	roomName : rGameTest,
@@ -228,19 +256,35 @@ global.level9 =
 	timed : 10,
 	goalType : GOALTYPE.COLLECT,
 	pointReq : 4,
+	completionLevel : 0,
 }
 
 
 //Level Selection - Contains all levels in game, in order
-global.levelSelectArray[0] = global.level1;
-global.levelSelectArray[1] = global.level2;
-global.levelSelectArray[2] = global.level3;
-global.levelSelectArray[3] = global.level4;
-global.levelSelectArray[4] = global.level5;
-global.levelSelectArray[5] = global.level6;
-global.levelSelectArray[6] = global.level7;
-global.levelSelectArray[7] = global.level8;
-global.levelSelectArray[8] = global.level9;
+//global.levelSelectArray[0] = global.level_Beginning;
+//global.levelSelectArray[1] = global.level_Slope;
+//global.levelSelectArray[2] = global.level_Bend;
+//global.levelSelectArray[3] = global.level_Boom;
+//global.levelSelectArray[3] = global.level_Open;
+//global.levelSelectArray[4] = global.level_Gaps;
+//global.levelSelectArray[5] = global.level_Bounce;
+//global.levelSelectArray[6] = global.level_Turning;
+//global.levelSelectArray[7] = global.level_Conserve;
+//global.levelSelectArray[8] = global.level_Test;
+
+global.levelSelectArray = 
+[
+global.level_Beginning,
+global.level_Slope,
+global.level_Bend,
+global.level_Boom,
+global.level_Open,
+global.level_Gaps,
+global.level_Bounce,
+global.level_Turning,
+global.level_Conserve,
+global.level_Test,
+]
 
 global.worldName[0] = "Forest";
 global.worldName[1] = "Underwater";

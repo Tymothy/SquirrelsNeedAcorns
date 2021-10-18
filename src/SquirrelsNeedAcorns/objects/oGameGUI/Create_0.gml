@@ -11,6 +11,7 @@ countUp = 0;
 showCountDown = countDown;
 gameTimerInit = global.levelSelectArray[global.selectedLevel].timed;
 gameTimer = gameTimerInit;
+//goalType = global.levelSelectArray[global.selectedLevel].goalType;
 
 if(gameTimerInit == 0)
 {
@@ -18,6 +19,7 @@ if(gameTimerInit == 0)
 	timerMode = TIMERMODE.UNTIMED;
 	gameTimerInit = 600;
 	showTime = 0;
+	gameTimer = gameTimerInit;
 }
 else
 {

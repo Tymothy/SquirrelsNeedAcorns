@@ -46,6 +46,7 @@ switch(global.gameModeString)
 		break;
 	
 }
+
 //if(global.gameModeString == "Challenge")
 //	{
 

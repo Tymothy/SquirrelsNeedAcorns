@@ -179,11 +179,28 @@ button_h = max(0,font_get_size(menuFont)*3);
 		//Write score
 		//draw_text_outline(menu_x, menu_y*.5, "Points scored this run", c_black, c_ltgray);
 		draw_set_font(fTextLarge);
-		draw_text_outline(menu_x, menu_y*.5,string(global.points) + " / " + string(global.availablePoints),c_black, c_yellow);
-		if(global.points >= global.availablePoints)
+		
+		switch(global.levelSelectArray[global.selectedLevel].goalType)
 		{
-			draw_text_outline(menu_x, menu_y*.5+font_get_size(fTextLarge)*2,string(global.time),c_black, c_yellow);
+			case GOALTYPE.GOAL :
+				draw_text_outline(menu_x, menu_y*.5,string(global.points) + " / " + string(global.availablePoints),c_black, c_yellow);
+				if(global.points >= global.availablePoints)
+				{
+					draw_text_outline(menu_x, menu_y*.5+font_get_size(fTextLarge)*2,string(global.time),c_black, c_yellow);
+				}			
+				break;
+				
+			case GOALTYPE.COLLECT :
+				draw_text_outline(menu_x, menu_y*.5,string(global.points),c_black, c_yellow);		
+				break;
+							
 		}
+		if(global.levelSelectArray[global.selectedLevel].goalType == GOALTYPE.GOAL)
+		{
+
+		}
+		
+		
 		//Gamemode specific
 		draw_set_font(menuFont);
 		draw_text_outline(menu_x, menu_y*.15, string(global.gameModeString), c_black, c_ltgray);
