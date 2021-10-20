@@ -165,7 +165,7 @@ global.level_Open =
 	art : s_gameIce1,
 	highScore : [0, 0, 0],
 	difficulty : 5,
-	timed : 0,
+	timed : 60,
 	goalType : GOALTYPE.COLLECT,
 	pointReq : 0,
 	completionLevel : 0,
