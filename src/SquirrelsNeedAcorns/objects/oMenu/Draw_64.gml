@@ -180,37 +180,44 @@ button_h = max(0,font_get_size(menuFont)*3);
 		//draw_text_outline(menu_x, menu_y*.5, "Points scored this run", c_black, c_ltgray);
 		draw_set_font(fTextLarge);
 		
-		switch(global.levelSelectArray[global.selectedLevel].goalType)
+		if(global.gameMode == 2)
 		{
-			case GOALTYPE.GOAL :
-				draw_text_outline(menu_x, menu_y*.5,string(global.points) + " / " + string(global.availablePoints),c_black, c_yellow);
-				if(global.points >= global.availablePoints)
-				{
-					draw_text_outline(menu_x, menu_y*.5+font_get_size(fTextLarge)*2,string(global.time),c_black, c_yellow);
-				}			
-				break;
-				
-			case GOALTYPE.COLLECT :
-				draw_text_outline(menu_x, menu_y*.5,string(global.points),c_black, c_yellow);		
-				break;
-							
+			draw_set_font(fTextNormal);
+			draw_text_outline(menu_x, menu_y*.15+font_get_size(menuFont)*1.5, "Score not saved due to mode", c_black, c_ltgray);
 		}
-		if(global.levelSelectArray[global.selectedLevel].goalType == GOALTYPE.GOAL)
+		else
 		{
-
+			switch(global.GOALTYPE)
+			{
+				case GOALTYPE.GOAL :
+					if(global.goalReached == true)
+					{
+						draw_text_outline(menu_x, menu_y*.5,string(global.points) + " / " + string(global.availablePoints),c_black, c_yellow);
+						if(global.points >= global.availablePoints)
+						{
+							draw_text_outline(menu_x, menu_y*.5+font_get_size(fTextLarge)*2,string(global.time),c_black, c_yellow);
+						}		
+					}
+					else
+					{
+						draw_text_outline(menu_x, menu_y*.5,"Goal not reached",c_black, c_yellow);
+					}
+					break;
+				
+				case GOALTYPE.COLLECT :
+					draw_text_outline(menu_x, menu_y*.5,string(global.points),c_black, c_yellow);		
+					break;
+							
+			}
 		}
 		
 		
 		//Gamemode specific
 		draw_set_font(menuFont);
 		draw_text_outline(menu_x, menu_y*.15, string(global.gameModeString), c_black, c_ltgray);
-	
-		if(global.gameMode == 2)
+		
 		{
-			draw_set_font(fTextNormal);
-			draw_text_outline(menu_x, menu_y*.15+font_get_size(menuFont)*1.5, "Score not saved due to mode", c_black, c_ltgray);
-		}else{
-		draw_text_outline(menu_x, menu_y*.15+font_get_size(menuFont)*1.5, string(global.levelSelectArray[global.selectedLevel].levelName),c_black,c_ltgray);	
+			draw_text_outline(menu_x, menu_y*.15+font_get_size(menuFont)*1.5, string(global.levelSelectArray[global.selectedLevel].levelName),c_black,c_ltgray);	
 		}
 		
 	} //End EndRun

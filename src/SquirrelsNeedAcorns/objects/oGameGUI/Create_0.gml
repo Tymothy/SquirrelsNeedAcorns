@@ -11,7 +11,6 @@ countUp = 0;
 showCountDown = countDown;
 gameTimerInit = global.levelSelectArray[global.selectedLevel].timed;
 gameTimer = gameTimerInit;
-//goalType = global.levelSelectArray[global.selectedLevel].goalType;
 
 if(gameTimerInit == 0)
 {
@@ -37,7 +36,20 @@ timerDisplayOffset = 30;
 alertFont = fTextLarge;
 UIFont = fTextLarge;
 hintFont = fTextNormal;
-global.availablePoints = instance_number(oPointPickup);
+
+global.availablePoints = 0;
+if(instance_exists(oPointPickup))
+{
+	var _pointPickup = instance_number(oPointPickup);
+	global.availablePoints += _pointPickup;
+}
+
+if(instance_exists(oSuperAcorn))
+{
+	var _pointSuperAcorn = instance_number(oSuperAcorn);
+	_pointSuperAcorn = _pointSuperAcorn * 5; //If reading directly from object, game crashes as it reads before variable is set
+	global.availablePoints += _pointSuperAcorn;
+}
 
 touchUI = true;
 var _hh = global.GUIhh

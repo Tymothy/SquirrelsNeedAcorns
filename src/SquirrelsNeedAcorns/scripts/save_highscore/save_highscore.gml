@@ -2,37 +2,44 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function save_highscore(){
 	ini_open(global.saveFile);
-	var _checkHighscore = 0;
-	var _checkTime = 9999.99;
+	var _savedHighscore = 0;
+	var _savedTime = 9999.99;
 	
-	_checkHighscore = ini_read_real(string(global.gameModeString), string(global.levelSelectArray[global.selectedLevel].saveNum), 0);
+	//Read current high score
+	_savedHighscore = ini_read_real(string(global.gameModeString), string(global.levelSelectArray[global.selectedLevel].saveNum), 0);
+	_savedTime = ini_read_real("Time",  string(global.levelSelectArray[global.selectedLevel].saveNum), 0);
+	
 	if(global.gameModeString == "Challenge")
 	{
-		_checkTime = ini_read_real("Time",  string(global.levelSelectArray[global.selectedLevel].saveNum), 0);			
+		switch (global.GOALTYPE)
+		{
+			//Player's goal is to reach the end of the level, collecting all points in a level, and then improve their time
+			case GOALTYPE.GOAL :
+				if(check_highscore(_savedHighscore) == true)
+				{
+					save_points(global.points);
+				}
+				
+				if(check_time(_savedTime) == true)
+				{
+					save_time(global.time);	
+				}
+					
+			break;
+			
+			//Player's goal is to collect as many points as possible.
+			case GOALTYPE.COLLECT :
+				if(check_highscore(_savedHighscore) == true)
+				{
+					save_points(global.points);
+				}
+			break;
+			
+		}
+
 	}
+	ini_close();
 
-	
-					show_debug_message("Checking for previous highscore");
-					if(_checkHighscore <= global.points) //If high score is reached, set it
-						{
-						show_debug_message("Writing points to save file");
-						ini_write_real(string(global.gameModeString), global.levelSelectArray[global.selectedLevel].saveNum, global.points);
-						global.levelSelectArray[global.selectedLevel].highScore[global.gameMode] = global.points;
-
-						
-						if(_checkTime <= global.time && global.points >= global.availablePoints)
-						{
-							show_debug_message("Writing time to save file");
-							ini_write_real("Time", global.levelSelectArray[global.selectedLevel].saveNum, global.time);
-						}
-							
-						ini_close();
-
-						}
-						else {
-								ini_close();
-							return -1;	
-						}
 }
 
 function load_highscore(){
@@ -45,8 +52,5 @@ function load_highscore(){
 			global.levelSelectArray[i].highScore[1] = ini_read_real("Zen", string(global.levelSelectArray[i].saveNum), 0)
 			global.levelSelectArray[i].highScore[2] = ini_read_real("Time", string(global.levelSelectArray[i].saveNum), 0)
 		}
-	
-	
 	ini_close();
-
 }

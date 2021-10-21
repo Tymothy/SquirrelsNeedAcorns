@@ -7,3 +7,5 @@ if(room != rStart)
 		show_debug_message("Orientation: " + string(global.orientation));	
 	}
 }
+
+global.GOALTYPE = global.levelSelectArray[global.selectedLevel].goalType;

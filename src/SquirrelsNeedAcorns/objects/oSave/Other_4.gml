@@ -2,10 +2,9 @@
 // You can write your code in this editor
 if(room = rEndRun)
 {
-
 	//var _checkHighscore = 0;
 
-	if(global.goalReached == true)
+	if(global.goalReached == true || global.GOALTYPE = GOALTYPE.COLLECT)
 		{
 		switch(global.gameMode)
 		{

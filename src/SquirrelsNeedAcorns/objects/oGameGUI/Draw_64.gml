@@ -52,7 +52,25 @@ if(global.gameOptions.scoring == true)
 {
 	draw_set_color(c_yellow);
 	draw_sprite(sAcorn,image_index, xSpacing, ySpacing*2);
-	draw_text_transformed_color(xSpacing/2+valueSpacing, ySpacing*2+2,string(oPlayer.pointsOnPlayer) + " / " + string(global.availablePoints), 1, 1, 0, c_yellow, c_yellow, c_yellow, c_yellow, 1);
+	switch(timerMode)
+	{
+		//Draw score / available points
+		case TIMERMODE.UNTIMED :
+			draw_text_transformed_color(xSpacing/2+valueSpacing, ySpacing*2+2,
+			string(oPlayer.pointsOnPlayer) + " / " + string(global.availablePoints), 
+			1, 1, 0, c_yellow, c_yellow, c_yellow, c_yellow, 1);
+			break;
+		
+		//Draw score only
+		case TIMERMODE.TIMED :
+			draw_text_transformed_color(xSpacing/2+valueSpacing, ySpacing*2+2,
+			string(oPlayer.pointsOnPlayer), 
+			1, 1, 0, c_yellow, c_yellow, c_yellow, c_yellow, 1);
+			break;
+	
+	}
+	
+
 }
 
 //Draw Health
