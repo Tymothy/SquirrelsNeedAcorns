@@ -302,6 +302,7 @@ if(oGameGUI.gameTimer > 0.0 && oPause.paused == false) //Remove all player contr
 				
 			}
 		}
+	
 		/*
 		TODO: Collision with enemies
 		
@@ -347,7 +348,8 @@ if(oGameGUI.gameTimer > 0.0 && oPause.paused == false) //Remove all player contr
 	{
 		collisionSide = "";	
 	}
-		
+	
+					
 	//Obstacle Collision
 	var _collideObject = oparObstacle;
 	if (place_meeting(x+xSpeed,y, _collideObject))
@@ -373,21 +375,52 @@ if(oGameGUI.gameTimer > 0.0 && oPause.paused == false) //Remove all player contr
 		yCollision = true;
 		damageObstacle = true;
 	}
-	
-	/*
-	if (place_meeting(x+hsp,y,oWall))
-		{
-		while (!place_meeting(x+sign(hsp),y,oWall))
-		{
-		x = x +sign(hsp);
-		}
-		hsp = 0;
-		}
-		x = x + hsp;
-	*/
-	
-		x += xSpeed;
-		y += ySpeed;	
+
+	if(bonusSpeedPower > 0)
+	{
+		var _dir = point_direction(x + xSpeed, y + ySpeed, x, y);
+		bonusSpeedX = lengthdir_x(bonusSpeedPower, _dir);
+		bonusSpeedY = lengthdir_y(bonusSpeedPower, _dir);
+		
+		xSpeed += bonusSpeedX;
+		ySpeed += bonusSpeedY;
+		ySpeedTemp += bonusSpeedX;
+		xSpeedTemp += bonusSpeedY;
+		
+		bonusSpeedPower = 0;
+	}
+		
+//BROKEN ROCKET CODE
+	//if(bonusSpeedPower > 0)
+	//		{
+	//			if(pTimer == 0)
+	//			{
+	//				//First frame of the rocket
+	//				//Find which way the rocket will propel
+	//				var _dir = point_direction(x, y, x + xSpeed, y + ySpeed);
+	//				bonusSpeedX = lengthdir_x(bonusSpeedPower, _dir);
+	//				bonusSpeedY = lengthdir_y(bonusSpeedPower, _dir);
+	//			}
+	//			bonusMul = twerp(TwerpType.inout_cubic, 0, 1, pTimer / bonusSpeedTime);
+	//			pTimer++;
+		
+	//			if(pTimer >= bonusSpeedTime)
+	//			{
+	//				//Last frame of the rocket
+	//				bonusSpeedPower = 0;
+	//				bonusSpeedTime = 0;
+	//				pTimer = 0;
+	//				bonusSpeedX = 0;
+	//				bonusSpeedY = 0;
+	//				bonusMul = 0;
+	//			}
+	//		}		
+	//		xSpeed += bonusMul * bonusSpeedX;
+	//		ySpeed += bonusMul * bonusSpeedY;
+
+	x += xSpeed;
+	y += ySpeed;		
+
 	#endregion
 
 	#region //Controls and checks involving player vitals
@@ -447,6 +480,8 @@ if(oGameGUI.gameTimer > 0.0 && oPause.paused == false) //Remove all player contr
 	}
 	#endregion
 	
+	
+	
 	if (playerHealth < 1)
 	{
 		planetFriction = playerDeathFriction;	
@@ -481,6 +516,8 @@ if(oGameGUI.gameTimer > 0.0 && oPause.paused == false) //Remove all player contr
 			other.pointsOnPlayer += pointValue;
 			other.fuel += fuelValue;
 			other.playerHealth += lifeValue;
+			other.bonusSpeedPower = speedPower;
+			other.bonusSpeedTime = speedTime;
 			instance_destroy();
 			//audio_play_sound(soundPickup,3,false);
 		}	
@@ -495,6 +532,8 @@ if(oGameGUI.gameTimer > 0.0 && oPause.paused == false) //Remove all player contr
 			other.pointsOnPlayer += pointValue;
 			other.fuel += fuelValue;
 			other.playerHealth += lifeValue;
+			other.bonusSpeedPower = speedPower;
+			other.bonusSpeedTime = speedTime;
 			instance_destroy();
 			//audio_play_sound(soundPickup,3,false);
 		}	
@@ -539,6 +578,13 @@ if(playerMoved == false && flyUp > 0)
 {
 	playerMoved = true;
 }
+
+	
+//Add bonus speed
+
+
+
+
 
 //Fix the subpixel movement stuttering
 x = round(x);

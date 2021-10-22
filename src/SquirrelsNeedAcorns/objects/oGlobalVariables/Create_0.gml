@@ -7,7 +7,7 @@ global.versionText = "Squirrels Need Acorns - Alpha Version 0.6.3";
 global.debug = false; //Controls all the debugging.  Set to false before exporting
 global.playerName = ""; //Used for the highscores
 global.musicToggle = 0; //Set to 1 to export with sound on by default.  Set to 0 for no sound on game on.
-global.testRoom = ""; //Put a room to immediately go to that room for testing.  Export with ""
+global.testRoom = rGameTest; //Put a room to immediately go to that room for testing.  Export with ""
 global.displayCountUp = true;
 
 //Declare Global Variables
@@ -90,7 +90,7 @@ enum GOALTYPE { //Each goal type can also be timed/untimed
 global.level_Beginning =
 {
 	saveNum : 101, //Save num, first number used for world, last two used for levels
-	roomName : rGameForest01,
+	roomName : rGame101,
 	world : 0,
 	levelName : "F01 - Beginning",
 	levelType : LEVELTYPE.FOREST,
@@ -107,7 +107,7 @@ global.level_Beginning =
 global.level_Slope =
 {
 	saveNum : 102, 
-	roomName : rGameForest02,
+	roomName : rGame102,
 	world : 0,
 	levelName : "F02 - Slope",
 	levelType : LEVELTYPE.FOREST,
@@ -124,7 +124,7 @@ global.level_Slope =
 global.level_Bend =
 {
 	saveNum : 103, 
-	roomName : rGameForest03,
+	roomName : rGame103,
 	world : 0,
 	levelName : "F03 - Bend",
 	levelType : LEVELTYPE.FOREST,
@@ -140,7 +140,7 @@ global.level_Bend =
 global.level_Boom =
 {
 	saveNum : 104, 
-	roomName : rGameForest04,
+	roomName : rGame104,
 	world : 0,
 	levelName : "F04 - Boom",
 	levelType : LEVELTYPE.FOREST,
@@ -157,7 +157,7 @@ global.level_Boom =
 global.level_Open =
 {
 	saveNum : 105, 
-	roomName : rGameForest05,
+	roomName : rGame105,
 	world : 0,
 	levelName : "F05 - Open",
 	levelType : LEVELTYPE.FOREST,
@@ -174,9 +174,9 @@ global.level_Open =
 global.level_Gaps =
 {
 	saveNum : 106, 
-	roomName : rGameForest06,
+	roomName : rGame106,
 	world : 0,
-	levelName : "F05 - Gaps",
+	levelName : "F06 - Gaps",
 	levelType : LEVELTYPE.FOREST,
 	unlocked : true,
 	art : s_gameIce1,
@@ -194,7 +194,7 @@ global.level_Gaps =
 global.level_Bounce =
 {
 	saveNum : 201, 
-	roomName : rGameWater1,
+	roomName : rGame201,
 	world : 1,
 	levelName : "W01 - Bounce",
 	levelType : LEVELTYPE.WATER,
@@ -211,7 +211,7 @@ global.level_Bounce =
 global.level_Turning =
 {
 	saveNum : 202, 
-	roomName : rGameWater2,
+	roomName : rGame202,
 	world : 1,
 	levelName : "W02 - Turning",
 	levelType : LEVELTYPE.WATER,
@@ -228,7 +228,7 @@ global.level_Turning =
 global.level_Conserve =
 {
 	saveNum : 203, 
-	roomName : rGameWater3,
+	roomName : rGame203,
 	world : 1,
 	levelName : "W03 - Conserve",
 	levelType : LEVELTYPE.WATER,
@@ -244,7 +244,7 @@ global.level_Conserve =
 
 global.level_Test =
 {
-	saveNum : 204, 
+	saveNum : 001, 
 	roomName : rGameTest,
 	world : 1,
 	levelName : "T01 - Test",

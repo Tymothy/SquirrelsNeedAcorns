@@ -53,6 +53,19 @@ applyXBounce = false;
 applyYBounce = false;
 invulnCount = invulnTimer;
 playerMoved = false;
+bonusSpeedPower = 0;
+bonusSpeedTime = 0;
+bonusMul = 0;
+
+//Bonus Speed
+pTimer = 0;
+pLength = room_speed * 2;
+pStart = 50;
+pEnd = 150;
+pStartX = x;
+pStartY = y;
+bonusSpeedX = 0;
+bonusSpeedY = 0;
 
 
 //Tilemap Collision
