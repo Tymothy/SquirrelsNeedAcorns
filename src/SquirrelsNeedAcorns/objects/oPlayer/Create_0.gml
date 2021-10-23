@@ -56,7 +56,7 @@ playerMoved = false;
 bonusSpeedPower = 0;
 bonusSpeedTime = 0;
 bonusMul = 0;
-
+rocketPickedUp = false;
 //Bonus Speed
 pTimer = 0;
 pLength = room_speed * 2;

@@ -205,7 +205,22 @@ global.level_Rocket =
 	completionLevel : 0,
 }
 
-
+global.level_Redirection =
+{
+	saveNum : 108, 
+	roomName : rGame108,
+	world : 0,
+	levelName : "F08 - Redirection",
+	levelType : LEVELTYPE.FOREST,
+	unlocked : true,
+	art : s_gameIce1,
+	highScore : [0, 0, 0],
+	difficulty : 5,
+	timed : 0,
+	goalType : GOALTYPE.GOAL,
+	pointReq : 0,
+	completionLevel : 0,
+}
 
 
 //Water Levels
@@ -299,6 +314,7 @@ global.level_Boom,
 global.level_Open,
 global.level_Gaps,
 global.level_Rocket,
+global.level_Redirection,
 global.level_Bounce,
 global.level_Turning,
 global.level_Conserve,

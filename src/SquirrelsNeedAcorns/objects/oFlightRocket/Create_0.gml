@@ -5,5 +5,5 @@
 if(live_call()) return live_result;
 event_inherited();
 
-speedPower = .35; //Default is .35
+speedPower = .25; //Default is .35
 speedTime = 250; //Frames to speed

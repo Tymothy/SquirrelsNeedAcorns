@@ -20,11 +20,18 @@ if(oGameGUI.gameTimer > 0.0 && oPause.paused == false) //Remove all player contr
 	if (_paused == false)
 	{	
 		//Rocket boosting
+		//TODO: Bug, multiple rockets seem to keep adding to speed in crease
 	if(bonusSpeedPower > 0)
 			{
-				if(pTimer == 0)
+				if(rocketPickedUp == true)
 				{
 					show_debug_message("Rocket power applied");
+					if(pTimer != 0)
+					{
+						show_debug_message("Rocket picked up while under rocket power");
+						bonusSpeedTime += pTimer; //Add additional time to end of rocket to account for the bonus rocket time
+					}
+					rocketPickedUp = false;
 				}
 				//if(pTimer == 0)
 				//{
@@ -74,9 +81,10 @@ if(oGameGUI.gameTimer > 0.0 && oPause.paused == false) //Remove all player contr
 	//At full rocket speed
 	if(bonusSpeedPower > 0)
 			{
-				if(pTimer == 0)
+				if(rocketPickedUp == true)
 				{
 					show_debug_message("Rocket power applied");
+					rocketPickedUp = false;
 				}
 				//if(pTimer == 0)
 				//{
@@ -104,7 +112,7 @@ if(oGameGUI.gameTimer > 0.0 && oPause.paused == false) //Remove all player contr
 			xSpeedTemp += bonusMul * bonusSpeedX;
 			ySpeedTemp += bonusMul * bonusSpeedY;
 			}	
-	}
+
 	
 	//Environment movement effects	
 	#endregion
@@ -129,13 +137,7 @@ if(oGameGUI.gameTimer > 0.0 && oPause.paused == false) //Remove all player contr
 		{
 			xSpeedFloat = 0;
 		}
-		//if(yCollision = true)
-		//{
-		//	if (xSpeedTemp != 0){
-		//		xSpeedTemp -= planetFriction*sign(xSpeed);
-		//	}
-		//	}
-		//}
+
 /*
 	Arrays store clockwise, starting from top middle.
 	Order collisionArray[
@@ -376,46 +378,6 @@ if(oGameGUI.gameTimer > 0.0 && oPause.paused == false) //Remove all player contr
 			}
 		}
 	
-		/*
-		TODO: Collision with enemies
-		
-		//Get bounding boxes of jellyfish
-		if(place_meeting(x+xSpeed,y, _collideEnemy))
-		{
-			while(!place_meeting(x+sign(xSpeed), y, _collideEnemy))
-			{
-				x = x + sign(xSpeed);
-			}
-			xSpeed = 0;
-			xSpeedTemp = 0;
-			xCollision = true;
-		}
-		
-		if(place_meeting(x,y+ySpeed, _collideEnemy))
-		{
-			while(!place_meeting(x, y+sign(ySpeed), _collideEnemy))
-			{
-				y = y + sign(ySpeed);
-			}
-			
-			ySpeed = 0;
-			ySpeedTemp = 0;
-			yCollision = true;
-			
-
-		}		
-		//TODO: After implementing collision, make sure enemy can push player, or player can push enemy to keep "stuck" collisions
-			with(instance_nearest(x, y, _collideEnemy))
-			{
-				//var pd = point_direction(x, y,other.x,other.y);
-				////var new_push_amount = 1 * cos( degtorad( direction - pd));
-				//other.x += lengthdir_x(speed, pd);
-				//other.y += lengthdir_y(speed, pd);
-				//show_debug_message("Pushing...");
-			}
-			*/
-
-	
 	}
 	else
 	{
@@ -448,25 +410,6 @@ if(oGameGUI.gameTimer > 0.0 && oPause.paused == false) //Remove all player contr
 		yCollision = true;
 		damageObstacle = true;
 	}
-	
-//TODO: Fix this code to make it accerlate over time, rather than instantly accerelate.
-	//if(bonusSpeedPower > 0)
-	//{
-	//	var _dir = point_direction(x + xSpeed, y + ySpeed, x, y);
-	//	bonusSpeedX = lengthdir_x(bonusSpeedPower, _dir);
-	//	bonusSpeedY = lengthdir_y(bonusSpeedPower, _dir);
-		
-	//	xSpeed += bonusSpeedX;
-	//	ySpeed += bonusSpeedY;
-	//	ySpeedTemp += bonusSpeedX;
-	//	xSpeedTemp += bonusSpeedY;
-		
-	//	bonusSpeedPower = 0;
-	//}
-		
-			
-//			xSpeedTemp += bonusMul * bonusSpeedX;
-//			ySpeedTemp += bonusMul * bonusSpeedY;
 
 	x += xSpeed;
 	y += ySpeed;		
@@ -496,7 +439,7 @@ if(oGameGUI.gameTimer > 0.0 && oPause.paused == false) //Remove all player contr
 
 			if(global.gameOptions.damage == true)
 			{
-				playerDamage();
+				//playerDamage();
 			}
 			
 		}
@@ -509,13 +452,13 @@ if(oGameGUI.gameTimer > 0.0 && oPause.paused == false) //Remove all player contr
 
 			if(global.gameOptions.damage == true)
 			{
-				playerDamage();
+				//playerDamage();
 			}
 		}
 	}
 	
 
-
+	//TODO: Remove this stuff to remove the flash since health has been removed
 	if(invuln == true)
 	{
 		invulnCount--;
@@ -568,6 +511,10 @@ if(oGameGUI.gameTimer > 0.0 && oPause.paused == false) //Remove all player contr
 			other.playerHealth += lifeValue;
 			other.bonusSpeedPower = speedPower;
 			other.bonusSpeedTime = speedTime;
+			if(speedPower > 0)
+			{
+				other.rocketPickedUp = true;	
+			}
 			instance_destroy();
 			//audio_play_sound(soundPickup,3,false);
 		}	
@@ -584,6 +531,10 @@ if(oGameGUI.gameTimer > 0.0 && oPause.paused == false) //Remove all player contr
 			other.playerHealth += lifeValue;
 			other.bonusSpeedPower = speedPower;
 			other.bonusSpeedTime = speedTime;
+			if(speedPower > 0)
+			{
+				other.rocketPickedUp = true;	
+			}
 			instance_destroy();
 			//audio_play_sound(soundPickup,3,false);
 		}	
@@ -602,25 +553,40 @@ if(oGameGUI.gameTimer > 0.0 && oPause.paused == false) //Remove all player contr
 
 
 	
-if(hasControl == true)
-{
-	if (moveLeft == 1) image_xscale = -1;
-	if (moveRight == 1) image_xscale = 1;
-	if (fireStarted == 0 && flyUp > 0)
+	if(hasControl == true)
 	{
-		audio_play_sound(soundFire, 10, true);
-		fireStarted = 1;
+		if (moveLeft == 1)
+		{
+			image_xscale = -1;
+		}
+		
+		if (moveRight == 1)
+		{
+			image_xscale = 1;
+		}
+		if (fireStarted == 0 && flyUp > 0)
+		{
+			audio_play_sound(soundFire, 10, true);
+			fireStarted = 1;
+		}
+		
+		if (flyUp > 0) 
+		{
+			audio_resume_sound(soundFire);
+		}
 	}
-	if (flyUp > 0) audio_resume_sound(soundFire);
 	
-}
-if (flyUp == 0) audio_pause_sound(soundFire);
-if (oGameGUI.gameOver == 1) audio_pause_sound(soundFire);
+	if (flyUp == 0)
+	{
+		audio_pause_sound(soundFire);
+	}
+
+	if (oGameGUI.gameOver == 1)
+	{
+		audio_pause_sound(soundFire);
+	}
 	#endregion
 
-	#region
-
-	#endregion
 }//End of game timer check
 
 //Check to see when player moved.  Used to detect if player knows how to play
