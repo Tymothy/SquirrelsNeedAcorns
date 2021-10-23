@@ -1,4 +1,5 @@
 /// @desc Player Step
+
 if(live_call()) return live_result;
 var _paused = oPause.paused;
 damageObstacle = false; //If set to true, apply damage
@@ -18,6 +19,41 @@ if(oGameGUI.gameTimer > 0.0 && oPause.paused == false) //Remove all player contr
 	}
 	if (_paused == false)
 	{	
+		//Rocket boosting
+	if(bonusSpeedPower > 0)
+			{
+				if(pTimer == 0)
+				{
+					show_debug_message("Rocket power applied");
+				}
+				//if(pTimer == 0)
+				//{
+					//First frame of the rocket
+					//Find which way the rocket will propel
+					var _dir = point_direction(x, y, x + xSpeed, y + ySpeed);
+					bonusSpeedX = lengthdir_x(bonusSpeedPower, _dir);
+					bonusSpeedY = lengthdir_y(bonusSpeedPower, _dir);
+				//}
+				bonusMul = twerp(TwerpType.out_quad, 0, 1, pTimer / bonusSpeedTime);
+				pTimer++;
+		
+				if(pTimer >= bonusSpeedTime)
+				{
+					//Last frame of the rocket
+					bonusSpeedPower = 0;
+					bonusSpeedTime = 0;
+					pTimer = 0;
+					bonusSpeedX = 0;
+					bonusSpeedY = 0;
+					bonusMul = 0;
+					show_debug_message("Rocket power done");
+				}
+	
+			xSpeedTemp += bonusMul * bonusSpeedX;
+			ySpeedTemp += bonusMul * bonusSpeedY;
+
+			}	
+	}
 		if(hasControl == true)
 		{
 			ySpeedTemp = (ySpeedTemp - (flyUp * flyUpPower));
@@ -32,7 +68,44 @@ if(oGameGUI.gameTimer > 0.0 && oPause.paused == false) //Remove all player contr
 		xSpeedTemp = lerp(xSpeedTemp, 0, airResist);
 		ySpeedTemp = lerp(ySpeedTemp, 0, airResist);
 		
+	
+	//Rocket boosting
+	//TODO: Bug if another rocket is picked up while boosting, make sure player just has added time
+	//At full rocket speed
+	if(bonusSpeedPower > 0)
+			{
+				if(pTimer == 0)
+				{
+					show_debug_message("Rocket power applied");
+				}
+				//if(pTimer == 0)
+				//{
+					//First frame of the rocket
+					//Find which way the rocket will propel
+					var _dir = point_direction(x, y, x + xSpeed, y + ySpeed);
+					bonusSpeedX = lengthdir_x(bonusSpeedPower, _dir);
+					bonusSpeedY = lengthdir_y(bonusSpeedPower, _dir);
+				//}
+				bonusMul = twerp(TwerpType.out_quad, 0, 1, pTimer / bonusSpeedTime);
+				pTimer++;
+		
+				if(pTimer >= bonusSpeedTime)
+				{
+					//Last frame of the rocket
+					bonusSpeedPower = 0;
+					bonusSpeedTime = 0;
+					pTimer = 0;
+					bonusSpeedX = 0;
+					bonusSpeedY = 0;
+					bonusMul = 0;
+					show_debug_message("Rocket power done");
+				}
+	
+			xSpeedTemp += bonusMul * bonusSpeedX;
+			ySpeedTemp += bonusMul * bonusSpeedY;
+			}	
 	}
+	
 	//Environment movement effects	
 	#endregion
 
@@ -375,48 +448,25 @@ if(oGameGUI.gameTimer > 0.0 && oPause.paused == false) //Remove all player contr
 		yCollision = true;
 		damageObstacle = true;
 	}
-
-	if(bonusSpeedPower > 0)
-	{
-		var _dir = point_direction(x + xSpeed, y + ySpeed, x, y);
-		bonusSpeedX = lengthdir_x(bonusSpeedPower, _dir);
-		bonusSpeedY = lengthdir_y(bonusSpeedPower, _dir);
-		
-		xSpeed += bonusSpeedX;
-		ySpeed += bonusSpeedY;
-		ySpeedTemp += bonusSpeedX;
-		xSpeedTemp += bonusSpeedY;
-		
-		bonusSpeedPower = 0;
-	}
-		
-//BROKEN ROCKET CODE
+	
+//TODO: Fix this code to make it accerlate over time, rather than instantly accerelate.
 	//if(bonusSpeedPower > 0)
-	//		{
-	//			if(pTimer == 0)
-	//			{
-	//				//First frame of the rocket
-	//				//Find which way the rocket will propel
-	//				var _dir = point_direction(x, y, x + xSpeed, y + ySpeed);
-	//				bonusSpeedX = lengthdir_x(bonusSpeedPower, _dir);
-	//				bonusSpeedY = lengthdir_y(bonusSpeedPower, _dir);
-	//			}
-	//			bonusMul = twerp(TwerpType.inout_cubic, 0, 1, pTimer / bonusSpeedTime);
-	//			pTimer++;
+	//{
+	//	var _dir = point_direction(x + xSpeed, y + ySpeed, x, y);
+	//	bonusSpeedX = lengthdir_x(bonusSpeedPower, _dir);
+	//	bonusSpeedY = lengthdir_y(bonusSpeedPower, _dir);
 		
-	//			if(pTimer >= bonusSpeedTime)
-	//			{
-	//				//Last frame of the rocket
-	//				bonusSpeedPower = 0;
-	//				bonusSpeedTime = 0;
-	//				pTimer = 0;
-	//				bonusSpeedX = 0;
-	//				bonusSpeedY = 0;
-	//				bonusMul = 0;
-	//			}
-	//		}		
-	//		xSpeed += bonusMul * bonusSpeedX;
-	//		ySpeed += bonusMul * bonusSpeedY;
+	//	xSpeed += bonusSpeedX;
+	//	ySpeed += bonusSpeedY;
+	//	ySpeedTemp += bonusSpeedX;
+	//	xSpeedTemp += bonusSpeedY;
+		
+	//	bonusSpeedPower = 0;
+	//}
+		
+			
+//			xSpeedTemp += bonusMul * bonusSpeedX;
+//			ySpeedTemp += bonusMul * bonusSpeedY;
 
 	x += xSpeed;
 	y += ySpeed;		

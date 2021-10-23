@@ -5,5 +5,5 @@
 if(live_call()) return live_result;
 event_inherited();
 
-speedPower = 4.5; //Multiplier
-speedTime = 300; //Frames to speed
+speedPower = .35; //Default is .35
+speedTime = 250; //Frames to speed

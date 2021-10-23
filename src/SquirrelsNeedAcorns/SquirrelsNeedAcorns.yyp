@@ -89,6 +89,7 @@
     {"id":{"name":"oparPickup","path":"objects/oparPickup/oparPickup.yy",},"order":2,},
     {"id":{"name":"s_button_circle","path":"sprites/s_button_circle/s_button_circle.yy",},"order":6,},
     {"id":{"name":"o_button_music","path":"objects/o_button_music/o_button_music.yy",},"order":7,},
+    {"id":{"name":"rGame107","path":"rooms/rGame107/rGame107.yy",},"order":6,},
     {"id":{"name":"rm_brightness_contrast","path":"rooms/rm_brightness_contrast/rm_brightness_contrast.yy",},"order":0,},
     {"id":{"name":"s_pickup_special_life","path":"sprites/s_pickup_special_life/s_pickup_special_life.yy",},"order":4,},
     {"id":{"name":"sprNextButton","path":"sprites/sprNextButton/sprNextButton.yy",},"order":33,},
@@ -419,6 +420,7 @@
     {"roomId":{"name":"romTest3","path":"rooms/romTest3/romTest3.yy",},},
     {"roomId":{"name":"romTest4","path":"rooms/romTest4/romTest4.yy",},},
     {"roomId":{"name":"rGame106","path":"rooms/rGame106/rGame106.yy",},},
+    {"roomId":{"name":"rGame107","path":"rooms/rGame107/rGame107.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
