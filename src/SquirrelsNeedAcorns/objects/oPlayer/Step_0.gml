@@ -298,7 +298,8 @@ if(oGameGUI.gameTimer > 0.0 && oPause.paused == false) //Remove all player contr
 			//Apply effects of collision
 			with(instance_nearest(x,y, _collideEnemy))
 			{
-
+				active = false; //Collision has happened
+				oneTimeRun = true; //Run the one time run method
 				switch (other.collisionSide)
 				{
 					case "Top":
@@ -328,22 +329,63 @@ if(oGameGUI.gameTimer > 0.0 && oPause.paused == false) //Remove all player contr
 					switch (other.collisionSide)
 					{
 						case "Top":
-							if(other.ySpeed > 0)	other.ySpeed = other.ySpeed * -.5
-							else other.ySpeed = 0;
+							if(other.ySpeed > 0)
+							{
+								other.ySpeed = other.ySpeed * -.5;
+							}
+							else
+							{
+								other.ySpeed = 0;
+							}
 							
 							other.ySpeed -= attributes.bounceStrength;
 							other.ySpeedTemp = other.ySpeed;
+							active = false;
 							break;
+							
 						case "Right":
-							//TODO: Give a bounce right						
+							if(other.xSpeed < 0)
+							{
+								other.xSpeed = other.xSpeed * -.5;
+							}
+							else
+							{
+								other.xSpeed = 0;
+							}
+							other.xSpeed -= attributes.bounceStrength;
+							other.xSpeedTemp = other.xSpeed;
+							active = false;					
 							break;
 						
 						case "Bottom":
-							//TODO: Give a bounce down
+							if(other.ySpeed < 0)
+							{
+								other.ySpeed = other.ySpeed * .5;
+							}
+							else
+							{
+								other.ySpeed = 0;
+							}
+							
+							other.ySpeed += attributes.bounceStrength;
+							other.ySpeedTemp = other.ySpeed;
+							active = false;
+							break;
 							break;
 						
 						case "Left":
-							//TODO: Give a bounce left
+							if(other.xSpeed > 0)
+							{
+								other.xSpeed = other.xSpeed * -.5
+							}
+							else
+							{
+								other.ySpeed = 0;
+							}
+							
+							other.xSpeed -= attributes.bounceStrength;
+							other.xSpeedTemp = other.xSpeed;
+							active = false;					
 							break;
 					}
 					

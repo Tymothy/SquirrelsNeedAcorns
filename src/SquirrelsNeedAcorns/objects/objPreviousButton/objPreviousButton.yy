@@ -1,8 +1,5 @@
 {
-  "spriteId": {
-    "name": "sprPreviousButton",
-    "path": "sprites/sprPreviousButton/sprPreviousButton.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,

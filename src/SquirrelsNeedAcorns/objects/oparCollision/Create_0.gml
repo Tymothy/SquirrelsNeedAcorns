@@ -57,3 +57,10 @@ cycleCounter = 0;
 
 damageOnContact = 0;
 moveSpeed = 0;
+active = true;
+oneTimeRun = false;
+
+oneTimeRunFunc = function() {
+	show_debug_message("Default oneTimeRun message.  No action taken.");
+	oneTimeRun = false;
+}

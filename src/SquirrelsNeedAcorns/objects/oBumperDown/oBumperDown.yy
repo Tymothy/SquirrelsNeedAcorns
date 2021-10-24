@@ -1,15 +1,15 @@
 {
   "spriteId": {
-    "name": "sBumper",
-    "path": "sprites/sBumper/sBumper.yy",
+    "name": "sBumperDown",
+    "path": "sprites/sBumperDown/sBumperDown.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "oparEnemy",
-    "path": "objects/oparEnemy/oparEnemy.yy",
+    "name": "oBumperPar",
+    "path": "objects/oBumperPar/oBumperPar.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,

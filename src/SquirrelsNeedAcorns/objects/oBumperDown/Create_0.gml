@@ -3,19 +3,22 @@
 
 // Inherit the parent event
 event_inherited();
-
-attributes =
-{
-	description : "Bounces objects extremely fast",
-	damage : 0,
-	moveSpeed : 0,
-	pushable : false,
-	stationary : true,
-	paletteSwap : 0,
-	dropOnDestroy: false,
-	topCollide : collideProperty.bounce, 
-	botCollide : collideProperty.standard,
-	rightCollide : collideProperty.standard,
-	leftCollide : collideProperty.standard,
-	bounceStrength : 12
+oneTimeRunFunc = function() {
+	show_debug_message("OneTimeRun - Sending player down.");
+		with(oPlayer)
+		{
+			if(ySpeed < 0)
+				{
+					ySpeed = ySpeed * -.5;
+				}
+				else
+				{
+					ySpeed = 0;
+				}
+							
+				ySpeed += other.attributes.bounceStrength;
+				ySpeedTemp = ySpeed;
+				other.active = false;
+		}
+	oneTimeRun = false;
 }
