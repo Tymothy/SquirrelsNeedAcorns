@@ -14,19 +14,19 @@ buttonXScale = 1.6;
 buttonYScale = 1.2;
 
 //Completion Symbols
-missing1 = s_missing_1;
-missing2 = s_missing_2;
-missing3 = s_missing_3;
-complete1 = s_pickup_point_acorn;
-complete2 = s_pickup_point_superAcorn;
-complete3 = sGoalAcorn;
+missing1 = oLevelSelect.missing1;
+missing2 = oLevelSelect.missing2;
+missing3 = oLevelSelect.missing3;
+complete1 = oLevelSelect.complete1;
+complete2 = oLevelSelect.complete2;
+complete3 = oLevelSelect.complete3;
+
 y1 = -18;
 y2 = -2;
 y3 = 15;
 x1 = 25;
 x2 = 25;
 x3 = 25;
-missingTransparency = 1;
 
 endStepRan = false; //Run the end step code once to take the changes to the button
 
