@@ -19,6 +19,8 @@ if(global.resolutionChanged == true)
 
 if(world != global.selectedWorld)
 {
+	var _selectedLevelPresent = false;
+		
 		world = global.selectedWorld;
 			show_debug_message("Generating new buttons with the world");
 		//Loop through levels to find which levels are in the correct world
@@ -34,10 +36,18 @@ if(world != global.selectedWorld)
 			if(global.levelSelectArray[i].world == global.selectedWorld) 
 			{
 				worldArr[worldArrInc] = i;
+				if(global.selectedLevel == worldArr[worldArrInc])
+				{
+					_selectedLevelPresent = true;
+				}
 				worldArrInc++;
 			}
 		}
-
+		
+		if(_selectedLevelPresent == false)
+		{
+			global.selectedLevel = worldArr[0];	
+		}
 		//Create the level buttons on screen
 		_arrayLen = array_length(worldArr);
 		var _width = 5; //How many levels wide in a row
@@ -64,7 +74,7 @@ if(world != global.selectedWorld)
 					}
 				}
 			}
-		global.selectedLevel = worldArr[0];
+		//global.selectedLevel = worldArr[0];
 		}
 	array_delete(worldArr, 0, _arrayLen);
 	

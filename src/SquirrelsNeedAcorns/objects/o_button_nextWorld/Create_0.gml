@@ -13,5 +13,6 @@ update_button = function() {
 	if(global.selectedWorld < global.topWorld)
 	{
 		global.selectedWorld++;
+		
 	}
 }

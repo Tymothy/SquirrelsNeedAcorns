@@ -77,8 +77,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Interactables",
-    "path": "folders/Sprites/Entities/Interactables.yy",
+    "name": "SquirrelsNeedAcorns",
+    "path": "SquirrelsNeedAcorns.yyp",
   },
   "resourceVersion": "1.0",
   "name": "sExplodingAcornIdle",

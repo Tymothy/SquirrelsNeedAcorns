@@ -76,10 +76,17 @@ if (keyboard_check_pressed(vk_enter) == true
 				SlideTransition(TRANS_MODE.GOTO,global.lastGameRoom);
 				break;
 			case 1:
-				SlideTransition(TRANS_MODE.GOTO,rLevelSelect);
+				if(select_level(1) == 1)
+				{
+					SlideTransition(TRANS_MODE.GOTO, global.levelSelectArray[global.selectedLevel].roomName);	
+				}
+				else {
+					//At the last level, return to level select
+					SlideTransition(TRANS_MODE.GOTO, rLevelSelect);
+				}
 				break;
 			case 2:
-				SlideTransition(TRANS_MODE.GOTO,rMainMenu);
+				SlideTransition(TRANS_MODE.GOTO, rLevelSelect);
 				break;
 		}
 	}	

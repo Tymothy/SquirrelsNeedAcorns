@@ -9,24 +9,32 @@ if(sprite != -1)
 	draw_sprite(sprite,0,x,y);
 }
 
-draw_text_outline(x,y, string(displayText),c_black, c_ltgray);
+draw_text_outline(x - 10,y, string(displayText),c_black, c_ltgray);
 
 switch(completionLevel)
 {
 	case 0:
-		
+		draw_sprite_ext(missing1, 0, x + x1, y + y1, .5, .5, image_angle, image_blend, missingTransparency);
+		draw_sprite_ext(missing2, 0, x + x2, y + y2, .5, .5, image_angle, image_blend, missingTransparency);
+		draw_sprite_ext(missing3, 0, x + x3, y + y3, .5, .5, image_angle, image_blend, missingTransparency);
 	break;
 	
 	case 1:
-		draw_sprite_ext(s_pickup_point_acorn, 0, x, y + 25, .5, .5, image_angle, image_blend, image_alpha);
+		draw_sprite_ext(complete1, 0, x + x1, y + y1, .5, .5, image_angle, image_blend, missingTransparency);
+		draw_sprite_ext(missing2, 0, x + x2, y + y2, .5, .5, image_angle, image_blend, missingTransparency);
+		draw_sprite_ext(missing3, 0, x + x3, y + y3, .5, .5, image_angle, image_blend, missingTransparency);
 	break;
 	
 	case 2:
-		draw_sprite_ext(s_pickup_point_superAcorn, 0, x, y + 25, .5, .5, image_angle, image_blend, image_alpha);
+		draw_sprite_ext(complete1, 0, x + x1, y + y1, .5, .5, image_angle, image_blend, missingTransparency);
+		draw_sprite_ext(complete2, 0, x + x2, y + y2, .5, .5, image_angle, image_blend, missingTransparency);
+		draw_sprite_ext(missing3, 0, x + x3, y + y3, .5, .5, image_angle, image_blend, missingTransparency);
 	break;
 	
 	case 3:
-		draw_sprite_ext(sGoalAcorn, 0, x, y + 25, .5, .5, image_angle, image_blend, image_alpha);
+		draw_sprite_ext(complete1, 0, x + x1, y + y1, .5, .5, image_angle, image_blend, missingTransparency);
+		draw_sprite_ext(complete2, 0, x + x2, y + y2, .5, .5, image_angle, image_blend, missingTransparency);
+		draw_sprite_ext(complete3, 0, x + x3, y + y3, .5, .5, image_angle, image_blend, missingTransparency);
 	break;
 }
 

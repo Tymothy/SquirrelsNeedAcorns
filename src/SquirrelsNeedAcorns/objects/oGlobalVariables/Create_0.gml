@@ -188,12 +188,12 @@ global.level_Gaps =
 	completionLevel : 0,
 }
 
-global.level_Rocket =
+global.level_Rebound =
 {
 	saveNum : 107, 
 	roomName : rGame107,
 	world : 0,
-	levelName : "F07 - Rocket",
+	levelName : "F07 - Rebound",
 	levelType : LEVELTYPE.FOREST,
 	unlocked : true,
 	art : s_gameIce1,
@@ -222,6 +222,39 @@ global.level_Redirection =
 	completionLevel : 0,
 }
 
+global.level_Precision =
+{
+	saveNum : 109, 
+	roomName : rGame109,
+	world : 0,
+	levelName : "F09 - Precision",
+	levelType : LEVELTYPE.FOREST,
+	unlocked : true,
+	art : s_gameIce1,
+	highScore : [0, 0, 0],
+	difficulty : 5,
+	timed : 0,
+	goalType : GOALTYPE.GOAL,
+	pointReq : 0,
+	completionLevel : 0,
+}
+
+global.level_Choices =
+{
+	saveNum : 110, 
+	roomName : rGame110,
+	world : 0,
+	levelName : "F10 - Choices",
+	levelType : LEVELTYPE.FOREST,
+	unlocked : true,
+	art : s_gameIce1,
+	highScore : [0, 0, 0],
+	difficulty : 5,
+	timed : 60,
+	goalType : GOALTYPE.COLLECT,
+	pointReq : 0,
+	completionLevel : 0,
+}
 
 //Water Levels
 global.level_Bounce =
@@ -294,31 +327,25 @@ global.level_Test =
 
 
 //Level Selection - Contains all levels in game, in order
-//global.levelSelectArray[0] = global.level_Beginning;
-//global.levelSelectArray[1] = global.level_Slope;
-//global.levelSelectArray[2] = global.level_Bend;
-//global.levelSelectArray[3] = global.level_Boom;
-//global.levelSelectArray[3] = global.level_Open;
-//global.levelSelectArray[4] = global.level_Gaps;
-//global.levelSelectArray[5] = global.level_Bounce;
-//global.levelSelectArray[6] = global.level_Turning;
-//global.levelSelectArray[7] = global.level_Conserve;
-//global.levelSelectArray[8] = global.level_Test;
-
 global.levelSelectArray = 
 [
+//Forest Levels
 global.level_Beginning,
 global.level_Slope,
 global.level_Bend,
 global.level_Boom,
 global.level_Open,
 global.level_Gaps,
-global.level_Rocket,
+global.level_Rebound,
 global.level_Redirection,
-global.level_Bounce,
+global.level_Precision,
+global.level_Choices, 
+
+//Water Levels
+global.level_Bounce, 
 global.level_Turning,
 global.level_Conserve,
-global.level_Test,
+//global.level_Test,
 ]
 
 global.worldName[0] = "Forest";

@@ -15,21 +15,21 @@ margin = font_get_size(levelSelectFont)*1.7;
 	modeStringY = levelNameY;
 	
 	modeX = _ww * .9;
-	modeY = _hh * .9;
+	modeY = _hh * .8;
 	backX = _ww * .1;
-	backY = _hh * .9;
+	backY = _hh * .8;
 	nextWorldX = _ww * .7;
-	nextWorldY = _hh * .9;
+	nextWorldY = _hh * .8;
 	prevWorldX = _ww * .3;
-	prevWorldY = _hh * .9;
+	prevWorldY = _hh * .8;
 	playX = _ww * .5;
-	playY = _hh * .9;
+	playY = _hh * .8;
 	usernameX = _ww * .5;
-	usernameY = _hh*  .9;
+	usernameY = _hh*  .8;
 	
 	//Create the area for the levelselection
 	topLevelY = _hh * .4;
-	botLevelY = _hh * .7;
+	botLevelY = _hh * .75;
 	leftLevelX = _ww * .05;
 	rightLevelX = _ww * .95;
 	

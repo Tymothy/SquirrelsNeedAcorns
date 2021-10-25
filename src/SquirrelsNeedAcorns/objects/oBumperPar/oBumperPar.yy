@@ -1,8 +1,5 @@
 {
-  "spriteId": {
-    "name": "sBumperRight",
-    "path": "sprites/sBumperRight/sBumperRight.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,

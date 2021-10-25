@@ -15,7 +15,7 @@ draw_text_outline(levelNameX, levelNameY + margin, string(global.levelSelectArra
 
 //Draw current mode under level name
 //draw_text_outline(modeStringX, modeStringY, string(global.gameModeString), c_black, c_ltgray);
-draw_text_outline(modeX, modeY - margin*1.2, string(global.gameModeString), c_black, c_ltgray);
+//draw_text_outline(modeX, modeY - margin*2.3, string(global.gameModeString), c_black, c_ltgray);
 //As long as mode is not practice, display high score
 	var _score = global.levelSelectArray[global.selectedLevel].highScore[global.gameMode];
 	var _time = global.levelSelectArray[global.selectedLevel].highScore[2];

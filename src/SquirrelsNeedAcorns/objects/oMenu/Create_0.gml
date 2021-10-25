@@ -44,7 +44,7 @@ if(room == rMainMenu)
 //button_h = 80;
 button[0] = "Play";
 button[1] = "How to Play";
-button[2] = "Set Username";
+//button[2] = "Set Username";
 //button[2] = "Options";
 
 	//Create button size
@@ -73,8 +73,8 @@ if(room == rEndRun)
 {
 //button_h = 80;
 button[0] = "Run Again";
-button[1] = "Level Select";
-button[2] = "Main Menu";
+button[1] = "Next Level";
+button[2] = "Level Select";
 //button[3] = "Exit";
 }
 
