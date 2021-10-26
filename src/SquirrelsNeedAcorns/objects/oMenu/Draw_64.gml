@@ -89,9 +89,9 @@ button_h = max(0,font_get_size(menuFont)*3);
 		draw_text_outline(left_text_x,text_y+textSpacing*8,string("possible, or to collect as many acorns"), c_black,c_ltgray);		
 		draw_text_outline(left_text_x,text_y+textSpacing*9,string("as you can before time runs out."), c_black,c_ltgray);
 		
-		draw_text_outline(left_text_x,text_y+textSpacing*11,string("For an added challenge, the levels with"), c_black,c_ltgray);
-		draw_text_outline(left_text_x,text_y+textSpacing*12,string("golden acorns have a time to beat to"), c_black,c_ltgray);
-		draw_text_outline(left_text_x,text_y+textSpacing*13,string("master the level."), c_black,c_ltgray);
+		draw_text_outline(left_text_x,text_y+textSpacing*11,string("See if you can master every level!"), c_black,c_ltgray);
+		//draw_text_outline(left_text_x,text_y+textSpacing*12,string("golden acorns have a time to beat to"), c_black,c_ltgray);
+		//draw_text_outline(left_text_x,text_y+textSpacing*13,string("master the level."), c_black,c_ltgray);
 
 		draw_set_halign(fa_right);
 		draw_text_outline(right_text_x,text_y+textSpacing*5,string("The game is designed for landscape mode"), c_black,c_ltgray);		
