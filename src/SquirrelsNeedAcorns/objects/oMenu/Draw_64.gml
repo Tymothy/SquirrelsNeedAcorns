@@ -183,7 +183,7 @@ button_h = max(0,font_get_size(menuFont)*3);
 		if(global.gameMode == 2)
 		{
 			draw_set_font(fTextNormal);
-			draw_text_outline(menu_x, menu_y*.15+font_get_size(menuFont)*1.5, "Score not saved due to mode", c_black, c_ltgray);
+			draw_text_outline(menu_x, menu_y * .15 + (font_get_size(menuFont)*1.5) * 2, "Practice Mode - Score not saved.", c_black, c_ltgray);
 		}
 		else
 		{
