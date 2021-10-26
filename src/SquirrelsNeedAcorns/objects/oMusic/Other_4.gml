@@ -11,8 +11,8 @@ if(global.musicToggle == 1)
 		{
 			switch (global.levelSelectArray[global.selectedLevel].levelType)
 			{
-				case LEVELTYPE.FOREST : 
-					currentMusic = forestMusic;
+				case LEVELTYPE.MOUNTAINS : 
+					currentMusic = mountainsMusic;
 				break;
 	
 				case LEVELTYPE.WATER : 

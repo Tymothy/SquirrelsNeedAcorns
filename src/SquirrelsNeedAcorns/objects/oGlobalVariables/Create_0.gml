@@ -75,7 +75,7 @@ global.gameModeString = "Challenge";
 
 #region Level Struct Declarations
 enum LEVELTYPE {
-	FOREST,
+	MOUNTAINS,
 	SPACE,
 	WATER
 }
@@ -93,7 +93,7 @@ global.level_Beginning =
 	roomName : rGame101,
 	world : 0,
 	levelName : "F01 - Beginning",
-	levelType : LEVELTYPE.FOREST,
+	levelType : LEVELTYPE.MOUNTAINS,
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0, 0], //Gamemode, points, time
@@ -113,7 +113,7 @@ global.level_Slope =
 	roomName : rGame102,
 	world : 0,
 	levelName : "F02 - Slope",
-	levelType : LEVELTYPE.FOREST,
+	levelType : LEVELTYPE.MOUNTAINS,
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0, 0],
@@ -133,7 +133,7 @@ global.level_Bend =
 	roomName : rGame103,
 	world : 0,
 	levelName : "F03 - Bend",
-	levelType : LEVELTYPE.FOREST,
+	levelType : LEVELTYPE.MOUNTAINS,
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0, 0],
@@ -152,7 +152,7 @@ global.level_Boom =
 	roomName : rGame104,
 	world : 0,
 	levelName : "F04 - Boom",
-	levelType : LEVELTYPE.FOREST,
+	levelType : LEVELTYPE.MOUNTAINS,
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0, 0],
@@ -172,7 +172,7 @@ global.level_Open =
 	roomName : rGame105,
 	world : 0,
 	levelName : "F05 - Open",
-	levelType : LEVELTYPE.FOREST,
+	levelType : LEVELTYPE.MOUNTAINS,
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0, 0],
@@ -192,7 +192,7 @@ global.level_Gaps =
 	roomName : rGame106,
 	world : 0,
 	levelName : "F06 - Gaps",
-	levelType : LEVELTYPE.FOREST,
+	levelType : LEVELTYPE.MOUNTAINS,
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0, 0],
@@ -212,7 +212,7 @@ global.level_Rebound =
 	roomName : rGame107,
 	world : 0,
 	levelName : "F07 - Rebound",
-	levelType : LEVELTYPE.FOREST,
+	levelType : LEVELTYPE.MOUNTAINS,
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0, 0],
@@ -232,7 +232,7 @@ global.level_Redirection =
 	roomName : rGame108,
 	world : 0,
 	levelName : "F08 - Redirection",
-	levelType : LEVELTYPE.FOREST,
+	levelType : LEVELTYPE.MOUNTAINS,
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0, 0],
@@ -252,7 +252,7 @@ global.level_Precision =
 	roomName : rGame109,
 	world : 0,
 	levelName : "F09 - Precision",
-	levelType : LEVELTYPE.FOREST,
+	levelType : LEVELTYPE.MOUNTAINS,
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0, 0],
@@ -272,7 +272,7 @@ global.level_Choices =
 	roomName : rGame110,
 	world : 0,
 	levelName : "F10 - Choices",
-	levelType : LEVELTYPE.FOREST,
+	levelType : LEVELTYPE.MOUNTAINS,
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0, 0],
@@ -371,7 +371,7 @@ global.level_Test =
 //Level Selection - Contains all levels in game, in order
 global.levelSelectArray = 
 [
-//Forest Levels
+//Mountains Levels
 global.level_Beginning,
 global.level_Slope,
 global.level_Bend,
@@ -390,7 +390,7 @@ global.level_Conserve,
 //global.level_Test,
 ]
 
-global.worldName[0] = "Forest";
+global.worldName[0] = "Mountains";
 global.worldName[1] = "Underwater";
 //global.worldName[2
 

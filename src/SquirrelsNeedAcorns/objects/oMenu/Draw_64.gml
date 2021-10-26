@@ -25,7 +25,7 @@ button_h = max(0,font_get_size(menuFont)*3);
 		draw_set_valign(fa_middle);
 		draw_set_halign(fa_center);
 	
-		draw_text_outline(menu_x, menu_y/2, "Squirrels\nNeed Acorns", c_white, c_teal);
+		draw_text_outline(menu_x, menu_y/2, "Squirrels\nNeed Acorns", c_black, c_ltgray);
 	
 	} //End Main Menu
 
@@ -66,7 +66,9 @@ button_h = max(0,font_get_size(menuFont)*3);
 	
 		//	draw_sprite(sWASD, image_index,100,700);
 		
-		var text_x = _ww *.5;
+		var text_x = _ww * .5;
+		var left_text_x = _ww *.2;
+		var right_text_x = _ww * .8;
 		var text_y = _hh *.1;
 
 
@@ -77,12 +79,28 @@ button_h = max(0,font_get_size(menuFont)*3);
 		draw_text_outline(text_x,text_y+textSpacing*0,string("How to Play"),c_white,c_aqua);
 		draw_set_font(fTextNormal);	
 		draw_set_color (c_ltgray);
-		draw_text_outline(text_x,text_y+textSpacing*3,string("Under construction."), c_black,c_ltgray);		
-//		draw_text_outline(text_x,text_y+textSpacing*3,string("Touch left or right side of to screen move."), c_black,c_ltgray);
+//		draw_text_outline(text_x,text_y+textSpacing*3,string("Under construction."), c_black,c_ltgray);		
+		draw_text_outline(text_x,text_y+textSpacing*3,string("Touch left or right side of to screen move in game."), c_black,c_ltgray);
 		
-//		draw_text_outline(text_x,text_y+textSpacing*5,string("The goal is to collect as many"), c_black,c_ltgray);
-//		draw_text_outline(text_x,text_y+textSpacing*6,string("acorns as you can in 60 seconds."), c_black,c_ltgray);
+		draw_set_halign(fa_left);
+		draw_text_outline(left_text_x,text_y+textSpacing*5,string("Depending on the level, the goal"), c_black,c_ltgray);
+		draw_text_outline(left_text_x,text_y+textSpacing*6,string("is to either reach the golden acorn."), c_black,c_ltgray);
+		draw_text_outline(left_text_x,text_y+textSpacing*7,string("while collecting as many acorns as"), c_black,c_ltgray);		
+		draw_text_outline(left_text_x,text_y+textSpacing*8,string("possible, or to collect as many acorns"), c_black,c_ltgray);		
+		draw_text_outline(left_text_x,text_y+textSpacing*9,string("as you can before time runs out."), c_black,c_ltgray);
 		
+		draw_text_outline(left_text_x,text_y+textSpacing*11,string("For an added challenge, the levels with"), c_black,c_ltgray);
+		draw_text_outline(left_text_x,text_y+textSpacing*12,string("golden acorns have a time to beat to"), c_black,c_ltgray);
+		draw_text_outline(left_text_x,text_y+textSpacing*13,string("master the level."), c_black,c_ltgray);
+
+		draw_set_halign(fa_right);
+		draw_text_outline(right_text_x,text_y+textSpacing*5,string("The game is designed for landscape mode"), c_black,c_ltgray);		
+		draw_text_outline(right_text_x,text_y+textSpacing*6,string("but is fully playable in portrait mode,"), c_black,c_ltgray);
+		draw_text_outline(right_text_x,text_y+textSpacing*7,string("with only some cosmetic graphic issues."), c_black,c_ltgray);
+		
+		//draw_text_outline(text_x,text_y+textSpacing*6,string("Make sure to keep an eye on your fuel"), c_black,c_ltgray);		
+		//draw_text_outline(text_x,text_y+textSpacing*6,string("possible, or to collect as many acorns"), c_black,c_ltgray);		
+		//draw_text_outline(text_x,text_y+textSpacing*6,string("as you can before time runs out."), c_black,c_ltgray);
 //		draw_text_outline(text_x,text_y+textSpacing*8,string("Watch your fuel, don't hit the"), c_black,c_ltgray);
 //		draw_text_outline(text_x,text_y+textSpacing*9,string("walls too hard, and avoid spikes."), c_black,c_ltgray);
 

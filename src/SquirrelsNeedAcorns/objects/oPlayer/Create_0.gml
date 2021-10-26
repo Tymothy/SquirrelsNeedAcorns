@@ -104,7 +104,7 @@ enemyCollideAttribute = -1;
 //Applying level effects to player
 switch (global.levelSelectArray[global.selectedLevel].levelType)
 {
-	case LEVELTYPE.FOREST : 
+	case LEVELTYPE.MOUNTAINS : 
 		planetGravityEVar = planetGravityEVar * 1;
 		airResist = .005;
 	break;

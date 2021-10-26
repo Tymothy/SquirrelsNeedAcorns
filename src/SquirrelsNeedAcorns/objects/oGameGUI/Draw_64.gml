@@ -107,8 +107,17 @@ if(showCountDown > 0)
 		draw_set_color(c_ltgray);
 		draw_set_halign(fa_center);
 		draw_set_valign(fa_middle);
-		draw_text(alertX,alertY,"Get Ready!");
-		draw_text_outline(alertX,alertY, "Get Ready!", c_black,c_ltgray);
+		switch(global.GOALTYPE)
+		{
+			case GOALTYPE.GOAL:
+				draw_text_outline(alertX,alertY, "Reach the golden acorn!", c_black,c_ltgray);			
+			break;
+			
+			case GOALTYPE.COLLECT:
+				draw_text_outline(alertX,alertY, "Collect as many acorns as possible!", c_black,c_ltgray);			
+			break;
+		}
+
 
 		draw_set_font(alertFont);
 		draw_set_color(c_yellow);

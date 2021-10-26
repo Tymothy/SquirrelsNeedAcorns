@@ -1,5 +1,5 @@
 mainMenuMusic = sound_music_TheLongestYear;
-forestMusic = sound_music_FastLanes;
+mountainsMusic = sound_music_FastLanes;
 waterMusic = sound_music_YouWereAlways;
 
 currentMusic = mainMenuMusic;

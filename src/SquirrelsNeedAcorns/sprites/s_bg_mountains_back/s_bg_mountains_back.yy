@@ -9,7 +9,7 @@
   "swfPrecision": 2.525,
   "bbox_left": 0,
   "bbox_right": 399,
-  "bbox_top": 2,
+  "bbox_top": 0,
   "bbox_bottom": 399,
   "HTile": false,
   "VTile": false,
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"1f5fd4d1-1e65-4d65-aba7-36bfe3310ecc","path":"sprites/s_bg_forest_grass/s_bg_forest_grass.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"1f5fd4d1-1e65-4d65-aba7-36bfe3310ecc","path":"sprites/s_bg_forest_grass/s_bg_forest_grass.yy",},"LayerId":{"name":"38f23ec2-2a00-496e-a5a4-2f184817e6bd","path":"sprites/s_bg_forest_grass/s_bg_forest_grass.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"s_bg_forest_grass","path":"sprites/s_bg_forest_grass/s_bg_forest_grass.yy",},"resourceVersion":"1.0","name":"1f5fd4d1-1e65-4d65-aba7-36bfe3310ecc","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"e389a537-cc82-4fd3-8708-a9cfa371262e","path":"sprites/s_bg_mountains_back/s_bg_mountains_back.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"e389a537-cc82-4fd3-8708-a9cfa371262e","path":"sprites/s_bg_mountains_back/s_bg_mountains_back.yy",},"LayerId":{"name":"e3a13f76-2ac9-46b6-961f-b149c8bf724e","path":"sprites/s_bg_mountains_back/s_bg_mountains_back.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"s_bg_mountains_back","path":"sprites/s_bg_mountains_back/s_bg_mountains_back.yy",},"resourceVersion":"1.0","name":"e389a537-cc82-4fd3-8708-a9cfa371262e","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"s_bg_forest_grass","path":"sprites/s_bg_forest_grass/s_bg_forest_grass.yy",},
+    "spriteId": {"name":"s_bg_mountains_back","path":"sprites/s_bg_mountains_back/s_bg_mountains_back.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"fbd0b691-b0c3-4626-857e-acb1ab1845bd","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1f5fd4d1-1e65-4d65-aba7-36bfe3310ecc","path":"sprites/s_bg_forest_grass/s_bg_forest_grass.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"c8bd1f0d-d042-45da-a10a-c9b74f0bf700","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e389a537-cc82-4fd3-8708-a9cfa371262e","path":"sprites/s_bg_mountains_back/s_bg_mountains_back.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,14 +58,14 @@
     "yorigin": 200,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"s_bg_forest_grass","path":"sprites/s_bg_forest_grass/s_bg_forest_grass.yy",},
+    "parent": {"name":"s_bg_mountains_back","path":"sprites/s_bg_mountains_back/s_bg_mountains_back.yy",},
     "resourceVersion": "1.3",
-    "name": "s_bg_forest_grass",
+    "name": "s_bg_mountains_back",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"38f23ec2-2a00-496e-a5a4-2f184817e6bd","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"e3a13f76-2ac9-46b6-961f-b149c8bf724e","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites/Background/Forest.yy",
   },
   "resourceVersion": "1.0",
-  "name": "s_bg_forest_grass",
+  "name": "s_bg_mountains_back",
   "tags": [],
   "resourceType": "GMSprite",
 }

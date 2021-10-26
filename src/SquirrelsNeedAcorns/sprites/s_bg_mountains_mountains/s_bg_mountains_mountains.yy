@@ -9,8 +9,8 @@
   "swfPrecision": 2.525,
   "bbox_left": 0,
   "bbox_right": 399,
-  "bbox_top": 164,
-  "bbox_bottom": 399,
+  "bbox_top": 16,
+  "bbox_bottom": 349,
   "HTile": false,
   "VTile": false,
   "For3D": false,
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"bff7479b-caac-45c3-97ed-c6d0e79cde8d","path":"sprites/s_bg_forest_hills/s_bg_forest_hills.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"bff7479b-caac-45c3-97ed-c6d0e79cde8d","path":"sprites/s_bg_forest_hills/s_bg_forest_hills.yy",},"LayerId":{"name":"c8dce34f-aac9-417c-b67f-27bd129c5ab5","path":"sprites/s_bg_forest_hills/s_bg_forest_hills.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"s_bg_forest_hills","path":"sprites/s_bg_forest_hills/s_bg_forest_hills.yy",},"resourceVersion":"1.0","name":"bff7479b-caac-45c3-97ed-c6d0e79cde8d","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"2f49858d-bca7-45fe-838b-18daa907f536","path":"sprites/s_bg_mountains_mountains/s_bg_mountains_mountains.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"2f49858d-bca7-45fe-838b-18daa907f536","path":"sprites/s_bg_mountains_mountains/s_bg_mountains_mountains.yy",},"LayerId":{"name":"401e1589-a8f6-48ef-afe8-58dd4b77c715","path":"sprites/s_bg_mountains_mountains/s_bg_mountains_mountains.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"s_bg_mountains_mountains","path":"sprites/s_bg_mountains_mountains/s_bg_mountains_mountains.yy",},"resourceVersion":"1.0","name":"2f49858d-bca7-45fe-838b-18daa907f536","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"s_bg_forest_hills","path":"sprites/s_bg_forest_hills/s_bg_forest_hills.yy",},
+    "spriteId": {"name":"s_bg_mountains_mountains","path":"sprites/s_bg_mountains_mountains/s_bg_mountains_mountains.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"64b0521e-4ad2-4f0c-8206-514423a556fd","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bff7479b-caac-45c3-97ed-c6d0e79cde8d","path":"sprites/s_bg_forest_hills/s_bg_forest_hills.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"a2cb4ba2-9ed2-45fa-a54e-0e6e92c3acac","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2f49858d-bca7-45fe-838b-18daa907f536","path":"sprites/s_bg_mountains_mountains/s_bg_mountains_mountains.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,14 +58,14 @@
     "yorigin": 200,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"s_bg_forest_hills","path":"sprites/s_bg_forest_hills/s_bg_forest_hills.yy",},
+    "parent": {"name":"s_bg_mountains_mountains","path":"sprites/s_bg_mountains_mountains/s_bg_mountains_mountains.yy",},
     "resourceVersion": "1.3",
-    "name": "s_bg_forest_hills",
+    "name": "s_bg_mountains_mountains",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"c8dce34f-aac9-417c-b67f-27bd129c5ab5","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"401e1589-a8f6-48ef-afe8-58dd4b77c715","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites/Background/Forest.yy",
   },
   "resourceVersion": "1.0",
-  "name": "s_bg_forest_hills",
+  "name": "s_bg_mountains_mountains",
   "tags": [],
   "resourceType": "GMSprite",
 }

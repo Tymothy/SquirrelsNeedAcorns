@@ -11,7 +11,7 @@ if(backgroundType != global.levelSelectArray[global.selectedLevel].levelType)
 
 switch (backgroundType)
 {
-	case LEVELTYPE.FOREST:
+	case LEVELTYPE.MOUNTAINS:
 	if(room_height < 1500) //Level Select Screen
 	{
 		var mid1Factor = 1;
@@ -29,8 +29,8 @@ switch (backgroundType)
 		var mid3Factor = .83;
 		
 		var mid1Offset = -1 * (room_height/40);
-		var mid2Offset = 1 * (room_height/120);
-		var mid3Offset =  1 * room_height / 5.5;
+		var mid2Offset = 1 * (room_height/35);
+		var mid3Offset =  1 * room_height / 4.5;
 	}
 	else //Huge Levels
 	{
@@ -38,9 +38,9 @@ switch (backgroundType)
 		var mid2Factor = .95;
 		var mid3Factor = .92;
 		
-		var mid1Offset = -1 * (room_height/50);
-		var mid2Offset = 1 * (room_height/120);
-		var mid3Offset =  1 * room_height / 10.5;
+		var mid1Offset = -1 * (room_height/350);
+		var mid2Offset = 1 * (room_height/30);
+		var mid3Offset =  1 * room_height / 8;
 	}
 	break;
 

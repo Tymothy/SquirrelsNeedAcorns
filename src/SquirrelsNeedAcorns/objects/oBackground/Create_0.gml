@@ -13,21 +13,21 @@ middle_layer = layer_create(1097);
 foreground_layer = layer_create(1096);
 
 //Set the inital sprites on create
-solidFill_layer_bg = layer_background_create(solidFill_layer, s_bg_forest_back);
-back_layer_bg = layer_background_create(back_layer, s_bg_forest_mountains);
-middle_layer_bg = layer_background_create(middle_layer, s_bg_forest_hills);
-foreground_layer_bg = layer_background_create(foreground_layer, s_bg_forest_grass);
+solidFill_layer_bg = layer_background_create(solidFill_layer, s_bg_mountains_back);
+back_layer_bg = layer_background_create(back_layer, s_bg_mountains_mountains);
+middle_layer_bg = layer_background_create(middle_layer, s_bg_mountains_hills);
+foreground_layer_bg = layer_background_create(foreground_layer, s_bg_mountains_grass);
 
-//Forest
+//Mountains
 set_background = function()
 {
 	switch(backgroundType)
 	{
-		case LEVELTYPE.FOREST:
-			layer_background_sprite(solidFill_layer_bg, s_bg_forest_back);
-			layer_background_sprite(back_layer_bg, s_bg_forest_mountains);
-			layer_background_sprite(middle_layer_bg, s_bg_forest_hills);
-			layer_background_sprite(foreground_layer_bg, s_bg_forest_grass);
+		case LEVELTYPE.MOUNTAINS:
+			layer_background_sprite(solidFill_layer_bg, s_bg_mountains_back);
+			layer_background_sprite(back_layer_bg, s_bg_mountains_mountains);
+			layer_background_sprite(middle_layer_bg, s_bg_mountains_hills);
+			layer_background_sprite(foreground_layer_bg, s_bg_mountains_grass);
 		
 		break;
 	
