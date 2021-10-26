@@ -30,19 +30,49 @@ switch(global.gameModeString)
 
 	
 	case "Challenge" :
-		if(_time == 0)
+		switch(global.levelSelectArray[global.selectedLevel].completionLevel)
 		{
-			draw_text_outline(modeStringX, modeStringY+margin, string(_score), c_black, c_yellow);
-		}
-		else
-		{
-			if(_time < 9999)
-			{
-			draw_text_outline(modeStringX, modeStringY+margin, string(_time) + " seconds", c_black, c_yellow);
-			}
-			else {
-			draw_text_outline(modeStringX, modeStringY+margin, "Set a time!", c_black, c_yellow);				
-			}
+			case 0 :
+				draw_text_outline(modeStringX, modeStringY+margin, string(_score), c_black, c_yellow);
+			break;
+			
+			case 1 :
+				draw_text_outline(modeStringX, modeStringY+margin, string(_score), c_black, c_yellow);
+			break;
+			
+			case 2 :
+				switch (global.GOALTYPE)
+				{
+					case GOALTYPE.GOAL :
+						draw_text_outline(modeStringX, modeStringY+margin, string(_time) + " seconds", c_black, c_yellow);					
+					break;
+					
+					case GOALTYPE.COLLECT :
+						draw_text_outline(modeStringX, modeStringY+margin, string(_score), c_black, c_yellow);				
+					break;
+					
+					default :
+						draw_text_outline(modeStringX, modeStringY+margin, string(_score), c_black, c_yellow);	
+					break;
+				}
+			break;
+			
+			case 3 :
+				switch (global.GOALTYPE)
+				{
+					case GOALTYPE.GOAL :
+						draw_text_outline(modeStringX, modeStringY+margin, string(_time) + " seconds", c_black, c_yellow);					
+					break;
+					
+					case GOALTYPE.COLLECT :
+						draw_text_outline(modeStringX, modeStringY+margin, string(_score), c_black, c_yellow);				
+					break;
+					
+					default :
+						draw_text_outline(modeStringX, modeStringY+margin, string(_score), c_black, c_yellow);	
+					break;
+				}
+			break;
 		}
 		
 		break;

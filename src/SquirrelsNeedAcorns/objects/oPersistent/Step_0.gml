@@ -3,3 +3,4 @@ if os_is_paused()
     {
 		//global.pause = true;
     }
+global.GOALTYPE = global.levelSelectArray[global.selectedLevel].goalType;
