@@ -3,7 +3,7 @@
 #macro database_send false //Use false to not send runs to server, export with true
 
 //Variables changed often
-global.versionText = "Squirrels Need Acorns - Alpha Version 0.6.3";
+global.versionText = "Squirrels Need Acorns - Alpha Version 0.7.0";
 global.debug = false; //Controls all the debugging.  Set to false before exporting
 global.playerName = ""; //Used for the highscores
 global.musicToggle = 0; //Set to 1 to export with sound on by default.  Set to 0 for no sound on game on.
@@ -103,7 +103,7 @@ global.level_Beginning =
 	pointReq : 0, //How many points required to pass
 	compLev1 : 1, //Points to get 1st level
 	compLev2 : 5, //Points to get 2nd level
-	compLev3 : 6.1, //Time to beat for max, acorns for GOALTYPE.COLLECT
+	compLev3 : 6.17, //Time to beat for max, acorns for GOALTYPE.COLLECT
 	completionLevel : 0, //How many acorns to present on level select screen
 }
 
@@ -123,7 +123,7 @@ global.level_Slope =
 	pointReq : 0,
 	compLev1 : 1, //Points to get 1st level
 	compLev2 : 8, //Points to get 2nd level
-	compLev3 : 6.1, //Time to beat for max, acorns for GOALTYPE.COLLECT
+	compLev3 : 11.22, //Time to beat for max, acorns for GOALTYPE.COLLECT
 	completionLevel : 0,
 }
 
@@ -143,7 +143,7 @@ global.level_Bend =
 	pointReq : 0,
 	compLev1 : 1, //Points to get 1st level
 	compLev2 : 10, //Points to get 2nd level
-	compLev3 : 6.1, //Time to beat for max, acorns for GOALTYPE.COLLECT
+	compLev3 : 17.20, //Time to beat for max, acorns for GOALTYPE.COLLECT
 	completionLevel : 0,
 }
 global.level_Boom =
@@ -162,7 +162,7 @@ global.level_Boom =
 	pointReq : 0,
 	compLev1 : 1, //Points to get 1st level
 	compLev2 : 11, //Points to get 2nd level
-	compLev3 : 6.1, //Time to beat for max, acorns for GOALTYPE.COLLECT
+	compLev3 : 16.23, //Time to beat for max, acorns for GOALTYPE.COLLECT
 	completionLevel : 0,
 }
 
@@ -202,7 +202,7 @@ global.level_Gaps =
 	pointReq : 0,
 	compLev1 : 1, //Points to get 1st level
 	compLev2 : 7, //Points to get 2nd level
-	compLev3 : 6.1, //Time to beat for max, acorns for GOALTYPE.COLLECT
+	compLev3 : 21.67, //Time to beat for max, acorns for GOALTYPE.COLLECT
 	completionLevel : 0,
 }
 
@@ -222,7 +222,7 @@ global.level_Rebound =
 	pointReq : 0,
 	compLev1 : 1, //Points to get 1st level
 	compLev2 : 9, //Points to get 2nd level
-	compLev3 : 6.1, //Time to beat for max, acorns for GOALTYPE.COLLECT
+	compLev3 : 26.77, //Time to beat for max, acorns for GOALTYPE.COLLECT
 	completionLevel : 0,
 }
 
@@ -242,7 +242,7 @@ global.level_Redirection =
 	pointReq : 0,
 	compLev1 : 1, //Points to get 1st level
 	compLev2 : 4, //Points to get 2nd level
-	compLev3 : 6.1, //Time to beat for max, acorns for GOALTYPE.COLLECT
+	compLev3 : 13.10, //Time to beat for max, acorns for GOALTYPE.COLLECT
 	completionLevel : 0,
 }
 
@@ -262,7 +262,7 @@ global.level_Precision =
 	pointReq : 0,
 	compLev1 : 1, //Points to get 1st level
 	compLev2 : 11, //Points to get 2nd level
-	compLev3 : 6.1, //Time to beat for max, acorns for GOALTYPE.COLLECT
+	compLev3 : 29.07, //Time to beat for max, acorns for GOALTYPE.COLLECT
 	completionLevel : 0,
 }
 
@@ -303,7 +303,7 @@ global.level_Bounce =
 	pointReq : 0,
 	compLev1 : 1, //Points to get 1st level
 	compLev2 : 6, //Points to get 2nd level
-	compLev3 : 6.1, //Time to beat for max, acorns for GOALTYPE.COLLECT
+	compLev3 : 16.23, //Time to beat for max, acorns for GOALTYPE.COLLECT
 	completionLevel : 0,
 }
 
@@ -323,7 +323,7 @@ global.level_Turning =
 	pointReq : 0,
 	compLev1 : 1, //Points to get 1st level
 	compLev2 : 9, //Points to get 2nd level
-	compLev3 : 6.1, //Time to beat for max, acorns for GOALTYPE.COLLECT
+	compLev3 : 32.17, //Time to beat for max, acorns for GOALTYPE.COLLECT
 	completionLevel : 0,
 }
 
@@ -343,7 +343,7 @@ global.level_Conserve =
 	pointReq : 0,
 	compLev1 : 1, //Points to get 1st level
 	compLev2 : 9, //Points to get 2nd level
-	compLev3 : 6.1, //Time to beat for max, acorns for GOALTYPE.COLLECT
+	compLev3 : 20.45, //Time to beat for max, acorns for GOALTYPE.COLLECT
 	completionLevel : 0,
 }
 
@@ -365,7 +365,6 @@ global.level_Test =
 	compLev2 : 9, //Points to get 2nd level
 	compLev3 : 6.1, //Time to beat for max, acorns for GOALTYPE.COLLECT
 	completionLevel : 0,
-
 }
 
 

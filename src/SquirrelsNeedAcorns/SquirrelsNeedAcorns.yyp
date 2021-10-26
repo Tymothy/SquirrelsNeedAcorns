@@ -163,7 +163,6 @@
     {"id":{"name":"sAcorn","path":"sprites/sAcorn/sAcorn.yy",},"order":0,},
     {"id":{"name":"rGame106","path":"rooms/rGame106/rGame106.yy",},"order":5,},
     {"id":{"name":"rGameIce2","path":"rooms/rGameIce2/rGameIce2.yy",},"order":1,},
-    {"id":{"name":"oCompletionLevel","path":"objects/oCompletionLevel/oCompletionLevel.yy",},"order":10,},
     {"id":{"name":"s_bg_forest_mountains","path":"sprites/s_bg_forest_mountains/s_bg_forest_mountains.yy",},"order":0,},
     {"id":{"name":"twerp","path":"scripts/twerp/twerp.yy",},"order":21,},
     {"id":{"name":"shd_posterization","path":"shaders/shd_posterization/shd_posterization.yy",},"order":8,},

@@ -7,7 +7,7 @@ function save_highscore(){
 	
 	//Read current high score
 	_savedHighscore = ini_read_real(string(global.gameModeString), string(global.levelSelectArray[global.selectedLevel].saveNum), 0);
-	_savedTime = ini_read_real("Time",  string(global.levelSelectArray[global.selectedLevel].saveNum), 0);
+	_savedTime = ini_read_real("Time",  string(global.levelSelectArray[global.selectedLevel].saveNum), 9999.99);
 	
 	if(global.gameModeString == "Challenge")
 	{
@@ -50,7 +50,7 @@ function load_highscore(){
 		{
 			global.levelSelectArray[i].highScore[0] = ini_read_real("Challenge", string(global.levelSelectArray[i].saveNum), 0)
 			global.levelSelectArray[i].highScore[1] = ini_read_real("Zen", string(global.levelSelectArray[i].saveNum), 0)
-			global.levelSelectArray[i].highScore[2] = ini_read_real("Time", string(global.levelSelectArray[i].saveNum), 0)
+			global.levelSelectArray[i].highScore[2] = ini_read_real("Time", string(global.levelSelectArray[i].saveNum), 9999.99)
 		}
 	ini_close();
 }

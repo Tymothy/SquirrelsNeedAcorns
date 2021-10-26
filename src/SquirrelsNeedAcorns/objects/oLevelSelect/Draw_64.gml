@@ -36,7 +36,13 @@ switch(global.gameModeString)
 		}
 		else
 		{
-			draw_text_outline(modeStringX, modeStringY+margin, string(_time) + " seconds", c_black, c_yellow);	
+			if(_time < 9999)
+			{
+			draw_text_outline(modeStringX, modeStringY+margin, string(_time) + " seconds", c_black, c_yellow);
+			}
+			else {
+			draw_text_outline(modeStringX, modeStringY+margin, "Set a time!", c_black, c_yellow);				
+			}
 		}
 		
 		break;
