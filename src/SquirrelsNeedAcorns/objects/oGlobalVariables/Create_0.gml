@@ -1,12 +1,12 @@
 /// @desc Generate global variables
-#macro live_enabled 1 //Turn to 0 to turn off for exporting, 1 to use
+#macro live_enabled 0 //Turn to 0 to turn off for exporting, 1 to use
 #macro database_send false //Use false to not send runs to server, export with true
 
 //Variables changed often
 global.versionText = "Squirrels Need Acorns - Alpha Version 0.7.0";
 global.debug = false; //Controls all the debugging.  Set to false before exporting
 global.playerName = ""; //Used for the highscores
-global.musicToggle = 0; //Set to 1 to export with sound on by default.  Set to 0 for no sound on game on.
+global.musicToggle = 1; //Set to 1 to export with sound on by default.  Set to 0 for no sound on game on.
 global.testRoom = ""; //Put a room to immediately go to that room for testing.  Export with ""
 global.displayCountUp = true;
 
