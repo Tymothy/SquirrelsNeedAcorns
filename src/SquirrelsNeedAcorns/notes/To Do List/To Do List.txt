@@ -1,9 +1,12 @@
 General Ideas
 
+== Yana Suggestions ===
+Add damage back in
+On main menu screen have the player object fly around
+Better title screen/logo
+
 === Bugs to Fix ===
 Username selection
-Remove player control after reaching the goal so player just falls
-
 
 === Alpha 0.8 ===
 Make displays work nicely with portait mode(no super zoom out)

@@ -17,7 +17,7 @@ attributes =
 	botCollide : collideProperty.standard,
 	rightCollide : collideProperty.standard,
 	leftCollide : collideProperty.standard,
-	bounceStrength : 12
+	bounceStrength : 10
 }
 
 image_speed = 0;

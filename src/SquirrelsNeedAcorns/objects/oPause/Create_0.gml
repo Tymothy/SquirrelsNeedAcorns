@@ -4,10 +4,10 @@ if(live_call()) return live_result;
 paused = false;
 pauseFont = fTextLarge;
 touchSelect = false;
-margin = 1.15; //How far around text button should be drawn, as a multiplyer.
+margin = 1.8; //How far around text button should be drawn, as a multiplyer.
 buttonSprite = s_button_pressable;
 
-button_h = font_get_size(pauseFont)*2.3;
+button_h = font_get_size(pauseFont)*3.5;
 button[0] = "Continue";
 button[1] = "Restart";
 button[2] = "End Run";

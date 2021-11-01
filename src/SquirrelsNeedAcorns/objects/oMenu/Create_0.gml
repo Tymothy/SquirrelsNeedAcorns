@@ -3,7 +3,7 @@ menuFont = fTextLarge;
 button_h = font_get_size(menuFont)*2.3;
 button_w = 20;
 
-margin = 1.15; //How far around text button should be drawn, as a multiplyer
+margin = 1.8; //How far around text button should be drawn, as a multiplyer
 buttonSprite = s_button_pressable;
 enum LAYOUT{
 	HORIZONTAL,
@@ -14,9 +14,6 @@ ableToSelect = true;
 touchSelect = false;
 
 debug = true;
-
-//High score variables
-rGameIce1Score = 0;
 
 switch(global.gameMode)
 	{

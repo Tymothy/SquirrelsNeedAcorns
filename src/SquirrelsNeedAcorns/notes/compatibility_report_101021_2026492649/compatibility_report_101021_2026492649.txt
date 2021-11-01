@@ -1,227 +1,0 @@
-Converting GML script: ${project_dir}\scripts\inputbox_create\inputbox_create.gml
-Converted description /// @description inputbox_create(x, y, width, height, marginx, marginy, text, font)/// @param x
-/// @param  y
-/// @param  width
-/// @param  height
-/// @param  marginx
-/// @param  marginy
-/// @param  text
-/// @param  font
-
-Converting GML script: ${project_dir}\scripts\inputbox_get_font\inputbox_get_font.gml
-Converted description /// @description inputbox_get_font(id)/// @param id
-
-Converting GML script: ${project_dir}\scripts\inputbox_set_font\inputbox_set_font.gml
-Converted description /// @description inputbox_set_font(id, font)/// @param id
-/// @param  font
-
-Converting GML script: ${project_dir}\scripts\inputbox_get_text\inputbox_get_text.gml
-Converted description /// @description inputbox_get_text(id)/// @param id
-
-Converting GML script: ${project_dir}\scripts\inputbox_set_text\inputbox_set_text.gml
-Converted description /// @description inputbox_set_text(id, str)/// @param id
-/// @param  str
-
-Converting GML script: ${project_dir}\scripts\inputbox_delete_selection\inputbox_delete_selection.gml
-Converted description /// @description inputbox_delete_selection(id)/// @param id
-
-Converting GML script: ${project_dir}\scripts\inputbox_get_selection\inputbox_get_selection.gml
-Converted description /// @description inputbox_get_selection(id)/// @param id
-
-Converting GML script: ${project_dir}\scripts\inputbox_set_colours\inputbox_set_colours.gml
-Converted description /// @description inputbox_set_colours(id, stroke col, stroke alp, fill col, fill alp, text col, text alp, cursor col, cursor alp, select col, select alp, select text col, select text alp)/// @param id
-/// @param  stroke col
-/// @param  stroke alp
-/// @param  fill col
-/// @param  fill alp
-/// @param  text col
-/// @param  text alp
-/// @param  cursor col
-/// @param  cursor alp
-/// @param  select col
-/// @param  select alp
-/// @param  select text col
-/// @param  select text alp
-
-Converting GML script: ${project_dir}\scripts\inputbox_set_stroke\inputbox_set_stroke.gml
-Converted description /// @description inputbox_set_stroke(id, stroke width)/// @param id
-/// @param  stroke width
-
-Converting GML script: ${project_dir}\scripts\inputbox_get_stroke\inputbox_get_stroke.gml
-Converted description /// @description inputbox_get_stroke(id)/// @param id
-
-Converting GML script: ${project_dir}\scripts\inputbox_get_width\inputbox_get_width.gml
-Converted description /// @description inputbox_get_width(id)/// @param id
-
-Converting GML script: ${project_dir}\scripts\inputbox_get_height\inputbox_get_height.gml
-Converted description /// @description inputbox_get_height(id)/// @param id
-
-Converting GML script: ${project_dir}\scripts\inputbox_set_size\inputbox_set_size.gml
-Converted description /// @description inputbox_set_size(id, width, height)/// @param id
-/// @param  width
-/// @param  height
-
-Converting GML script: ${project_dir}\scripts\inputbox_get_x\inputbox_get_x.gml
-Converted description /// @description inputbox_get_x(id)/// @param id
-
-Converting GML script: ${project_dir}\scripts\inputbox_get_y\inputbox_get_y.gml
-Converted description /// @description inputbox_get_y(id)/// @param id
-
-Converting GML script: ${project_dir}\scripts\inputbox_set_position\inputbox_set_position.gml
-Converted description /// @description inputbox_set_position(id, x, y)/// @param id
-/// @param  x
-/// @param  y
-
-Converting GML script: ${project_dir}\scripts\inputbox_get_margin_x\inputbox_get_margin_x.gml
-Converted description /// @description inputbox_get_margin_x(id)/// @param id
-
-Converting GML script: ${project_dir}\scripts\inputbox_get_margin_y\inputbox_get_margin_y.gml
-Converted description /// @description inputbox_get_margin_y(id)/// @param id
-
-Converting GML script: ${project_dir}\scripts\inputbox_set_margins\inputbox_set_margins.gml
-Converted description /// @description inputbox_set_margins(id, xmargin, ymargin)/// @param id
-/// @param  xmargin
-/// @param  ymargin
-
-Converting GML script: ${project_dir}\scripts\inputbox_select_menu_hover\inputbox_select_menu_hover.gml
-Converted description /// @description inputbox_select_menu_hover()    
-
-Converting GML script: ${project_dir}\scripts\inputbox_copy\inputbox_copy.gml
-Converted description /// @description inputbox_copy()    
-
-Converting GML script: ${project_dir}\scripts\inputbox_paste\inputbox_paste.gml
-Converted description /// @description inputbox_paste()    
-
-Converting GML script: ${project_dir}\scripts\inputbox_keyboard_input\inputbox_keyboard_input.gml
-Converted description /// @description inputbox_keyboard_interaction()
-
-Converting GML script: ${project_dir}\scripts\inputbox_mouse_interaction\inputbox_mouse_interaction.gml
-Converted description /// @description inputbox_mouse_interaction()
-
-Converting GML script: ${project_dir}\scripts\inputbox_select_menu_update\inputbox_select_menu_update.gml
-Converted description /// @description inputbox_select_menu_update()    
-
-Converting GML script: ${project_dir}\scripts\inputbox_select_menu_update_dimensions\inputbox_select_menu_update_dimensions.gml
-Converted description /// @description inputbox_select_menu_update_dimensions()
-
-Converting GML script: ${project_dir}\scripts\inputbox_cursor_flash\inputbox_cursor_flash.gml
-Converted description /// @description inputbox_cursor_flash() 
-
-Converting GML script: ${project_dir}\scripts\string_find_position_x\string_find_position_x.gml
-Converted description /// @description string_find_position_x(string, x, px, round)/// @param string
-/// @param  x
-/// @param  px
-/// @param  round
-
-Converting GML script: ${project_dir}\scripts\string_find_character_x\string_find_character_x.gml
-Converted description /// @description string_find_character_x(string, x, px)/// @param string
-/// @param  x
-/// @param  px
-
-Converting GML script: ${project_dir}\scripts\string_find_word_endpoints\string_find_word_endpoints.gml
-Converted description /// @description string_find_word_endpoints(string, pos)/// @param string
-/// @param  pos
-
-Converting GML script: ${project_dir}\scripts\in_bounds\in_bounds.gml
-Converted description /// @description in_bounds(x, y, x1, y1, x2, y2)/// @param x
-/// @param  y
-/// @param  x1
-/// @param  y1
-/// @param  x2
-/// @param  y2
-
-Converting GML script: ${project_dir}\scripts\draw_circle_width\draw_circle_width.gml
-Converted description /// @description draw_circle_width(x, y, radius, outline width, level of detail, outline align)/// @param x
-/// @param  y
-/// @param  radius
-/// @param  outline width
-/// @param  level of detail
-/// @param  outline align
-
-Converting GML script: ${project_dir}\scripts\draw_rectangle_width\draw_rectangle_width.gml
-Converted description /// @description draw_rectangle_width(x1, y1, x2, y2, outline width)/// @param x1
-/// @param  y1
-/// @param  x2
-/// @param  y2
-/// @param  outline width
-
-Converting GML script: ${project_dir}\scripts\draw_rectangle_sprite\draw_rectangle_sprite.gml
-Converted description /// @description draw_rectangle_sprite(x1, y1, width, height, spr, colour, alpha);/// @param x1
-/// @param  y1
-/// @param  width
-/// @param  height
-/// @param  spr
-/// @param  colour
-/// @param  alpha
-
-Converting GML script: ${project_dir}\scripts\inputbox_randomise\inputbox_randomise.gml
-Converted description /// @description inputbox_randomise()
-
-!!! Font fntInputBox uses a font (Roboto Th) not installed on this system - Font has NOT been regenerated
-GameMaker Studio 1 font texture has been backed up at ${project_dir}\fonts\fntInputBox\fntInputBox.gms1.png
-!!! Font fntButton uses a font (San Francisco Display Ultraligh) not installed on this system - Font has NOT been regenerated
-GameMaker Studio 1 font texture has been backed up at ${project_dir}\fonts\fntButton\fntButton.gms1.png
-!!! Font fntMenu uses a font (Roboto) not installed on this system - Font has NOT been regenerated
-GameMaker Studio 1 font texture has been backed up at ${project_dir}\fonts\fntMenu\fntMenu.gms1.png
-!!! Font fntInput2 uses a font (WC Mano Negra Bta) not installed on this system - Font has NOT been regenerated
-GameMaker Studio 1 font texture has been backed up at ${project_dir}\fonts\fntInput2\fntInput2.gms1.png
-!!! Font fntInput3 uses a font (OCR A Std) not installed on this system - Font has NOT been regenerated
-GameMaker Studio 1 font texture has been backed up at ${project_dir}\fonts\fntInput3\fntInput3.gms1.png
-Font fntInput4 has been converted to font family Comic Sans MS (Regular)
-GameMaker Studio 1 font texture has been backed up at ${project_dir}\fonts\fntInput4\fntInput4.gms1.png
-!!! Font fntHUD uses a font (Roboto) not installed on this system - Font has NOT been regenerated
-GameMaker Studio 1 font texture has been backed up at ${project_dir}\fonts\fntHUD\fntHUD.gms1.png
-Converting GML script: ${project_dir}\objects\objTestControl\Create_0.gml
-Converted description /// @description global visuals
-
-Converting GML script: ${project_dir}\objects\objTestControl\Step_0.gml
-Converted description /// @description set cursor
-
-Converting GML script: ${project_dir}\objects\objTestControl\Draw_0.gml
-Converted description /// @description draw example texts
-
-Converting GML script: ${project_dir}\objects\objInputBox\Create_0.gml
-Converted description /// @description initialise visuals
-
-Converting GML script: ${project_dir}\objects\objInputBox\Step_0.gml
-Converted description /// @description step setup
-
-Converting GML script: ${project_dir}\objects\objInputBox\Other_3.gml
-Converted description /// @description destroy history stack
-
-Converting GML script: ${project_dir}\objects\objInputBox\Draw_0.gml
-Converted description /// @description draw inputbox
-
-Converting GML script: ${project_dir}\objects\objNextButton\Step_0.gml
-Converted description /// @description go to the next room
-
-Converting GML script: ${project_dir}\objects\objPreviousButton\Step_0.gml
-Converted description /// @description go to the previous room
-
-Converting GML script: ${project_dir}\objects\objButton\Create_0.gml
-Converted description /// @description initialise visuals
-
-Converting GML script: ${project_dir}\objects\objButton\Step_0.gml
-Converted description /// @description step setup
-
-Converting GML script: ${project_dir}\objects\objButton\Draw_0.gml
-Converted description /// @description draw button
-
-Converting GML script: instance inst_9632BC44 creation code
-Converted description /// @description button setting
-
-Converting GML script: instance inst_33E55D0A creation code
-Converted description /// @description tex
-
-Converting GML script: instance inst_164E4F79 creation code
-Converted description /// @description tex
-
-Converting GML script: instance inst_DAA732AD creation code
-Converted description /// @description tex
-
-Converting GML script: instance inst_C0C3E199 creation code
-Converted description /// @description tex
-
-Added compatibility script 'instance/instance_create.gml'
-Added compatibility script 'object/object_get_depth.gml'
-Added compatibility script '__global_object_depths.gml'

@@ -4,16 +4,26 @@ if(live_call()) return live_result;
 var _paused = oPause.paused;
 damageObstacle = false; //If set to true, apply damage
 
+
 if(oGameGUI.gameTimer > 0.0 && oPause.paused == false) //Remove all player control if timer runs out
 	{
 	#region //Player movement
+	
+		#region Premovement checks
+		if (fuel > 1) //Player found fuel
+		{
+			hasControl = true;
+			alive = true;
+		}
+		#endregion
+	
 	moveLeft = keyboard_check(vk_left) || keyboard_check(ord("A")) + oGameGUI.moveLeft;
 	moveRight = keyboard_check(vk_right) || keyboard_check(ord("D")) + oGameGUI.moveRight;
 	//flyUp = keyboard_check(ord("W")) || keyboard_check(vk_up) + oGameGUI.flyUp;
 	flyUp = min(1,moveLeft + moveRight);
 
 	//Remove control if player is dead
-	if(playerHealth < 1 || oGameGUI.showCountDown != 0)
+	if(playerHealth < 1 || oGameGUI.showCountDown != 0 || global.goalReached == true || fuel < 1)
 	{
 		hasControl = false;	
 	}
@@ -528,17 +538,9 @@ if(oGameGUI.gameTimer > 0.0 && oPause.paused == false) //Remove all player contr
 		planetFriction = planetFrictionInit;
 	}
 	//Remove control if out of fuel
-	if (fuel < 1)
-	{
-		hasControl = false;
-		alive = false;
-	}
 
-	if (fuel > 1)
-	{
-		hasControl = true;
-		alive = true;
-	}
+
+
 	#endregion
 
 	#region //Objective Pickup Collision

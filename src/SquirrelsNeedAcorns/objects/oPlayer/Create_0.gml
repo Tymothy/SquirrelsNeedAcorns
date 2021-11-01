@@ -115,7 +115,9 @@ switch (global.levelSelectArray[global.selectedLevel].levelType)
 	break;
 	
 	case LEVELTYPE.SPACE : 
-		planetGravityEVar = planetGravityEVar * .5;
+		planetGravityEVar = planetGravityEVar * .4;
 		airResist = .003;
+		flyUpPowerEVar *= .6; 
+		pushPowerEVar *= .6;
 	break;
 }

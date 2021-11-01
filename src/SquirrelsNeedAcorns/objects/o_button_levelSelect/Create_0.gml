@@ -9,8 +9,8 @@ levelRoom = global.levelSelectArray[level].roomName;
 buttonText = global.levelSelectArray[level].levelName;
 completionLevel = global.levelSelectArray[level].completionLevel;
 world = global.selectedWorld;
-displayText = string_copy(buttonText, 1, 3);
-buttonXScale = 1.6;
+displayText = string_copy(buttonText, 1, 2);
+buttonXScale = 1.25;
 buttonYScale = 1.2;
 
 //Completion Symbols

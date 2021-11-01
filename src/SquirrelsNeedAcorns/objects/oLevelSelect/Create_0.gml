@@ -27,23 +27,23 @@ margin = font_get_size(levelSelectFont)*1.7;
 	usernameX = _ww * .5;
 	usernameY = _hh*  .8;
 	
-	compLvlX = _ww * .85;
+	compLvlX = _ww * .80;
 	compLvlY = _hh * .05;
 	compLvlYMax = _hh * .25;
 	xStringOffset = _ww * .037;
-	
+
+	//Create the area for the levelselection
+	topLevelY = _hh * .4;
+	botLevelY = _hh * .75;
+	leftLevelX = _ww * .05;
+	rightLevelX = _ww * .95;
+
 	complete1 = s_pickup_point_acorn;
 	complete2 = s_pickup_point_superAcorn;
 	complete3 = sGoalAcorn;
 	missing1 = s_missing_1;
 	missing2 = s_missing_2;
 	missing3 = s_missing_3;
-	
-	//Create the area for the levelselection
-	topLevelY = _hh * .4;
-	botLevelY = _hh * .75;
-	leftLevelX = _ww * .05;
-	rightLevelX = _ww * .95;
 	
 	world = -1;
 	

@@ -39,12 +39,12 @@ function UIScaling(){
 	    //display_set_gui_size(base_w, base_w / aspect);
 		ww = base_w;
 	    hh = base_w / aspect;
-		_hh = floor(browser_width / hh);
-		_ww = _hh;
+		//_hh = floor(browser_width / hh);
+		//_ww = _hh;
 
-		//display_set_gui_maximize((browser_width / ww), browser_height / hh, 0, 0);
+		display_set_gui_maximize((browser_width / ww), browser_height / hh, 0, 0);
 		
-		display_set_gui_maximize(_ww, _hh, 0, 0);
+		//display_set_gui_maximize(_ww, _hh, 0, 0);
 		global.orientation = ORIENTATION.PORTRAIT;
 	    }
 	global.GUIww = ww;

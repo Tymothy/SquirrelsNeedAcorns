@@ -2,7 +2,7 @@ if(live_call()) return live_result;
 //Draw the buttons created in the Create event
 var _ww = global.GUIww;
 var _hh = global.GUIhh;
-button_h = max(0,font_get_size(menuFont)*3);
+button_h = max(0,font_get_size(menuFont)*3.5);
 
 	if(room == rMainMenu)
 	{
@@ -67,8 +67,8 @@ button_h = max(0,font_get_size(menuFont)*3);
 		//	draw_sprite(sWASD, image_index,100,700);
 		
 		var text_x = _ww * .5;
-		var left_text_x = _ww *.2;
-		var right_text_x = _ww * .8;
+		var left_text_x = _ww *.15;
+		var right_text_x = _ww * .85;
 		var text_y = _hh *.1;
 
 
@@ -93,10 +93,10 @@ button_h = max(0,font_get_size(menuFont)*3);
 		//draw_text_outline(left_text_x,text_y+textSpacing*12,string("golden acorns have a time to beat to"), c_black,c_ltgray);
 		//draw_text_outline(left_text_x,text_y+textSpacing*13,string("master the level."), c_black,c_ltgray);
 
-		draw_set_halign(fa_right);
-		draw_text_outline(right_text_x,text_y+textSpacing*5,string("The game is designed for landscape mode"), c_black,c_ltgray);		
-		draw_text_outline(right_text_x,text_y+textSpacing*6,string("but is fully playable in portrait mode,"), c_black,c_ltgray);
-		draw_text_outline(right_text_x,text_y+textSpacing*7,string("with only some cosmetic graphic issues."), c_black,c_ltgray);
+		//draw_set_halign(fa_right);
+		draw_text_outline(left_text_x,text_y+textSpacing*13,string("The game is designed for landscape mode"), c_black,c_ltgray);		
+		draw_text_outline(left_text_x,text_y+textSpacing*14,string("but is fully playable in portrait mode,"), c_black,c_ltgray);
+		draw_text_outline(left_text_x,text_y+textSpacing*15,string("with only some cosmetic graphic issues."), c_black,c_ltgray);
 		
 		//draw_text_outline(text_x,text_y+textSpacing*6,string("Make sure to keep an eye on your fuel"), c_black,c_ltgray);		
 		//draw_text_outline(text_x,text_y+textSpacing*6,string("possible, or to collect as many acorns"), c_black,c_ltgray);		
@@ -159,22 +159,6 @@ button_h = max(0,font_get_size(menuFont)*3);
 		draw_set_color (c_ltgray);
 		draw_set_font(fTextNormal);
 
-	
-		//Draw High Scores
-			draw_text_outline(text_x,text_y+textSpacing*1,string("Ice Asteroid - ")+string(rGameIce1Score),c_black,c_ltgray);
-			//draw_text(text_x,text_y+textSpacing*3,string("The goal is to collect as many"));
-			//draw_text(text_x,text_y+textSpacing*4,string("acorns as you can in 60 seconds."));
-			//draw_text(text_x,text_y+textSpacing*6,string("Be mindful of your fuel and"));
-			//draw_text(text_x,text_y+textSpacing*7,string("hitting the walls too hard."));
-			//draw_text(text_x,text_y+textSpacing*10,string("M to toggle music."));
-
-
-			//Left side
-			//draw_set_font(fTextLarge);
-			//text_x = global.GUIww *.25;
-			//text_y = global.GUIhh *.65;
-			//draw_text(text_x,text_y,string("Movement"));
-		
 	}
 
 	if(room == rLevelSelect)

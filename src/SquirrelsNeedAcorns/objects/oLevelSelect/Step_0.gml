@@ -15,6 +15,16 @@ if(global.resolutionChanged == true)
 	backY = _hh*.9;
 	usernameX = _ww*.5;
 	usernameY = _hh*.9;
+	
+	compLvlX = _ww * .8;
+	compLvlY = _hh * .05;
+	compLvlYMax = _hh * .25;
+	xStringOffset = _ww * .037;
+	
+	topLevelY = _hh * .4;
+	botLevelY = _hh * .75;
+	leftLevelX = _ww * .05;
+	rightLevelX = _ww * .95;
 }
 
 if(world != global.selectedWorld)
@@ -51,7 +61,7 @@ if(world != global.selectedWorld)
 		//Create the level buttons on screen
 		_arrayLen = array_length(worldArr);
 		var _width = 5; //How many levels wide in a row
-		var _numRows = (_arrayLen / _width);
+		var _numRows = ceil((_arrayLen / _width));
 
 		var _xMargin = (rightLevelX - leftLevelX) / _width; //Gives the space for each level selection
 		var _yMargin = (botLevelY - topLevelY) / _numRows;

@@ -1,7 +1,7 @@
 {
   "hinting": 0,
   "glyphOperations": 0,
-  "interpreter": 1,
+  "interpreter": 0,
   "pointRounding": 0,
   "fontName": "Press Start 2P",
   "styleName": "Regular",
@@ -132,7 +132,7 @@
     "path": "folders/Fonts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "fTextLarge",
+  "name": "fTextNormal",
   "tags": [],
   "resourceType": "GMFont",
 }

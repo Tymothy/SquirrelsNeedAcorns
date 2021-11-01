@@ -5,7 +5,7 @@
 event_inherited();
 //sprite = s_logo_back;
 displayText = "Next\nWorld";
-buttonXScale = 1.7;
+buttonXScale = 1.9;
 buttonYScale = 1.5;
 
 update_button = function() {
@@ -13,6 +13,9 @@ update_button = function() {
 	if(global.selectedWorld < global.topWorld)
 	{
 		global.selectedWorld++;
-		
+	}
+	else
+	{
+		global.selectedWorld = 0;	
 	}
 }

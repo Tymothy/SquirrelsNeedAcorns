@@ -92,7 +92,7 @@ global.level_Beginning =
 	saveNum : 101, //Save num, first number used for world, last two used for levels
 	roomName : rGame101,
 	world : 0,
-	levelName : "F01 - Beginning",
+	levelName : "01 - Beginning",
 	levelType : LEVELTYPE.MOUNTAINS,
 	unlocked : true,
 	art : s_gameIce1,
@@ -112,7 +112,7 @@ global.level_Slope =
 	saveNum : 102, 
 	roomName : rGame102,
 	world : 0,
-	levelName : "F02 - Slope",
+	levelName : "02 - Slope",
 	levelType : LEVELTYPE.MOUNTAINS,
 	unlocked : true,
 	art : s_gameIce1,
@@ -132,7 +132,7 @@ global.level_Bend =
 	saveNum : 103, 
 	roomName : rGame103,
 	world : 0,
-	levelName : "F03 - Bend",
+	levelName : "03 - Bend",
 	levelType : LEVELTYPE.MOUNTAINS,
 	unlocked : true,
 	art : s_gameIce1,
@@ -151,7 +151,7 @@ global.level_Boom =
 	saveNum : 104, 
 	roomName : rGame104,
 	world : 0,
-	levelName : "F04 - Boom",
+	levelName : "04 - Boom",
 	levelType : LEVELTYPE.MOUNTAINS,
 	unlocked : true,
 	art : s_gameIce1,
@@ -171,7 +171,7 @@ global.level_Open =
 	saveNum : 105, 
 	roomName : rGame105,
 	world : 0,
-	levelName : "F05 - Open",
+	levelName : "05 - Open",
 	levelType : LEVELTYPE.MOUNTAINS,
 	unlocked : true,
 	art : s_gameIce1,
@@ -191,7 +191,7 @@ global.level_Gaps =
 	saveNum : 106, 
 	roomName : rGame106,
 	world : 0,
-	levelName : "F06 - Gaps",
+	levelName : "06 - Gaps",
 	levelType : LEVELTYPE.MOUNTAINS,
 	unlocked : true,
 	art : s_gameIce1,
@@ -211,7 +211,7 @@ global.level_Rebound =
 	saveNum : 107, 
 	roomName : rGame107,
 	world : 0,
-	levelName : "F07 - Rebound",
+	levelName : "07 - Rebound",
 	levelType : LEVELTYPE.MOUNTAINS,
 	unlocked : true,
 	art : s_gameIce1,
@@ -231,7 +231,7 @@ global.level_Redirection =
 	saveNum : 108, 
 	roomName : rGame108,
 	world : 0,
-	levelName : "F08 - Redirection",
+	levelName : "08 - Redirection",
 	levelType : LEVELTYPE.MOUNTAINS,
 	unlocked : true,
 	art : s_gameIce1,
@@ -251,7 +251,7 @@ global.level_Precision =
 	saveNum : 109, 
 	roomName : rGame109,
 	world : 0,
-	levelName : "F09 - Precision",
+	levelName : "09 - Precision",
 	levelType : LEVELTYPE.MOUNTAINS,
 	unlocked : true,
 	art : s_gameIce1,
@@ -271,7 +271,7 @@ global.level_Choices =
 	saveNum : 110, 
 	roomName : rGame110,
 	world : 0,
-	levelName : "F10 - Choices",
+	levelName : "10 - Choices",
 	levelType : LEVELTYPE.MOUNTAINS,
 	unlocked : true,
 	art : s_gameIce1,
@@ -292,7 +292,7 @@ global.level_Bounce =
 	saveNum : 201, 
 	roomName : rGame201,
 	world : 1,
-	levelName : "W01 - Bounce",
+	levelName : "11 - Bounce",
 	levelType : LEVELTYPE.WATER,
 	unlocked : true,
 	art : s_gameIce1,
@@ -312,7 +312,7 @@ global.level_Turning =
 	saveNum : 202, 
 	roomName : rGame202,
 	world : 1,
-	levelName : "W02 - Turning",
+	levelName : "12 - Turning",
 	levelType : LEVELTYPE.WATER,
 	unlocked : true,
 	art : s_gameIce1,
@@ -327,12 +327,112 @@ global.level_Turning =
 	completionLevel : 0,
 }
 
-global.level_Conserve =
+global.level_Cracks =
 {
 	saveNum : 203, 
 	roomName : rGame203,
 	world : 1,
-	levelName : "W03 - Conserve",
+	levelName : "13 - Cracks",
+	levelType : LEVELTYPE.WATER,
+	unlocked : true,
+	art : s_gameIce1,
+	highScore : [0, 0, 0],
+	difficulty : 5,
+	timed : 0,
+	goalType : GOALTYPE.GOAL,
+	pointReq : 0,
+	compLev1 : 1, //Points to get 1st level
+	compLev2 : 9, //Points to get 2nd level
+	compLev3 : 20.45, //Time to beat for max, acorns for GOALTYPE.COLLECT
+	completionLevel : 0,
+}
+
+global.level_Spiral =
+{
+	saveNum : 204, 
+	roomName : rGame204,
+	world : 1,
+	levelName : "14 - Spiral",
+	levelType : LEVELTYPE.WATER,
+	unlocked : true,
+	art : s_gameIce1,
+	highScore : [0, 0, 0],
+	difficulty : 5,
+	timed : 0,
+	goalType : GOALTYPE.GOAL,
+	pointReq : 0,
+	compLev1 : 1, //Points to get 1st level
+	compLev2 : 9, //Points to get 2nd level
+	compLev3 : 20.45, //Time to beat for max, acorns for GOALTYPE.COLLECT
+	completionLevel : 0,
+}
+
+global.level_Caverns =
+{
+	saveNum : 205, 
+	roomName : rGame205,
+	world : 1,
+	levelName : "15 - Caverns",
+	levelType : LEVELTYPE.WATER,
+	unlocked : true,
+	art : s_gameIce1,
+	highScore : [0, 0, 0],
+	difficulty : 5,
+	timed : 60,
+	goalType : GOALTYPE.COLLECT,
+	pointReq : 0,
+	compLev1 : 25, //Points to get 1st level
+	compLev2 : 50, //Points to get 2nd level
+	compLev3 : 75, //Time to beat for max, acorns for GOALTYPE.COLLECT
+	completionLevel : 0,
+}
+
+global.level_Up_Down =
+{
+	saveNum : 206, 
+	roomName : rGame206,
+	world : 1,
+	levelName : "16 - Up and Down",
+	levelType : LEVELTYPE.WATER,
+	unlocked : true,
+	art : s_gameIce1,
+	highScore : [0, 0, 0],
+	difficulty : 5,
+	timed : 0,
+	goalType : GOALTYPE.GOAL,
+	pointReq : 0,
+	compLev1 : 1, //Points to get 1st level
+	compLev2 : 9, //Points to get 2nd level
+	compLev3 : 20.45, //Time to beat for max, acorns for GOALTYPE.COLLECT
+	completionLevel : 0,
+}
+
+global.level_Loop =
+{
+	saveNum : 207, 
+	roomName : rGame207,
+	world : 1,
+	levelName : "17 - Loop",
+	levelType : LEVELTYPE.WATER,
+	unlocked : true,
+	art : s_gameIce1,
+	highScore : [0, 0, 0],
+	difficulty : 5,
+	timed : 0,
+	goalType : GOALTYPE.GOAL,
+	pointReq : 0,
+	compLev1 : 1, //Points to get 1st level
+	compLev2 : 9, //Points to get 2nd level
+	compLev3 : 20.45, //Time to beat for max, acorns for GOALTYPE.COLLECT
+	completionLevel : 0,
+}
+
+global.level_Conserve =
+{
+	saveNum : 209, 
+	roomName : rGame209,
+	world : 1,
+	levelName : "19 - Conserve",
 	levelType : LEVELTYPE.WATER,
 	unlocked : true,
 	art : s_gameIce1,
@@ -352,7 +452,7 @@ global.level_Test =
 	saveNum : 001, 
 	roomName : rGameTest,
 	world : 1,
-	levelName : "T01 - Test",
+	levelName : "T1 - Test",
 	levelType : LEVELTYPE.WATER,
 	unlocked : true,
 	art : s_gameIce1,
@@ -386,6 +486,11 @@ global.level_Choices,
 //Water Levels
 global.level_Bounce, 
 global.level_Turning,
+global.level_Cracks,
+global.level_Spiral,
+global.level_Caverns,
+global.level_Up_Down,
+global.level_Loop,
 global.level_Conserve,
 //global.level_Test,
 ]
