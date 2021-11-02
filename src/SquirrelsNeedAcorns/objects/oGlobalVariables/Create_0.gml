@@ -427,6 +427,26 @@ global.level_Loop =
 	completionLevel : 0,
 }
 
+global.level_Back_and_Forth =
+{
+	saveNum : 208, 
+	roomName : rGame208,
+	world : 1,
+	levelName : "18 - Back and Forth",
+	levelType : LEVELTYPE.WATER,
+	unlocked : true,
+	art : s_gameIce1,
+	highScore : [0, 0, 0],
+	difficulty : 5,
+	timed : 0,
+	goalType : GOALTYPE.GOAL,
+	pointReq : 0,
+	compLev1 : 1, //Points to get 1st level
+	compLev2 : 9, //Points to get 2nd level
+	compLev3 : 20.45, //Time to beat for max, acorns for GOALTYPE.COLLECT
+	completionLevel : 0,
+}
+
 global.level_Conserve =
 {
 	saveNum : 209, 
@@ -491,6 +511,7 @@ global.level_Spiral,
 global.level_Caverns,
 global.level_Up_Down,
 global.level_Loop,
+global.level_Back_and_Forth,
 global.level_Conserve,
 //global.level_Test,
 ]

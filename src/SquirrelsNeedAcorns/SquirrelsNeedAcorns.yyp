@@ -71,6 +71,7 @@
     {"id":{"name":"GMLive","path":"scripts/GMLive/GMLive.yy",},"order":4,},
     {"id":{"name":"s_pickup_point_superAcorn","path":"sprites/s_pickup_point_superAcorn/s_pickup_point_superAcorn.yy",},"order":3,},
     {"id":{"name":"obj_controller_radial_blur","path":"objects/obj_controller_radial_blur/obj_controller_radial_blur.yy",},"order":0,},
+    {"id":{"name":"rGame208","path":"rooms/rGame208/rGame208.yy",},"order":9,},
     {"id":{"name":"sUnderground","path":"sprites/sUnderground/sUnderground.yy",},"order":0,},
     {"id":{"name":"s_bg_underwater_foreground","path":"sprites/s_bg_underwater_foreground/s_bg_underwater_foreground.yy",},"order":3,},
     {"id":{"name":"obj_player_LED_effect","path":"objects/obj_player_LED_effect/obj_player_LED_effect.yy",},"order":1,},
@@ -417,6 +418,7 @@
     {"roomId":{"name":"rGame206","path":"rooms/rGame206/rGame206.yy",},},
     {"roomId":{"name":"rGame207","path":"rooms/rGame207/rGame207.yy",},},
     {"roomId":{"name":"rGame203","path":"rooms/rGame203/rGame203.yy",},},
+    {"roomId":{"name":"rGame208","path":"rooms/rGame208/rGame208.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":17,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
@@ -537,7 +539,7 @@
     {"CopyToMask":-1,"filePath":"datafiles/GMLive","resourceVersion":"1.0","name":"temp.shader","resourceType":"GMIncludedFile",},
   ],
   "MetaData": {
-    "IDEVersion": "2.3.5.589",
+    "IDEVersion": "2.3.6.595",
   },
   "resourceVersion": "1.4",
   "name": "SquirrelsNeedAcorns",
