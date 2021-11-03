@@ -7,7 +7,7 @@ event_inherited();
 attributes =
 {
 	description : "An acorn better left untouched.  Explosive.",
-	damage : 0,
+	damage : 1,
 	moveSpeed : 0,
 	pushable : false,
 	stationary : true,

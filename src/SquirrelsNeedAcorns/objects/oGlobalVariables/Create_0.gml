@@ -67,7 +67,7 @@ global.gameOptions =
 {
 	timed : false,
 	fuelUse : false,
-	damage : false,
+	damage : true,
 	scoring : true,
 }
 global.gameMode = 0;
@@ -465,6 +465,26 @@ global.level_Conserve =
 	compLev2 : 9, //Points to get 2nd level
 	compLev3 : 20.45, //Time to beat for max, acorns for GOALTYPE.COLLECT
 	completionLevel : 0,
+}
+
+global.level_Water =
+{
+	saveNum : 210, 
+	roomName : rGame210,
+	world : 1,
+	levelName : "20 - Water",
+	levelType : LEVELTYPE.WATER,
+	unlocked : true,
+	art : s_gameIce1,
+	highScore : [0, 0, 0],
+	difficulty : 5,
+	timed : 60,
+	goalType : GOALTYPE.COLLECT,
+	pointReq : 0,
+	compLev1 : 25, //Points to get 1st level
+	compLev2 : 50, //Points to get 2nd level
+	compLev3 : 75, //Time to beat for max, acorns for GOALTYPE.COLLECT
+	completionLevel : 0, 
 }
 
 global.level_Test =

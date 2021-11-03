@@ -262,6 +262,7 @@
     {"id":{"name":"instance_create","path":"scripts/instance_create/instance_create.yy",},"order":0,},
     {"id":{"name":"obj_player_refraction","path":"objects/obj_player_refraction/obj_player_refraction.yy",},"order":1,},
     {"id":{"name":"oScaling","path":"objects/oScaling/oScaling.yy",},"order":3,},
+    {"id":{"name":"rGame210","path":"rooms/rGame210/rGame210.yy",},"order":10,},
     {"id":{"name":"fConthrax11","path":"fonts/fConthrax11/fConthrax11.yy",},"order":10,},
     {"id":{"name":"Zoom","path":"scripts/Zoom/Zoom.yy",},"order":3,},
     {"id":{"name":"obj_background","path":"objects/obj_background/obj_background.yy",},"order":0,},
@@ -419,6 +420,7 @@
     {"roomId":{"name":"rGame207","path":"rooms/rGame207/rGame207.yy",},},
     {"roomId":{"name":"rGame203","path":"rooms/rGame203/rGame203.yy",},},
     {"roomId":{"name":"rGame208","path":"rooms/rGame208/rGame208.yy",},},
+    {"roomId":{"name":"rGame210","path":"rooms/rGame210/rGame210.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":17,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},

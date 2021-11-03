@@ -408,6 +408,10 @@ if(oGameGUI.gameTimer > 0.0 && oPause.paused == false) //Remove all player contr
 					other.ySpeed += lengthdir_y(attributes.pushStrength, _dir);
 					other.xSpeedTemp = other.xSpeed;
 					other.ySpeedTemp = other.ySpeed;
+					if(attributes.damage == 1)
+					{
+						playerDamage();	
+					}
 					active = false;
 				}
 				if(other.enemyCollideAttribute == collideProperty.damage)
@@ -491,7 +495,7 @@ if(oGameGUI.gameTimer > 0.0 && oPause.paused == false) //Remove all player contr
 
 			if(global.gameOptions.damage == true)
 			{
-				//playerDamage();
+				playerDamage();
 			}
 			
 		}
@@ -504,7 +508,7 @@ if(oGameGUI.gameTimer > 0.0 && oPause.paused == false) //Remove all player contr
 
 			if(global.gameOptions.damage == true)
 			{
-				//playerDamage();
+				playerDamage();
 			}
 		}
 	}

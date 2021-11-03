@@ -13,7 +13,7 @@ function set_game_mode(_gameMode){
 			global.gameModeString = "Challenge";
 			global.gameOptions.timed = true;
 			global.gameOptions.fuelUse = true;
-			global.gameOptions.damage = false;
+			global.gameOptions.damage = true;
 			global.gameOptions.scoring = true;
 			break;
 	

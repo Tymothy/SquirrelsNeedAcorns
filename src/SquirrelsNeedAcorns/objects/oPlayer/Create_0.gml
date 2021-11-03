@@ -14,8 +14,8 @@ airResist = .00; //No resistance at 0
 //Editable Variables
 bounceStrengthEVar = 2;
 worldSpeedEVar = .1; //0 to 1, lower is slower  Was .1
-ySpeedKillEVar = 70;
-xSpeedKillEVar = 70;
+ySpeedKillEVar = 7000;
+xSpeedKillEVar = 7000;
 engineFuelUsage = 2;
 playerHealth = 3;
 invulnTimer = 50;

@@ -18,6 +18,4 @@ if(global.gameOptions.damage == true)
 	ScreenShake(oCamera, 10, 30);
 	flash_player(.8, c_red, oPlayer.invulnTimer);
 	oPlayer.invuln = true;
-
-
 }
