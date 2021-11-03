@@ -452,7 +452,7 @@ global.level_Conserve =
 	saveNum : 209, 
 	roomName : rGame209,
 	world : 1,
-	levelName : "19 - Conserve",
+	levelName : "19 - Jellyfish Hopping",
 	levelType : LEVELTYPE.WATER,
 	unlocked : true,
 	art : s_gameIce1,
