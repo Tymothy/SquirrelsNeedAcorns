@@ -467,12 +467,12 @@ global.level_Conserve =
 	completionLevel : 0,
 }
 
-global.level_Water =
+global.level_Fuel_Lines =
 {
 	saveNum : 210, 
 	roomName : rGame210,
 	world : 1,
-	levelName : "20 - Water",
+	levelName : "20 - Fuel Lines",
 	levelType : LEVELTYPE.WATER,
 	unlocked : true,
 	art : s_gameIce1,
@@ -533,6 +533,7 @@ global.level_Up_Down,
 global.level_Loop,
 global.level_Back_and_Forth,
 global.level_Conserve,
+global.level_Fuel_Lines,
 //global.level_Test,
 ]
 
