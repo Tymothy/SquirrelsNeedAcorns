@@ -100,7 +100,7 @@ global.level_Beginning =
 	difficulty : 1,
 	timed : 0, //0 is no time limit
 	goalType : GOALTYPE.GOAL,
-	pointReq : 0, //How many points required to pass
+	availablePoints : 0, //How many points available in the level
 	compLev1 : 1, //Points to get 1st level
 	compLev2 : 5, //Points to get 2nd level
 	compLev3 : 6.17, //Time to beat for max, acorns for GOALTYPE.COLLECT
@@ -120,7 +120,7 @@ global.level_Slope =
 	difficulty : 2,
 	timed : 0,
 	goalType : GOALTYPE.GOAL,
-	pointReq : 0,
+	availablePoints : 0,
 	compLev1 : 1, //Points to get 1st level
 	compLev2 : 8, //Points to get 2nd level
 	compLev3 : 11.22, //Time to beat for max, acorns for GOALTYPE.COLLECT
@@ -140,7 +140,7 @@ global.level_Bend =
 	difficulty : 3,
 	timed : 0,
 	goalType : GOALTYPE.GOAL,
-	pointReq : 0,
+	availablePoints : 0,
 	compLev1 : 1, //Points to get 1st level
 	compLev2 : 10, //Points to get 2nd level
 	compLev3 : 17.20, //Time to beat for max, acorns for GOALTYPE.COLLECT
@@ -159,7 +159,7 @@ global.level_Boom =
 	difficulty : 5,
 	timed : 0,
 	goalType : GOALTYPE.GOAL,
-	pointReq : 0,
+	availablePoints : 0,
 	compLev1 : 1, //Points to get 1st level
 	compLev2 : 11, //Points to get 2nd level
 	compLev3 : 16.23, //Time to beat for max, acorns for GOALTYPE.COLLECT
@@ -179,7 +179,7 @@ global.level_Open =
 	difficulty : 5,
 	timed : 60,
 	goalType : GOALTYPE.COLLECT,
-	pointReq : 0,
+	availablePoints : 0,
 	compLev1 : 20, //Points to get 1st level
 	compLev2 : 45, //Points to get 2nd level
 	compLev3 : 70, //Time to beat for max, acorns for GOALTYPE.COLLECT
@@ -199,7 +199,7 @@ global.level_Gaps =
 	difficulty : 5,
 	timed : 0,
 	goalType : GOALTYPE.GOAL,
-	pointReq : 0,
+	availablePoints : 0,
 	compLev1 : 1, //Points to get 1st level
 	compLev2 : 7, //Points to get 2nd level
 	compLev3 : 21.67, //Time to beat for max, acorns for GOALTYPE.COLLECT
@@ -219,7 +219,7 @@ global.level_Rebound =
 	difficulty : 5,
 	timed : 0,
 	goalType : GOALTYPE.GOAL,
-	pointReq : 0,
+	availablePoints : 0,
 	compLev1 : 1, //Points to get 1st level
 	compLev2 : 9, //Points to get 2nd level
 	compLev3 : 26.77, //Time to beat for max, acorns for GOALTYPE.COLLECT
@@ -239,7 +239,7 @@ global.level_Redirection =
 	difficulty : 5,
 	timed : 0,
 	goalType : GOALTYPE.GOAL,
-	pointReq : 0,
+	availablePoints : 0,
 	compLev1 : 1, //Points to get 1st level
 	compLev2 : 4, //Points to get 2nd level
 	compLev3 : 13.10, //Time to beat for max, acorns for GOALTYPE.COLLECT
@@ -259,7 +259,7 @@ global.level_Precision =
 	difficulty : 5,
 	timed : 0,
 	goalType : GOALTYPE.GOAL,
-	pointReq : 0,
+	availablePoints : 0,
 	compLev1 : 1, //Points to get 1st level
 	compLev2 : 11, //Points to get 2nd level
 	compLev3 : 29.07, //Time to beat for max, acorns for GOALTYPE.COLLECT
@@ -279,7 +279,7 @@ global.level_Choices =
 	difficulty : 5,
 	timed : 60,
 	goalType : GOALTYPE.COLLECT,
-	pointReq : 0,
+	availablePoints : 0,
 	compLev1 : 25, //Points to get 1st level
 	compLev2 : 50, //Points to get 2nd level
 	compLev3 : 75, //Time to beat for max, acorns for GOALTYPE.COLLECT
@@ -300,7 +300,7 @@ global.level_Bounce =
 	difficulty : 5,
 	timed : 0,
 	goalType : GOALTYPE.GOAL,
-	pointReq : 0,
+	availablePoints : 0,
 	compLev1 : 1, //Points to get 1st level
 	compLev2 : 6, //Points to get 2nd level
 	compLev3 : 16.23, //Time to beat for max, acorns for GOALTYPE.COLLECT
@@ -320,7 +320,7 @@ global.level_Turning =
 	difficulty : 5,
 	timed : 0,
 	goalType : GOALTYPE.GOAL,
-	pointReq : 0,
+	availablePoints : 0,
 	compLev1 : 1, //Points to get 1st level
 	compLev2 : 9, //Points to get 2nd level
 	compLev3 : 32.17, //Time to beat for max, acorns for GOALTYPE.COLLECT
@@ -340,7 +340,7 @@ global.level_Cracks =
 	difficulty : 5,
 	timed : 0,
 	goalType : GOALTYPE.GOAL,
-	pointReq : 0,
+	availablePoints : 0,
 	compLev1 : 1, //Points to get 1st level
 	compLev2 : 9, //Points to get 2nd level
 	compLev3 : 20.45, //Time to beat for max, acorns for GOALTYPE.COLLECT
@@ -360,7 +360,7 @@ global.level_Spiral =
 	difficulty : 5,
 	timed : 0,
 	goalType : GOALTYPE.GOAL,
-	pointReq : 0,
+	availablePoints : 0,
 	compLev1 : 1, //Points to get 1st level
 	compLev2 : 9, //Points to get 2nd level
 	compLev3 : 20.45, //Time to beat for max, acorns for GOALTYPE.COLLECT
@@ -380,7 +380,7 @@ global.level_Caverns =
 	difficulty : 5,
 	timed : 60,
 	goalType : GOALTYPE.COLLECT,
-	pointReq : 0,
+	availablePoints : 0,
 	compLev1 : 25, //Points to get 1st level
 	compLev2 : 50, //Points to get 2nd level
 	compLev3 : 75, //Time to beat for max, acorns for GOALTYPE.COLLECT
@@ -400,7 +400,7 @@ global.level_Up_Down =
 	difficulty : 5,
 	timed : 0,
 	goalType : GOALTYPE.GOAL,
-	pointReq : 0,
+	availablePoints : 0,
 	compLev1 : 1, //Points to get 1st level
 	compLev2 : 9, //Points to get 2nd level
 	compLev3 : 20.45, //Time to beat for max, acorns for GOALTYPE.COLLECT
@@ -420,7 +420,7 @@ global.level_Loop =
 	difficulty : 5,
 	timed : 0,
 	goalType : GOALTYPE.GOAL,
-	pointReq : 0,
+	availablePoints : 0,
 	compLev1 : 1, //Points to get 1st level
 	compLev2 : 9, //Points to get 2nd level
 	compLev3 : 20.45, //Time to beat for max, acorns for GOALTYPE.COLLECT
@@ -440,7 +440,7 @@ global.level_Back_and_Forth =
 	difficulty : 5,
 	timed : 0,
 	goalType : GOALTYPE.GOAL,
-	pointReq : 0,
+	availablePoints : 0,
 	compLev1 : 1, //Points to get 1st level
 	compLev2 : 9, //Points to get 2nd level
 	compLev3 : 20.45, //Time to beat for max, acorns for GOALTYPE.COLLECT
@@ -460,7 +460,7 @@ global.level_Conserve =
 	difficulty : 5,
 	timed : 0,
 	goalType : GOALTYPE.GOAL,
-	pointReq : 0,
+	availablePoints : 0,
 	compLev1 : 1, //Points to get 1st level
 	compLev2 : 9, //Points to get 2nd level
 	compLev3 : 20.45, //Time to beat for max, acorns for GOALTYPE.COLLECT
@@ -480,7 +480,7 @@ global.level_Fuel_Lines =
 	difficulty : 5,
 	timed : 60,
 	goalType : GOALTYPE.COLLECT,
-	pointReq : 0,
+	availablePoints : 0,
 	compLev1 : 25, //Points to get 1st level
 	compLev2 : 50, //Points to get 2nd level
 	compLev3 : 75, //Time to beat for max, acorns for GOALTYPE.COLLECT
@@ -500,7 +500,7 @@ global.level_Test =
 	difficulty : 5,
 	timed : 10,
 	goalType : GOALTYPE.COLLECT,
-	pointReq : 4,
+	availablePoints : 4,
 	compLev1 : 1, //Points to get 1st level
 	compLev2 : 9, //Points to get 2nd level
 	compLev3 : 6.1, //Time to beat for max, acorns for GOALTYPE.COLLECT

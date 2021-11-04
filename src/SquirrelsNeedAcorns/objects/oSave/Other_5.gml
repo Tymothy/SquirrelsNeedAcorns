@@ -4,14 +4,24 @@ global.lastRoom = room;
 
 if(room = rUsername)
 {
+	ini_open(global.saveFile);
 	save_info();
+	ini_close();
 }
 //Save at room end
+
 if(room == global.levelSelectArray[global.selectedLevel].roomName)
 {
+	//Available Points saving
+	ini_open(global.saveFile);
 	show_debug_message("Saving at end of room.");
-	//var _checkHighscore = 0;
-
+	
+	var _availablePoints = ini_read_real("AvailablePoints",  string(global.levelSelectArray[global.selectedLevel].saveNum), 0);
+	if(check_availablePoints(_availablePoints) == true)
+		{
+			save_availablePoints(_availablePoints);	
+		}
+	
 	if(global.goalReached == true || global.GOALTYPE = GOALTYPE.COLLECT)
 		{
 		switch(global.gameMode)
@@ -37,4 +47,5 @@ if(room == global.levelSelectArray[global.selectedLevel].roomName)
 		save_change_money(global.points);
 	}
 	load_highscore();
+	ini_close();
 }

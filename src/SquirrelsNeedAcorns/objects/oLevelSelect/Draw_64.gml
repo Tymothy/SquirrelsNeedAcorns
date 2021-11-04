@@ -22,75 +22,99 @@ draw_text_outline(levelNameX, levelNameY + margin, string(global.levelSelectArra
 	var _compLev2 = global.levelSelectArray[global.selectedLevel].compLev2;
 	var _compLev3 = global.levelSelectArray[global.selectedLevel].compLev3;
 	var _time = global.levelSelectArray[global.selectedLevel].highScore[2];
-	
+	var _availablePoints = global.levelSelectArray[global.selectedLevel].availablePoints;
 	
 
-switch(global.gameModeString)
+switch (global.GOALTYPE)
 {
+	case GOALTYPE.GOAL :
+		if(_time < 9998)
+		{
+			//draw_text_outline(modeStringX, modeStringY+margin, string(_score), c_black, c_yellow);
+		draw_text_outline(modeStringX, modeStringY+margin, string(_time) + " seconds", c_black, c_yellow);					
+		}
+	break;
+					
+	case GOALTYPE.COLLECT :
+		draw_text_outline(modeStringX, modeStringY+margin, string(_score), c_black, c_yellow);				
+	break;
+					
+	default :
+		//draw_text_outline(modeStringX, modeStringY+margin, string(_score), c_black, c_yellow);	
+	break;
+}
+
+//switch(global.gameModeString)
+//{
 
 	
-	case "Challenge" :
-		switch(global.levelSelectArray[global.selectedLevel].completionLevel)
-		{
-			case 0 :
-				draw_text_outline(modeStringX, modeStringY+margin, string(_score), c_black, c_yellow);
-			break;
+//	case "Challenge" :
+//		switch(global.levelSelectArray[global.selectedLevel].completionLevel)
+//		{
+//			case 0 :
+//				draw_text_outline(modeStringX, modeStringY+margin, string(_score), c_black, c_yellow);
+//			break;
 			
-			case 1 :
-				draw_text_outline(modeStringX, modeStringY+margin, string(_score), c_black, c_yellow);
-			break;
+//			case 1 :
+//				draw_text_outline(modeStringX, modeStringY+margin, string(_score), c_black, c_yellow);
+//			break;
 			
-			case 2 :
-				switch (global.GOALTYPE)
-				{
-					case GOALTYPE.GOAL :
-						draw_text_outline(modeStringX, modeStringY+margin, string(_time) + " seconds", c_black, c_yellow);					
-					break;
+//			case 2 :
+//				switch (global.GOALTYPE)
+//				{
+//					case GOALTYPE.GOAL :
+//						draw_text_outline(modeStringX, modeStringY+margin, string(_time) + " seconds", c_black, c_yellow);					
+//					break;
 					
-					case GOALTYPE.COLLECT :
-						draw_text_outline(modeStringX, modeStringY+margin, string(_score), c_black, c_yellow);				
-					break;
+//					case GOALTYPE.COLLECT :
+//						draw_text_outline(modeStringX, modeStringY+margin, string(_score), c_black, c_yellow);				
+//					break;
 					
-					default :
-						draw_text_outline(modeStringX, modeStringY+margin, string(_score), c_black, c_yellow);	
-					break;
-				}
-			break;
+//					default :
+//						draw_text_outline(modeStringX, modeStringY+margin, string(_score), c_black, c_yellow);	
+//					break;
+//				}
+//			break;
 			
-			case 3 :
-				switch (global.GOALTYPE)
-				{
-					case GOALTYPE.GOAL :
-						draw_text_outline(modeStringX, modeStringY+margin, string(_time) + " seconds", c_black, c_yellow);					
-					break;
+//			case 3 :
+//				switch (global.GOALTYPE)
+//				{
+//					case GOALTYPE.GOAL :
+//						draw_text_outline(modeStringX, modeStringY+margin, string(_time) + " seconds", c_black, c_yellow);					
+//					break;
 					
-					case GOALTYPE.COLLECT :
-						draw_text_outline(modeStringX, modeStringY+margin, string(_score), c_black, c_yellow);				
-					break;
+//					case GOALTYPE.COLLECT :
+//						draw_text_outline(modeStringX, modeStringY+margin, string(_score), c_black, c_yellow);				
+//					break;
 					
-					default :
-						draw_text_outline(modeStringX, modeStringY+margin, string(_score), c_black, c_yellow);	
-					break;
-				}
-			break;
-		}
+//					default :
+//						draw_text_outline(modeStringX, modeStringY+margin, string(_score), c_black, c_yellow);	
+//					break;
+//				}
+//			break;
+//		}
 		
-		break;
+//		break;
 		
-	case "Zen" :
-		draw_text_outline(modeStringX, modeStringY+margin, string(_score), c_black, c_yellow);
-		break;
+//	case "Zen" :
+//		draw_text_outline(modeStringX, modeStringY+margin, string(_score), c_black, c_yellow);
+//		break;
 		
-	case "Practice" :
+//	case "Practice" :
 	
-		break;
+//		break;
 	
-}
+//}
 
 	//compLvlX = _ww * .75;
 	//compLvlY = _hh * .1;
 	//compLvlYMax = _hh * .35;
 	var _mid = ((compLvlY +compLvlYMax) / 2);
+	
+		draw_set_font(infoFont);
+		draw_set_valign(fa_middle);
+		draw_set_halign(fa_center);
+		
 	//Draw the goal scores/times
 		draw_sprite_ext(complete1, 0, compLvlX, compLvlY, .5, .5, image_angle, image_blend, image_alpha);
 		draw_sprite_ext(complete2, 0, compLvlX, _mid, .5, .5, image_angle, image_blend, image_alpha);
@@ -103,5 +127,27 @@ switch(global.gameModeString)
 		draw_text_outline(compLvlX + xStringOffset, compLvlY, string(_compLev1),c_black, c_ltgray);
 		draw_text_outline(compLvlX + xStringOffset, _mid, string(_compLev2),c_black, c_ltgray);
 		draw_text_outline(compLvlX + xStringOffset, compLvlYMax, string(_compLev3),c_black, c_ltgray);
-	
+		
+		//Draw how many acorns were collected from the level
+		draw_set_halign(fa_middle);
+		//draw_text_outline(acornsX, acornsY, "Acorns Collected", c_black, c_ltgray);
+		draw_sprite_ext(s_pickup_point_acorn, 0, acornsX, acornsY, .5, .5, image_angle, image_blend, image_alpha);
+		switch(global.GOALTYPE)
+		{
+			case GOALTYPE.GOAL :
+				//draw_sprite_ext(s_pickup_point_acorn, 0, acornsX, acornsY + margin, .5, .5, image_angle, image_blend, image_alpha);
+				if(_availablePoints > 0)
+				{
+					draw_text_outline(acornsX, acornsY + margin, string(_score) + " / " +  string(_availablePoints), c_black, c_ltgray);
+				}
+				else {
+					draw_text_outline(acornsX, acornsY + margin, string(_score), c_black, c_ltgray);
+				}
+				break;
+				
+			case GOALTYPE.COLLECT :
+				//draw_sprite_ext(s_pickup_point_acorn, 0, acornsX, acornsY + margin * 2, .5, .5, image_angle, image_blend, image_alpha);
+				draw_text_outline(acornsX, acornsY + margin, string(_score) , c_black, c_ltgray);
+				break;
+		}
 	

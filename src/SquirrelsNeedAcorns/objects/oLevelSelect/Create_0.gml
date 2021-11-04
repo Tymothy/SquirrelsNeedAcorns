@@ -1,5 +1,6 @@
 if(live_call()) return live_result;
 levelSelectFont = fTextLarge;
+infoFont = fTextNormal;
 margin = font_get_size(levelSelectFont)*1.7;
 
 
@@ -31,6 +32,10 @@ margin = font_get_size(levelSelectFont)*1.7;
 	compLvlY = _hh * .05;
 	compLvlYMax = _hh * .25;
 	xStringOffset = _ww * .037;
+	
+	//Place to show selected acorns collected
+	acornsX = _ww * .08;
+	acornsY = _hh * .08;
 
 	//Create the area for the levelselection
 	topLevelY = _hh * .4;
