@@ -9,99 +9,36 @@ if(backgroundType != global.levelSelectArray[global.selectedLevel].levelType)
 
 }
 
-//switch (backgroundType)
-//{
-//	case LEVELTYPE.MOUNTAINS:
-//	if(room_height < 1500) //Level Select Screen
-//	{
-//		var mid1Factor = 1;
-//		var mid2Factor = 1;
-//		var mid3Factor = 1;
-		
-//		var mid1Offset = -1 * (room_height/ 3);
-//		var mid2Offset = -1 * (room_height/ 2.2);
-//		var mid3Offset =  1 * room_height / 3;
-//	}
-//	else if(room_height < 2500) //Normal Levels
-//	{
-//		var mid1Factor = .95;
-//		var mid2Factor = .89;
-//		var mid3Factor = .83;
-		
-//		var mid1Offset = -1 * (room_height/40);
-//		var mid2Offset = 1 * (room_height/35);
-//		var mid3Offset =  1 * room_height / 4.5;
-		
-//		var mid1Offset = -200;
-//		var mid2Offset = -170;
-//		var mid3Offset =  180;	
-//	}
-//	else //Huge Levels
-//	{
-//		var mid1Factor = .97;
-//		var mid2Factor = .95;
-//		var mid3Factor = .92;
-		
-//		var mid1Offset = -1 * (room_height/350);
-//		var mid2Offset = 1 * (room_height/30);
-//		var mid3Offset =  1 * room_height / 8;
-
-//		var mid1Offset = -200;
-//		var mid2Offset = -130;
-//		var mid3Offset =  240;	
-//	}
-//	break;
-
-//	case LEVELTYPE.WATER:
-//	if(room_height < 1500) //Level Select Screen
-//	{
-//		var mid1Factor = 1;
-//		var mid2Factor = 1;
-//		var mid3Factor = 1;
-		
-//		var mid1Offset = -1 * (room_height/ 1.2);
-//		var mid2Offset = -1 * (room_height/ 1.2);
-//		var mid3Offset =  -1 * room_height / 2.4;
-		
-		
-//	}
-//	else if(room_height < 2500) //Normal Levels
-//	{
-//		var mid1Factor = .95;
-//		var mid2Factor = .89;
-//		var mid3Factor = .83;
-		
-//		var mid1Offset = - 1 * (room_height/12);
-//		var mid2Offset = - 1 * (room_height/60);
-//		var mid3Offset =  1 * room_height / 10;
-		
-//		var mid1Offset = -200;
-//		var mid2Offset = -170;
-//		var mid3Offset =  180;		
-//	}
-//	else //Huge Levels
-//	{
-//		var mid1Factor = .97;
-//		var mid2Factor = .95;
-//		var mid3Factor = .92;
-		
-//		var mid1Offset = -1 * (room_height/50);
-//		var mid2Offset = 1 * (room_height/120);
-//		var mid3Offset =  1 * room_height / 10.5;
-		
-//		var mid1Offset = -200;
-//		var mid2Offset = -170;
-//		var mid3Offset =  180;			
-//	}	
-//	break;
-
-//}
 switch (backgroundType)
 {
 	case LEVELTYPE.MOUNTAINS:
+	if(room_height < 1500) //Level Select Screen
+	{
+		var mid1Factor = 1;
+		var mid2Factor = 1;
+		var mid3Factor = 1;
+		
+		var mid1Offset = -100;
+		var mid2Offset = -80;
+		var mid3Offset =  90;
+	}
+	else //Normal Levels
+	{
+		var mid1Factor = .95;
+		var mid2Factor = .89;
+		var mid3Factor = .83;
+		
 		var mid1Offset = -200;
 		var mid2Offset = -130;
 		var mid3Offset =  240;
+	}
+}
+switch (backgroundType)
+{
+	case LEVELTYPE.MOUNTAINS:
+		//var mid1Offset = -200;
+		//var mid2Offset = -130;
+		//var mid3Offset =  240;
 	break;
 
 	case LEVELTYPE.WATER:

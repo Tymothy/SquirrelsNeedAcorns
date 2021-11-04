@@ -5,7 +5,7 @@
 event_inherited();
 //sprite = s_logo_back;
 displayText = "Next\nWorld";
-buttonXScale = 1.9;
+buttonXScale = 2.0;
 buttonYScale = 1.5;
 
 update_button = function() {

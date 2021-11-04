@@ -33,5 +33,5 @@ if (instance_exists(oPlayer))
 {
 		x = oPlayer.x;
 		y = oPlayer.y;
-//		zoom = 1.5; // Higher is "zoomed out"
+
 }

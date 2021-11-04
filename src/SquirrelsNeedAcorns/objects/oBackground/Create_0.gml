@@ -45,10 +45,22 @@ layer_background_htiled(solidFill_layer_bg, true);
 layer_background_vtiled(solidFill_layer_bg, true);
 
 layer_background_htiled(back_layer_bg, true);
-layer_y(back_layer, 000);
+layer_y(back_layer, 0);
 
 layer_background_htiled(middle_layer_bg, true);
-layer_y(middle_layer, -10);
+layer_y(middle_layer, 0);
 
 layer_background_htiled(foreground_layer_bg, true);
-layer_y(foreground_layer, 250);
+layer_y(foreground_layer, 0);
+
+//If we are not in a game room, make background smaller
+if(room != global.levelSelectArray[global.selectedLevel].roomName)
+{
+	show_debug_message("Scaling background");
+	layer_background_xscale(back_layer_bg, .5);
+	layer_background_yscale(back_layer_bg, .5);
+	layer_background_xscale(middle_layer_bg, .5);
+	layer_background_yscale(middle_layer_bg, .5);
+	layer_background_xscale(foreground_layer_bg, .5);
+	layer_background_yscale(foreground_layer_bg, .5);		
+}

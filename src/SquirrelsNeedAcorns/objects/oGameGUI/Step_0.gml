@@ -66,16 +66,17 @@ if(oPause.paused == false) //UI Elements
 	}
 
 
-
-	if(gameTimer == 0 || oPlayer.fuel < 10 || oPlayer.playerHealth < 1 || global.goalReached = true)
+	//Check for round ending scenarios
+	if(gameTimer == 0 || oPlayer.fuel < 1 || oPlayer.playerHealth < 1 || global.goalReached == true)
 	{
 		gameOver = true;
 		gameOverTimer = max(0,gameOverTimer - delta_time/1000000);
 	}
-	else
+	else //Check in case player gets fuel after time is up.  Give player back time and don't end round.
 	{
 		gameOverTimer = 3;
 	}
+	//Go to end run room after end game timer is up
 	if (gameOverTimer == 0)
 	{
 		SlideTransition(TRANS_MODE.GOTO,rEndRun);
