@@ -45,6 +45,7 @@ if(paused == true && _wait == false)
 					break;
 				case 2:
 					SlideTransition(TRANS_MODE.GOTO,rEndRun);
+					//global.pause = false;
 					break;
 				//TODO: This should only be displayed when game is in desktop mode.  Maybe fully remove?
 				case 3:

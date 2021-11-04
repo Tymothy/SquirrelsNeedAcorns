@@ -63,6 +63,22 @@ switch (backgroundType)
 	layer_y(back_layer, oCamera.y + mid1Offset);
 	layer_y(middle_layer, oCamera.y + mid2Offset);
 	layer_y(foreground_layer, oCamera.y + mid3Offset);	
+	
+//if(room != global.levelSelectArray[global.selectedLevel].roomName)
+//{	
+//	if (layer_background_get_yscale(back_layer_bg) != .5)
+//	{
+//	    layer_background_yscale(back_layer_bg, .5);
+//	}
+//	if (layer_background_get_yscale(middle_layer_bg) != .5)
+//	{
+//	    layer_background_yscale(middle_layer_bg, .5);
+//	}
+//	if (layer_background_get_yscale(foreground_layer_bg) != .5)
+//	{
+//	    layer_background_yscale(foreground_layer_bg, .5);
+//	}
+//}
 //	break;
 	
 //	case LEVELTYPE.WATER :

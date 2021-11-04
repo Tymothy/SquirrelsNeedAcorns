@@ -34,7 +34,6 @@
     {"id":{"name":"oBumperLeft","path":"objects/oBumperLeft/oBumperLeft.yy",},"order":4,},
     {"id":{"name":"oPointPickup","path":"objects/oPointPickup/oPointPickup.yy",},"order":1,},
     {"id":{"name":"oBackground","path":"objects/oBackground/oBackground.yy",},"order":8,},
-    {"id":{"name":"oTileWall","path":"objects/oTileWall/oTileWall.yy",},"order":7,},
     {"id":{"name":"s_shirt_red","path":"sprites/s_shirt_red/s_shirt_red.yy",},"order":0,},
     {"id":{"name":"sMine","path":"sprites/sMine/sMine.yy",},"order":2,},
     {"id":{"name":"s_button_right","path":"sprites/s_button_right/s_button_right.yy",},"order":4,},
