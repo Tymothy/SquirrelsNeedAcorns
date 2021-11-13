@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if(live_call()) return live_result;
+
 // Inherit the parent event
 event_inherited();
 //sprite = s_logo_back;
@@ -11,16 +11,13 @@ completionLevel = global.levelSelectArray[level].completionLevel;
 world = global.selectedWorld;
 displayText = string_copy(buttonText, 1, 2);
 buttonXScale = 1.25;
-buttonYScale = 1.2;
+buttonYScale = 1.1;
 
 //Completion Symbols
-missing1 = oLevelSelect.missing1;
-missing2 = oLevelSelect.missing2;
-missing3 = oLevelSelect.missing3;
 complete1 = oLevelSelect.complete1;
 complete2 = oLevelSelect.complete2;
 complete3 = oLevelSelect.complete3;
-
+complete4 = oLevelSelect.complete4;
 y1 = -18;
 y2 = -2;
 y3 = 15;
@@ -33,4 +30,8 @@ endStepRan = false; //Run the end step code once to take the changes to the butt
 update_button = function() {
 	//SlideTransition(TRANS_MODE.GOTO,levelRoom);
 	global.selectedLevel = level;
+}
+
+double_tap = function() {
+	SlideTransition(TRANS_MODE.GOTO,global.levelSelectArray[global.selectedLevel].roomName);
 }

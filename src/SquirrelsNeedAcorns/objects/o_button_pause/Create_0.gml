@@ -16,11 +16,12 @@ update_button = function() {
 			case 1:
 				global.pause = true;
 			break;
-		
 
-		
 	}
 	//global.musicToggle = position;
-	
-	//TO DO: Music Toggle Script, like set_game_mode
+}
+
+double_tap = function() {
+	SlideTransition(TRANS_MODE.GOTO,room);
+	global.pause = true;
 }

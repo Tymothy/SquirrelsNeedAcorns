@@ -1,5 +1,5 @@
 /// @desc Generate global variables
-#macro live_enabled 1 //Turn to 0 to turn off for exporting, 1 to use
+//#macro live_enabled 1 //Turn to 0 to turn off for exporting, 1 to use
 #macro database_send false //Use false to not send runs to server, export with true
 
 //Variables changed often
@@ -101,8 +101,8 @@ global.level_Beginning =
 	timed : 0, //0 is no time limit
 	goalType : GOALTYPE.GOAL,
 	availablePoints : 0, //How many points available in the level
-	compLev1 : 1, //Points to get 1st level
-	compLev2 : 5, //Points to get 2nd level
+	compLev1 : 15, //Points to get 1st level
+	compLev2 : 10, //Points to get 2nd level
 	compLev3 : 6.17, //Time to beat for max, acorns for GOALTYPE.COLLECT
 	completionLevel : 0, //How many acorns to present on level select screen
 }
@@ -487,6 +487,26 @@ global.level_Fuel_Lines =
 	completionLevel : 0, 
 }
 
+global.level_Asteroid =
+{
+	saveNum : 305, 
+	roomName : rGame305,
+	world : 2,
+	levelName : "25 - Asteroid",
+	levelType : LEVELTYPE.SPACE,
+	unlocked : true,
+	art : s_gameIce1,
+	highScore : [0, 0, 0],
+	difficulty : 5,
+	timed : 60,
+	goalType : GOALTYPE.COLLECT,
+	availablePoints : 0,
+	compLev1 : 25, //Points to get 1st level
+	compLev2 : 50, //Points to get 2nd level
+	compLev3 : 75, //Time to beat for max, acorns for GOALTYPE.COLLECT
+	completionLevel : 0, 
+}
+
 global.level_Test =
 {
 	saveNum : 001, 
@@ -535,11 +555,14 @@ global.level_Back_and_Forth,
 global.level_Conserve,
 global.level_Fuel_Lines,
 //global.level_Test,
+
+//Space Levels
+global.level_Asteroid,
 ]
 
 global.worldName[0] = "Mountains";
 global.worldName[1] = "Underwater";
-//global.worldName[2
+global.worldName[2] = "Space";
 
 global.selectedLevel = 0;
 global.selectedWorld = 0;

@@ -7,8 +7,7 @@ Better title screen/logo
 
 === Bugs to Fix ===
 Username selection
-Background doubles in scale when ending run.  It's fine when completing normally. WTFFFF
-Touch area is broken for play, prev world, and next world
+
 
 === Alpha 0.8 ===
 Make displays work nicely with portait mode(no super zoom out)
