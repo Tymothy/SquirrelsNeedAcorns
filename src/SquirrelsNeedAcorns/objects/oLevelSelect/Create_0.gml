@@ -46,9 +46,8 @@ margin = font_get_size(levelSelectFont)*1.7;
 	complete1 = s_pickup_point_acorn;
 	complete2 = s_pickup_point_superAcorn;
 	complete3 = sGoalAcorn;
-	missing1 = s_missing_1;
-	missing2 = s_missing_2;
-	missing3 = s_missing_3;
+	complete4 = sGoalAcorn;
+
 	
 	world = -1;
 	

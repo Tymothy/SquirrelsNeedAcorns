@@ -1,5 +1,5 @@
 /// @desc Generate global variables
-//#macro live_enabled 1 //Turn to 0 to turn off for exporting, 1 to use
+#macro live_enabled 1 //Turn to 0 to turn off for exporting, 1 to use
 #macro database_send false //Use false to not send runs to server, export with true
 
 //Variables changed often
@@ -490,7 +490,7 @@ global.level_Fuel_Lines =
 global.level_Asteroid =
 {
 	saveNum : 305, 
-	roomName : rGame305,
+	roomName : rGame201,
 	world : 2,
 	levelName : "25 - Asteroid",
 	levelType : LEVELTYPE.SPACE,
