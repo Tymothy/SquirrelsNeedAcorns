@@ -116,12 +116,12 @@ switch (global.GOALTYPE)
 		draw_set_halign(fa_center);
 		
 	//Draw the goal scores/times
-		draw_sprite_ext(complete1, 0, compLvlX, compLvlY, .5, .5, image_angle, image_blend, image_alpha);
-		draw_sprite_ext(complete2, 0, compLvlX, _mid, .5, .5, image_angle, image_blend, image_alpha);
-		draw_sprite_ext(complete3, 0, compLvlX, compLvlYMax, .5, .5, image_angle, image_blend, image_alpha);
+		draw_sprite_ext(complete2, 0, compLvlX, compLvlY, 1, 1, image_angle, image_blend, image_alpha);
+		draw_sprite_ext(complete3, 0, compLvlX, _mid, 1, 1, image_angle, image_blend, image_alpha);
+		draw_sprite_ext(complete4, 0, compLvlX, compLvlYMax, 1, 1, image_angle, image_blend, image_alpha);
 		
 		
-		draw_set_valign(fa_center);
+		draw_set_valign(fa_middle);
 		draw_set_halign(fa_left);
 
 		draw_text_outline(compLvlX + xStringOffset, compLvlY, string(_compLev1),c_black, c_ltgray);

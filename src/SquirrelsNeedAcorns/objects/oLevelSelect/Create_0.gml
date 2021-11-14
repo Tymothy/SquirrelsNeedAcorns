@@ -28,9 +28,9 @@ margin = font_get_size(levelSelectFont)*1.7;
 	usernameX = _ww * .5;
 	usernameY = _hh*  .8;
 	
-	compLvlX = _ww * .80;
+	compLvlX = _ww * .87;
 	compLvlY = _hh * .05;
-	compLvlYMax = _hh * .25;
+	compLvlYMax = _hh * .23;
 	xStringOffset = _ww * .037;
 	
 	//Place to show selected acorns collected
@@ -43,12 +43,11 @@ margin = font_get_size(levelSelectFont)*1.7;
 	leftLevelX = _ww * .05;
 	rightLevelX = _ww * .95;
 
-	complete1 = s_pickup_point_acorn;
-	complete2 = s_pickup_point_superAcorn;
-	complete3 = sGoalAcorn;
-	missing1 = s_missing_1;
-	missing2 = s_missing_2;
-	missing3 = s_missing_3;
+	complete1 = spr_copperAcorn;
+	complete2 = spr_silverAcorn;
+	complete3 = spr_goldAcorn;
+	complete4 = spr_gemAcorn;
+
 	
 	world = -1;
 	

@@ -1,5 +1,5 @@
 /// @desc Generate global variables
-//#macro live_enabled 1 //Turn to 0 to turn off for exporting, 1 to use
+#macro live_enabled 1 //Turn to 0 to turn off for exporting, 1 to use
 #macro database_send false //Use false to not send runs to server, export with true
 
 //Variables changed often
@@ -101,9 +101,9 @@ global.level_Beginning =
 	timed : 0, //0 is no time limit
 	goalType : GOALTYPE.GOAL,
 	availablePoints : 0, //How many points available in the level
-	compLev1 : 15, //Points to get 1st level
-	compLev2 : 10, //Points to get 2nd level
-	compLev3 : 6.17, //Time to beat for max, acorns for GOALTYPE.COLLECT
+	compLev1 : 15.00, //Points to get 1st level
+	compLev2 : 10.00, //Points to get 2nd level
+	compLev3 : 9, //Time to beat for max, acorns for GOALTYPE.COLLECT
 	completionLevel : 0, //How many acorns to present on level select screen
 }
 
@@ -490,7 +490,7 @@ global.level_Fuel_Lines =
 global.level_Asteroid =
 {
 	saveNum : 305, 
-	roomName : rGame305,
+	roomName : rGame305, //CHANGE THIS BACK TO THE CORRECT LEVEL
 	world : 2,
 	levelName : "25 - Asteroid",
 	levelType : LEVELTYPE.SPACE,

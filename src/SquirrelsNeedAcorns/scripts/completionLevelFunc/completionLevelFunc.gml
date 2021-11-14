@@ -1,11 +1,4 @@
-/*
-function <NAME>(_var1, _var2, _var3...) {
-/// @desc ...
-/// @arg ....
-/// @arg ....
-//CODE
-}
-*/
+
 function completionLevelFunc(){
 /// @desc Updates the completion level for all levels
 		var _arrayLen = array_length(global.levelSelectArray);
