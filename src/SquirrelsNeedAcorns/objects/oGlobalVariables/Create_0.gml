@@ -18,20 +18,13 @@ global.points = 0;
 global.availablePoints = 0;
 global.time = 0;
 global.goalReached = false;
-
-global.final = 0;
-global.highscore = 0;
-global.money = 0;
 global.pause = 0;
 
-global.touchEnabled = true;
+global.touchEnabled = true; //Need to add functionality to detect if user is using keyboard/mouse or touch
 global.virtualKeyboardOn = false;
 
 global.defaultWidth = 640; //Default 640
 global.defaultHeight = 360; //Default 360
-global.tileSize = 16;
-global.goalAspect = global.defaultWidth / global.defaultHeight;
-global.GUIZoom = 2; //Higher number, smaller UI
 global.aspect = browser_width / browser_height;
 global.GUIww = 0;
 global.GUIhh = 0;
@@ -59,8 +52,6 @@ global.playerPropelRunning = s_propel_red_running;
 
 //Save File
 global.saveFile = "savedata.ini";
-
-
 
 //Game Modes
 global.gameOptions =

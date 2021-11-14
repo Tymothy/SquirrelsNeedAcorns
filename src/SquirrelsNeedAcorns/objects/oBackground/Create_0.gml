@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+if(live_call()) return live_result;
 
 
 //Set the parallax
@@ -39,25 +39,38 @@ set_background = function()
 		
 		case LEVELTYPE.SPACE:
 			layer_background_sprite(solidFill_layer_bg, sStarfieldBackground);
-			layer_background_sprite(back_layer_bg, sEmpty);
+			layer_background_sprite(back_layer_bg, sStarfieldBackground);
 			layer_background_sprite(middle_layer_bg, sEmpty);
 			layer_background_sprite(foreground_layer_bg, sEmpty);	
 		break;
 	}
+
+	layer_background_htiled(solidFill_layer_bg, true);
+	layer_background_vtiled(solidFill_layer_bg, true);
+
+	layer_background_htiled(back_layer_bg, true);
+	layer_y(back_layer, 0);
+
+	layer_background_htiled(middle_layer_bg, true);
+	layer_y(middle_layer, 0);
+
+	layer_background_htiled(foreground_layer_bg, true);
+	layer_y(foreground_layer, 0);
+
+	//If the middle layer is empty, back layer needs to be fully tiled
+	if(layer_background_get_sprite(middle_layer_bg) == sEmpty)
+	{
+		layer_background_vtiled(back_layer_bg, true);
+	}
+	else
+	{
+		layer_background_vtiled(back_layer_bg, false);		
+	}
+	
 }
 set_background();
 
-layer_background_htiled(solidFill_layer_bg, true);
-layer_background_vtiled(solidFill_layer_bg, true);
 
-layer_background_htiled(back_layer_bg, true);
-layer_y(back_layer, 0);
-
-layer_background_htiled(middle_layer_bg, true);
-layer_y(middle_layer, 0);
-
-layer_background_htiled(foreground_layer_bg, true);
-layer_y(foreground_layer, 0);
 
 //If we are not in a game room, make background smaller
 if(room != global.levelSelectArray[global.selectedLevel].roomName)
