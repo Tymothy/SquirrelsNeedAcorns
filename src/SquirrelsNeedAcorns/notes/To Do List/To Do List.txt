@@ -44,6 +44,7 @@ Implement a shop to spend money
 Add items that give cosmetic effects
 Histogram to show players score vs. a percent of the world
 Add a campaign, or reason to proceed in game
+Launch type level in Forest, or a map with heavier gravity.  Kinda like doodle jump
 
 TEST:
 Parameter injection attacks (Avoid high score from being cheated).

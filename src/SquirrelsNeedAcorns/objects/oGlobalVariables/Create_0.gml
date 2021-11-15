@@ -478,6 +478,86 @@ global.level_Fuel_Lines =
 	completionLevel : 0, 
 }
 
+global.level_Space_Boulders =
+{
+	saveNum : 301, 
+	roomName : rGame301,
+	world : 2,
+	levelName : "21 - Space Boulders",
+	levelType : LEVELTYPE.SPACE,
+	unlocked : true,
+	art : s_gameIce1,
+	highScore : [0, 0, 0],
+	difficulty : 5,
+	timed : 0,
+	goalType : GOALTYPE.GOAL,
+	availablePoints : 0,
+	compLev1 : 1, //Points to get 1st level
+	compLev2 : 9, //Points to get 2nd level
+	compLev3 : 20.45, //Time to beat for max, acorns for GOALTYPE.COLLECT
+	completionLevel : 0,
+}
+
+global.level_Speed_Tunnel =
+{
+	saveNum : 302, 
+	roomName : rGame302,
+	world : 2,
+	levelName : "22 - Speed Tunnel",
+	levelType : LEVELTYPE.SPACE,
+	unlocked : true,
+	art : s_gameIce1,
+	highScore : [0, 0, 0],
+	difficulty : 5,
+	timed : 0,
+	goalType : GOALTYPE.GOAL,
+	availablePoints : 0,
+	compLev1 : 1, //Points to get 1st level
+	compLev2 : 9, //Points to get 2nd level
+	compLev3 : 20.45, //Time to beat for max, acorns for GOALTYPE.COLLECT
+	completionLevel : 0,
+}
+
+global.level_Minefield =
+{
+	saveNum : 303, 
+	roomName : rGame303,
+	world : 2,
+	levelName : "23 - Minefield",
+	levelType : LEVELTYPE.SPACE,
+	unlocked : true,
+	art : s_gameIce1,
+	highScore : [0, 0, 0],
+	difficulty : 5,
+	timed : 0,
+	goalType : GOALTYPE.GOAL,
+	availablePoints : 0,
+	compLev1 : 1, //Points to get 1st level
+	compLev2 : 9, //Points to get 2nd level
+	compLev3 : 20.45, //Time to beat for max, acorns for GOALTYPE.COLLECT
+	completionLevel : 0,
+}
+
+global.level_Rise =
+{
+	saveNum : 304, 
+	roomName : rGame304,
+	world : 2,
+	levelName : "24 - Rise",
+	levelType : LEVELTYPE.SPACE,
+	unlocked : true,
+	art : s_gameIce1,
+	highScore : [0, 0, 0],
+	difficulty : 5,
+	timed : 0,
+	goalType : GOALTYPE.GOAL,
+	availablePoints : 0,
+	compLev1 : 1, //Points to get 1st level
+	compLev2 : 9, //Points to get 2nd level
+	compLev3 : 20.45, //Time to beat for max, acorns for GOALTYPE.COLLECT
+	completionLevel : 0,
+}
+
 global.level_Asteroid =
 {
 	saveNum : 305, 
@@ -548,6 +628,10 @@ global.level_Fuel_Lines,
 //global.level_Test,
 
 //Space Levels
+global.level_Space_Boulders,
+global.level_Speed_Tunnel,
+global.level_Minefield,
+global.level_Rise,
 global.level_Asteroid,
 ]
 
