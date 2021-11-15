@@ -46,6 +46,16 @@ if(room == global.levelSelectArray[global.selectedLevel].roomName)
 
 		save_change_money(global.points);
 	}
+
 	load_highscore();
+	load_level();
+	ini_close();
+}
+
+if(room == rLevelSelect)
+{
+	ini_open(global.saveFile);
+	show_debug_message("Doing level select saves");
+	save_level();
 	ini_close();
 }

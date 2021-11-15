@@ -221,6 +221,7 @@
     {"id":{"name":"GMLive_tools","path":"scripts/GMLive_tools/GMLive_tools.yy",},"order":1,},
     {"id":{"name":"o_button_pause","path":"objects/o_button_pause/o_button_pause.yy",},"order":9,},
     {"id":{"name":"select_level","path":"scripts/select_level/select_level.yy",},"order":15,},
+    {"id":{"name":"save_level","path":"scripts/save_level/save_level.yy",},"order":10,},
     {"id":{"name":"sSign","path":"sprites/sSign/sSign.yy",},"order":5,},
     {"id":{"name":"oPersistent","path":"objects/oPersistent/oPersistent.yy",},"order":6,},
     {"id":{"name":"sBumperDown","path":"sprites/sBumperDown/sBumperDown.yy",},"order":2,},
