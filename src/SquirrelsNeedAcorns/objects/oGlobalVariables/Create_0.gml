@@ -52,6 +52,7 @@ global.playerPropelRunning = s_propel_red_running;
 
 //Save File
 global.saveFile = "savedata.ini";
+global.acornsCollected = 0; //Stores total acorns collected
 
 //Game Modes
 global.gameOptions =

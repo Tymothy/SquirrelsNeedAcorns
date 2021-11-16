@@ -47,13 +47,17 @@ function save_highscore(){
 
 function load_highscore(){
 	var _arraylength = array_length(global.levelSelectArray);
-	show_debug_message("Loading highscores")
+	show_debug_message("Loading highscores");
+	global.acornsCollected = 0;
 		for(var i = 0; i<_arraylength; i++) //Loop through levels
 		{
 			global.levelSelectArray[i].highScore[0] = ini_read_real("Challenge", string(global.levelSelectArray[i].saveNum), 0);
 			global.levelSelectArray[i].highScore[1] = ini_read_real("Zen", string(global.levelSelectArray[i].saveNum), 0);
 			global.levelSelectArray[i].highScore[2] = ini_read_real("Time", string(global.levelSelectArray[i].saveNum), 9999.99);
 			global.levelSelectArray[i].availablePoints = ini_read_real("AvailablePoints", string(global.levelSelectArray[i].saveNum), 0);
+			
+			//Get the total count of acorns collected
+			global.acornsCollected = global.acornsCollected + global.levelSelectArray[i].highScore[0];
 		}
 
 }

@@ -1,5 +1,5 @@
 /// @description Insert description here
-
+if(live_call()) return live_result;
 
 //If level type changes, change the background
 if(backgroundType != global.levelSelectArray[global.selectedLevel].levelType)
@@ -14,20 +14,12 @@ switch (backgroundType)
 	case LEVELTYPE.MOUNTAINS:
 	if(room_height < 1500) //Level Select Screen
 	{
-		var mid1Factor = 1;
-		var mid2Factor = 1;
-		var mid3Factor = 1;
-		
 		var mid1Offset = -100;
 		var mid2Offset = -80;
-		var mid3Offset =  90;
+		var mid3Offset =  00;
 	}
 	else //Normal Levels
 	{
-		var mid1Factor = .95;
-		var mid2Factor = .89;
-		var mid3Factor = .83;
-		
 		var mid1Offset = -200;
 		var mid2Offset = -130;
 		var mid3Offset =  240;
@@ -35,9 +27,19 @@ switch (backgroundType)
 	break;
 
 	case LEVELTYPE.WATER:
+	if(room_height < 1500) //Level Select Screen
+	{
+		var mid1Offset = -100;
+		var mid2Offset = -80;
+		var mid3Offset =  90;
+	}
+		else //Normal Levels
+	{
 		var mid1Offset = -0;
 		var mid2Offset = 70;
 		var mid3Offset =  250;
+	}
+
 	break;
 	
 	case LEVELTYPE.SPACE:
