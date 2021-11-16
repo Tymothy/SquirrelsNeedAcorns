@@ -20,7 +20,7 @@ if(global.musicToggle == 1)
 				break;
 	
 				case LEVELTYPE.SPACE : 
-					
+					currentMusic = spaceMusic;
 				break;
 			}
 		}

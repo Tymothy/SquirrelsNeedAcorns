@@ -25,17 +25,22 @@ rightArrBottomY = _hh-_margin;
 var _sWidth = sprite_get_width(s_button_circle);
 var _sHeight = sprite_get_height(s_button_circle);
 
-pauseLeftX = _ww - _sWidth-_margin+1;
+pauseLeftX = _ww - _sWidth - _margin + 1;
 pauseTopY = 3;
 pauseRightX = _ww -_margin;
-pauseBottomY = _sHeight+_margin;
+pauseBottomY = _sHeight + _margin;
 #endregion
 
 if(oPause.paused == false) //UI Elements
 	{
 	if (countDown > 0)
 	{
-		countDown = max(0,countDown - delta_time/1000000);
+		if(instance_exists(oSoundCountdown) == false)
+		{
+			instance_create(x, y, oSoundCountdown);	
+		}
+		var _countdownModifer = 2.15; //Speed at which count down goes, higher is faster
+		countDown = max(0,countDown - delta_time/1000000 * _countdownModifer);
 		showCountDown = max(0,ceil(countDown));
 	}
 	if(global.gameOptions.timed == true)

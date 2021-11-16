@@ -5,6 +5,7 @@ switch (global.musicToggle)
 		audio_pause_sound(soundMusic);
 		global.musicToggle = false;
 		break;
+		
 	case 0:
 		audio_resume_sound(soundMusic);
 		global.musicToggle = true;

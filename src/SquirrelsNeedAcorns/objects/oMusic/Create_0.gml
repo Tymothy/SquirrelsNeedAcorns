@@ -1,6 +1,7 @@
 mainMenuMusic = sound_music_TheLongestYear;
 mountainsMusic = sound_music_FastLanes;
 waterMusic = sound_music_YouWereAlways;
+spaceMusic = sound_music_StarsAbove;
 
 currentMusic = mainMenuMusic;
 endingMusic = 0;

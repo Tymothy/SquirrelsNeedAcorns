@@ -36,6 +36,7 @@ Add database stuff back in (Just commented out)
 
 
 Ideas:
+Seperate open world levels into their own campaign
 Camera has a path from the golden acorn to the player to give player a sense of the level
 
 The first tap may give a side boost (useful for stopping suddenly)

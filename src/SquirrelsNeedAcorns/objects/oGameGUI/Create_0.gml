@@ -6,7 +6,7 @@ enum TIMERMODE {
 	UNTIMED,
 	TIMED
 }
-countDown = 3;
+countDown = 4; //To match the sound, will not be 4 seconds
 countUp = 0;
 showCountDown = countDown;
 gameTimerInit = global.levelSelectArray[global.selectedLevel].timed;
