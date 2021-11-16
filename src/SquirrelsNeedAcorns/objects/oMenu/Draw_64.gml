@@ -198,10 +198,11 @@ button_h = max(0,font_get_size(menuFont)*3.5);
 				case GOALTYPE.GOAL :
 					if(global.goalReached == true)
 					{
-						draw_text_outline(menu_x, menu_y*.5,string(global.points) + " / " + string(global.availablePoints),c_black, c_yellow);
+						draw_text_outline(menu_x, menu_y*.5,string(global.points),c_black, c_yellow);
 						//if(global.points >= global.availablePoints)
 						//{
-							draw_text_outline(menu_x, menu_y*.5+font_get_size(fTextLarge)*2,string(global.time) + " seconds",c_black, c_yellow);
+						var _time = string_format(global.time, 2, 3)
+						draw_text_outline(menu_x, menu_y*.5+font_get_size(fTextLarge)*2,string(_time) + " seconds",c_black, c_yellow);
 						//}		
 					}
 					else

@@ -36,8 +36,8 @@ Add database stuff back in (Just commented out)
 
 
 Ideas:
-Add a secret star in each level?
-Make the super acorns a money to use for collections.  Save per level so as you collect them, they disappear.  (maybe replaced with a ghost acorn?).
+Camera has a path from the golden acorn to the player to give player a sense of the level
+
 The first tap may give a side boost (useful for stopping suddenly)
 Some way to compare your scores with friends
 Implement a shop to spend money

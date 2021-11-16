@@ -57,7 +57,8 @@ if(oPause.paused == false) //UI Elements
 				case TIMERMODE.TIMED :
 					gameTimer = max(0, gameTimer - delta_time/1000000);
 					countUp = countUp + delta_time/1000000;
-					showTime = max(0,ceil(gameTimer));
+					showTime = gameTimer;
+					//showTime = max(0,ceil(gameTimer));
 					showCountDown = 0;
 					countDown = 0;
 				break;

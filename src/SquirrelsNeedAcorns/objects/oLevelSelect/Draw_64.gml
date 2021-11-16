@@ -2,8 +2,12 @@ if(live_call()) return live_result;
 
 //Draw the art
 //draw_sprite(global.levelSelectArray[global.selectedLevel].art,0,artX,artY);
+draw_set_font(fTextNormal);
+draw_set_valign(fa_middle);
+draw_set_halign(fa_left);
+draw_text(global.GUIww*.03, global.GUIhh*.97, "Goal times not final");
 
-draw_set_font(levelSelectFont);
+draw_set_font(fTextLarge);
 draw_set_valign(fa_middle);
 draw_set_halign(fa_center);
 
@@ -25,9 +29,15 @@ draw_text_outline(levelNameX, levelNameY + margin, string(global.levelSelectArra
 	var _availablePoints = global.levelSelectArray[global.selectedLevel].availablePoints;
 	
 
+
 switch (global.GOALTYPE)
 {
 	case GOALTYPE.GOAL :
+		//Format to 3 decimals
+		_time = string_format(_time, 2, 3)
+		_compLev1 = string_format(_compLev1, 2, 3);
+		_compLev2 = string_format(_compLev2, 2, 3);
+		_compLev3 = string_format(_compLev3, 2, 3);	
 		if(_time < 9998)
 		{
 			//draw_text_outline(modeStringX, modeStringY+margin, string(_score), c_black, c_yellow);

@@ -48,7 +48,6 @@ if(room == global.levelSelectArray[global.selectedLevel].roomName)
 	}
 
 	load_highscore();
-	load_level();
 	ini_close();
 }
 

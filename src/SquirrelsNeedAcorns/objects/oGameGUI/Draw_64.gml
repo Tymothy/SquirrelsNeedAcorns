@@ -57,7 +57,8 @@ if(global.gameOptions.scoring == true)
 		//Draw score / available points
 		case TIMERMODE.UNTIMED :
 			draw_text_transformed_color(xSpacing/2+valueSpacing, ySpacing*2+2,
-			string(oPlayer.pointsOnPlayer) + " / " + string(global.availablePoints), 
+			//string(oPlayer.pointsOnPlayer) + " / " + string(global.availablePoints), 
+			string(oPlayer.pointsOnPlayer),			
 			1, 1, 0, c_yellow, c_yellow, c_yellow, c_yellow, 1);
 			break;
 		
@@ -83,6 +84,7 @@ if(global.gameOptions.damage == true)
 //Draw Time
 if(global.displayCountUp == true)
 {
+	showTime = string_format(showTime, 2, 3);
 	draw_set_font(UIFont);
 	draw_set_color(c_ltgray);
 	draw_set_halign(fa_center);
