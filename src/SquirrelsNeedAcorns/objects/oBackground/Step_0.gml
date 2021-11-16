@@ -29,15 +29,15 @@ switch (backgroundType)
 	case LEVELTYPE.WATER:
 	if(room_height < 1500) //Level Select Screen
 	{
-		var mid1Offset = -100;
-		var mid2Offset = -40;
-		var mid3Offset =  60;
+		var mid1Offset = -10;
+		var mid2Offset = 40;
+		var mid3Offset =  130;
 	}
 		else //Normal Levels
 	{
-		var mid1Offset = -0;
-		var mid2Offset = 70;
-		var mid3Offset =  250;
+		var mid1Offset = -100;
+		var mid2Offset = -30;
+		var mid3Offset =  150;
 	}
 
 	break;
