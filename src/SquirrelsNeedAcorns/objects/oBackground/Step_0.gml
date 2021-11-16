@@ -15,8 +15,8 @@ switch (backgroundType)
 	if(room_height < 1500) //Level Select Screen
 	{
 		var mid1Offset = -100;
-		var mid2Offset = -80;
-		var mid3Offset =  00;
+		var mid2Offset = -60;
+		var mid3Offset =  120;
 	}
 	else //Normal Levels
 	{
@@ -30,8 +30,8 @@ switch (backgroundType)
 	if(room_height < 1500) //Level Select Screen
 	{
 		var mid1Offset = -100;
-		var mid2Offset = -80;
-		var mid3Offset =  90;
+		var mid2Offset = -40;
+		var mid3Offset =  60;
 	}
 		else //Normal Levels
 	{
