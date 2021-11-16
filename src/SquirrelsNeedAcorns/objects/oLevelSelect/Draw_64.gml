@@ -138,7 +138,9 @@ switch (global.GOALTYPE)
 				//draw_sprite_ext(s_pickup_point_acorn, 0, acornsX, acornsY + margin, .5, .5, image_angle, image_blend, image_alpha);
 				if(_availablePoints > 0)
 				{
-					draw_text_outline(acornsX, acornsY + margin, string(_score) + " / " +  string(_availablePoints), c_black, c_ltgray);
+					//This will give a collected out of available.  Commented out for now.
+					//draw_text_outline(acornsX, acornsY + margin, string(_score) + " / " +  string(_availablePoints), c_black, c_ltgray);
+					draw_text_outline(acornsX, acornsY + margin, string(_score), c_black, c_ltgray);
 				}
 				else {
 					draw_text_outline(acornsX, acornsY + margin, string(_score), c_black, c_ltgray);
