@@ -10,7 +10,7 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "sound_music_YouWereAlways.wav",
+  "soundFile": "sound_music_YouWereAlways.ogg",
   "duration": 103.409706,
   "parent": {
     "name": "Soundtrack",

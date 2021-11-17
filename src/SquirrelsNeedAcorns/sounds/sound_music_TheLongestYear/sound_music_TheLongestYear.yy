@@ -10,7 +10,7 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "sound_music_TheLongestYear.wav",
+  "soundFile": "sound_music_TheLongestYear.ogg",
   "duration": 103.783791,
   "parent": {
     "name": "Soundtrack",
