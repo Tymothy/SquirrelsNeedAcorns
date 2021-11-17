@@ -269,6 +269,7 @@
     {"id":{"name":"oHighscore","path":"objects/oHighscore/oHighscore.yy",},"order":7,},
     {"id":{"name":"oExplodingAcorn","path":"objects/oExplodingAcorn/oExplodingAcorn.yy",},"order":2,},
     {"id":{"name":"sound_music_TheLongestYear","path":"sounds/sound_music_TheLongestYear/sound_music_TheLongestYear.yy",},"order":3,},
+    {"id":{"name":"oFuelGauge","path":"objects/oFuelGauge/oFuelGauge.yy",},"order":11,},
     {"id":{"name":"bkgMain","path":"sprites/bkgMain/bkgMain.yy",},"order":5,},
     {"id":{"name":"rGame209","path":"rooms/rGame209/rGame209.yy",},"order":1,},
     {"id":{"name":"sIceBlocks","path":"sprites/sIceBlocks/sIceBlocks.yy",},"order":4,},
@@ -285,6 +286,8 @@
     {"id":{"name":"spr_gemAcorn","path":"sprites/spr_gemAcorn/spr_gemAcorn.yy",},"order":9999,},
     {"id":{"name":"spr_goldAcorn","path":"sprites/spr_goldAcorn/spr_goldAcorn.yy",},"order":9999,},
     {"id":{"name":"spr_silverAcorn","path":"sprites/spr_silverAcorn/spr_silverAcorn.yy",},"order":9999,},
+    {"id":{"name":"spr_fuelGauge","path":"sprites/spr_fuelGauge/spr_fuelGauge.yy",},"order":11,},
+    {"id":{"name":"spr_health","path":"sprites/spr_health/spr_health.yy",},"order":9999,},
   ],
   "Options": [
     {"name":"Main","path":"options/main/options_main.yy",},

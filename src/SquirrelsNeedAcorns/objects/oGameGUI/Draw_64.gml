@@ -38,14 +38,14 @@ var ySpacing = 45;
 var valueSpacing = 45;
 
 //Draw Fuel
-//TODO: Fix the fuel bar to be pixel perfect
-if(global.gameOptions.fuelUse == true)
-{
-	draw_sprite(sFuelPickup,image_index, xSpacing, ySpacing);
-	draw_set_color(c_dkgray);
-	draw_rectangle(xSpacing+valueSpacing-11,ySpacing-12,xSpacing+valueSpacing+sprite_get_width(sFuelUIBar)-12,ySpacing+sprite_get_height(sFuelUIBar)-13,false);
-	draw_sprite_part(sFuelUIBar, image_index, 0, 0, (sprite_get_width(sFuelUIBar)*(oPlayer.fuel/oPlayer.fuelMax)), sprite_get_height(sFuelUIBar), xSpacing+valueSpacing-11, ySpacing-12);
-}
+//Removed as image is now being used
+//if(global.gameOptions.fuelUse == true)
+//{
+//	draw_sprite(sFuelPickup,image_index, xSpacing, ySpacing);
+//	draw_set_color(c_dkgray);
+//	draw_rectangle(xSpacing+valueSpacing-11,ySpacing-12,xSpacing+valueSpacing+sprite_get_width(sFuelUIBar)-12,ySpacing+sprite_get_height(sFuelUIBar)-13,false);
+//	draw_sprite_part(sFuelUIBar, image_index, 0, 0, (sprite_get_width(sFuelUIBar)*(oPlayer.fuel/oPlayer.fuelMax)), sprite_get_height(sFuelUIBar), xSpacing+valueSpacing-11, ySpacing-12);
+//}
 
 //Draw Points
 if(global.gameOptions.scoring == true)

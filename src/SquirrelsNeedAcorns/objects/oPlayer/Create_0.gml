@@ -121,3 +121,8 @@ switch (global.levelSelectArray[global.selectedLevel].levelType)
 		pushPowerEVar *= .6;
 	break;
 }
+
+if(instance_exists(oFuelGauge) == false)
+{
+	instance_create(x, y, oFuelGauge);	
+}
