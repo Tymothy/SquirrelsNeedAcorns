@@ -1,6 +1,6 @@
 {
   "compression": 0,
-  "volume": 0.72,
+  "volume": 1.0,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
@@ -10,7 +10,7 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "sound_goal.wav",
+  "soundFile": "sound_goal.ogg",
   "duration": 2.428844,
   "parent": {
     "name": "Pickup",

@@ -10,7 +10,7 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "sound_countdown.wav",
+  "soundFile": "sound_countdown.ogg",
   "duration": 2.999977,
   "parent": {
     "name": "Sounds",

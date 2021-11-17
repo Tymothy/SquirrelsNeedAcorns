@@ -10,7 +10,7 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "sound_explosion.wav",
+  "soundFile": "sound_explosion.ogg",
   "duration": 3.12127,
   "parent": {
     "name": "Contact",

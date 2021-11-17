@@ -1,6 +1,6 @@
 {
   "compression": 0,
-  "volume": 0.29,
+  "volume": 0.38,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
@@ -10,7 +10,7 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "sound_music_StarsAbove.wav",
+  "soundFile": "sound_music_StarsAbove.ogg",
   "duration": 240.633331,
   "parent": {
     "name": "Soundtrack",
