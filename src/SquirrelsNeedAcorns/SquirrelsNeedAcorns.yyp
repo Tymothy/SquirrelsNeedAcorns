@@ -182,7 +182,7 @@
     {"id":{"name":"s_logo_musicoff","path":"sprites/s_logo_musicoff/s_logo_musicoff.yy",},"order":5,},
     {"id":{"name":"rGame110","path":"rooms/rGame110/rGame110.yy",},"order":9,},
     {"id":{"name":"GMLive_action","path":"scripts/GMLive_action/GMLive_action.yy",},"order":0,},
-    {"id":{"name":"sound_point_2","path":"sounds/sound_point_2/sound_point_2.yy",},"order":4,},
+    {"id":{"name":"sound_goal","path":"sounds/sound_goal/sound_goal.yy",},"order":4,},
     {"id":{"name":"rHighscore","path":"rooms/rHighscore/rHighscore.yy",},"order":28,},
     {"id":{"name":"sGoalAcorn","path":"sprites/sGoalAcorn/sGoalAcorn.yy",},"order":5,},
     {"id":{"name":"GMLive_roomLoader","path":"scripts/GMLive_roomLoader/GMLive_roomLoader.yy",},"order":1,},

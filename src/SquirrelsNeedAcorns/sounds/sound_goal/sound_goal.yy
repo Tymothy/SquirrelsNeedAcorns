@@ -1,6 +1,6 @@
 {
   "compression": 0,
-  "volume": 0.48,
+  "volume": 0.72,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
@@ -10,14 +10,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "sound_point_2.wav",
-  "duration": 0.5,
+  "soundFile": "sound_goal.wav",
+  "duration": 2.428844,
   "parent": {
     "name": "Pickup",
     "path": "folders/Sounds/Pickup.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sound_point_2",
+  "name": "sound_goal",
   "tags": [],
   "resourceType": "GMSound",
 }

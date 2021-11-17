@@ -3,4 +3,4 @@
 global.goalReached = true;
 
 //TODO: Give better sound
-audio_play_sound(sound_pickup_point, 90, false); 
+audio_play_sound(sound_goal, 90, false); 
