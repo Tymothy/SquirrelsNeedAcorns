@@ -1,6 +1,6 @@
 {
   "compression": 1,
-  "volume": 0.23,
+  "volume": 0.21,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
@@ -11,7 +11,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "soundFire.wav",
-  "duration": 2.267687,
+  "duration": 20.0,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",

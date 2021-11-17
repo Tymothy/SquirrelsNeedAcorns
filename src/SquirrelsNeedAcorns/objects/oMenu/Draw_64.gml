@@ -94,13 +94,13 @@ button_h = max(0,font_get_size(menuFont)*3.5);
 		
 		draw_text_outline(left_text_x,text_y+textSpacing*10,string("For an added challenge, complete the levels faster!"), c_black,c_ltgray);
 		draw_text_outline(left_text_x,text_y+textSpacing*11,string("Unlock additional levels by collecting acorns"), c_black,c_ltgray);
-		draw_text_outline(left_text_x,text_y+textSpacing*12,string("and then completing the level."), c_black,c_ltgray);
+		draw_text_outline(left_text_x,text_y+textSpacing*12,string("and then completing the level.(Future Release)"), c_black,c_ltgray);
 		//draw_text_outline(left_text_x,text_y+textSpacing*13,string(""), c_black,c_ltgray);
 
 		//draw_set_halign(fa_right);
 		draw_text_outline(left_text_x,text_y+textSpacing*14,string("The game is designed for landscape mode"), c_black,c_ltgray);		
 		draw_text_outline(left_text_x,text_y+textSpacing*15,string("but is fully playable in portrait mode,"), c_black,c_ltgray);
-		draw_text_outline(left_text_x,text_y+textSpacing*16,string("with only some cosmetic graphic issues."), c_black,c_ltgray);
+		draw_text_outline(left_text_x,text_y+textSpacing*16,string("with only some scaling issues."), c_black,c_ltgray);
 		
 		//draw_text_outline(text_x,text_y+textSpacing*6,string("Make sure to keep an eye on your fuel"), c_black,c_ltgray);		
 		//draw_text_outline(text_x,text_y+textSpacing*6,string("possible, or to collect as many acorns"), c_black,c_ltgray);		

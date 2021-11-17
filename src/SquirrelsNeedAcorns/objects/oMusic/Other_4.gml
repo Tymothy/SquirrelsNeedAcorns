@@ -35,7 +35,7 @@ if(global.musicToggle == 1)
 			audio_sound_gain(endingMusic, 0, 300);
 			audio_play_sound(currentMusic, 90, true);	
 			audio_sound_gain(currentMusic, 0,0);
-			audio_sound_gain(currentMusic, 1,300);
+			audio_sound_gain(currentMusic, .15,300);
 		}
 		if(endingMusic == currentMusic)
 		{
