@@ -2,13 +2,17 @@
 // You can write your code in this editor
 if(active == false)
 {
-	//Acorn has been touched, start exploding animation
-	sprite_index = sExplodingAcornExplode
+	//Acorn has been touched, start exploding animation and sound
+	sprite_index = sExplodingAcornExplode;
+	if(oneTimeRun == true)
+	{
+		oneTimeRunFunc(); //Run explosion sound
+	}
 }
 
 
-//Run explosion animation then delete the instance
 
+//Run explosion animation then delete the instance
 
 if (image_speed > 0 && sprite_index == sExplodingAcornExplode)
 {

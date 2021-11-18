@@ -22,3 +22,10 @@ attributes =
 
 image_speed = 1;
 active = true;
+
+oneTimeRunFunc = function() {
+	show_debug_message("OneTimeRun - Explosion sound.");
+	
+	instance_create(x, y, oSoundExplosion);	
+	oneTimeRun = false;
+}

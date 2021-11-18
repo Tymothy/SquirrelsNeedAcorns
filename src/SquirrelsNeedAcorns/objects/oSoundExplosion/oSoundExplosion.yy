@@ -1,15 +1,12 @@
 {
-  "spriteId": {
-    "name": "sExplodingAcornIdle",
-    "path": "sprites/sExplodingAcornIdle/sExplodingAcornIdle.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "oparEnemy",
-    "path": "objects/oparEnemy/oparEnemy.yy",
+    "name": "oparSound",
+    "path": "objects/oparSound/oparSound.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -25,16 +22,15 @@
   "physicsShapePoints": [],
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Enemies",
-    "path": "folders/Objects/Entities/Placeable in Rooms/Enemies.yy",
+    "name": "Sound Effects",
+    "path": "folders/Objects/Controllers/Sound Effects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oExplodingAcorn",
+  "name": "oSoundExplosion",
   "tags": [],
   "resourceType": "GMObject",
 }

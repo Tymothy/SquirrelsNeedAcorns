@@ -461,10 +461,15 @@ if(oGameGUI.gameTimer > 0.0 && oPause.paused == false) //Remove all player contr
 		{
 			x = x + sign(xSpeed);
 		}
+		with(_collideObject)
+		{
+			active = false;
+		}
+		
 		xSpeed = 0;
 		xSpeedTemp = 0;
 		xCollision = true;
-		damageObstacle = true;		
+		damageObstacle = true;
 	}
 	
 	if (place_meeting(x,y+ySpeed, _collideObject))
@@ -477,6 +482,11 @@ if(oGameGUI.gameTimer > 0.0 && oPause.paused == false) //Remove all player contr
 		ySpeedTemp = 0;
 		yCollision = true;
 		damageObstacle = true;
+		with(_collideObject)
+		{
+			active = false;
+		}
+		
 	}
 
 	x += xSpeed;
@@ -599,6 +609,16 @@ if(oGameGUI.gameTimer > 0.0 && oPause.paused == false) //Remove all player contr
 			//audio_play_sound(soundPickup,3,false);
 		}	
 
+	}
+	
+	//Prevent player from going above 3 health or below 0
+	if(playerHealth > 3)
+	{
+		playerHealth = 3;	
+	}
+	if(playerHealth < 0)
+	{
+		playerHealth = 0;	
 	}
 	
 	global.points = pointsOnPlayer;

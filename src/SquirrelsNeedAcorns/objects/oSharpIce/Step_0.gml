@@ -34,6 +34,7 @@ switch(state)
 		break;
 	
 }
+
 /*
 if (irandom(animationProbability) == 1 && animationInProgress == false && animationRestTimer <1)
 {
