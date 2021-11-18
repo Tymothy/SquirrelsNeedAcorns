@@ -39,7 +39,7 @@ if(oPause.paused == false) //UI Elements
 		{
 			instance_create(x, y, oSoundCountdown);	
 		}
-		var _countdownModifer = 2.15; //Speed at which count down goes, higher is faster
+		var _countdownModifer = 2.1; //Speed at which count down goes, higher is faster
 		countDown = max(0,countDown - delta_time/1000000 * _countdownModifer);
 		showCountDown = max(0,ceil(countDown));
 	}

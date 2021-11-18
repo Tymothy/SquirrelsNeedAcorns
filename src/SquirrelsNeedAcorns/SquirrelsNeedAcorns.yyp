@@ -221,6 +221,7 @@
     {"id":{"name":"oMusic","path":"objects/oMusic/oMusic.yy",},"order":2,},
     {"id":{"name":"oBumperRight","path":"objects/oBumperRight/oBumperRight.yy",},"order":1,},
     {"id":{"name":"SlideTransition","path":"scripts/SlideTransition/SlideTransition.yy",},"order":1,},
+    {"id":{"name":"oHealthPoints","path":"objects/oHealthPoints/oHealthPoints.yy",},"order":12,},
     {"id":{"name":"rGame108","path":"rooms/rGame108/rGame108.yy",},"order":7,},
     {"id":{"name":"spr_Indicator","path":"sprites/spr_Indicator/spr_Indicator.yy",},"order":10000,},
     {"id":{"name":"sArrowKeys","path":"sprites/sArrowKeys/sArrowKeys.yy",},"order":0,},
@@ -289,8 +290,9 @@
     {"id":{"name":"oPlayerMove","path":"objects/oPlayerMove/oPlayerMove.yy",},"order":2,},
     {"id":{"name":"spr_goldAcorn","path":"sprites/spr_goldAcorn/spr_goldAcorn.yy",},"order":9999,},
     {"id":{"name":"spr_silverAcorn","path":"sprites/spr_silverAcorn/spr_silverAcorn.yy",},"order":9999,},
-    {"id":{"name":"spr_fuelGauge","path":"sprites/spr_fuelGauge/spr_fuelGauge.yy",},"order":11,},
     {"id":{"name":"spr_health","path":"sprites/spr_health/spr_health.yy",},"order":9999,},
+    {"id":{"name":"spr_healthPointsFrame","path":"sprites/spr_healthPointsFrame/spr_healthPointsFrame.yy",},"order":9999,},
+    {"id":{"name":"spr_fuelGauge","path":"sprites/spr_fuelGauge/spr_fuelGauge.yy",},"order":9999,},
   ],
   "Options": [
     {"name":"Main","path":"options/main/options_main.yy",},

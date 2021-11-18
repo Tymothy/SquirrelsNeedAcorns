@@ -124,7 +124,12 @@ switch (global.levelSelectArray[global.selectedLevel].levelType)
 
 if(instance_exists(oFuelGauge) == false)
 {
-	instance_create(x, y, oFuelGauge);	
+	instance_create_depth(x, y, 102, oFuelGauge);	
+}
+
+if(instance_exists(oHealthPoints) == false)
+{
+	instance_create_depth(x, y, 101, oHealthPoints);	
 }
 
 if(instance_exists(oWatcher) == false)

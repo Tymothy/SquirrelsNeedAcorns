@@ -7,3 +7,5 @@
 //+ " and gamemode " +string(global.gameMode)
 //+ " and selected level " + string(global.selectedLevel)
 //+" to server.");
+
+//oPlayer.pointsOnPlayer += 10;

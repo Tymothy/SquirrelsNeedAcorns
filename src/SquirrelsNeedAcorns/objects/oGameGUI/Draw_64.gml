@@ -50,36 +50,36 @@ var valueSpacing = 45;
 //Draw Points
 if(global.gameOptions.scoring == true)
 {
-	draw_set_color(c_yellow);
-	draw_sprite(sAcorn,image_index, xSpacing, ySpacing*2);
-	switch(timerMode)
-	{
-		//Draw score / available points
-		case TIMERMODE.UNTIMED :
-			draw_text_transformed_color(xSpacing/2+valueSpacing, ySpacing*2+2,
-			//string(oPlayer.pointsOnPlayer) + " / " + string(global.availablePoints), 
-			string(oPlayer.pointsOnPlayer),			
-			1, 1, 0, c_yellow, c_yellow, c_yellow, c_yellow, 1);
-			break;
+	//draw_set_color(c_yellow);
+	//draw_sprite(sAcorn,image_index, xSpacing, ySpacing*2);
+	//switch(timerMode)
+	//{
+	//	//Draw score / available points
+	//	//case TIMERMODE.UNTIMED :
+	//	//	draw_text_transformed_color(xSpacing/2+valueSpacing, ySpacing*2+2,
+	//	//	//string(oPlayer.pointsOnPlayer) + " / " + string(global.availablePoints), 
+	//	//	string(oPlayer.pointsOnPlayer),			
+	//	//	1, 1, 0, c_yellow, c_yellow, c_yellow, c_yellow, 1);
+	//	//	break;
 		
-		//Draw score only
-		case TIMERMODE.TIMED :
-			draw_text_transformed_color(xSpacing/2+valueSpacing, ySpacing*2+2,
-			string(oPlayer.pointsOnPlayer), 
-			1, 1, 0, c_yellow, c_yellow, c_yellow, c_yellow, 1);
-			break;
+	//	////Draw score only
+	//	//case TIMERMODE.TIMED :
+	//	//	draw_text_transformed_color(xSpacing/2+valueSpacing, ySpacing*2+2,
+	//	//	string(oPlayer.pointsOnPlayer), 
+	//	//	1, 1, 0, c_yellow, c_yellow, c_yellow, c_yellow, 1);
+	//	//	break;
 	
-	}
+	//}
 	
 
 }
 
 //Draw Health
-if(global.gameOptions.damage == true)
-{
-	draw_sprite(sPlayer,0, xSpacing, ySpacing*3);
-	draw_text_transformed_color(xSpacing/2+valueSpacing, ySpacing*3,oPlayer.playerHealth, 1, 1, 0, c_red, c_red, c_red, c_red, 1);
-}
+//if(global.gameOptions.damage == true)
+//{
+//	draw_sprite(sPlayer,0, xSpacing, ySpacing*3);
+//	draw_text_transformed_color(xSpacing/2+valueSpacing, ySpacing*3,oPlayer.playerHealth, 1, 1, 0, c_red, c_red, c_red, c_red, 1);
+//}
 
 //Draw Time
 if(global.displayCountUp == true)
@@ -120,12 +120,13 @@ if(showCountDown > 0)
 			break;
 		}
 
-
 		draw_set_font(alertFont);
 		draw_set_color(c_yellow);
 		draw_set_halign(fa_center);
 		draw_set_valign(fa_middle);
-		draw_text_outline(alertX,alertY+font_get_size(alertFont)*1.5,string(showCountDown),c_black, c_ltgray);
+		
+		draw_text_outline(alertX,alertY+font_get_size(alertFont)*2.25,"Get Ready!",c_black, c_ltgray);
+		//draw_text_outline(alertX,alertY+font_get_size(alertFont)*1.5,string(showCountDown),c_black, c_ltgray);
 	}
 
 #region //Alerts

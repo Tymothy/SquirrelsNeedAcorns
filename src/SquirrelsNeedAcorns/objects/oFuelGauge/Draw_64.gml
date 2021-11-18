@@ -1,8 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 if(live_call()) return live_result;
-var _x = global.GUIww * .02;
-var _y = global.GUIhh * .02;
+_x = global.GUIww * .02;
+_y = global.GUIhh * .02;
 
 //var _frameNum = max(0, floor(sprite_get_number(sprite) * _fuelPercent));//Reverse to display frames in right order
 var _frameNum = max(0, sprite_get_number(sprite) - ceil(oPlayer.fuel / tickInc));
