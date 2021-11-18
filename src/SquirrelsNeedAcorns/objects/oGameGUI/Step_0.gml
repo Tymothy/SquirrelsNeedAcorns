@@ -96,52 +96,8 @@ if(touchUI)
 			var _x = device_mouse_x_to_gui(i);
 			var _y = device_mouse_y_to_gui(i);
 		//Check the inital click
-		if (device_mouse_check_button_pressed(i, mb_any)) {
-
-			
-			//FlyUp Button
-			//if(flyupDevice == -1)
-			//{
-			//	if(_y > flyupTopY && _y < flyupBottomY)
-			//	{
-			//		if(_x > flyupLeftX && _x < flyupRightX)
-			//		{
-			//			//Assign device to flyup button
-			//			show_debug_message("Fly up button pressed with device " + string(i));
-			//			flyupDevice = i;
-			//		}
-			//	}
-			//}
-		
-			if(leftArrDevice == -1)
-			{			
-				//Left Arrow Button
-				if(_y > leftArrTopY && _y < leftArrBottomY)
-				{
-					if(_x > leftArrLeftX && _x < leftArrRightX)
-					{
-						//Assign device to flyup button
-						show_debug_message("Left arrow button pressed with device " + string(i));
-						leftArrDevice = i;
-					}
-				}
-			}
-		
-			if(rightArrDevice == -1)
-			{
-				//Right Arrow Button
-				if(_y > rightArrTopY && _y < rightArrBottomY)
-				{
-					if(_x > rightArrLeftX && _x < rightArrRightX)
-					{
-						//Assign device to flyup button
-						show_debug_message("Right arrow button pressed with device " + string(i));
-						rightArrDevice = i;
-					}
-				}
-			}
-			
-						//FlyUp Button
+		if (device_mouse_check_button_pressed(i, mb_any)) {			
+			//Pause button
 			if(pauseDevice == -1)
 			{
 				if(_y > pauseTopY && _y < pauseBottomY)
@@ -158,22 +114,6 @@ if(touchUI)
 		
 		//Check if user releases
 		if (device_mouse_check_button_released(i, mb_any)) {
-			//When true, button has been let go.
-			//if(i = flyupDevice)
-			//{
-			//	flyupDevice = -1;
-			//	show_debug_message("Fly up button released with device " + string(i));
-			//}
-			if(i = leftArrDevice)
-			{
-				leftArrDevice = -1;
-				show_debug_message("Left arrow button released with device " + string(i));
-			}
-			if(i = rightArrDevice)
-			{
-				rightArrDevice = -1;
-				show_debug_message("Right arrow button released with device " + string(i));
-			}
 			if(i = pauseDevice)
 			{
 				pauseDevice = -1;
@@ -181,41 +121,10 @@ if(touchUI)
 			}
 		}//End Release check
 		
-		//Check if user moves outside the zone
-		//if(flyupDevice > -1)
-		//{
-		//	var _DeviceY = device_mouse_y_to_gui(flyupDevice);
-		//	var _DeviceX = device_mouse_x_to_gui(flyupDevice);
-		//	if(_DeviceY < flyupTopY || _DeviceY > flyupBottomY || _DeviceX < flyupLeftX || _DeviceX > flyupRightX)
-		//	{
-		//			//Assign device to flyup button
-		//			show_debug_message("Flyup button out of zone, disabling device " + string(flyupDevice));
-		//			flyupDevice = -1;
-		//	}
-		//}
 
 		
 		
 	}//End For Loop
-	//if(flyupDevice > -1)
-	//{
-	//	flyUp = 1;
-	//} else {
-	//	flyUp = 0;	
-	//}
-	if(leftArrDevice > -1)
-	{
-		moveLeft = 1;
-	} else {
-		moveLeft = 0;	
-	}
-	
-	if(rightArrDevice > -1)
-	{
-		moveRight = 1;
-	} else {
-		moveRight = 0;	
-	}
 	
 	if(pauseDevice > -1)
 	{

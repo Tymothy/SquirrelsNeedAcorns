@@ -17,10 +17,22 @@ if(oGameGUI.gameTimer > 0.0 && oPause.paused == false) //Remove all player contr
 		}
 		#endregion
 	
-	moveLeft = keyboard_check(vk_left) || keyboard_check(ord("A")) + oGameGUI.moveLeft;
-	moveRight = keyboard_check(vk_right) || keyboard_check(ord("D")) + oGameGUI.moveRight;
+	moveLeft = keyboard_check(vk_left) || keyboard_check(ord("A"));// + oGameGUI.moveLeft;
+	moveRight = keyboard_check(vk_right) || keyboard_check(ord("D"));// + oGameGUI.moveRight;
 	//flyUp = keyboard_check(ord("W")) || keyboard_check(vk_up) + oGameGUI.flyUp;
+	if(instance_exists(oPlayerMove))
+	{
+		//Cycle through all touches
+		with(oPlayerMove){
+			oPlayer.moveRight += moveRight;
+			oPlayer.moveLeft += moveLeft;
+		}
+		//Do not allow multiple touches to provide bonus speed
+		moveRight = min(1, moveRight);
+		moveLeft = min(1, moveLeft);
+	}
 	flyUp = min(1,moveLeft + moveRight);
+
 
 	//Remove control if player is dead
 	if(playerHealth < 1 || oGameGUI.showCountDown != 0 || global.goalReached == true || fuel < 1)

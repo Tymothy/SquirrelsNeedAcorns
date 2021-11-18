@@ -126,3 +126,9 @@ if(instance_exists(oFuelGauge) == false)
 {
 	instance_create(x, y, oFuelGauge);	
 }
+
+if(instance_exists(oWatcher) == false)
+{
+	show_debug_message("Creating oWatcher");
+	instance_create_layer(x, y, layer, oWatcher);
+}
