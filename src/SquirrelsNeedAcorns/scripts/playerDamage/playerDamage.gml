@@ -7,7 +7,7 @@ if(global.gameOptions.damage == true)
 	}
 			if(oPlayer.playerHealth > 0)
 			{
-				//audio_play_sound(soundHit, 10, false);
+				audio_play_sound(soundHit, 10, false);
 				
 			}
 			else if (oPlayer.alive == true)
