@@ -4,13 +4,15 @@ function select_level(_increment){
 	
 	var _arraylength = array_length(global.levelSelectArray);
 	var _value = global.selectedLevel + _increment;
+
 	
 	if(_value >= 0 && _value < _arraylength)
 	{
 		global.selectedLevel = _value;
 		return 1;
 	}
-	else{
+	else
+	{
 	return 0;
 	}
 }

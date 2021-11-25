@@ -10,8 +10,10 @@ if(global.virtualKeyboardOn == true)
 if (touchSelect == true 
 && ableToSelect == true)
 {
-	play_sound();
+
 	activate_button();	
+	play_sound();
+	sound = soundSuccess;
 	touchSelect = false; //Reset touch select so buttons aren't constantly pushed.
 
 

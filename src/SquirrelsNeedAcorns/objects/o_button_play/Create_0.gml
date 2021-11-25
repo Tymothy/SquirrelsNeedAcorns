@@ -17,7 +17,7 @@ update_button = function() {
 	}
 	else
 	{
-		//Play cancel sound	
+		sound = soundFail;	
 	}
 }
 drawText = function ()

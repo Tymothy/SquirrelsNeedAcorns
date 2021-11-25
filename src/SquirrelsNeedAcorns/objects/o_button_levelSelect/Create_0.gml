@@ -36,13 +36,17 @@ update_button = function() {
 	{
 		global.selectedLevel = level;
 	}
+	else
+	{
+		sound = soundFail;	
+	}
 }
 
 double_tap = function() {
 	if(unlockedStatus == true)
 	{
 		SlideTransition(TRANS_MODE.GOTO,global.levelSelectArray[global.selectedLevel].roomName);
-	}
+	}	
 }
 
 drawText = function ()

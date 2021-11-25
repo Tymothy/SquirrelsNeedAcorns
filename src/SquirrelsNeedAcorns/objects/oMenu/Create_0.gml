@@ -70,8 +70,16 @@ if(room == rEndRun)
 {
 //button_h = 80;
 button[0] = "Run Again";
+if(global.levelSelectArray[global.selectedLevel + 1].unlocked == true)
+{
 button[1] = "Next Level";
 button[2] = "Level Select";
+}
+
+else{
+	button[1] = "Level Select";
+}
+
 //button[3] = "Exit";
 }
 
