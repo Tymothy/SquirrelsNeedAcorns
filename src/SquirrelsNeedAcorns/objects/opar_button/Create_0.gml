@@ -2,7 +2,13 @@
 // You can write your code in this editor
 my_touch = -1; //The touch id for multitouch
 image_speed = 0;
-sprite = -1;
+
+//If sprite does not exist, set to -1
+if (!variable_instance_exists(id, "sprite"))
+{
+	sprite = -1;
+}
+
 
 font = fTextLarge;
 outline = c_white;
@@ -12,7 +18,7 @@ soundSuccess = sound_button_success;
 soundFail = sound_button_fail;
 sound = soundSuccess;
 
-margin = 1.05;//How far around text to draw
+margin = 1.07;//How far around text to draw
 
 text = "";
 
@@ -27,15 +33,23 @@ yStart = y/global.GUIhh;
 draw_set_font(font); //Required so string height and width can be accurately found
 maxWidth = 0;
 maxHeight = 0;
-
-maxHeight = sprite_get_height(s_logo_challenge); //Set the boundries of clickable area to exact sprite size
-maxWidth = sprite_get_width(s_logo_challenge);//Set the boundries of clickable area to exact sprite size
+if(sprite == -1) {
+	maxHeight = sprite_get_height(s_logo_challenge); //Set the boundries of clickable area to exact sprite size
+	maxWidth = sprite_get_width(s_logo_challenge);//Set the boundries of clickable area to exact sprite size
+}
+else {
+	maxHeight = sprite_get_height(sprite); //Set the boundries of clickable area to exact sprite size
+	maxWidth = sprite_get_width(sprite);//Set the boundries of clickable area to exact sprite size
+}
 maxWidth = maxWidth * margin; //Expand boundries to allow user to slightly miss the play button on sides
 maxHeight = maxHeight * margin; //Expand boundries to allow user to slightly miss play button on top/bottom
 
 //Get xscale and yscale values to use in Draw GUI event
-buttonXScale = maxWidth/sprite_get_width(buttonSprite); 
-buttonYScale = maxHeight/sprite_get_height(buttonSprite); 
+//buttonXScale = maxWidth/sprite_get_width(buttonSprite); 
+//buttonYScale = maxHeight/sprite_get_height(buttonSprite); 
+buttonXScale = maxWidth/sprite_get_width(buttonSprite) * margin; 
+buttonYScale = maxHeight/sprite_get_height(buttonSprite) * margin; 
+
 
 clickTime = current_time;
 doubleClick = 500; //time in ms to allow for double tap

@@ -1,6 +1,6 @@
 /// @description Draw button
 //draw_self();
-draw_sprite(s_button_pressable,0,x,y);
+//draw_sprite(s_button_pressable,0,x,y);
 
 	draw_set_font(font);
 	draw_set_valign(fa_middle);

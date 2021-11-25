@@ -115,7 +115,7 @@ maxHeight = 0;
 
 maxHeight = string_height_array(button);
 maxWidth = string_width_array(button);
-maxWidth = maxWidth * margin;
+maxWidth = maxWidth * (margin *.8);
 maxHeight = maxHeight * margin;
 
 //Get xscale and yscale values to use in Draw GUI event

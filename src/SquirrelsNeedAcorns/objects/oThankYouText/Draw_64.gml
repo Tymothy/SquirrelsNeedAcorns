@@ -28,16 +28,21 @@
 		draw_text_outline(left_text_x,text_y+textSpacing*9,string("Special thank you to my family, friends, and"), c_black,c_ltgray);		
 		draw_text_outline(left_text_x,text_y+textSpacing*10,string("the Advanced Kind community.  Without you,"), c_black,c_ltgray);
 		draw_text_outline(left_text_x,text_y+textSpacing*11, string("this game probably would not exist."), c_black,c_ltgray);
+
+		draw_text_outline(left_text_x,text_y+textSpacing*13,string("I sincerely thank you for taking time to play"), c_black,c_ltgray);
+		draw_text_outline(left_text_x,text_y+textSpacing*14,string("my first game and I hope that you enjoy it."), c_black,c_ltgray);
 		
-		draw_text_outline(left_text_x,text_y+textSpacing*13,string("If you would like to get in touch, please join"), c_black,c_ltgray);
-		draw_text_outline(left_text_x,text_y+textSpacing*14,string("the Discord community below.  I would love"), c_black,c_ltgray);
-		draw_text_outline(left_text_x,text_y+textSpacing*15,string("to hear your thoughts on the game!"), c_black,c_ltgray);
+		draw_text_outline(left_text_x,text_y+textSpacing*16,string("-Tym"), c_black,c_ltgray);
+
+		//draw_text_outline(left_text_x,text_y+textSpacing*13,string("If you would like to get in touch, please join"), c_black,c_ltgray);
+		//draw_text_outline(left_text_x,text_y+textSpacing*14,string("the Discord community below.  I would love"), c_black,c_ltgray);
+		//draw_text_outline(left_text_x,text_y+textSpacing*15,string("to hear your thoughts on the game!"), c_black,c_ltgray);
 		
-		draw_text_outline(left_text_x,text_y+textSpacing*17,string("I despise ads, so this game is fully ad free."), c_black,c_ltgray);
-		draw_text_outline(left_text_x,text_y+textSpacing*18,string("However, if you would like to support me,"), c_black,c_ltgray);
-		draw_text_outline(left_text_x,text_y+textSpacing*19,string("please consider donating by clicking below."), c_black,c_ltgray);
+		//draw_text_outline(left_text_x,text_y+textSpacing*17,string("I despise ads, so this game is fully ad free."), c_black,c_ltgray);
+		//draw_text_outline(left_text_x,text_y+textSpacing*18,string("However, if you would like to support me,"), c_black,c_ltgray);
+		//draw_text_outline(left_text_x,text_y+textSpacing*19,string("please consider donating by clicking below."), c_black,c_ltgray);
 		
-		draw_text_outline(left_text_x,text_y+textSpacing*21,string("I sincerely thank you for taking time to play"), c_black,c_ltgray);
-		draw_text_outline(left_text_x,text_y+textSpacing*22,string("my first game and I hope that you enjoy it."), c_black,c_ltgray);
+		//draw_text_outline(left_text_x,text_y+textSpacing*21,string("I sincerely thank you for taking time to play"), c_black,c_ltgray);
+		//draw_text_outline(left_text_x,text_y+textSpacing*22,string("my first game and I hope that you enjoy it."), c_black,c_ltgray);
 		
-		draw_text_outline(left_text_x,text_y+textSpacing*24,string("-Tym"), c_black,c_ltgray);
+		//draw_text_outline(left_text_x,text_y+textSpacing*24,string("-Tym"), c_black,c_ltgray);
