@@ -44,3 +44,11 @@ double_tap = function() {
 		SlideTransition(TRANS_MODE.GOTO,global.levelSelectArray[global.selectedLevel].roomName);
 	}
 }
+
+drawText = function ()
+{
+	draw_set_valign(fa_center);
+	draw_set_halign(fa_middle);
+	draw_set_font(fTextLarge);
+	draw_text_outline(x ,y, string(displayText),c_black, c_ltgray);
+}
