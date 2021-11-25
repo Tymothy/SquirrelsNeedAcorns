@@ -10,14 +10,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "sound_button_select.ogg",
+  "soundFile": "sound_button_success.ogg",
   "duration": 0.132063,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sound_button_select",
+  "name": "sound_button_success",
   "tags": [],
   "resourceType": "GMSound",
 }

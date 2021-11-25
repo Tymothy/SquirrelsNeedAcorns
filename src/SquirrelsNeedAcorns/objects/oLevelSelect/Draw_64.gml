@@ -7,52 +7,67 @@ draw_set_valign(fa_middle);
 draw_set_halign(fa_left);
 draw_text(global.GUIww*.03, global.GUIhh*.97, "Goal times not final");
 
-draw_set_font(fTextLarge);
-draw_set_valign(fa_middle);
-draw_set_halign(fa_center);
-
+var _score = global.levelSelectArray[global.selectedLevel].highScore[global.gameMode];
+var _compLev1 = global.levelSelectArray[global.selectedLevel].compLev1;
+var _compLev2 = global.levelSelectArray[global.selectedLevel].compLev2;
+var _compLev3 = global.levelSelectArray[global.selectedLevel].compLev3;
+var _time = global.levelSelectArray[global.selectedLevel].highScore[2];
+var _availablePoints = global.levelSelectArray[global.selectedLevel].availablePoints;
+	draw_set_font(fTextLarge);
+		draw_set_valign(fa_middle);
+		draw_set_halign(fa_center);
 //Draw world at top of screen
 draw_text_outline(levelNameX, levelNameY, string(global.worldName[global.selectedWorld]),c_black,c_ltgray);
-
-//Draw level name at top of screen
-draw_text_outline(levelNameX, levelNameY + margin, string(global.levelSelectArray[global.selectedLevel].levelName),c_black,c_ltgray);
-
-//Draw current mode under level name
-//draw_text_outline(modeStringX, modeStringY, string(global.gameModeString), c_black, c_ltgray);
-//draw_text_outline(modeX, modeY - margin*2.3, string(global.gameModeString), c_black, c_ltgray);
-//As long as mode is not practice, display high score
-	var _score = global.levelSelectArray[global.selectedLevel].highScore[global.gameMode];
-	var _compLev1 = global.levelSelectArray[global.selectedLevel].compLev1;
-	var _compLev2 = global.levelSelectArray[global.selectedLevel].compLev2;
-	var _compLev3 = global.levelSelectArray[global.selectedLevel].compLev3;
-	var _time = global.levelSelectArray[global.selectedLevel].highScore[2];
-	var _availablePoints = global.levelSelectArray[global.selectedLevel].availablePoints;
-	
-
-
-switch (global.GOALTYPE)
+		
+switch(global.levelSelectArray[global.selectedLevel].unlocked)
 {
-	case GOALTYPE.GOAL :
-		//Format to 3 decimals
-		_time = string_format(_time, 2, 3)
-		_compLev1 = string_format(_compLev1, 2, 3);
-		_compLev2 = string_format(_compLev2, 2, 3);
-		_compLev3 = string_format(_compLev3, 2, 3);	
-		if(_time < 9998)
+	case true:
+
+		draw_set_font(fTextLarge);
+		draw_set_valign(fa_middle);
+		draw_set_halign(fa_center);
+
+		//Draw level name at top of screen
+		draw_text_outline(levelNameX, levelNameY + margin, string(global.levelSelectArray[global.selectedLevel].levelName),c_black,c_ltgray);
+
+
+		switch (global.GOALTYPE)
 		{
-			//draw_text_outline(modeStringX, modeStringY+margin, string(_score), c_black, c_yellow);
-		draw_text_outline(modeStringX, modeStringY+margin, string(_time) + " seconds", c_black, c_yellow);					
-		}
-	break;
+			case GOALTYPE.GOAL :
+				//Format to 3 decimals
+				_time = string_format(_time, 2, 3)
+				_compLev1 = string_format(_compLev1, 2, 3);
+				_compLev2 = string_format(_compLev2, 2, 3);
+				_compLev3 = string_format(_compLev3, 2, 3);	
+				if(_time < 9998)
+				{
+					//draw_text_outline(modeStringX, modeStringY+margin, string(_score), c_black, c_yellow);
+				draw_text_outline(modeStringX, modeStringY+margin, string(_time) + " seconds", c_black, c_yellow);					
+				}
+			break;
 					
-	case GOALTYPE.COLLECT :
-		draw_text_outline(modeStringX, modeStringY+margin, string(_score), c_black, c_yellow);				
-	break;
+			case GOALTYPE.COLLECT :
+				draw_text_outline(modeStringX, modeStringY+margin, string(_score), c_black, c_yellow);				
+			break;
 					
-	default :
-		//draw_text_outline(modeStringX, modeStringY+margin, string(_score), c_black, c_yellow);	
+			default :
+				//draw_text_outline(modeStringX, modeStringY+margin, string(_score), c_black, c_yellow);	
+			break;
+		}	
 	break;
+	
+	case false:
+	draw_set_font(fTextNormal);
+		draw_set_valign(fa_middle);
+		draw_set_halign(fa_center);
+
+		//Draw level name at top of screen
+		draw_text_outline(levelNameX, levelNameY + margin, "World locked!",c_black,c_red);
+		draw_text_outline(modeStringX, modeStringY+margin, "Collect more acorns!", c_black, c_red);			
+	break;
+	
 }
+
 
 //switch(global.gameModeString)
 //{

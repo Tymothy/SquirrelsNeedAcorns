@@ -8,6 +8,9 @@ font = fTextLarge;
 outline = c_white;
 color = c_ltgray;
 
+soundSuccess = sound_button_success;
+soundFail = sound_button_fail;
+sound = soundSuccess;
 
 margin = 1.05;//How far around text to draw
 
@@ -49,5 +52,9 @@ scale_button = function() {
 
 double_tap = function() {
 	show_debug_message("Double tap button updated");
+}
+
+play_sound = function() {
+	audio_play_sound(sound, 90, false);
 }
 alarm[0] = 1;

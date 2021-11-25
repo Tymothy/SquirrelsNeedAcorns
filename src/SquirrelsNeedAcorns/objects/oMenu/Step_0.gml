@@ -24,7 +24,7 @@ if (keyboard_check_pressed(vk_enter) == true
 || touchSelect == true 
 && ableToSelect == true)
 {
-	audio_play_sound(sound_button_select, 90, false);
+	audio_play_sound(sound_button_success, 90, false);
 	if(room == rMainMenu)
 	{
 		switch (menu_index)
