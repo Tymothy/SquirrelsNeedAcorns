@@ -297,6 +297,7 @@
     {"id":{"name":"spr_health","path":"sprites/spr_health/spr_health.yy",},"order":9999,},
     {"id":{"name":"spr_healthPointsFrame","path":"sprites/spr_healthPointsFrame/spr_healthPointsFrame.yy",},"order":9999,},
     {"id":{"name":"spr_fuelGauge","path":"sprites/spr_fuelGauge/spr_fuelGauge.yy",},"order":9999,},
+    {"id":{"name":"spr_lock","path":"sprites/spr_lock/spr_lock.yy",},"order":9999,},
   ],
   "Options": [
     {"name":"Main","path":"options/main/options_main.yy",},

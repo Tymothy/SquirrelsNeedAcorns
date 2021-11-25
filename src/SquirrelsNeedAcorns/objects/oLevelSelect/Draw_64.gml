@@ -107,8 +107,6 @@ switch(global.levelSelectArray[global.selectedLevel].unlocked)
 		draw_set_halign(fa_center);
 
 		//Draw level name at top of screen
-		draw_text_outline(levelNameX, levelNameY + margin, "World locked!",c_black,c_red);
-		draw_text_outline(modeStringX, modeStringY+margin, "Collect more acorns!", c_black, c_red);			
 	break;
 	
 }
