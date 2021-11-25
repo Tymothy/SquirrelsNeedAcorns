@@ -35,6 +35,20 @@ enum ORIENTATION{
 	LANDSCAPE,
 	PORTRAIT
 }
+
+enum TARGET {
+	MOBILE,
+	COMPUTER
+}
+
+if(os_type == os_android || os_type == os_ios) {
+	global.target = TARGET.MOBILE;
+}
+else {
+	global.target = TARGET.COMPUTER;
+}
+
+	
 global.resolutionChanged = false;
 global.resolutionReset = false;
 global.orientation = ORIENTATION.LANDSCAPE;

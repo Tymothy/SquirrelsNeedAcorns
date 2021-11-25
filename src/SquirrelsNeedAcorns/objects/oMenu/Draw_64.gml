@@ -40,13 +40,7 @@ button_h = max(0,font_get_size(menuFont)*3.5);
 		draw_set_valign(fa_middle);
 		menu_x = _ww *.5;
 		menu_y = _hh *.8;
-		//button_h = font_get_size(menuFont)*1.5;
-		//menu_x = 200;
-		//menu_y = 100; //- ((button_h * buttons)/2 + button_h);
-		//button_h = 60;
 
-		//draw_set_valign(fa_middle);
-		//draw_set_halign(fa_center);
 		repeat (buttons)
 		{
 			draw_sprite_ext(s_button_pressable,0,menu_x,menu_y + button_h * i,buttonXScale,buttonYScale,0,-1,1); //Draw pressed button
@@ -58,16 +52,10 @@ button_h = max(0,font_get_size(menuFont)*3.5);
 				draw_sprite_ext(s_button_pressable,1,menu_x,menu_y + button_h * i,buttonXScale,buttonYScale,0,-1,1); //Draw pressed button
 			}
 			draw_text_outline(menu_x, menu_y + button_h * i, button[i], c_black,c_ltgray);
-			//if (menu_index == i)
-			//{
-			//draw_text_outline(menu_x, menu_y + button_h * i, button[i], c_black,c_aqua);
-			//}
 			i++;	
 		}
 		i = 0;
-	
-		//	draw_sprite(sWASD, image_index,100,700);
-		
+
 		var text_x = _ww * .5;
 		var left_text_x = _ww *.15;
 		var right_text_x = _ww * .85;
@@ -79,42 +67,37 @@ button_h = max(0,font_get_size(menuFont)*3.5);
 		draw_set_halign(fa_center);
 		draw_set_valign(fa_top);
 		draw_set_font(fTextLarge);
-		draw_text_outline(text_x,text_y+textSpacing*0,string("How to Play"),c_white,c_aqua);
+		draw_text_outline(text_x,text_y+textSpacing*0,string("How to Play"),c_black,c_ltgray);
 		draw_set_font(fTextNormal);	
 		draw_set_color (c_ltgray);
-//		draw_text_outline(text_x,text_y+textSpacing*3,string("Under construction."), c_black,c_ltgray);		
-		draw_text_outline(text_x,text_y+textSpacing*3,string("Touch left or right side of to screen move in game."), c_black,c_ltgray);
+	
+		switch(global.target)
+		{
+			case TARGET.MOBILE:
+				draw_text_outline(text_x,text_y+textSpacing*4,string("Touch left or right side of to screen move in game."), c_black,c_ltgray);			
+			break;
+			
+			case TARGET.COMPUTER:
+				draw_text_outline(text_x,text_y+textSpacing*4,string("Use left and right arrow keys to move in game."), c_black,c_ltgray);						
+			break;
+		}
+			
 		
 		draw_set_halign(fa_center);
-		draw_text_outline(left_text_x,text_y+textSpacing*5,string("Depending on the level, the goal"), c_black,c_ltgray);
-		draw_text_outline(left_text_x,text_y+textSpacing*6,string("is to either reach the golden acorn"), c_black,c_ltgray);
-		draw_text_outline(left_text_x,text_y+textSpacing*7,string("or to collect as many acorns as possible"), c_black,c_ltgray);		
-		draw_text_outline(left_text_x,text_y+textSpacing*8,string("before the time runs out."), c_black,c_ltgray);		
+		draw_text_outline(left_text_x,text_y+textSpacing*6,string("Depending on the level, the goal"), c_black,c_ltgray);
+		draw_text_outline(left_text_x,text_y+textSpacing*7,string("is to either reach the golden acorn"), c_black,c_ltgray);
+		draw_text_outline(left_text_x,text_y+textSpacing*8,string("or to collect as many acorns as possible"), c_black,c_ltgray);		
+		draw_text_outline(left_text_x,text_y+textSpacing*9,string("before the time runs out."), c_black,c_ltgray);		
 		//draw_text_outline(left_text_x,text_y+textSpacing*9,string("as you can before time runs out."), c_black,c_ltgray);
 		
-		draw_text_outline(left_text_x,text_y+textSpacing*10,string("For an added challenge, complete the levels faster!"), c_black,c_ltgray);
-		draw_text_outline(left_text_x,text_y+textSpacing*11,string("Unlock additional levels by collecting acorns"), c_black,c_ltgray);
-		draw_text_outline(left_text_x,text_y+textSpacing*12,string("and then completing the level.(Future Release)"), c_black,c_ltgray);
-		//draw_text_outline(left_text_x,text_y+textSpacing*13,string(""), c_black,c_ltgray);
-
-		//draw_set_halign(fa_right);
-		draw_text_outline(left_text_x,text_y+textSpacing*14,string("The game is designed for landscape mode"), c_black,c_ltgray);		
-		draw_text_outline(left_text_x,text_y+textSpacing*15,string("but is fully playable in portrait mode,"), c_black,c_ltgray);
-		draw_text_outline(left_text_x,text_y+textSpacing*16,string("with only some scaling issues."), c_black,c_ltgray);
-		
-		//draw_text_outline(text_x,text_y+textSpacing*6,string("Make sure to keep an eye on your fuel"), c_black,c_ltgray);		
-		//draw_text_outline(text_x,text_y+textSpacing*6,string("possible, or to collect as many acorns"), c_black,c_ltgray);		
-		//draw_text_outline(text_x,text_y+textSpacing*6,string("as you can before time runs out."), c_black,c_ltgray);
-//		draw_text_outline(text_x,text_y+textSpacing*8,string("Watch your fuel, don't hit the"), c_black,c_ltgray);
-//		draw_text_outline(text_x,text_y+textSpacing*9,string("walls too hard, and avoid spikes."), c_black,c_ltgray);
-
-			//Left side
-			draw_set_font(fTextLarge);
-			text_x = global.GUIww *.25;
-			text_y = global.GUIhh *.65;
-			//draw_text(text_x,text_y,string("Movement"));
+		draw_text_outline(left_text_x,text_y+textSpacing*11,string("For an added challenge, complete the levels faster!"), c_black,c_ltgray);
+		draw_text_outline(left_text_x,text_y+textSpacing*12,string("Gem acorns are the developer's best time in each level."), c_black,c_ltgray);
+		draw_text_outline(left_text_x,text_y+textSpacing*14,string("Unlock additional levels by collecting as many"), c_black,c_ltgray);
+		draw_text_outline(left_text_x,text_y+textSpacing*15,string("acorns as possible, and then completing the level."), c_black,c_ltgray);
 		
 	}
+
+
 
 	if(room == rHighscore)
 	{

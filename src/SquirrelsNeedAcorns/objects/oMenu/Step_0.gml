@@ -50,6 +50,7 @@ if (keyboard_check_pressed(vk_enter) == true
 			case 0:
 				SlideTransition(TRANS_MODE.GOTO,rMainMenu);
 				break;
+			
 		}
 	}
 	//if(room == rLevelSelect)

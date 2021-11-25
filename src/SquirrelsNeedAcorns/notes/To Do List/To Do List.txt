@@ -1,7 +1,7 @@
 General Ideas
 
 == Yana Suggestions ===
-Add damage back in
+
 On main menu screen have the player object fly around
 Better title screen/logo
 
@@ -10,23 +10,26 @@ Username selection
 
 
 === Alpha 0.8 ===
-Make displays work nicely with portait mode(no super zoom out)
-Remove a minimum of 1 acorn to get 1 level completion
-Timer only appears when replaying the level after fully beating it
 Add particles and various effects (https://manual.yoyogames.com/GameMaker_Language/GML_Reference/Drawing/Particles/Particles.htm?rhsearch=mobile&rhhlterm=mobile)
 Change transition style from the Sean Spaulding version
 Indicators showing objectives
 UIX improvement (helpful tips)
 
 === Alpha 0.9 ===
-Add cosmetics
+Note from the developer room
+ - Thank you note for downloading and playing
+ - Link to Discord
+ - Donation IAP
+Cosmetic shop
 Integrate Apple GameCenter and Android Google Play for usernames/accounts
 Add blur shader for when game is paused
+Info object (prompt player to move if they haven't moved, if cancel appears, tell why)
+When cosmetic is unlocked, have an image of it float in from off screen, then move back off.
 
 === Beta 0.10 ===
 Add link to join discord
 Additional level world
-Opt-in video ads - extra XP, money generation, etc.
+
 
 === Polish ===
 Hover sound for mouse for HTML5/Windows exports
@@ -45,7 +48,7 @@ Implement a shop to spend money
 Add items that give cosmetic effects
 Histogram to show players score vs. a percent of the world
 Add a campaign, or reason to proceed in game
-Launch type level in Forest, or a map with heavier gravity.  Kinda like doodle jump
+Launch type level in Forest, or a map with heavier gravity.  Kinda like doodle jump.
 
 TEST:
 Parameter injection attacks (Avoid high score from being cheated).
