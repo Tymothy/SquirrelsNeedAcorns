@@ -4,6 +4,7 @@ if(endStepRan == false)
 {
 	levelRoom = global.levelSelectArray[level].roomName;
 	buttonText = global.levelSelectArray[level].levelName;
+	unlockedStatus = global.levelSelectArray[level].unlocked;
 	world = global.selectedWorld;
 	displayText = string_copy(buttonText, 1, 3);
 	completionLevel = global.levelSelectArray[level].completionLevel;

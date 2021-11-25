@@ -10,6 +10,9 @@ Username selection
 
 
 === Alpha 0.8 ===
+grayscale shader for locked levels and play button
+
+
 Make displays work nicely with portait mode(no super zoom out)
 Remove a minimum of 1 acorn to get 1 level completion
 Timer only appears when replaying the level after fully beating it

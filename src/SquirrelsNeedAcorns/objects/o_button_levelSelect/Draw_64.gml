@@ -62,6 +62,21 @@ switch(completionLevel)
 	break;	
 }
 
+
+switch(unlockedStatus)
+{
+	case true:
+		//Level is unlocked and playable
+	break;
+	
+	case false:
+		//Level is locked and not playable
+		draw_set_font(fTextNormal);
+		draw_sprite_ext(sChainLink, image_index, x, y - 10, .5, .5, image_angle,image_blend, image_alpha);		
+		draw_text_outline(x ,y+20, string(global.levelSelectArray[level].unlockPoints),c_black, c_yellow);
+	break;
+	
+}
 //if(global.selectedLevel == level)
 //{
 //	draw_sprite_ext(s_button_pressable,1,x,y,buttonXScale,buttonYScale,0,-1,1);

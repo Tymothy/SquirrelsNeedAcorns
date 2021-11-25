@@ -86,6 +86,7 @@ global.level_Beginning =
 	world : 0,
 	levelName : "01 - Beginning",
 	levelType : LEVELTYPE.MOUNTAINS,
+	unlockPoints : 0, //Points required for level to be unlocked
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0, 0], //Gamemode, points, time
@@ -106,6 +107,7 @@ global.level_Slope =
 	world : 0,
 	levelName : "02 - Slope",
 	levelType : LEVELTYPE.MOUNTAINS,
+	unlockPoints : 0, //Points required for level to be unlocked
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0, 0],
@@ -126,6 +128,7 @@ global.level_Bend =
 	world : 0,
 	levelName : "03 - Bend",
 	levelType : LEVELTYPE.MOUNTAINS,
+	unlockPoints : 0, //Points required for level to be unlocked
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0, 0],
@@ -145,6 +148,7 @@ global.level_Boom =
 	world : 0,
 	levelName : "04 - Boom",
 	levelType : LEVELTYPE.MOUNTAINS,
+	unlockPoints : 0, //Points required for level to be unlocked
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0, 0],
@@ -165,6 +169,7 @@ global.level_Open =
 	world : 0,
 	levelName : "05 - Open",
 	levelType : LEVELTYPE.MOUNTAINS,
+	unlockPoints : 30, //Points required for level to be unlocked
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0, 0],
@@ -185,6 +190,7 @@ global.level_Gaps =
 	world : 0,
 	levelName : "06 - Gaps",
 	levelType : LEVELTYPE.MOUNTAINS,
+	unlockPoints : 75, //Points required for level to be unlocked
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0, 0],
@@ -205,6 +211,7 @@ global.level_Rebound =
 	world : 0,
 	levelName : "07 - Rebound",
 	levelType : LEVELTYPE.MOUNTAINS,
+	unlockPoints : 75, //Points required for level to be unlocked
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0, 0],
@@ -225,6 +232,7 @@ global.level_Redirection =
 	world : 0,
 	levelName : "08 - Redirection",
 	levelType : LEVELTYPE.MOUNTAINS,
+	unlockPoints : 75, //Points required for level to be unlocked
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0, 0],
@@ -245,6 +253,7 @@ global.level_Precision =
 	world : 0,
 	levelName : "09 - Precision",
 	levelType : LEVELTYPE.MOUNTAINS,
+	unlockPoints : 75, //Points required for level to be unlocked
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0, 0],
@@ -265,6 +274,7 @@ global.level_Choices =
 	world : 0,
 	levelName : "10 - Choices",
 	levelType : LEVELTYPE.MOUNTAINS,
+	unlockPoints : 125, //Points required for level to be unlocked
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0, 0],
@@ -286,6 +296,7 @@ global.level_Bounce =
 	world : 1,
 	levelName : "11 - Bounce",
 	levelType : LEVELTYPE.WATER,
+	unlockPoints : 175, //Points required for level to be unlocked
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0, 0],
@@ -306,6 +317,7 @@ global.level_Turning =
 	world : 1,
 	levelName : "12 - Turning",
 	levelType : LEVELTYPE.WATER,
+	unlockPoints : 175, //Points required for level to be unlocked
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0, 0],
@@ -326,6 +338,7 @@ global.level_Cracks =
 	world : 1,
 	levelName : "13 - Cracks",
 	levelType : LEVELTYPE.WATER,
+	unlockPoints : 175, //Points required for level to be unlocked
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0, 0],
@@ -346,6 +359,7 @@ global.level_Spiral =
 	world : 1,
 	levelName : "14 - Spiral",
 	levelType : LEVELTYPE.WATER,
+	unlockPoints : 175, //Points required for level to be unlocked
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0, 0],
@@ -366,6 +380,7 @@ global.level_Caverns =
 	world : 1,
 	levelName : "15 - Caverns",
 	levelType : LEVELTYPE.WATER,
+	unlockPoints : 225, //Points required for level to be unlocked
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0, 0],
@@ -386,6 +401,7 @@ global.level_Up_Down =
 	world : 1,
 	levelName : "16 - Up and Down",
 	levelType : LEVELTYPE.WATER,
+	unlockPoints : 275, //Points required for level to be unlocked
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0, 0],
@@ -406,6 +422,7 @@ global.level_Loop =
 	world : 1,
 	levelName : "17 - Loop",
 	levelType : LEVELTYPE.WATER,
+	unlockPoints : 275, //Points required for level to be unlocked
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0, 0],
@@ -426,6 +443,7 @@ global.level_Back_and_Forth =
 	world : 1,
 	levelName : "18 - Back and Forth",
 	levelType : LEVELTYPE.WATER,
+	unlockPoints : 275, //Points required for level to be unlocked
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0, 0],
@@ -446,6 +464,7 @@ global.level_Conserve =
 	world : 1,
 	levelName : "19 - Jellyfish Hopping",
 	levelType : LEVELTYPE.WATER,
+	unlockPoints : 275, //Points required for level to be unlocked
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0, 0],
@@ -466,6 +485,7 @@ global.level_Fuel_Lines =
 	world : 1,
 	levelName : "20 - Fuel Lines",
 	levelType : LEVELTYPE.WATER,
+	unlockPoints : 325, //Points required for level to be unlocked
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0, 0],
@@ -486,6 +506,7 @@ global.level_Space_Boulders =
 	world : 2,
 	levelName : "21 - Space Boulders",
 	levelType : LEVELTYPE.SPACE,
+	unlockPoints : 375, //Points required for level to be unlocked
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0, 0],
@@ -506,6 +527,7 @@ global.level_Speed_Tunnel =
 	world : 2,
 	levelName : "22 - Speed Tunnel",
 	levelType : LEVELTYPE.SPACE,
+	unlockPoints : 375, //Points required for level to be unlocked
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0, 0],
@@ -526,6 +548,7 @@ global.level_Minefield =
 	world : 2,
 	levelName : "23 - Minefield",
 	levelType : LEVELTYPE.SPACE,
+	unlockPoints : 375, //Points required for level to be unlocked
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0, 0],
@@ -546,6 +569,7 @@ global.level_Rise =
 	world : 2,
 	levelName : "24 - Rise",
 	levelType : LEVELTYPE.SPACE,
+	unlockPoints : 375, //Points required for level to be unlocked
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0, 0],
@@ -562,10 +586,11 @@ global.level_Rise =
 global.level_Asteroid =
 {
 	saveNum : 305, 
-	roomName : rGame305, //CHANGE THIS BACK TO THE CORRECT LEVEL
+	roomName : rGame305,
 	world : 2,
 	levelName : "25 - Asteroid",
 	levelType : LEVELTYPE.SPACE,
+	unlockPoints : 425, //Points required for level to be unlocked
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0, 0],

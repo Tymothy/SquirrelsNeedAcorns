@@ -46,6 +46,7 @@ if(world != global.selectedWorld)
 			if(global.levelSelectArray[i].world == global.selectedWorld) 
 			{
 				worldArr[worldArrInc] = i;
+				
 				if(global.selectedLevel == worldArr[worldArrInc])
 				{
 					_selectedLevelPresent = true;
@@ -53,11 +54,14 @@ if(world != global.selectedWorld)
 				worldArrInc++;
 			}
 		}
-		
-		if(_selectedLevelPresent == false)
-		{
-			global.selectedLevel = worldArr[0];	
-		}
+		//Need a check to see if level is unlocked, before allowing it to be selected
+	//	if(global.levelSelectArray[worldArr[0]].unlocked == true)
+	//	{
+			if(_selectedLevelPresent == false)
+			{
+				global.selectedLevel = worldArr[0];	
+			}
+	//	}
 		//Create the level buttons on screen
 		_arrayLen = array_length(worldArr);
 		var _width = 5; //How many levels wide in a row
