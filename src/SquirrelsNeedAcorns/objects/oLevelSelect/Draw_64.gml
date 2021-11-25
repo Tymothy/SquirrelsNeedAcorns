@@ -54,87 +54,8 @@ switch(global.levelSelectArray[global.selectedLevel].unlocked)
 				//draw_text_outline(modeStringX, modeStringY+margin, string(_score), c_black, c_yellow);	
 			break;
 		}	
-	break;
-	
-	case false:
-	draw_set_font(fTextNormal);
-		draw_set_valign(fa_middle);
-		draw_set_halign(fa_center);
-
-		//Draw level name at top of screen
-		draw_text_outline(levelNameX, levelNameY + margin, "World locked!",c_black,c_red);
-		draw_text_outline(modeStringX, modeStringY+margin, "Collect more acorns!", c_black, c_red);			
-	break;
-	
-}
-
-
-//switch(global.gameModeString)
-//{
-
-	
-//	case "Challenge" :
-//		switch(global.levelSelectArray[global.selectedLevel].completionLevel)
-//		{
-//			case 0 :
-//				draw_text_outline(modeStringX, modeStringY+margin, string(_score), c_black, c_yellow);
-//			break;
-			
-//			case 1 :
-//				draw_text_outline(modeStringX, modeStringY+margin, string(_score), c_black, c_yellow);
-//			break;
-			
-//			case 2 :
-//				switch (global.GOALTYPE)
-//				{
-//					case GOALTYPE.GOAL :
-//						draw_text_outline(modeStringX, modeStringY+margin, string(_time) + " seconds", c_black, c_yellow);					
-//					break;
-					
-//					case GOALTYPE.COLLECT :
-//						draw_text_outline(modeStringX, modeStringY+margin, string(_score), c_black, c_yellow);				
-//					break;
-					
-//					default :
-//						draw_text_outline(modeStringX, modeStringY+margin, string(_score), c_black, c_yellow);	
-//					break;
-//				}
-//			break;
-			
-//			case 3 :
-//				switch (global.GOALTYPE)
-//				{
-//					case GOALTYPE.GOAL :
-//						draw_text_outline(modeStringX, modeStringY+margin, string(_time) + " seconds", c_black, c_yellow);					
-//					break;
-					
-//					case GOALTYPE.COLLECT :
-//						draw_text_outline(modeStringX, modeStringY+margin, string(_score), c_black, c_yellow);				
-//					break;
-					
-//					default :
-//						draw_text_outline(modeStringX, modeStringY+margin, string(_score), c_black, c_yellow);	
-//					break;
-//				}
-//			break;
-//		}
 		
-//		break;
-		
-//	case "Zen" :
-//		draw_text_outline(modeStringX, modeStringY+margin, string(_score), c_black, c_yellow);
-//		break;
-		
-//	case "Practice" :
-	
-//		break;
-	
-//}
-
-	//compLvlX = _ww * .75;
-	//compLvlY = _hh * .1;
-	//compLvlYMax = _hh * .35;
-	var _mid = ((compLvlY +compLvlYMax) / 2);
+			var _mid = ((compLvlY +compLvlYMax) / 2);
 	
 		draw_set_font(infoFont);
 		draw_set_valign(fa_middle);
@@ -157,6 +78,7 @@ switch(global.levelSelectArray[global.selectedLevel].unlocked)
 		draw_set_halign(fa_middle);
 		//draw_text_outline(acornsX, acornsY, "Acorns Collected", c_black, c_ltgray);
 		draw_sprite_ext(s_pickup_point_acorn, 0, acornsX, acornsY, .5, .5, image_angle, image_blend, image_alpha);
+		
 		switch(global.GOALTYPE)
 		{
 			case GOALTYPE.GOAL :
@@ -177,4 +99,20 @@ switch(global.levelSelectArray[global.selectedLevel].unlocked)
 				draw_text_outline(acornsX, acornsY + margin, string(_score) , c_black, c_ltgray);
 				break;
 		}
+	break;
+	
+	case false:
+	draw_set_font(fTextNormal);
+		draw_set_valign(fa_middle);
+		draw_set_halign(fa_center);
+
+		//Draw level name at top of screen
+		draw_text_outline(levelNameX, levelNameY + margin, "World locked!",c_black,c_red);
+		draw_text_outline(modeStringX, modeStringY+margin, "Collect more acorns!", c_black, c_red);			
+	break;
+	
+}
+
+
+
 	

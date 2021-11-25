@@ -1,8 +1,7 @@
 if(live_call()) return live_result;
 
 
-if(global.levelSelectArray[global.selectedLevel].unlocked == true)
-{
+
 	dispX = global.GUIww * .5;
 	dispY = global.GUIhh * .95;
 	margin = global.GUIhh *.01; //Margin between sprite and words
@@ -21,4 +20,3 @@ if(global.levelSelectArray[global.selectedLevel].unlocked == true)
 	draw_sprite_ext(sprite, 0, dispX - _spriteX, _spriteY, xScale, yScale, image_angle, image_blend, image_alpha);
 	draw_text_outline(_textX, _textY, text, c_black, c_ltgray);
 	draw_sprite_ext(sprite, 0, dispX + _spriteX, _spriteY, xScale, yScale, image_angle, image_blend, image_alpha);
-}
