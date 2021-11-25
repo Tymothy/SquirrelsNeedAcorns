@@ -3,7 +3,7 @@
 
 // Inherit the parent event
 event_inherited();
-max_positions = 3; //We have three modes, so we need 3 cycles
+max_positions = 2; //We have 2 modes, so we need 2 cycles
 position = global.gameMode;
 
 update_button = function() {
@@ -13,12 +13,9 @@ update_button = function() {
 			break;
 	
 			case 1:
-				sprite = s_logo_zen;
-			break;
-		
-			case 2:
 				sprite = s_logo_practice;
-			break;	
+			break;
+
 		
 	}
 	global.gameMode = position;
