@@ -1,9 +1,10 @@
 /// @desc Generate global variables
 #macro live_enabled 1 //Turn to 0 to turn off for exporting, 1 to use
 #macro database_send false //Use false to not send runs to server, export with true
+#macro practice_button false
 
 //Variables changed often
-global.versionText = "Squirrels Need Acorns - Alpha Version 0.8.0";
+global.versionText = "Squirrels Need Acorns - Version 1.0.0";
 global.debug = false; //Controls all the debugging.  Set to false before exporting
 global.playerName = ""; //Used for the highscores
 global.musicToggle = 1; //Set to 1 to export with sound on by default.  Set to 0 for no sound on game on.
@@ -108,9 +109,9 @@ global.level_Beginning =
 	timed : 0, //0 is no time limit
 	goalType : GOALTYPE.GOAL,
 	availablePoints : 0, //How many points available in the level
-	compLev1 : 15.00, //Points to get 1st level
-	compLev2 : 10.00, //Points to get 2nd level
-	compLev3 : 7.317, //Time to beat for max, acorns for GOALTYPE.COLLECT
+	compLev1 : 8.5, //Points to get 1st level
+	compLev2 : 7.5, //Points to get 2nd level
+	compLev3 : 6.731, //Time to beat for max, acorns for GOALTYPE.COLLECT
 	completionLevel : 0, //How many acorns to present on level select screen
 }
 
@@ -129,9 +130,9 @@ global.level_Slope =
 	timed : 0,
 	goalType : GOALTYPE.GOAL,
 	availablePoints : 0,
-	compLev1 : 12, //Points to get 1st level
-	compLev2 : 9.25, //Points to get 2nd level
-	compLev3 : 8.867, //Time to beat for max, acorns for GOALTYPE.COLLECT
+	compLev1 : 10, //Points to get 1st level
+	compLev2 : 8.5, //Points to get 2nd level
+	compLev3 : 7.581, //Time to beat for max, acorns for GOALTYPE.COLLECT
 	completionLevel : 0,
 }
 
@@ -150,9 +151,9 @@ global.level_Bend =
 	timed : 0,
 	goalType : GOALTYPE.GOAL,
 	availablePoints : 0,
-	compLev1 : 19, //Points to get 1st level
-	compLev2 : 15.5, //Points to get 2nd level
-	compLev3 : 14.975, //Time to beat for max, acorns for GOALTYPE.COLLECT
+	compLev1 : 18.25, //Points to get 1st level
+	compLev2 : 15, //Points to get 2nd level
+	compLev3 : 13.429, //Time to beat for max, acorns for GOALTYPE.COLLECT
 	completionLevel : 0,
 }
 global.level_Boom =
@@ -170,9 +171,9 @@ global.level_Boom =
 	timed : 0,
 	goalType : GOALTYPE.GOAL,
 	availablePoints : 0,
-	compLev1 : 21, //Points to get 1st level
-	compLev2 : 18, //Points to get 2nd level
-	compLev3 : 16.23, //Time to beat for max, acorns for GOALTYPE.COLLECT
+	compLev1 : 20, //Points to get 1st level
+	compLev2 : 15.5, //Points to get 2nd level
+	compLev3 : 12.230, //Time to beat for max, acorns for GOALTYPE.COLLECT
 	completionLevel : 0,
 }
 
@@ -183,7 +184,7 @@ global.level_Open =
 	world : 0,
 	levelName : "05 - Open",
 	levelType : LEVELTYPE.MOUNTAINS,
-	unlockPoints : 30, //Points required for level to be unlocked
+	unlockPoints : 45, //Points required for level to be unlocked
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0, 0],
@@ -191,9 +192,9 @@ global.level_Open =
 	timed : 60,
 	goalType : GOALTYPE.COLLECT,
 	availablePoints : 0,
-	compLev1 : 20, //Points to get 1st level
-	compLev2 : 45, //Points to get 2nd level
-	compLev3 : 70, //Time to beat for max, acorns for GOALTYPE.COLLECT
+	compLev1 : 45, //Points to get 1st level
+	compLev2 : 65, //Points to get 2nd level
+	compLev3 : 85, //Time to beat for max, acorns for GOALTYPE.COLLECT
 	completionLevel : 0,
 }
 
@@ -204,7 +205,7 @@ global.level_Gaps =
 	world : 0,
 	levelName : "06 - Gaps",
 	levelType : LEVELTYPE.MOUNTAINS,
-	unlockPoints : 75, //Points required for level to be unlocked
+	unlockPoints : 85, //Points required for level to be unlocked
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0, 0],
@@ -212,9 +213,9 @@ global.level_Gaps =
 	timed : 0,
 	goalType : GOALTYPE.GOAL,
 	availablePoints : 0,
-	compLev1 : 29, //Points to get 1st level
-	compLev2 : 23.5, //Points to get 2nd level
-	compLev3 : 21.285, //Time to beat for max, acorns for GOALTYPE.COLLECT
+	compLev1 : 22.25, //Points to get 1st level
+	compLev2 : 19.5, //Points to get 2nd level
+	compLev3 : 17.978, //Time to beat for max, acorns for GOALTYPE.COLLECT
 	completionLevel : 0,
 }
 
@@ -225,7 +226,7 @@ global.level_Rebound =
 	world : 0,
 	levelName : "07 - Rebound",
 	levelType : LEVELTYPE.MOUNTAINS,
-	unlockPoints : 75, //Points required for level to be unlocked
+	unlockPoints : 85, //Points required for level to be unlocked
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0, 0],
@@ -233,9 +234,9 @@ global.level_Rebound =
 	timed : 0,
 	goalType : GOALTYPE.GOAL,
 	availablePoints : 0,
-	compLev1 : 35, //Points to get 1st level
-	compLev2 : 29.25, //Points to get 2nd level
-	compLev3 : 26.77, //Time to beat for max, acorns for GOALTYPE.COLLECT
+	compLev1 : 30, //Points to get 1st level
+	compLev2 : 24.75, //Points to get 2nd level
+	compLev3 : 22.110, //Time to beat for max, acorns for GOALTYPE.COLLECT
 	completionLevel : 0,
 }
 
@@ -246,7 +247,7 @@ global.level_Redirection =
 	world : 0,
 	levelName : "08 - Redirection",
 	levelType : LEVELTYPE.MOUNTAINS,
-	unlockPoints : 75, //Points required for level to be unlocked
+	unlockPoints : 85, //Points required for level to be unlocked
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0, 0],
@@ -256,7 +257,7 @@ global.level_Redirection =
 	availablePoints : 0,
 	compLev1 : 18, //Points to get 1st level
 	compLev2 : 15, //Points to get 2nd level
-	compLev3 : 13.10, //Time to beat for max, acorns for GOALTYPE.COLLECT
+	compLev3 : 12.763, //Time to beat for max, acorns for GOALTYPE.COLLECT
 	completionLevel : 0,
 }
 
@@ -267,7 +268,7 @@ global.level_Precision =
 	world : 0,
 	levelName : "09 - Precision",
 	levelType : LEVELTYPE.MOUNTAINS,
-	unlockPoints : 75, //Points required for level to be unlocked
+	unlockPoints : 85, //Points required for level to be unlocked
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0, 0],
@@ -275,9 +276,9 @@ global.level_Precision =
 	timed : 0,
 	goalType : GOALTYPE.GOAL,
 	availablePoints : 0,
-	compLev1 : 38, //Points to get 1st level
-	compLev2 : 32, //Points to get 2nd level
-	compLev3 : 29.07, //Time to beat for max, acorns for GOALTYPE.COLLECT
+	compLev1 : 30.0, //Points to get 1st level
+	compLev2 : 27.5, //Points to get 2nd level
+	compLev3 : 25.742, //Time to beat for max, acorns for GOALTYPE.COLLECT
 	completionLevel : 0,
 }
 
@@ -288,7 +289,7 @@ global.level_Choices =
 	world : 0,
 	levelName : "10 - Choices",
 	levelType : LEVELTYPE.MOUNTAINS,
-	unlockPoints : 125, //Points required for level to be unlocked
+	unlockPoints : 150, //Points required for level to be unlocked
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0, 0],
@@ -296,9 +297,9 @@ global.level_Choices =
 	timed : 60,
 	goalType : GOALTYPE.COLLECT,
 	availablePoints : 0,
-	compLev1 : 25, //Points to get 1st level
-	compLev2 : 50, //Points to get 2nd level
-	compLev3 : 75, //Time to beat for max, acorns for GOALTYPE.COLLECT
+	compLev1 : 50, //Points to get 1st level
+	compLev2 : 65, //Points to get 2nd level
+	compLev3 : 80, //Time to beat for max, acorns for GOALTYPE.COLLECT
 	completionLevel : 0,
 }
 
@@ -310,7 +311,7 @@ global.level_Bounce =
 	world : 1,
 	levelName : "11 - Bounce",
 	levelType : LEVELTYPE.WATER,
-	unlockPoints : 175, //Points required for level to be unlocked
+	unlockPoints : 215, //Points required for level to be unlocked
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0, 0],
@@ -319,7 +320,7 @@ global.level_Bounce =
 	goalType : GOALTYPE.GOAL,
 	availablePoints : 0,
 	compLev1 : 20, //Points to get 1st level
-	compLev2 : 15.5, //Points to get 2nd level
+	compLev2 : 15.0, //Points to get 2nd level
 	compLev3 : 13.201, //Time to beat for max, acorns for GOALTYPE.COLLECT
 	completionLevel : 0,
 }
@@ -331,7 +332,7 @@ global.level_Turning =
 	world : 1,
 	levelName : "12 - Turning",
 	levelType : LEVELTYPE.WATER,
-	unlockPoints : 175, //Points required for level to be unlocked
+	unlockPoints : 215, //Points required for level to be unlocked
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0, 0],
@@ -352,7 +353,7 @@ global.level_Cracks =
 	world : 1,
 	levelName : "13 - Cracks",
 	levelType : LEVELTYPE.WATER,
-	unlockPoints : 175, //Points required for level to be unlocked
+	unlockPoints : 215, //Points required for level to be unlocked
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0, 0],
@@ -360,8 +361,8 @@ global.level_Cracks =
 	timed : 0,
 	goalType : GOALTYPE.GOAL,
 	availablePoints : 0,
-	compLev1 : 15, //Points to get 1st level
-	compLev2 : 11, //Points to get 2nd level
+	compLev1 : 13, //Points to get 1st level
+	compLev2 : 9.5, //Points to get 2nd level
 	compLev3 : 8.434, //Time to beat for max, acorns for GOALTYPE.COLLECT
 	completionLevel : 0,
 }
@@ -373,7 +374,7 @@ global.level_Spiral =
 	world : 1,
 	levelName : "14 - Spiral",
 	levelType : LEVELTYPE.WATER,
-	unlockPoints : 175, //Points required for level to be unlocked
+	unlockPoints : 215, //Points required for level to be unlocked
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0, 0],
@@ -381,9 +382,9 @@ global.level_Spiral =
 	timed : 0,
 	goalType : GOALTYPE.GOAL,
 	availablePoints : 0,
-	compLev1 : 37, //Points to get 1st level
-	compLev2 : 34, //Points to get 2nd level
-	compLev3 : 32.968, //Time to beat for max, acorns for GOALTYPE.COLLECT
+	compLev1 : 40, //Points to get 1st level
+	compLev2 : 35, //Points to get 2nd level
+	compLev3 : 32.440, //Time to beat for max, acorns for GOALTYPE.COLLECT
 	completionLevel : 0,
 }
 
@@ -394,7 +395,7 @@ global.level_Caverns =
 	world : 1,
 	levelName : "15 - Caverns",
 	levelType : LEVELTYPE.WATER,
-	unlockPoints : 225, //Points required for level to be unlocked
+	unlockPoints : 315, //Points required for level to be unlocked
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0, 0],
@@ -402,9 +403,9 @@ global.level_Caverns =
 	timed : 60,
 	goalType : GOALTYPE.COLLECT,
 	availablePoints : 0,
-	compLev1 : 25, //Points to get 1st level
-	compLev2 : 50, //Points to get 2nd level
-	compLev3 : 75, //Time to beat for max, acorns for GOALTYPE.COLLECT
+	compLev1 : 50, //Points to get 1st level
+	compLev2 : 70, //Points to get 2nd level
+	compLev3 : 85, //Time to beat for max, acorns for GOALTYPE.COLLECT
 	completionLevel : 0,
 }
 
@@ -415,7 +416,7 @@ global.level_Up_Down =
 	world : 1,
 	levelName : "16 - Up and Down",
 	levelType : LEVELTYPE.WATER,
-	unlockPoints : 275, //Points required for level to be unlocked
+	unlockPoints : 375, //Points required for level to be unlocked
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0, 0],
@@ -436,7 +437,7 @@ global.level_Loop =
 	world : 1,
 	levelName : "17 - Loop",
 	levelType : LEVELTYPE.WATER,
-	unlockPoints : 275, //Points required for level to be unlocked
+	unlockPoints : 375, //Points required for level to be unlocked
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0, 0],
@@ -457,7 +458,7 @@ global.level_Back_and_Forth =
 	world : 1,
 	levelName : "18 - Back and Forth",
 	levelType : LEVELTYPE.WATER,
-	unlockPoints : 275, //Points required for level to be unlocked
+	unlockPoints : 375, //Points required for level to be unlocked
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0, 0],
@@ -478,7 +479,7 @@ global.level_Conserve =
 	world : 1,
 	levelName : "19 - Jellyfish Hopping",
 	levelType : LEVELTYPE.WATER,
-	unlockPoints : 275, //Points required for level to be unlocked
+	unlockPoints : 375, //Points required for level to be unlocked
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0, 0],
@@ -499,7 +500,7 @@ global.level_Fuel_Lines =
 	world : 1,
 	levelName : "20 - Fuel Lines",
 	levelType : LEVELTYPE.WATER,
-	unlockPoints : 325, //Points required for level to be unlocked
+	unlockPoints : 435, //Points required for level to be unlocked
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0, 0],
@@ -507,9 +508,9 @@ global.level_Fuel_Lines =
 	timed : 60,
 	goalType : GOALTYPE.COLLECT,
 	availablePoints : 0,
-	compLev1 : 25, //Points to get 1st level
-	compLev2 : 50, //Points to get 2nd level
-	compLev3 : 75, //Time to beat for max, acorns for GOALTYPE.COLLECT
+	compLev1 : 50, //Points to get 1st level
+	compLev2 : 80, //Points to get 2nd level
+	compLev3 : 90, //Time to beat for max, acorns for GOALTYPE.COLLECT
 	completionLevel : 0, 
 }
 
@@ -520,7 +521,7 @@ global.level_Space_Boulders =
 	world : 2,
 	levelName : "21 - Space Boulders",
 	levelType : LEVELTYPE.SPACE,
-	unlockPoints : 375, //Points required for level to be unlocked
+	unlockPoints : 550, //Points required for level to be unlocked
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0, 0],
@@ -541,7 +542,7 @@ global.level_Speed_Tunnel =
 	world : 2,
 	levelName : "22 - Speed Tunnel",
 	levelType : LEVELTYPE.SPACE,
-	unlockPoints : 375, //Points required for level to be unlocked
+	unlockPoints : 550, //Points required for level to be unlocked
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0, 0],
@@ -562,7 +563,7 @@ global.level_Minefield =
 	world : 2,
 	levelName : "23 - Minefield",
 	levelType : LEVELTYPE.SPACE,
-	unlockPoints : 375, //Points required for level to be unlocked
+	unlockPoints : 550, //Points required for level to be unlocked
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0, 0],
@@ -583,7 +584,7 @@ global.level_Rise =
 	world : 2,
 	levelName : "24 - Rise",
 	levelType : LEVELTYPE.SPACE,
-	unlockPoints : 375, //Points required for level to be unlocked
+	unlockPoints : 550, //Points required for level to be unlocked
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0, 0],
@@ -604,7 +605,7 @@ global.level_Asteroid =
 	world : 2,
 	levelName : "25 - Asteroid",
 	levelType : LEVELTYPE.SPACE,
-	unlockPoints : 425, //Points required for level to be unlocked
+	unlockPoints : 650, //Points required for level to be unlocked
 	unlocked : true,
 	art : s_gameIce1,
 	highScore : [0, 0, 0],
@@ -612,9 +613,9 @@ global.level_Asteroid =
 	timed : 60,
 	goalType : GOALTYPE.COLLECT,
 	availablePoints : 0,
-	compLev1 : 25, //Points to get 1st level
-	compLev2 : 50, //Points to get 2nd level
-	compLev3 : 75, //Time to beat for max, acorns for GOALTYPE.COLLECT
+	compLev1 : 45, //Points to get 1st level
+	compLev2 : 60, //Points to get 2nd level
+	compLev3 : 80, //Time to beat for max, acorns for GOALTYPE.COLLECT
 	completionLevel : 0, 
 }
 

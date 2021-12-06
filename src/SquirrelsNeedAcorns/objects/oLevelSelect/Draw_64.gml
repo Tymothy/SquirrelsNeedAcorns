@@ -5,7 +5,7 @@ if(live_call()) return live_result;
 draw_set_font(fTextNormal);
 draw_set_valign(fa_middle);
 draw_set_halign(fa_left);
-draw_text(global.GUIww*.03, global.GUIhh*.97, "Goal times not final");
+//draw_text(global.GUIww*.03, global.GUIhh*.97, "Goal times not final");
 
 var _score = global.levelSelectArray[global.selectedLevel].highScore[global.gameMode];
 var _compLev1 = global.levelSelectArray[global.selectedLevel].compLev1;

@@ -22,8 +22,8 @@
 		draw_text_outline(left_text_x,text_y+textSpacing*3,string("Thank you for playing my first game!"), c_black,c_ltgray);
 		
 		draw_text_outline(left_text_x,text_y+textSpacing*5,string("Squirrels Need Acorns is the very first game"), c_black,c_ltgray);
-		draw_text_outline(left_text_x,text_y+textSpacing*6,string("I have ever created and I am extremely excited"), c_black,c_ltgray);
-		draw_text_outline(left_text_x,text_y+textSpacing*7,string("I am able to share it with you."), c_black,c_ltgray);		
+		draw_text_outline(left_text_x,text_y+textSpacing*6,string("I have ever created and I am extremely happy"), c_black,c_ltgray);
+		draw_text_outline(left_text_x,text_y+textSpacing*7,string("that I am able to share it with you."), c_black,c_ltgray);		
 		
 		draw_text_outline(left_text_x,text_y+textSpacing*9,string("Special thank you to my family, friends, and"), c_black,c_ltgray);		
 		draw_text_outline(left_text_x,text_y+textSpacing*10,string("the Advanced Kind community.  Without you,"), c_black,c_ltgray);

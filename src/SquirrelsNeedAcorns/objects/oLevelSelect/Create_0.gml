@@ -54,7 +54,10 @@ margin = font_get_size(levelSelectFont)*1.9;
 	completionLevelFunc();
 	unlock_level();
 
-instance_create_layer(modeX, modeY, "UI_Buttons",o_button_mode);
+if(practice_button == true)
+{
+	instance_create_layer(modeX, modeY, "UI_Buttons",o_button_mode);
+}
 instance_create_layer(backX, backY, "UI_Buttons",o_button_back);
 instance_create_layer(nextWorldX, nextWorldY, "UI_Buttons", o_button_nextWorld);
 instance_create_layer(prevWorldX, prevWorldY, "UI_Buttons", o_button_prevWorld);

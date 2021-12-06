@@ -18,8 +18,8 @@ button_h = max(0,font_get_size(menuFont)*3.5);
 		draw_set_halign(fa_left);
 		draw_set_valign(fa_bottom);
 		//Draw at very top left of screen
-		draw_text(global.GUIww*.03, global.GUIhh*.89, "This is an alpha build, all content subject to change.");
-		draw_text(global.GUIww*.03, global.GUIhh*.93, "Progress may not save between updates.");
+		//draw_text(global.GUIww*.03, global.GUIhh*.89, "This is an alpha build, all content subject to change.");
+		//draw_text(global.GUIww*.03, global.GUIhh*.93, "Progress may not save between updates.");
 		draw_text(global.GUIww*.03, global.GUIhh*.97, string(global.versionText));
 		
 		//Draw Title
