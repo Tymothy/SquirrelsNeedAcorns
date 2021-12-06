@@ -1,5 +1,5 @@
 /// @desc Player Create
-if(live_call()) return live_result;
+
 
 //Level Variables
 //Old values, before resolution change

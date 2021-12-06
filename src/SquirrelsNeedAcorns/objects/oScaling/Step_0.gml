@@ -1,5 +1,5 @@
 /// @description Insert description here
-if(live_call()) return live_result;
+
 if(fullscreen == true)
 {
 	if (browser_width != width || browser_height != height || currentRoom != room || runScaling == true)

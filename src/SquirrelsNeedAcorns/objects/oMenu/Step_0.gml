@@ -1,4 +1,4 @@
-if(live_call()) return live_result;
+
 //menu_move = keyboard_check_pressed(vk_down) -  keyboard_check(vk_up);
 
 if (keyboard_check_pressed(vk_down) == true || keyboard_check_pressed(ord("S")) == true)

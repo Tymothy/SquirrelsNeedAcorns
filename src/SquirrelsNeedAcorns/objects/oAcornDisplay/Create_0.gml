@@ -1,4 +1,4 @@
-if(live_call()) return live_result;
+
 
 sprite = s_pickup_point_acorn;
 //Center of the sprite

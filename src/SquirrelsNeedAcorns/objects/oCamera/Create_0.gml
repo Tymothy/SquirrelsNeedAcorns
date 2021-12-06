@@ -1,5 +1,5 @@
 /// @desc Insert description here
-if(live_call()) return live_result;
+
 
 xTo = xstart;
 yTo = ystart;

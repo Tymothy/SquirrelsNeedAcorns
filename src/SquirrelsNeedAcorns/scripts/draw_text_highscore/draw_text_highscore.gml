@@ -1,5 +1,5 @@
 
-if(live_call()) return live_result;
+
 function draw_text_highscore(x,y,text1,text2,text3,highscores,name,colour){
 	/// @description draw_text_highscore(x,y,text1,text2,text3,highscores,name,colour)
 	/// @param x            Draw x position

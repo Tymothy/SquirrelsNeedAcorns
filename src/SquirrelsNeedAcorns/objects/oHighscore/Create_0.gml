@@ -1,5 +1,5 @@
 /// @description  Initialise loading the online highscores
-if(live_call()) return live_result;
+
 player_name = global.playerName;
 highscoreFont = fTextNormal;
 lines = 5;

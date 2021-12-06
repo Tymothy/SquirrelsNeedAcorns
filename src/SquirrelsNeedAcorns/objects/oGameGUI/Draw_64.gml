@@ -1,4 +1,4 @@
-if(live_call()) return live_result;
+
 /// @desc Insert description here
 //draw_set_color(c_red)
 //draw_rectangle(50,50,50+(200-50)*(oPlayer.fuel),100,0);

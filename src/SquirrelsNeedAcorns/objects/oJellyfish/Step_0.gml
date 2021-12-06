@@ -1,6 +1,6 @@
 /// @description Jellyfish step
 // You can write your code in this editor
-if(live_call()) return live_result;
+
 //Move towards target
 if(global.pause == false)
 {

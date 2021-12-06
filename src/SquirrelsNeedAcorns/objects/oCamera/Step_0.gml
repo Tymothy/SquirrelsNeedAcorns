@@ -1,5 +1,5 @@
 /// @desc Insert description here
-if(live_call()) return live_result;
+
 //camera_set_view_pos(global.cam,oPlayer.x-global.view_w_half,oPlayer.y-global.view_h_half);
 var camID = view_camera[0];
 var camWidth = camera_get_view_width(camID);

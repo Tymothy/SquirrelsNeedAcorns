@@ -1,4 +1,4 @@
-if(live_call()) return live_result;
+
 
 //Draw the art
 //draw_sprite(global.levelSelectArray[global.selectedLevel].art,0,artX,artY);

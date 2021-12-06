@@ -1,4 +1,4 @@
-if(live_call()) return live_result;
+
 //Draw the buttons created in the Create event
 var _ww = global.GUIww;
 var _hh = global.GUIhh;

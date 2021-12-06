@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if(live_call()) return live_result;
+
 _x = global.GUIww * .02;
 _y = global.GUIhh * .02;
 

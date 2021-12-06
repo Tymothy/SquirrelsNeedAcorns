@@ -1,4 +1,4 @@
-if(live_call()) return live_result;
+
 /// @description Draw black bars
 // You can write your code in this editor
 

@@ -1,4 +1,4 @@
-if(live_call()) return live_result;
+
 levelSelectFont = fTextLarge;
 infoFont = fTextNormal;
 margin = font_get_size(levelSelectFont)*1.9;

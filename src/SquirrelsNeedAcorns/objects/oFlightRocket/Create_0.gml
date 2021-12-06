@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 // Inherit the parent event
-if(live_call()) return live_result;
+
 event_inherited();
 
 speedPower = .25; //Default is .35

@@ -1,5 +1,5 @@
 /// @description  Draw the highscores if available
-if(live_call()) return live_result;
+
 draw_set_colour(c_ltgray);
 draw_set_font(highscoreFont);
 draw_set_valign(fa_top);
