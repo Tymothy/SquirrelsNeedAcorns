@@ -4,7 +4,7 @@
 #macro practice_button false
 
 //Variables changed often
-global.versionText = "Squirrels Need Acorns - Version 1.0.0";
+global.versionText = "Squirrels Need Acorns - Version 1.0.2";
 global.debug = false; //Controls all the debugging.  Set to false before exporting
 global.playerName = ""; //Used for the highscores
 global.musicToggle = 1; //Set to 1 to export with sound on by default.  Set to 0 for no sound on game on.

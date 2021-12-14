@@ -1,17 +1,3 @@
-V 0.6.0
-Fixed GUI scaling on tablets
-Added level name to end run screen
-Added username, no login or registration required
-Save username between sessions
-Allow score board to alternate between multiple levels
- - Add a game mode column in database
- - Add a level column in database
- Have server send score to database at end of each run
- 
- V 0.6.1
- Added sandy rocks tileset
- Create Jellyfish object
- Update oParCollision to have base values, which children then change, like damage.
-Allow player to bounce off roof of enemies (jellyfish)
-Seperate hitbox based on the struct properties.  For example, the top 10% of a hitbox
-	if collided with, should let the player bounce if the bounce property is selected.
+V 1.0.2
+- Added additional fuel to first 4 levels to help beginning players
+- Increased size of hint text for controls

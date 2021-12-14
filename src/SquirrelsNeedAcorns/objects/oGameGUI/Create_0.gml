@@ -35,7 +35,7 @@ timerDisplayOffset = 30;
 
 alertFont = fTextLarge;
 UIFont = fTextLarge;
-hintFont = fTextNormal;
+hintFont = fTextLarge;
 
 global.availablePoints = 0;
 if(instance_exists(oPointPickup))
