@@ -38,12 +38,14 @@ prevYSpeed = 0;
 prevXSpeed = 0;
 pushPower = pushPowerEVar * worldSpeedEVar;
 flyUpPower = flyUpPowerEVar * worldSpeedEVar;
+
 planetGravity = planetGravityEVar * worldSpeedEVar;
 planetFriction = planetFrictionEVar * worldSpeedEVar;
 planetFrictionInit = planetFriction;
 playerDeathFriction = playerDeathFrictionEVar * worldSpeedEVar;
 bounceStrength = bounceStrengthEVar * worldSpeedEVar;
 bounceStrengthInit = bounceStrength;
+
 ySpeedKill = ySpeedKillEVar * worldSpeedEVar;
 xSpeedKill = xSpeedKillEVar * worldSpeedEVar;
 yCollision = false;

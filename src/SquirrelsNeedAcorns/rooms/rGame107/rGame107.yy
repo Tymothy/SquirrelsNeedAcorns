@@ -18,6 +18,8 @@
         {"properties":[],"isDnd":false,"objectId":{"name":"oPointPickup","path":"objects/oPointPickup/oPointPickup.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":768.0,"y":1024.0,"resourceVersion":"1.0","name":"inst_54877EA5","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"oPointPickup","path":"objects/oPointPickup/oPointPickup.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1088.0,"y":1312.0,"resourceVersion":"1.0","name":"inst_6F1F6C3E","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"oPointPickup","path":"objects/oPointPickup/oPointPickup.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":960.0,"y":512.0,"resourceVersion":"1.0","name":"inst_75CF74B4","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"oFuelPickup","path":"objects/oFuelPickup/oFuelPickup.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":2592.0,"y":1312.0,"resourceVersion":"1.0","name":"inst_47038144","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"oFuelPickup","path":"objects/oFuelPickup/oFuelPickup.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":2336.0,"y":928.0,"resourceVersion":"1.0","name":"inst_7C176735","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Transition","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"oPause","path":"objects/oPause/oPause.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":64.0,"y":64.0,"resourceVersion":"1.0","name":"inst_7ADC9DFF_1_1_3_1_1_1","tags":[],"resourceType":"GMRInstance",},
@@ -232,6 +234,8 @@
     {"name":"inst_2B699FA1","path":"rooms/rGame107/rGame107.yy",},
     {"name":"inst_194BE2FA","path":"rooms/rGame107/rGame107.yy",},
     {"name":"inst_2ECDD566","path":"rooms/rGame107/rGame107.yy",},
+    {"name":"inst_47038144","path":"rooms/rGame107/rGame107.yy",},
+    {"name":"inst_7C176735","path":"rooms/rGame107/rGame107.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

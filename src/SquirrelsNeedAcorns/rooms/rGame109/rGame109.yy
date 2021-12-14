@@ -69,6 +69,7 @@
         {"properties":[],"isDnd":false,"objectId":{"name":"oPointPickup","path":"objects/oPointPickup/oPointPickup.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":3904.0,"y":896.0,"resourceVersion":"1.0","name":"inst_54BC1221","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"oPointPickup","path":"objects/oPointPickup/oPointPickup.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":4320.0,"y":544.0,"resourceVersion":"1.0","name":"inst_51BEB36","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"oSuperAcorn","path":"objects/oSuperAcorn/oSuperAcorn.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":5152.0,"y":192.0,"resourceVersion":"1.0","name":"inst_414EC91C","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"oFuelPickup","path":"objects/oFuelPickup/oFuelPickup.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":3296.0,"y":800.0,"resourceVersion":"1.0","name":"inst_4ECFA79A","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":400,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Pickups","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[],"visible":true,"depth":500,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Enemies","tags":[],"resourceType":"GMRInstanceLayer",},
     {"tilesetId":{"name":"tsForest","path":"tilesets/tsForest/tsForest.yy",},"x":0,"y":0,"tiles":{"SerialiseWidth":256,"SerialiseHeight":64,"TileSerialiseData":[
@@ -232,6 +233,7 @@
     {"name":"inst_54BC1221","path":"rooms/rGame109/rGame109.yy",},
     {"name":"inst_51BEB36","path":"rooms/rGame109/rGame109.yy",},
     {"name":"inst_414EC91C","path":"rooms/rGame109/rGame109.yy",},
+    {"name":"inst_4ECFA79A","path":"rooms/rGame109/rGame109.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,
